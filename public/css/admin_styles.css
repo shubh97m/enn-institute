@@ -1,0 +1,10 @@
+img.list_img{
+	max-height:90px;
+	width:90px;
+	box-shadow: 1px grey;
+	margin-left: 0px;
+	padding: 0px;
+}	
+.list_mg{
+	padding: 9px auto;
+}
