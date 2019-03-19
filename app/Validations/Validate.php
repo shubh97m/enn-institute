@@ -23,6 +23,7 @@ class Validate
       'name'              => ['required','string'],
       'last_name'         => ['nullable','string'],
       'phone_code'        => ['nullable','required_with:mobile_number','string'],
+      'phone2'            => ['nullable', 'numeric'],
       'mobile_number'     => ['required','numeric'],
       'req_mobile_number' => ['required','required_with:phone_code','numeric'],
       'country'           => ['required','string'],
@@ -42,7 +43,8 @@ class Validate
       'slug_no_space'   => ['required','alpha_dash','max:255'],
       'password_check'  => ['required'],
       'newpassword'   => ['required','max:10'],
-           'password_null'   => ['nullable']
+      'password_null'   => ['nullable']
+      
     ];
     return $validation[$key];
   }
@@ -80,6 +82,7 @@ class Validate
       {
         $validations = [
           'phone'       =>$this->validation('phone'),
+          'phone2'       =>$this->validation('phone2'),
           'email'       =>$this->validation('email'),
           'address'     =>$this->validation('address')
           ];
@@ -87,6 +90,7 @@ class Validate
          $validator = \Validator::make($this->data->all(), $validations,[
           'phone.required'       => 'Phone is required.',
           'phone.numeric'        => 'Phone should be in numeric format.',
+          'phone2.numeric'       => 'Phone should be in numeric',
           'email.required'       => 'Email is required.',
           'address.required'     => 'Address is Required.',
           ]);

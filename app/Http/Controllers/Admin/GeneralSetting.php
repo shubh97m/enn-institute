@@ -20,26 +20,39 @@ class GeneralSetting extends Controller
 	    $id = 1;
         $data['settings'] = _arefy(generalSettings::where('id',$id)->first());
                   // pp($data['settings']);
-
+        $data['social_sites']= json_decode($data['settings']['social_sites']);
+        // dd($data['social_sites']['facebook']);
         return view('admin.home',$data);
 
 	}
 	public function changeSetting(Request $request)
 	{
-        $data['phone'] =!empty($request->phone)?$request->phone:'';
-        $data['phone2'] =!empty($request->phone2)?$request->phone2:'';
+        $validation = new Validations($request);
+        $validator  = $validation->addSetting();
+        if ($validator->fails())
+        {
+            $this->message = $validator->errors();
+        }
+        else
+        {
+        $data['phone']        =!empty($request->phone)?$request->phone:'';
+        $data['phone2']       =!empty($request->phone2)?$request->phone2:'';
         $data['skype_number'] =!empty($request->skype_number)?$request->skype_number:'';
-        $data['email'] =!empty($request->email)?$request->email:'';
-        $data['address'] =!empty($request->address)?$request->address:'';
-        $data['social_sites'] =!empty($request->social_sites)?$request->social_sites:'';
-                 
+        $data['email']        =!empty($request->email)?$request->email:'';
+        $data['address']      =!empty($request->address)?$request->address:'';
+        $data['skype_number'] =!empty($request->skype_number)?$request->skype_number:'';
+        
+        $data['social_sites'] = json_encode(array('facebook' =>$request->facebook_url,
+                                                  'linkdin'  =>$request->linkdin_url ,
+                                                  'twitter'  =>$request->twitter_url));
 
-    $inserId = generalSettings::where('id',1)->update($data);                
-        $this->status = true;
-        $this->modal  = true;
-        $this->alert    = true;
-        $this->message  = "Setting has updated successfully.";
-        $this->redirect = url('admin/general-settings'); 
+        $inserId = generalSettings::where('id',1)->update($data);                
+            $this->status     = true;
+            $this->modal      = true;
+            $this->alert      = true;
+            $this->message    = "Setting has updated successfully.";
+            $this->redirect   = url('admin/general-settings'); 
+        }      
 
         return $this->populateresponse();
 

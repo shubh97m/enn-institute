@@ -27,13 +27,11 @@
          <div class="col-md-12">
             <div class="form-group">
               <label>Mobile Number</label>
-              <input type="text" name ="phone" class="form-control" 
+              <input type="text" name ="phone2" class="form-control" 
               value= "{{!empty($settings['phone2'])?$settings['phone2']:''}}">
             </div>
           </div>
         </div>
-
-
         <div class="row">  
          <div class="col-md-12">
             <div class="form-group">
@@ -43,32 +41,50 @@
             </div>
           </div>
         </div>
+       
+      <div class="row">  
+         <div class="col-md-12">
+            <div class="form-group">
+              <label>Facebook Url</label>
+           <input type="text" name ="facebook_url" class="form-control"  value="
+             {{(!empty($social_sites)?$social_sites->facebook:'')}}">
+            </div>
+          </div>
+        </div>
+           <div class="row">  
+         <div class="col-md-12">
+            <div class="form-group">
+              <label>Twitter Url</label>
+           <input type="text" name ="twitter_url" class="form-control"  value="
+             {{(!empty($social_sites)?$social_sites->twitter:'')}}">
+            </div>
+          </div>
+        </div>
+           <div class="row">  
+         <div class="col-md-12">
+            <div class="form-group">
+              <label>Linkdin Url</label>
+           <input type="text" name ="linkdin_url" class="form-control"  value="
+             {{(!empty($social_sites)?$social_sites->linkdin:'')}}">
+            </div>
+          </div>
+        </div>
+     
+      <div class="row">  
+         <div class="col-md-12">
+            <div class="form-group">
+              <label>Skype Number</label>
+           <input type="text" name ="skype_number" class="form-control" value="
+             {{(!empty($settings['skype_number'])?$settings['skype_number']:'')}}">
+            </div>
+          </div>
+        </div>
 
         <div class="row">  
          <div class="col-md-12">
             <div class="form-group">
               <label>Address</label>
             <textarea id="description" name="address" rows="6" cols="80" ></textarea>
-            </div>
-          </div>
-        </div>
-      
-      <div class="row">  
-         <div class="col-md-12">
-            <div class="form-group">
-              <label>Social Icons</label>
-           <input type="text" name ="social_sites" class="form-control" value="
-             {{trim(!empty($settings['social_sites'])?$settings['social_sites']:'')}}">
-            </div>
-          </div>
-        </div>
-
-      <div class="row">  
-         <div class="col-md-12">
-            <div class="form-group">
-              <label>Skype Number</label>
-           <input type="text" name ="social_sites" class="form-control" value="
-             {{(!empty($settings['skype_number'])?$settings['skype_number']:'')}}">
             </div>
           </div>
         </div>
