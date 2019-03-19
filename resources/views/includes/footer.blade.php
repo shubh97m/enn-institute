@@ -51,8 +51,8 @@
      		@endphp	
 					<ul class="jsnn-social-icons">
 						<li><a href=" {{(!empty($social_sites)?$social_sites->facebook:'')}}"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="{{$social_sites->linkdin}}"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="{{$social_sites->twitter}}"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="{{(!empty($social_sites)?$social_sites->facebook:'')}}"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="{{(!empty($social_sites)?$social_sites->facebook:'')}}"><i class="fa fa-linkedin"></i></a></li>
 					<!-- <li><a href="javascript:void(0);"><i class="fa fa-dribbble"></i></a></li> -->
 					</ul>
 				
