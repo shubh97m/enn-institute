@@ -110,7 +110,7 @@
     </script>
     <script type="text/javascript">
 		$(window).load(function(){        
-	   		$('#modal-apply-form').modal('show');
+	   		$('#modal-exam-form').modal('show');
 	    });
 	</script>
 	<script type="text/javascript">
@@ -128,6 +128,10 @@
 			$(".cross-icon").click(function(){
 				$(".searchIcon").css("display","block");
 				$(".cross-icon").css("display","none");
+			});
+			$("#img-modal").click(function(){
+				$("#modal-exam-form").modal("hide");
+				$("#register-form-exam").show();
 			});
             // window.addEventListener("keyup", function(e){ if(e.keyCode == 27) history.back(); }, false);
 

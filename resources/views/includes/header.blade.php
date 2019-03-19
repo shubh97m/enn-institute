@@ -16,7 +16,7 @@
 							<li><a href="#register-modal" data-toggle="modal">Register</a></li> -->
 							<li class="new-offered-blink">
 								<!-- <div class="float-right apply-now"> -->
-									<a href="#modal-apply-form" data-toggle="modal" class="apply-now quadrat">Apply Now</a>
+									<!-- <a href="#modal-apply-form" data-toggle="modal" class="apply-now quadrat">Apply Now</a> -->
 								<!-- </div> -->
 							</li>
 						</ul>
