@@ -32,18 +32,19 @@ class Validate
       'key_points'        => ['required','string','max:1500'],
       'title'             => ['required','string'],
       'profile_picture'   => ['required','mimes:doc,docx,pdf'],
-      'pin_code'      => ['nullable','max:6','min:4'],
+      'pin_code'          => ['nullable','max:6','min:4'],
       'type'              => ['required','string'],
-      'phone'           => ['required','numeric','digits:10'],
+      'phone'             => ['required','numeric','digits:10'],
       'location'          => ['required','string'],
       'password'          => ['required','string','max:50','min:6'],
-      'photo'       => ['required','mimes:jpg,jpeg,png'],
-      'photomimes'    => ['nullable','mimes:jpg,jpeg,png'],
-      'photo_null'    => ['nullable'],
-      'slug_no_space'   => ['required','alpha_dash','max:255'],
-      'password_check'  => ['required'],
-      'newpassword'   => ['required','max:10'],
-      'password_null'   => ['nullable']
+      'photo'             => ['required','mimes:jpg,jpeg,png'],
+      'course_img'             => ['mimes:jpg,jpeg,png'],
+      'photomimes'        => ['nullable','mimes:jpg,jpeg,png'],
+      'photo_null'        => ['nullable'],
+      'slug_no_space'     => ['required','alpha_dash','max:255'],
+      'password_check'    => ['required'],
+      'newpassword'       => ['required','max:10'],
+      'password_null'     => ['nullable']
       
     ];
     return $validation[$key];
@@ -95,7 +96,59 @@ class Validate
           'address.required'     => 'Address is Required.',
           ]);
           return $validator;            
-      }   
-        
+      }
+
+      public function addMain($action= 'add')
+         {
+            $validations = [
+          'title'        =>$this->validation('name'),    
+          'image'       =>$this->validation('course_img'),
+          'description' =>$this->validation('description'),
+          ];
+
+        $validator = \Validator::make($this->data->all(), $validations,[
+        'title.required'        => 'Course Name is required.',
+        'description.required'  => 'Course description is required ',
+        'image.mimes'           => 'Course image should be in .jpg,.jpeg,.png format.',
+    
+          ]);
+          return $validator;     
+         }  
+
+      public function addSub($action= 'add')
+         {
+            $validations = [
+          'title'        =>$this->validation('name'),    
+          'image'       =>$this->validation('course_img'),
+          ];
+
+        $validator = \Validator::make($this->data->all(), $validations,[
+        'title.required'        => 'Course Name is required.',
+        'image.mimes'           => 'Course image should be in .jpg,.jpeg,.png format.',
+    
+          ]);
+          return $validator;     
+         }  
+
+      public function addChild($action= 'add')
+         {
+            $validations = [
+          'title'        =>$this->validation('name'),    
+          'image'        =>$this->validation('course_img'),
+          'description' =>$this->validation('description'),
+      
+          ];
+
+        $validator = \Validator::make($this->data->all(), $validations,[
+        'title.required'        => 'Course Name is required.',
+        'description.required'  => 'Course description is required ',
+        'image.mimes'           => 'Course image should be in .jpg,.jpeg,.png format.',
+    
+          ]);
+          return $validator;     
+         }   
+      
+  
+
 }
 

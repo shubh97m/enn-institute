@@ -150,14 +150,17 @@ class sliderController extends Controller
     public function deleteSlider(Request $request,$id)
     {
        // pp($id);
-        $isUpdated               = Sliders::where('id',___decrypt($id))->delete();
+        $isUpdated          = Sliders::where('id',___decrypt($id))->delete();
 
         if($isUpdated){           
-            $this->message = 'Deleted Slider successfully.';
-            $this->status = true;
+            $this->message  = 'Deleted Slider successfully.';
+            $this->status   = true;
             $this->redirect = true;
             $this->jsondata = [];
         }
         return $this->populateresponse();
     }
 }
+
+
+

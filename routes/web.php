@@ -48,5 +48,20 @@ Route::resource('sliders', 'sliderController');
 	Route::get('general-settings','GeneralSetting@settings');
 	Route::post('general-settings','GeneralSetting@changeSetting');
 
+//*************Courses Section***********
+Route::get('list-courses','CourseController@index');
+	Route::get('main-courses/add','CourseController@addMainCourses');
+	Route::post('main-courses/add','CourseController@addMain');
+	Route::post('/{id}/delete','CourseController@deleteMainCourses');
+
+Route::get('sub-courses/add','CourseController@addSubCourses');
+	Route::post('sub-courses/add','CourseController@addSub');
+	Route::post('/{id}/delete','CourseController@deleteSubCourses');
+
+Route::get('child-courses/add','CourseController@addChildCourses');
+	Route::post('child-courses/add','CourseController@addChild');
+	Route::post('/{id}/delete','CourseController@deleteChildCourses');
+
+
 
 });

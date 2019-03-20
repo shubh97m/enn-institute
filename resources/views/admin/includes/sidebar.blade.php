@@ -40,7 +40,11 @@
             <i class="fa fa-fw fa-sign-out"></i> <span>General Settings</span>
           </a>
         </li>
-        
+         <li>
+          <a href="{{url('admin/list-courses')}}">
+            <i class="fa fa-fw fa-sign-out"></i><span>Courses Catagory</span>
+          </a>
+        </li>
          <li>
           <a href="{{url('admin/logout')}}">
             <i class="fa fa-fw fa-sign-out"></i> <span>Logout</span>

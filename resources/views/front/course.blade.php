@@ -16,7 +16,7 @@
 									<i class="icon-graduation"></i>
 								</span>
 								<div class="desc">
-									<h3><a href="sub-course.html">SAP Training</a></h3>
+									<h3><a href="{{url('admin/')}}">SAP Training</a></h3>
 									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
 									<!-- <a href="javascript:void(0);" class="read-more">Read More</a> -->
 								</div>

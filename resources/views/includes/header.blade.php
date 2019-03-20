@@ -39,12 +39,6 @@
 									<li class=""><a href="{{url('/')}}">Home</a></li>
 									<li class="has-dropdown">
 										<a href="{{url('/courses')}}">All Courses</a>
-										<!-- <ul class="dropdown">
-											<li><a href="#">Commercial</a></li>
-											<li><a href="#">Apartment</a></li>
-											<li><a href="#">House</a></li>
-											<li><a href="#">Building</a></li>
-										</ul> -->
 									</li>
 									<li class="hidemenu"><a href="javascript:void(0);">Training</a>
 										<ul class="training submenu">
