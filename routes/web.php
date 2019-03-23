@@ -1,3 +1,4 @@
+
 <?php
 
 /*
@@ -52,16 +53,21 @@ Route::resource('sliders', 'sliderController');
 Route::get('list-courses','CourseController@index');
 	Route::get('main-courses/add','CourseController@addMainCourses');
 	Route::post('main-courses/add','CourseController@addMain');
-	Route::post('/{id}/delete','CourseController@deleteMainCourses');
+	Route::post('list-courses/{id}/delete','CourseController@deleteMainCourses');
+	Route::get('main-courses/{id}/edit','CourseController@mainCourseEdit');
+	Route::post('main-courses/edit/{id}','CourseController@maincourseUpdate');
+
 
 Route::get('sub-courses/add','CourseController@addSubCourses');
 	Route::post('sub-courses/add','CourseController@addSub');
 	Route::post('/{id}/delete','CourseController@deleteSubCourses');
+	Route::get('sub-courses/{id}/edit','CourseController@subCourseEdit');
+	Route::post('sub-courses/{id}/edit','CourseController@subcourseUpdate');
 
 Route::get('child-courses/add','CourseController@addChildCourses');
 	Route::post('child-courses/add','CourseController@addChild');
 	Route::post('/{id}/delete','CourseController@deleteChildCourses');
-
-
+	Route::get('child-courses/{id}/edit','CourseController@childcourseEdit');
+	Route::post('child-courses/{id}/edit','CourseController@childcourseUpdate');
 
 });

@@ -52,8 +52,8 @@ class Validate
 
   public function login(){
         $validations = [
-            'email'              => $this->validation('req_email'),
-      'password'           => $this->validation('password'),
+      'email'                    => $this->validation('req_email'),
+      'password'                 => $this->validation('password'),
           ];
         $validator = \Validator::make($this->data->all(), $validations,[
             'email.required'     => 'E-mail is required.',
@@ -101,15 +101,15 @@ class Validate
       public function addMain($action= 'add')
          {
             $validations = [
-          'title'        =>$this->validation('name'),    
-          'image'       =>$this->validation('course_img'),
-          'description' =>$this->validation('description'),
+          'name'              =>$this->validation('name'),    
+          'image'             =>$this->validation('course_img'),
+          'description'       =>$this->validation('description'),
           ];
 
         $validator = \Validator::make($this->data->all(), $validations,[
-        'title.required'        => 'Course Name is required.',
-        'description.required'  => 'Course description is required ',
-        'image.mimes'           => 'Course image should be in .jpg,.jpeg,.png format.',
+        'name.required'        => 'Course Name is required.',
+        'description.required'       => 'Course description is required ',
+        'image.mimes'                => 'Course image should be in .jpg,.jpeg,.png format.',
     
           ]);
           return $validator;     
@@ -117,13 +117,13 @@ class Validate
 
       public function addSub($action= 'add')
          {
-            $validations = [
-          'title'        =>$this->validation('name'),    
-          'image'       =>$this->validation('course_img'),
+          $validations = [
+          'name'              =>$this->validation('name'),    
+          'image'             =>$this->validation('course_img'),
           ];
 
         $validator = \Validator::make($this->data->all(), $validations,[
-        'title.required'        => 'Course Name is required.',
+        'name.required'        => 'Course Name is required.',
         'image.mimes'           => 'Course image should be in .jpg,.jpeg,.png format.',
     
           ]);
@@ -133,16 +133,16 @@ class Validate
       public function addChild($action= 'add')
          {
             $validations = [
-          'title'        =>$this->validation('name'),    
+          'courseName'        =>$this->validation('name'),    
           'image'        =>$this->validation('course_img'),
           'description' =>$this->validation('description'),
       
           ];
 
         $validator = \Validator::make($this->data->all(), $validations,[
-        'title.required'        => 'Course Name is required.',
-        'description.required'  => 'Course description is required ',
-        'image.mimes'           => 'Course image should be in .jpg,.jpeg,.png format.',
+        'courseName.required'        => 'Course Name is required.',
+        'description.required'       => 'Course description is required ',
+        'image.mimes'                 => 'Course image should be in .jpg,.jpeg,.png format.',
     
           ]);
           return $validator;     

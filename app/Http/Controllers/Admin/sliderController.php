@@ -153,7 +153,7 @@ class sliderController extends Controller
         $isUpdated          = Sliders::where('id',___decrypt($id))->delete();
 
         if($isUpdated){           
-            $this->message  = 'Deleted Slider successfully.';
+            $this->message  = 'Slider has been deleted successfully.';
             $this->status   = true;
             $this->redirect = true;
             $this->jsondata = [];

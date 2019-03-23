@@ -28,7 +28,7 @@
           <div class="icon">
             <i class="fa fa-user-secret"></i>
           </div>
-          <a href="{{url('admin/courses')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="{{url('admin/list-courses')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
 
@@ -43,7 +43,7 @@
           <div class="icon">
             <i class="fa fa-fw fa-sitemap"></i>
           </div>
-          <a href="{{url('admin/categories')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="{{url('admin/')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->

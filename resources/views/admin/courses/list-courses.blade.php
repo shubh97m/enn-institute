@@ -5,10 +5,12 @@
     
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Courses Catagory</li>
+        <li class="active">Courses</li>
       </ol>
     </section>
-
+   <div class="box-header">
+      <h3 class="box-title">Course Catagory</h3>
+    </div>
     <!-- Main content -->
   <section class="content">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -66,7 +68,7 @@
                 @endphp
                        <tr>
                         <td> {{$i}}</td>
-                        <td> {{$courses['title']}}
+                        <td> {{$courses['name']}}
                         </td>
                         <td>   <img src="{{asset('assets/img/Courses/'.$courses['image'])}}"
                           class="list_img" / >
@@ -74,12 +76,12 @@
                         <td> {{$courses['description']}}</td>
                         <td> {{$courses['status']}}</td>
                         <td>
-                        <a href="javascript:void(0);" 
-                        data-url="{{url(sprintf('admin/list-courses/%s/delete',___encrypt($courses['id'])))}}" 
+                        <a href="{{url(sprintf('admin/main-courses/%s/edit',___encrypt($courses['id'])))}}"  title="Edit Courses"><i class="fa fa-edit"></i></a>|
+                        <a href="javascript:void(0);" data-url="{{url(sprintf('admin/list-courses/%s/delete',___encrypt($courses['id'])))}}" 
                         data-request="ajax-confirm"
                         data-ask_image="{{url('assets/img/delete.png')}}"
                         data-ask="Would you like to Delete?" title="Delete"><i class="fa fa-fw fa-trash"></i>
-                        </a> |
+                        </a> 
                         </td>
                         </tr>
                     @endforeach
@@ -100,41 +102,42 @@
             <div class="box-header">
               <h3 class="box-title">Sub Courses</h3>
               <div class="pull-right">
-                <a href="{!! url('admin/sub-courses/addSubCourses') !!}" class="btn btn-primary btn-add"><i class="fa fa-plus"></i> Add  Sub Courses</a>
+                <a href="{!! url('admin/sub-courses/add') !!}" class="btn btn-primary btn-add"><i class="fa fa-plus"></i> Add Sub Courses</a>
               </div>
             </div>
-
-            <!-- /.box-header -->
+           <!-- /.box-header -->
             <div class="box-body">
               <table id="example2" class="table table-bordered table-hover">
               <thead>
                 <tr>
-                 <th>S.no</th>
-                  <th>Course Name</th>
+                  <th>S.no</th>
+                  <th>Sub Course Name</th>
+                  <th>Main Course name</th>
+                  <th>Image</th>
                   <th>Status</th>
-                  <th >Actions</th>
+                  <th>Actions</th>
                 </tr>
-                </thead>
-                <tbody>
+              </thead>
+              <tbody>
                @php  
                  $i=0;
                 @endphp
-                @foreach($subCourse as $subCourses)
+                @foreach($subcourse as $subcourses)
                 @php
                   $i++;
                 @endphp
                        <tr>
                         <td> {{$i}}</td>
-                        <td> {{$subCourses['title']}}
+                        <td> {{$subcourses['name']}}
                         </td>
-                        <td>  <img src="{{asset('assets/img/Courses/'.$subCourses['image'])}}"
+                        <td> {{$subcourses['maincourse']['name']}}</td> 
+                        <td><img src="{{asset('assets/img/Courses/'.$subcourses['image'])}}"
                           class="list_img" / >
                         </td>
-                        <td> {{$subCourses['description']}}</td>
-                        <td> {{$subCourses['status']}}</td>
+                        <td> {{$subcourses['status']}}</td>
                         <td>
                         <a href="javascript:void(0);" 
-                        data-url="{{url(sprintf('admin/list-courses/%s/delete',___encrypt($subCourses['id'])))}}" 
+                        data-url="{{url(sprintf('admin/list-courses/%s/delete',___encrypt($subcourses['id'])))}}" 
                         data-request="ajax-confirm"
                         data-ask_image="{{url('assets/img/delete.png')}}"
                         data-ask="Would you like to Delete?" title="Delete"><i class="fa fa-fw fa-trash"></i>

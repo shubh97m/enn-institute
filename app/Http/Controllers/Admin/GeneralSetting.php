@@ -50,7 +50,7 @@ class GeneralSetting extends Controller
             $this->status     = true;
             $this->modal      = true;
             $this->alert      = true;
-            $this->message    = "Setting has updated successfully.";
+            $this->message    = "Settings has been updated successfully.";
             $this->redirect   = url('admin/general-settings'); 
         }      
 

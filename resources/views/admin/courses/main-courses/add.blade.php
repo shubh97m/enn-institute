@@ -12,7 +12,7 @@
             <div class="form-group">
               <label>Course Name:</label>
               <input type="text" class="form-control" placeholder="Enter Course Name..." 
-              name="title">
+              name="name">
             </div>
           </div>
        <div class="form-group">
@@ -21,7 +21,7 @@
                 <input onchange="readURL(this)" id="uploadFile" accept="image/*" name="image" type="file">
               </div>
               <div>
-                <img style="max-width: 250px;" src="{{asset('assets/img/avatar.png')}}" id="adminimg" alt="No Featured Image Added">
+                <img style="max-width: 250px;" src="{{asset('assets/img/avatar.png')}}" id="adminimg" alt="No course Image Added">
               </div>
             </div>
         <div class="row">

@@ -37,15 +37,7 @@
             </div>
           </div>
         </div>
-       <!--    <div class="col-md-6">
-            <div class="form-group">
-              <label>Slider Slug:</label>
-              <input type="text" class="form-control" placeholder="Enter Slider Slug..." name="slug" value="{{!empty($slider['slug'])?$slider['slug']:''}}">
-            </div>
-          </div>
-        </div> --> 
-      </div>
-
+  
         <div class="box-footer">
           <a href="{{url('admin/sliders')}}" class="btn btn-default">Cancel</a>
           <button type="button" data-request="ajax-submit" data-target='[role="edit-slider"]' class="btn btn-info pull-right">Submit</button>

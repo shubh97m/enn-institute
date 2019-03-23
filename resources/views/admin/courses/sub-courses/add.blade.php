@@ -9,21 +9,27 @@
         {{csrf_field()}}
      
 
+      <div class="row">
+          <div class="col-md-12">
+          <div class="form-group">
+            <label>Main course Name:</label>
+               <select class="form-control" name="courseName" id="courseName">
+                 <option value="">Select Main Course</option>
+                 @foreach($maincourse as $maincourses)
+                  <option value="{{!empty($maincourses['id'])?$maincourses['id']:''}}">{{!empty($maincourses['name'])?$maincourses['name']:''}}</option>
+                 @endforeach
+               </select>    
+            {{-- <textarea id="description" name="" rows="6" cols="80"></textarea> --}}
+          </div>
+        </div>
+        </div>  
         <div class="form-row">
             <div class="form-group">
               <label>Course Name:</label>
               <input type="text" class="form-control" placeholder="Enter Course Name..." 
-              name="title">
+              name="name">
             </div>
           </div>
-      <div class="row">
-          <div class="col-md-12">
-          <div class="form-group">
-            <label>Main Course Id:</label>
-            <textarea id="description" name="" rows="6" cols="80"></textarea>
-          </div>
-        </div>
-        </div>  
        <div class="form-group">
               <label>Course image:</label>
               <div>
