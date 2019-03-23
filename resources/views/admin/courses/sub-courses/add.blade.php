@@ -7,13 +7,11 @@
     <div class="box-body">
       <form role="add-mainCourses" method="POST" action="{{url('admin/sub-courses/add')}}"">
         {{csrf_field()}}
-     
-
       <div class="row">
           <div class="col-md-12">
           <div class="form-group">
             <label>Main course Name:</label>
-               <select class="form-control" name="courseName" id="courseName">
+               <select class="form-control" name="course_id" id="courseName">
                  <option value="">Select Main Course</option>
                  @foreach($maincourse as $maincourses)
                   <option value="{{!empty($maincourses['id'])?$maincourses['id']:''}}">{{!empty($maincourses['name'])?$maincourses['name']:''}}</option>
@@ -31,14 +29,14 @@
             </div>
           </div>
        <div class="form-group">
-              <label>Course image:</label>
-              <div>
-                <input onchange="readURL(this)" id="uploadFile" accept="image/*" name="image" type="file">
-              </div>
-              <div>
-                <img style="max-width: 250px;" src="{{asset('assets/img/avatar.png')}}" id="adminimg" alt="No Featured Image Added">
-              </div>
+            <label>Course image:</label>
+            <div>
+              <input onchange="readURL(this)" id="uploadFile" accept="image/*" name="image" type="file">
             </div>
+            <div>
+              <img style="max-width: 250px;" src="{{asset('assets/img/avatar.png')}}" id="adminimg" alt="No Featured Image Added">
+            </div>
+      </div>
        
 
          <div class="box-footer">

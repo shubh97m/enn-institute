@@ -68,16 +68,16 @@
                 @endphp
                        <tr>
                         <td> {{$i}}</td>
-                        <td> {{$courses['name']}}
+                        <td> {!!$courses['name']!!}
                         </td>
                         <td>   <img src="{{asset('assets/img/Courses/'.$courses['image'])}}"
                           class="list_img" / >
                         </td>
-                        <td> {{$courses['description']}}</td>
-                        <td> {{$courses['status']}}</td>
+                        <td> {!!($courses['description'])!!}</td>
+                        <td> {!!$courses['status']!!}</td>
                         <td>
-                        <a href="{{url(sprintf('admin/main-courses/%s/edit',___encrypt($courses['id'])))}}"  title="Edit Courses"><i class="fa fa-edit"></i></a>|
-                        <a href="javascript:void(0);" data-url="{{url(sprintf('admin/list-courses/%s/delete',___encrypt($courses['id'])))}}" 
+                        <a href="{!!url(sprintf('admin/main-courses/%s/edit',___encrypt($courses['id'])))!!}"  title="Edit Courses"><i class="fa fa-edit"></i></a>|
+                        <a href="javascript:void(0);" data-url="{{url(sprintf('admin/main-courses/%s/delete',___encrypt($courses['id'])))}}" 
                         data-request="ajax-confirm"
                         data-ask_image="{{url('assets/img/delete.png')}}"
                         data-ask="Would you like to Delete?" title="Delete"><i class="fa fa-fw fa-trash"></i>
@@ -123,6 +123,7 @@
                  $i=0;
                 @endphp
                 @foreach($subcourse as $subcourses)
+                {{-- {{dd($subcourses)}} --}}
                 @php
                   $i++;
                 @endphp
@@ -136,12 +137,13 @@
                         </td>
                         <td> {{$subcourses['status']}}</td>
                         <td>
+                        <a href="{{url(sprintf('admin/sub-courses/edit/%s',___encrypt($subcourses['id'])))}}" title="Edit Sub Courses"><i class="fa fa-edit"></i></a>|  
                         <a href="javascript:void(0);" 
                         data-url="{{url(sprintf('admin/list-courses/%s/delete',___encrypt($subcourses['id'])))}}" 
                         data-request="ajax-confirm"
                         data-ask_image="{{url('assets/img/delete.png')}}"
                         data-ask="Would you like to Delete?" title="Delete"><i class="fa fa-fw fa-trash"></i>
-                        </a> |
+                        </a> 
                         </td>
                         </tr>
                     @endforeach
