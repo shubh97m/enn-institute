@@ -1,7 +1,7 @@
 <div class="content-wrapper">
   <div class="box box-warning">
     <div class="box-header with-border">
-      <h3 class="box-title">Edit Courses</h3>
+      <h3 class="box-title">Edit Main Courses</h3>
     </div>
     <!-- /.box-header -->
     <div class="box-body">

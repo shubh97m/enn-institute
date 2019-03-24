@@ -30,16 +30,16 @@ Route::get('/services','HomeController@services');
 Route::get('admin/login','Admin\loginController@login');
 Route::post('admin/login','Admin\loginController@authentication');
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin'],function(){
-Route::get('home','loginController@home');
-Route::get('logout',function(){
-		\Auth::logout();
-          return redirect('admin/login');
 
+	Route::get('home','loginController@home');
+	Route::get('logout',function(){
+		\Auth::logout();
+	      return redirect('admin/login');
 	});
 
 
 //******************SLiders section*******
-Route::resource('sliders', 'sliderController');
+	Route::resource('sliders', 'sliderController');
 	Route::group(['prefix' => 'sliders'],function(){
 		Route::post('/status', 'sliderController@changeStatus');
 		Route::post('/{id}/delete','sliderController@deleteSlider');
@@ -50,21 +50,21 @@ Route::resource('sliders', 'sliderController');
 	Route::post('general-settings','GeneralSetting@changeSetting');
 
 //*************Courses Section***********
-Route::get('list-courses','CourseController@index');
+	Route::get('list-courses','CourseController@index');
 	Route::get('main-courses/add','CourseController@addMainCourses');
 	Route::post('main-courses/add','CourseController@addMain');
-	Route::post('list-courses/{id}/delete','CourseController@deleteMainCourses');
+	Route::post('main-courses/{id}/delete','CourseController@deleteMainCourses');
 	Route::get('main-courses/{id}/edit','CourseController@mainCourseEdit');
 	Route::post('main-courses/edit/{id}','CourseController@maincourseUpdate');
 
 
-Route::get('sub-courses/add','CourseController@addSubCourses');
+	Route::get('sub-courses/add','CourseController@addSubCourses');
 	Route::post('sub-courses/add','CourseController@addSub');
-	Route::post('/{id}/delete','CourseController@deleteSubCourses');
-	Route::get('sub-courses/{id}/edit','CourseController@subCourseEdit');
-	Route::post('sub-courses/{id}/edit','CourseController@subcourseUpdate');
+	Route::post('list-courses/{id}/delete','CourseController@deleteSubCourses');
+	Route::get('sub-courses/edit/{id}','CourseController@subCourseEdit');
+	Route::post('sub-courses/edit/{id}','CourseController@subcourseUpdate');
 
-Route::get('child-courses/add','CourseController@addChildCourses');
+	Route::get('child-courses/add','CourseController@addChildCourses');
 	Route::post('child-courses/add','CourseController@addChild');
 	Route::post('/{id}/delete','CourseController@deleteChildCourses');
 	Route::get('child-courses/{id}/edit','CourseController@childcourseEdit');

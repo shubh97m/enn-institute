@@ -84,15 +84,44 @@ public function mainCourseEdit(Request $request,$id)
             return view('admin/home', $data);
         }
 //Edit Sub courses add page view
-public function mainCourseEdit(Request $request,$id)
+public function subCourseEdit(Request $request,$id)
     {
-        $data['view'] = 'admin.courses.main-courses.edit';
         $id = ___decrypt($id);
-        $data['courses'] = _arefy(MainCourses::where('id',$id)->first());
-        // dd($data['tax']);
+        $data['view'] = 'admin.courses.sub-courses.edit';
+        $data['course']      = _arefy(MainCourses::where('status','!=','trashed')->get());
+        $data['subcourses']  = _arefy(SubCourses::where('id',$id)->first());
         return view('admin.home',$data);
     }
 //Edit sub courses add page view
+public function subcourseUpdate(Request $request, $id)
+    {   
+        $id = ___decrypt($id);
+        $validation = new Validations($request);
+        $validator  = $validation->addSub();
+        if ($validator->fails()) {
+            $this->message = $validator->errors();
+        }else
+        {
+          $data = SubCourses::findOrFail($id);
+          $input = $request->all();
+          
+        if ($file = $request->file('image'))
+        {
+          $photo_name = time().$request->file('image')->getClientOriginalName();
+          $file->move('assets/img/Courses',$photo_name);
+          $input['image'] = $photo_name;
+        }
+            $data->update($input);
+
+            $this->status   = true;
+            $this->modal    = true;
+            $this->alert    = true;
+            $this->message  = "Course has been Updated successfully.";
+            $this->redirect = url('admin/list-courses');
+        }
+            return $this->populateresponse();
+    }
+
 
 //child courses add page view
     public function addChildCourses()
@@ -181,7 +210,7 @@ public function mainCourseEdit(Request $request,$id)
     {
         $isUpdated          = MainCourses::where('id',___decrypt($id))->delete();
         if($isUpdated){           
-            $this->message  = 'Course deleted  successfully.';
+            $this->message  = 'Course has been deleted successfully.';
             $this->status   = true;
             $this->redirect = true;
             $this->jsondata = [];
@@ -193,7 +222,7 @@ public function mainCourseEdit(Request $request,$id)
     {
         $isUpdated          = SubCourses::where('id',___decrypt($id))->delete();
         if($isUpdated){           
-            $this->message  = 'Course deleted  successfully.';
+            $this->message  = 'Course has been deleted  successfully.';
             $this->status   = true;
             $this->redirect = true;
             $this->jsondata = [];
