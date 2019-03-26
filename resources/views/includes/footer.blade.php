@@ -134,7 +134,7 @@
 
 	            </div>
 	            <div class="text-center img-logo-modal">
-	            	<img src="images/logo/logo.png" alt="logo">
+	            	<img src="{{url('images/logo/logo.png')}}" alt="logo">
 	            </div>
 	           
 	            <div class="modal-body popupmodal-body">
@@ -177,7 +177,7 @@
 
 	            </div>
 	            <div class="text-center img-logo-modal">
-	            	<img src="images/logo/logo.png" alt="logo">
+	            	<img src="{{url('images/logo/logo.png')}}" alt="logo">
 	            </div>
 	           
 	            <div class="modal-body popupmodal-body">
