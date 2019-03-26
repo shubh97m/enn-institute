@@ -81,7 +81,7 @@
 			            <!--  -->
 		  				<a href="#register-form-exam" data-toggle="modal" style="cursor: pointer;">
 				            <div class="modal-body popupmodal-body">
-				              	<img src="images/Capture-img.jpg" alt="capture" id="img-modal">
+				              	<img src="{{url('images/Capture-img.jpg')}}" alt="capture" id="img-modal">
 				            </div>
 			        	</a>
 		          	</div>

@@ -4,34 +4,48 @@
 			<div class="row">
 				<div class="col-md-4">
 					<div>
-						<h3>SAP ERP Training</h3>
+						<h3>{{$course['name']}}</h3>
 					</div>
 					<div class="subcourseWrap">
 						<div class="row">
 							<div class="col-md-12 col-sm-12 col-xs-12">
 								<ul class="sub-course-offerred">
-									
-									<li class="sub-sub-course">
-										<div class="sub-course-content">
-											<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-												<i class="fa fa-book" aria-hidden="true"></i>
-											   <span>SAP Technical</span>
-											</button>
-											<ul class="sub-offered collapse" id="collapseExample">
-												<li>SAP ABAP/4 (Programming)</li>
-												<li>SAP BASIS (For Networking, H/W, DBA, System admin.)</li>
-												<li>SAP SM (Sol Man or Solution Manager)</li>
-												<li>SAP BO (Business Objects)</li>
-												<li>SAP PI (Process Integration)</li>
-												<li>SAP HANA</li>
-												<li>SAP Workflow</li>
-												<li>SAP Webdynpro</li>
-												<li>SAP Netweaver</li>
-												<li>SAP Security</li>	
-											</ul>
-										</div>
-									</li>
-									<li class="sub-sub-course">
+									@if(!empty($sub_course))
+										@foreach($sub_course as $sub_courses)
+										<li class="sub-sub-course">
+											<div class="sub-course-content">
+												<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample{{$sub_courses['id']}}" aria-expanded="false" aria-controls="collapseExample{{$sub_courses['id']}}">
+													<i class="fa fa-book" aria-hidden="true"></i>
+												   <span>{{$sub_courses['name']}}</span>
+												</button>
+												<ul class="sub-offered collapse" id="collapseExample{{$sub_courses['id']}}">
+													@php
+														$childCourse = App\Models\ChildCourses::where('sub_course',$sub_courses['id'])->get();
+													@endphp
+													@if(!empty($childCourse))
+														@foreach($childCourse as $childCourses)
+															<li>{{$childCourses->name}}</li>
+														@endforeach
+														@else
+														<li>No child Courses found.</li>
+													@endif
+													{{-- <li>SAP BASIS (For Networking, H/W, DBA, System admin.)</li>
+													<li>SAP SM (Sol Man or Solution Manager)</li>
+													<li>SAP BO (Business Objects)</li>
+													<li>SAP PI (Process Integration)</li>
+													<li>SAP HANA</li>
+													<li>SAP Workflow</li>
+													<li>SAP Webdynpro</li>
+													<li>SAP Netweaver</li>
+													<li>SAP Security</li>	 --}}
+												</ul>
+											</div>
+										</li>
+										@endforeach
+										@else
+										<li class="sub-sub-course">No Sub Courses Found.</li>
+									@endif
+									{{-- <li class="sub-sub-course">
 										<div class="sub-course-content">
 											<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
 												<i class="fa fa-book" aria-hidden="true"></i>
@@ -102,7 +116,7 @@
 												
 											</ul>
 										</div>
-									</li>	
+									</li>	 --}}
 								</ul>
 							</div>
 						</div>
