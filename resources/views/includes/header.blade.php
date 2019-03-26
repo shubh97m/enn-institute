@@ -1,4 +1,3 @@
-
 		<header>
 			<div class="topHeader">
 				<div class="container">
@@ -32,7 +31,7 @@
 					
 						<div class="row">
 							<div class="col-xs-2">
-								<div id="jsnn-logo"><a href="javascript:void(0);"><img src="images/logo/logo.png"></a></div>
+								<div id="jsnn-logo"><a href="javascript:void(0);"><img src="{{url('images/logo/logo.png')}}"></a></div>
 							</div>
 							<div class="col-xs-10 text-right menu-1">
 								<ul class="menuListing">

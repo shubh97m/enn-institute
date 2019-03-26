@@ -46,8 +46,8 @@ class HomeController extends Controller
         $id = ___decrypt($id);
         $data['view'] = 'front.sub_course';
         $where = 'course_id='.$id;
-        $data['course']    =  _arefy(SubCourses::list('array',$where));
-          
+        $data['sub_course']    =  _arefy(SubCourses::list('array',$where));
+        $data['course']      =  _arefy(MainCourses::where('id','=',$id)->first());
         return view('front_home',$data);
     }
 

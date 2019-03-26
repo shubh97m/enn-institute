@@ -183,8 +183,8 @@
                 <thead>
                 <tr>
                  <th>S.no</th>
-                  <th>Course Name</th>
-                  <th>Status</th>
+                  <th>Child Course Name</th>
+                  <th>Image</th>
                   <th >Actions</th>
                 </tr>
                 </thead>
@@ -200,9 +200,13 @@
                         <td> {{$i}}</td>
                         <td> {{$childCourses['name']}}
                         </td>
-                        <td><img src="{{asset('assets/img/Courses/'.$childCourses['image'])}}"
-                          class="list_img" / >
-                        </td>
+                        @if(!empty($childCourses['image']))
+                          <td><img src="{{asset('assets/img/Courses/'.$childCourses['image'])}}"
+                            class="list_img" / height="100" width="100">
+                          </td>
+                        @else
+                          <td>N/A</td>
+                        @endif
                         <td> {{$childCourses['status']}}</td>
                         <td>
                         <a href="javascript:void(0);" 
