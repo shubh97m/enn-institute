@@ -5,7 +5,7 @@
     
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Slider</li>
+        <li class="active">Partners</li>
       </ol>
     </section>
 
