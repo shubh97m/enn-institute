@@ -7,6 +7,8 @@ use Hash;
 use Illuminate\Http\Request;
 use App\Models\Sliders;
 use App\Models\Contact;
+use App\Models\MainCourses;
+use App\Models\SubCourses;
 use Validations\Validate as Validations;
 use App\Models\generalSettings;
 class HomeController extends Controller
@@ -33,10 +35,22 @@ class HomeController extends Controller
 	//********* Courses Section********
     public function courses()
     {
+        $data['course']      =  _arefy(MainCourses::where('status','=','active')->get());
     	$data['view'] ='front.course';
     	return view('front_home', $data);
     	
     }
+
+    public function sub_courses(Request $request,$id )
+    {
+        $id = ___decrypt($id);
+        $data['view'] = 'front.sub_course';
+        $where = 'course_id='.$id;
+        $data['course']    =  _arefy(SubCourses::list('array',$where));
+          
+        return view('front_home',$data);
+    }
+
     //********* Contact Section********
     public function contact()
     {

@@ -6,87 +6,31 @@
 			</div>
 		</section>
 		<section>
-		<div id="jsnn-course-wrap" class="jsnn-course-warp">
-			<div class="container">
-				<div class="progarmWrapper">
-					<div class="row">
-						<div class="col-md-4 text-center animate-box">
-							<div class="sub-courses">
-								<span class="icon">
-									<i class="icon-graduation"></i>
-								</span>
-								<div class="desc">
-									<h3><a href="{{url('admin/')}}">SAP Training</a></h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
-									<!-- <a href="javascript:void(0);" class="read-more">Read More</a> -->
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="sub-courses">
-								<span class="icon">
-									<i class="icon-graduation"></i>
-								</span>
-								<div class="desc">
-									<h3><a href="sub-course.html">Angular Training</a></h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
-									<!-- <a href="javascript:void(0);" class="read-more">Read More</a> -->
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="sub-courses">
-								<span class="icon">
-									<i class="icon-graduation"></i>
-								</span>
-								<div class="desc">
-									<h3><a href="sub-course.html">Design Training</a></h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
-									<!-- <a href="javascript:void(0);" class="read-more">Read More</a> -->
+			<div id="jsnn-course-wrap" class="jsnn-course-warp">
+				<div class="container">
+					<div class="progarmWrapper">
+						{{-- row starts here --}}
+						<div class="row">
+							@foreach($course as $courses)
+							<div class="col-md-4 text-center animate-box">
+								<div class="sub-courses">
+									<span class="icon">
+										<img src="{{url('assets/img/Courses')}}/{{$courses['image']}}" alt="course image" style="height:70px;width:60px">
+									</span>
+									<div class="desc">
+										<h3><a href="{{url('sub-course/'.___encrypt($courses['id']))}}">{{$courses['name']}}</a></h3>
+										<p>{!! str_limit(strip_tags($courses['description']),30) !!}</p>
+										 <a href="javascript:void(0);" class="read-more">Read More</a> 
 									</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="sub-courses">
-								<span class="icon">
-									<i class="icon-graduation"></i>
-								</span>
-								<div class="desc">
-									<h3><a href="sub-course.html">Java Training</a></h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
-									<!-- <a href="javascript:void(0);" class="read-more">Read More</a> -->
 								</div>
 							</div>
+							@endforeach
 						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="sub-courses">
-								<span class="icon">
-									<i class="icon-graduation"></i>
-								</span>
-								<div class="desc">
-									<h3><a href="sub-course.html">Python Training</a></h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
-									<!-- <a href="javascript:void(0);" class="read-more">Read More</a> -->
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="sub-courses">
-								<span class="icon">
-									<i class="icon-graduation"></i>
-								</span>
-								<div class="desc">
-									<h3><a href="sub-course.html">Web Training</a></h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
-									<!-- <a href="javascript:void(0);" class="read-more">Read More</a> -->
-								</div>
-							</div>
-						</div>
+						{{-- row ends here --}}
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 	
 
 		<!-- apply modal -->

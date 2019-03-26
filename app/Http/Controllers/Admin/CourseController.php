@@ -45,6 +45,7 @@ public function mainCourseEdit(Request $request,$id)
         // dd($data['tax']);
         return view('admin.home',$data);
     }
+   
 //Edit main courses add page view
  public function maincourseUpdate(Request $request, $id)
     {   

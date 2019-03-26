@@ -72,7 +72,7 @@
   $(function() {
     $('#main_course').change( function() {
       var val = $(this).val();
-          $('#othstate').val('').hide();
+          // $('#othstate').val('').hide();
           $.ajax({
              url: '{{url('admin/sub_course_list')}}',
              dataType: 'html',

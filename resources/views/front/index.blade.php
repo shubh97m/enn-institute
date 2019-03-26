@@ -125,7 +125,7 @@
 							<h3>Course</h3>
 						</div>
 						<div class="float-right view-btn">
-							<a href="course.html">View All Course</a>
+							<a href="{{url('/courses')}}">View All Course</a>
 						</div>
 					</div>
 					<div class="row">

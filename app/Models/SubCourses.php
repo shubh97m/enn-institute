@@ -19,7 +19,7 @@ class SubCourses extends Model
             'maincourse' => function($q){
                 $q->select('id','name');
             },
-        ]);
+        ])->where('status','active');        
         if($where){
             $table_subcourse->whereRaw($where);
         }
