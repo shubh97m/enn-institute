@@ -243,128 +243,128 @@
 				</div>
 		</div>
 	</section>
-	 <section id="gallery" class="gallery-wrap">
-        
-        <div class="container"> 
-	        <div class="row">
-	              <div class="col-12">
-	                  <div class="section-heading wow fadeInUp">
-	                      <h2>Our Gallery</h2>  
-	                  </div>
-	              </div>
-	        </div>       
-          
-	        <div class="row">          
-	            <div class="col-md-12">
-	             
-	              <div class="controls text-center">
-	                <a class="filter active btn btn-common" data-filter="all">
-	                  All 
-	                </a>
-	                <a class="filter btn btn-common" data-filter=".academy">
-	                  Academy 
-	                </a>
-	                <a class="filter btn btn-common" data-filter=".students">
-	                  Students
-	                </a>
-	                <a class="filter btn btn-common" data-filter=".awards">
-	                  Awards 
-	                </a>
-	              </div>
-	              
-	            </div>
+	<section id="gallery" class="gallery-wrap">
+	        
+	        <div class="container"> 
+		        <div class="row">
+		              <div class="col-12">
+		                  <div class="section-heading wow fadeInUp">
+		                      <h2>Our Gallery</h2>  
+		                  </div>
+		              </div>
+		        </div>       
+	          
+		        <div class="row">          
+		            <div class="col-md-12">
+		             
+		              <div class="controls text-center">
+		                <a class="filter active btn btn-common" data-filter="all">
+		                  All 
+		                </a>
+		                <a class="filter btn btn-common" data-filter=".academy">
+		                  Academy 
+		                </a>
+		                <a class="filter btn btn-common" data-filter=".students">
+		                  Students
+		                </a>
+		                <a class="filter btn btn-common" data-filter=".awards">
+		                  Awards 
+		                </a>
+		              </div>
+		              
+		            </div>
 
-	            <div id="portfolio" class="row wow fadeInDown" data-wow-delay="0.4s">
-	              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix students awards">
-	                <div class="portfolio-item">
-	                  <div class="shot-item">
-	                    <img src="images/gallery/IMG_20190225_134442.jpg" alt="projects"/>  
-	                    <div class="overlay">
-	                      <div class="icons">
-	                        <a class="lightbox preview" href="images/gallery/IMG_20190225_134442.jpg">
-	                          <i class="fa fa-eye"></i>
-	                        </a>
-	                      </div>
-	                    </div>
-	                  </div>               
-	                </div>
-	              </div>
-             
-	              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix students">
-	                <div class="portfolio-item">
-	                  <div class="shot-item">
-	                    <img src="images/gallery/IMG_20190225_134330.jpg" alt="gallery"/> 
-	                    <div class="overlay">
-	                      <div class="icons">
-	                        <a class="lightbox preview" href="images/gallery/IMG_20190225_134330.jpg">
-	                          <i class="fa fa-eye"></i>
-	                        </a>
-	                      </div>
-	                    </div>
-	                  </div>               
-	                </div>
-	              </div>
-	              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix students academy">
-	                <div class="portfolio-item">
-	                  <div class="shot-item">
-	                    <img src="images/gallery/IMG_20190225_134442.jpg" alt="gallery" /> 
-	                    <div class="overlay">
-	                      <div class="icons">
-	                        <a class="lightbox preview" href="images/gallery/IMG_20190225_134442.jpg">
-	                          <i class="fa fa-eye"></i>
-	                        </a>
-	                      </div>
-	                    </div>
-	                  </div>               
-	                </div>
-	              </div>
-	              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix students">
-	                <div class="portfolio-item">
-	                  <div class="shot-item">
-	                    <img src="images/gallery/IMG_20190225_135444.jpg" alt="gallery"/> 
-	                    <div class="overlay">
-	                      <div class="icons">
-	                        <a class="lightbox preview" href="images/gallery/IMG_20190225_135444.jpg">
-	                          <i class="fa fa-eye"></i>
-	                        </a>
-	                      </div>
-	                    </div>
-	                  </div>               
-	                </div>
-	              </div>
-	              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix academy">
-	                <div class="portfolio-item">
-	                  <div class="shot-item">
-	                    <img src="images/gallery/IMG_20190225_135524.jpg" alt="gallery"/>
-	                    <div class="overlay">
-	                      <div class="icons">
-	                        <a class="lightbox preview" href="images/gallery/IMG_20190225_135524.jpg">
-	                          <i class="fa fa-eye"></i>
-	                        </a>
-	                      </div>
-	                    </div>
-	                  </div>               
-	                </div>
-	              </div>
-	              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 students">
-	                <div class="portfolio-item">
-	                  <div class="shot-item">
-	                    <img src="images/gallery/IMG_20190225_194057.jpg" alt="projects"/>
-	                    <div class="overlay">
-	                      <div class="icons">
-	                        <a class="lightbox preview" href="images/gallery/IMG_20190225_194057.jpg">
-	                          <i class="fa fa-eye"></i>
-	                        </a>
-	                      </div>
-	                    </div>
-	                  </div>               
-	                </div>
-	              </div>
-	            </div>
-	          </div>
-	        </div>
-	      
-	    </section>
+		            <div id="portfolio" class="row wow fadeInDown" data-wow-delay="0.4s">
+		              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix students awards">
+		                <div class="portfolio-item">
+		                  <div class="shot-item">
+		                    <img src="images/gallery/gallery.jpg" alt="projects"/>  
+		                    <div class="overlay">
+		                      <div class="icons">
+		                        <a class="lightbox preview" href="images/gallery/gallery.jpg">
+		                          <i class="fa fa-eye"></i>
+		                        </a>
+		                      </div>
+		                    </div>
+		                  </div>               
+		                </div>
+		              </div>
+	             
+		              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix students">
+		                <div class="portfolio-item">
+		                  <div class="shot-item">
+		                    <img src="images/gallery/gallery1.jpg" alt="gallery"/> 
+		                    <div class="overlay">
+		                      <div class="icons">
+		                        <a class="lightbox preview" href="images/gallery/gallery1.jpg">
+		                          <i class="fa fa-eye"></i>
+		                        </a>
+		                      </div>
+		                    </div>
+		                  </div>               
+		                </div>
+		              </div>
+		              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix students academy">
+		                <div class="portfolio-item">
+		                  <div class="shot-item">
+		                    <img src="images/gallery/gallery2.jpg" alt="gallery" /> 
+		                    <div class="overlay">
+		                      <div class="icons">
+		                        <a class="lightbox preview" href="images/gallery/gallery2.jpg">
+		                          <i class="fa fa-eye"></i>
+		                        </a>
+		                      </div>
+		                    </div>
+		                  </div>               
+		                </div>
+		              </div>
+		              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix students">
+		                <div class="portfolio-item">
+		                  <div class="shot-item">
+		                    <img src="images/gallery/gallery3.jpg" alt="gallery"/> 
+		                    <div class="overlay">
+		                      <div class="icons">
+		                        <a class="lightbox preview" href="images/gallery/gallery3.jpg">
+		                          <i class="fa fa-eye"></i>
+		                        </a>
+		                      </div>
+		                    </div>
+		                  </div>               
+		                </div>
+		              </div>
+		              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix academy">
+		                <div class="portfolio-item">
+		                  <div class="shot-item">
+		                    <img src="images/gallery/gallery4.jpg" alt="gallery"/>
+		                    <div class="overlay">
+		                      <div class="icons">
+		                        <a class="lightbox preview" href="images/gallery/gallery4.jpg">
+		                          <i class="fa fa-eye"></i>
+		                        </a>
+		                      </div>
+		                    </div>
+		                  </div>               
+		                </div>
+		              </div>
+		              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 students">
+		                <div class="portfolio-item">
+		                  <div class="shot-item">
+		                    <img src="images/gallery/gallery5.jpg" alt="projects"/>
+		                    <div class="overlay">
+		                      <div class="icons">
+		                        <a class="lightbox preview" href="images/gallery/gallery5.jpg">
+		                          <i class="fa fa-eye"></i>
+		                        </a>
+		                      </div>
+		                    </div>
+		                  </div>               
+		                </div>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      
+		    </section>
 
 <section>
 	<div class="about-wrap">

@@ -545,6 +545,7 @@ ul.rightHeader {
 }
 .formLogin input{
   border: 1px solid #a3a3a3;
+  padding-left: 45px;
 }
 .box_xs .form-group {
     margin-bottom: 15px;
@@ -552,8 +553,23 @@ ul.rightHeader {
 .m-b-20{
   margin-bottom: 20px;
 }
+.formLogin .input-group{
+  width: 100%;
+}
+.formLogin .input-group-addon{
+  position: absolute;
+  left: 0;
+  border: 1px solid #a3a3a3;
+  z-index: 4;
+  /* width: 100%; */
+  width: 40px;
+  height: 100%;
+}
 .formWrapper {
   padding: 30px 60px;
+}
+.help-block{
+  color: #d72d2d;
 }
 .box_xs {
     max-width: 500px;
