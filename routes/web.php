@@ -18,10 +18,12 @@ Route::get('/clear-cache', function() {
     $exitCode = Artisan::call('config:cache');
     return 'DONE'; //Return anything
 });
+
 Route::get('/','HomeController@index');
 Route::get('/about-us','HomeController@aboutUs');
 Route::get('/courses','HomeController@courses');
 Route::get('/contact','HomeController@contact');
+Route::post('contact','HomeController@contactStore');
 Route::get('/services','HomeController@services');
 
 
@@ -32,6 +34,7 @@ Route::post('admin/login','Admin\loginController@authentication');
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin'],function(){
 
 	Route::get('home','loginController@home');
+	Route::get('contact','StaticController@contact');
 	Route::get('logout',function(){
 		\Auth::logout();
 	      return redirect('admin/login');
@@ -65,9 +68,11 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 	Route::post('sub-courses/edit/{id}','CourseController@subcourseUpdate');
 
 	Route::get('child-courses/add','CourseController@addChildCourses');
+	Route::get('sub_course_list','CourseController@ajax_sub_course_list');
 	Route::post('child-courses/add','CourseController@addChild');
 	Route::post('/{id}/delete','CourseController@deleteChildCourses');
 	Route::get('child-courses/{id}/edit','CourseController@childcourseEdit');
-	Route::post('child-courses/{id}/edit','CourseController@childcourseUpdate');
+	Route::post('child-courses/{id}/edit','CourseController@childCourseUpdate');
+
 
 });

@@ -130,23 +130,35 @@ class Validate
           return $validator;     
          }  
 
-      public function addChild($action= 'add')
-         {
-            $validations = [
-          'courseName'        =>$this->validation('name'),    
-          'image'        =>$this->validation('course_img'),
-          'description' =>$this->validation('description'),
-      
+        public function addChild($action= 'add')
+        {
+          $validations = [
+          'course'        =>$this->validation('name'),    
+          'sub_course'        =>$this->validation('name'),    
+          'name'        =>$this->validation('name'),
+          'image' =>$this->validation('course_img'),
           ];
 
-        $validator = \Validator::make($this->data->all(), $validations,[
-        'courseName.required'        => 'Course Name is required.',
-        'description.required'       => 'Course description is required ',
-        'image.mimes'                 => 'Course image should be in .jpg,.jpeg,.png format.',
-    
+          $validator = \Validator::make($this->data->all(), $validations,[
+          'image.mimes'                 => 'Course image should be in .jpg,.jpeg,.png format.',
+
           ]);
           return $validator;     
-         }   
+        }
+
+        public function contact($action= 'add')
+        {
+          $validations = [
+          'first_name'      =>$this->validation('name'),    
+          'last_name'       =>$this->validation('name'),    
+          'email'           =>$this->validation('name'),
+          'subject'         =>$this->validation('name'),
+          'message'         =>$this->validation('name'),
+          ];
+
+          $validator = \Validator::make($this->data->all(), $validations,[]);
+          return $validator;     
+        }   
       
   
 

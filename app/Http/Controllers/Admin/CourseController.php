@@ -123,13 +123,27 @@ public function subcourseUpdate(Request $request, $id)
     }
 
 
-//child courses add page view
+    //child courses add page view
     public function addChildCourses()
-        {
-            $data['view'] ='/admin.courses.sub-courses.add';
-            return view('admin/home', $data);
-        }
-//Main courses add functionality
+    {
+        $data['view'] ='/admin.courses.child-course.add';
+        $data['maincourse'] = _arefy(MainCourses::where('status','!=','trashed')->get());
+        return view('admin/home', $data);
+    }
+    public function childcourseEdit(Request $request,$id)
+    {
+        $id =___decrypt($id);
+        $data['view'] ='/admin.courses.child-course.edit';
+        $data['maincourse'] = _arefy(MainCourses::where('status','!=','trashed')->get());
+         $data['childcourses']  = _arefy(ChildCourses::where('id',$id)->first());
+        return view('admin/home', $data);
+    }
+    public function ajax_sub_course_list(Request $request)
+    {
+        $data['subcourse'] = _arefy(SubCourses::where('course_id',$request->id)->where('status','!=','trashed')->get());
+        return view('admin.courses.ajaxsubcat', $data);
+    }
+    //Main courses add functionality
     public function addMain(Request $request)
     {
         $validation = new Validations($request);
@@ -191,18 +205,50 @@ public function subcourseUpdate(Request $request, $id)
         if ($validator->fails()){
             $this->message = $validator->errors();
         }else{
-            $data = new MainCourses();
+            $data = new ChildCourses();
             $data->fill($request->all());
-            
+            if ($file = $request->file('image')){
+              $photo_name = time().$request->file('image')->getClientOriginalName();
+              $file->move('assets/img/Courses',$photo_name);
+              $data['image'] = $photo_name;
+            } 
             $data->save();
-
               $this->status   = true;
               $this->modal    = true;
               $this->alert    = true;
-              $this->message  = "Courses has been Added successfully.";
+              $this->message  = "Child Course has been Added successfully.";
               $this->redirect = url('admin/list-courses');
         } 
       return $this->populateresponse();
+    }
+
+    public function childCourseUpdate(Request $request, $id)
+    {   
+        $id = ___decrypt($id);
+        $validation = new Validations($request);
+        $validator  = $validation->addSub();
+        if ($validator->fails()) {
+            $this->message = $validator->errors();
+        }else
+        {
+          $data = ChildCourses::findOrFail($id);
+          $input = $request->all();
+          
+        if ($file = $request->file('image'))
+        {
+          $photo_name = time().$request->file('image')->getClientOriginalName();
+          $file->move('assets/img/Courses',$photo_name);
+          $input['image'] = $photo_name;
+        }
+            $data->update($input);
+
+            $this->status   = true;
+            $this->modal    = true;
+            $this->alert    = true;
+            $this->message  = "Child Course has been Updated successfully.";
+            $this->redirect = url('admin/list-courses');
+        }
+            return $this->populateresponse();
     }
 
 //main course delete functionality

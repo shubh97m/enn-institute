@@ -30,6 +30,16 @@
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           </a>        
         </li>
+        <li>
+          <a href="{{url('admin/list-courses')}}">
+            <i class="fa fa-fw fa-sign-out"></i><span>Courses Catagory</span>
+          </a>
+        </li>
+        <li class="active ">
+          <a href="{{url('admin/contact')}}">
+            <i class="fa fa-dashboard"></i> <span>Contact</span>
+          </a>        
+        </li>
          <li>
           <a href="{{url('admin/sliders')}}">
             <i class="fa fa-fw fa-sign-out"></i> <span>Sliders</span>
@@ -40,9 +50,10 @@
             <i class="fa fa-fw fa-sign-out"></i> <span>General Settings</span>
           </a>
         </li>
-         <li>
-          <a href="{{url('admin/list-courses')}}">
-            <i class="fa fa-fw fa-sign-out"></i><span>Courses Catagory</span>
+         
+        <li>
+          <a href="{{url('admin/client')}}">
+            <i class="fa fa-fw fa-sign-out"></i> <span>client</span>
           </a>
         </li>
          <li>

@@ -4,29 +4,30 @@
 				<div class="row">
 						<div class="col-md-6 animate-box pad-btm">
 						<h2 class="contact-info-size">Get In Touch</h2>
-						<form action="#">
+						<form role="contact" action="{{url('contact')}}" method="POST">
+							{{csrf_field()}}
 							<div class="row form-group">
 								<div class="col-md-6">
 									<!-- <label for="fname">First Name</label> -->
-									<input type="text" id="fname" class="form-control" placeholder="Your firstname">
+									<input type="text" name="first_name" id="fname" class="form-control" placeholder="Your firstname">
 								</div>
 								<div class="col-md-6">
 									<!-- <label for="lname">Last Name</label> -->
-									<input type="text" id="lname" class="form-control" placeholder="Your lastname">
+									<input type="text" name="last_name" id="lname" class="form-control" placeholder="Your lastname">
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<div class="col-md-12">
 									<!-- <label for="email">Email</label> -->
-									<input type="text" id="email" class="form-control" placeholder="Your email address">
+									<input type="text" name="email" id="email" class="form-control" placeholder="Your email address">
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<div class="col-md-12">
 									<!-- <label for="subject">Subject</label> -->
-									<input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
+									<input type="text" name="subject" id="subject" class="form-control" placeholder="Your subject of this message">
 								</div>
 							</div>
 
@@ -37,7 +38,7 @@
 								</div>
 							</div>
 							<div class="form-group">
-								<input type="submit" value="Send Message" class="btn btn-primary">
+								<button  type="button" data-request="ajax-submit" data-target='[role="contact"]' class="btn btn-primary">Send Message</button>
 							</div>
 						</form>		
 					</div>

@@ -6,6 +6,7 @@ use Auth;
 use Hash;
 use Illuminate\Http\Request;
 use App\Models\Sliders;
+use App\Models\Contact;
 use Validations\Validate as Validations;
 use App\Models\generalSettings;
 class HomeController extends Controller
@@ -42,5 +43,22 @@ class HomeController extends Controller
     	$data['view'] ='front.contact';
     	return view('front_home', $data);
     	
+    }
+    public function contactStore(Request $request){
+        $validation = new Validations($request);
+        $validator  = $validation->contact();
+        if ($validator->fails()){
+            $this->message = $validator->errors();
+        }else{
+            $data = new Contact();
+            $data->fill($request->all());
+            $data->save();
+              $this->status   = true;
+              $this->modal    = true;
+              $this->alert    = true;
+              $this->message  = "Thanks For Conatcting us.We will contact you as soon as possible.";
+              $this->redirect = url('contact');
+        } 
+      return $this->populateresponse();
     }
 }
