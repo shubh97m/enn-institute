@@ -19,7 +19,7 @@
 	 	<!-- Bootstrap 3.3.7 -->
 	 	<link rel="stylesheet" href="{{asset('assets/bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
 	  	<!-- Theme style -->
-	  	<link rel="stylesheet" href="{{asset('assets/css/styles.css')}}">
+	  	<link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 	  	
 	  	<link rel="stylesheet" href="{{asset('assets/css/sweetalert2.css')}}">
 	  	<!-- Google Font -->
@@ -31,34 +31,49 @@
 				<div class="box_xs">
 	     	       <form role="login" action="{{url('admin/login')}}"  method="post" data-request="enable-enter">
 	            	{{ csrf_field() }}
-		                <h3 class=" text-center ">Sign in to Proceed</h3>   
-		                <div class="form-row "> 
-		                  <div class="form-group col-md-4  ">
+	            		<div class="formWrapper">
+	            			<div id="jsnn-logo" style="text-align: center;"><a href="javascript:void(0);"><img src="../images/logo/logo.png"></a></div>
+		                <h3 class=" text-center ">Sign in to Proceed</h3> 
+		                <div class="m-b-20 formLogin">  
+			                <div class="input-group">
+							    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+							    <input  id="inputEmail3" type="email" class="form-control" name="email" placeholder="Email">
+							</div>
+						</div>
+		                <!-- <div class="form-row "> 
+		                  <div class="form-group col-md-2  ">
 		                    <label for="inputEmail3" class="control-label whites">Email</label>
 		         		  </div>			
 		                  <div class="form-group col-md-8 ">
 		                    <input type="email" name="email" class=" form-control" id="inputEmail3" placeholder="Email">
 		                   </div> 
-		                 </div>
-		                 <div class="form-row "> 
-		                  <div class="form-group col-md-4 mr-3 text-light">
+		                 </div> -->
+		                <div class="m-b-20 formLogin">
+			                <div class="input-group">
+							    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+							    <input type="password" class="form-control" name="email" placeholder="Password" id="inputPassword3">
+							</div>
+						</div>
+		                 <!-- <div class="form-row "> 
+		                  <div class="form-group col-md-2 mr-3 text-light">
 		                  	<label for="inputPassword3" class=" control-label whites">Password</label>
 		                   </div>
 		                	<div class="form-group col-md-8"> 
 		                    <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password">
 		                  	<input type="hidden" name="not_exists">
 		                   </div> 
-		                 </div>  
+		                 </div>   -->
 		                 <div class="form-row "> 
-		                  <div class="form-group col-md-12 whites">
+		                  <div class="form-group whites">
 		                        <input type ="checkbox"> Remember me
 		                   </div>
 		                  </div>	
-		                 <div class="form-row "> 
-		                  <div class="form-group col-md-12">
-		         			<small><a class="nav-link whites">Forget Password?</a></small>	
-							<button type ="button" class="btn btn-sm login " data-request ="ajax-submit" data-target='[role="login"]' style="background-color: #fc5c65 ;color:whitesmoke;float: right;"> Sign In</button>	
-		                   </div>
+			                 <div class="form-row "> 
+			                  <div class="form-group">
+			         			<small><a class="nav-link whites">Forget Password?</a></small>	
+								<button type ="button" class="btn btn-primary  login" data-request ="ajax-submit" data-target='[role="login"]' style="float: right;font-size: 14px;">Sign In</button>	
+			                   </div>
+		                   	</div>
 		                  </div> 
 		            	</form>
      		         </div>            
