@@ -173,18 +173,17 @@
             <div class="box-header">
               <h3 class="box-title">Child Courses</h3>
               <div class="pull-right">
-                <a href="{!! url('admin/child-courses/addChildCourses') !!}" class="btn btn-primary btn-add"><i class="fa fa-plus"></i> Add Child courses</a>
+                <a href="{!! url('admin/child-courses/add') !!}" class="btn btn-primary btn-add"><i class="fa fa-plus"></i> Add Child courses</a>
               </div>
             </div>
 
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example2" class="table table-bordered table-hover">
-                    <thead>
+                <thead>
                 <tr>
                  <th>S.no</th>
                   <th>Course Name</th>
-                  <th>Course Description</th>
                   <th>Status</th>
                   <th >Actions</th>
                 </tr>
@@ -199,12 +198,11 @@
                 @endphp
                        <tr>
                         <td> {{$i}}</td>
-                        <td> {{$childCourses['title']}}
+                        <td> {{$childCourses['name']}}
                         </td>
                         <td><img src="{{asset('assets/img/Courses/'.$childCourses['image'])}}"
                           class="list_img" / >
                         </td>
-                        <td> {{$childCourses['description']}}</td>
                         <td> {{$childCourses['status']}}</td>
                         <td>
                         <a href="javascript:void(0);" 
@@ -213,20 +211,11 @@
                         data-ask_image="{{url('assets/img/delete.png')}}"
                         data-ask="Would you like to Delete?" title="Delete"><i class="fa fa-fw fa-trash"></i>
                         </a> |
+                         <a href="{{url(sprintf('admin/child-courses/%s/edit',___encrypt($childCourses['id'])))}}"  title="Edit Detail"><i class="fa fa-edit"></i></a> 
                         </td>
                         </tr>
                     @endforeach
             
-{{--                         <td>
-                           <a href="{{url(sprintf('admin/sliders/%s/edit',___encrypt($slider['id'])))}}"  title="Edit Detail"><i class="fa fa-edit"></i></a> |
-                        <a href="javascript:void(0);" 
-                        data-url="{{url(sprintf('admin/sliders/%s/delete',___encrypt($slider['id'])))}}" 
-                        data-request="ajax-confirm"
-                        data-ask_image="{{url('assets/img/delete.png')}}"
-                        data-ask="Would you like to Delete?" title="Delete"><i class="fa fa-fw fa-trash"></i></a> |
-
-                        </td>
- --}}
                 </tbody>
               </table>
             {{-- </div> --}}

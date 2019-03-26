@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
-class staticController extends Controller
+use App\Models\Contact;
+class StaticController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,6 +15,12 @@ class staticController extends Controller
     public function index()
     {
         //
+    }
+     public function contact(Request $request)
+    {
+        $data['view'] = 'admin.contact.list';
+        $data['contact']  = _arefy(Contact::where('status','!=','trashed')->get());
+        return view('admin.home')->with($data);
     }
 
     /**

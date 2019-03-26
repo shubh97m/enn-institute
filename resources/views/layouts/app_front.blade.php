@@ -51,6 +51,7 @@
 	
 	<!-- Modernizr JS -->
 	<script src="{{asset('assets/js/modernizr-2.6.2.min.js')}}"></script>
+	<link rel="stylesheet" href="{{asset('assets/css/sweetalert2.css')}}">
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -210,6 +211,8 @@
 	
 	<script src="{{asset('assets/js/main.js')}}"></script>
 	<script src="{{asset('assets/js/custom.js')}}"></script>
+	<script src="{{asset('assets/js/sweetalert2.js')}}"></script>
+	<script src="{{asset('assets/js/script.js')}}"></script>
 	<script>
 	      $(window).scroll(function () { 
 	       if ($(this).scrollTop() < 20) {
