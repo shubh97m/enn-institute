@@ -644,6 +644,9 @@ ul.rightHeader {
     bottom: 13px;
     font-size: 14px;
 }
+#portfolio .mix {
+    display: none;
+}
 .jsnn-nav ul ul.training{
   display: block;
   width: 200px;
@@ -898,8 +901,8 @@ a.read-more:hover{
   padding: 20px;
 }
 .popupmodal {
-    margin-bottom: 20px;
-    margin-top: 10px;
+    /*margin-bottom: 20px;*/
+    /*margin-top: 10px;*/
 }
 .popupmodal .modal-header {
     border: transparent;
