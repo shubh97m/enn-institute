@@ -28,8 +28,8 @@
 		@endphp
 							<li><i class="fa fa-map-marker" style="color:#67bfff;"></i> 
 							{{$settings['address']}}</li>
-							<li><a href="tel://011-46702233"><i class="fa fa-phone"></i> 011-{{$settings['skype_number']}}</a></li>
-							<li><a href="mailto:info@yoursite.com"><i class="fa fa-envelope"></i> {{$settings['email']}}</a></li>
+							<li><a href="tel://011-{{$settings['skype_number']}}"><i class="fa fa-phone"></i> 011-{{$settings['skype_number']}}</a></li>
+							<li><a href="mailto:{{$settings['email']}}"><i class="fa fa-envelope"></i> {{$settings['email']}}</a></li>
 							<!-- <li><a href="javascript:void(0);"><i class="fa fa-map-marker"></i> yourwebsite.com</a></li> -->
 						</ul>
 					</div>
