@@ -51,6 +51,14 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 		Route::post('/{id}/delete','sliderController@deleteSlider');
 	});
 	
+//******************Partners section*******
+	Route::resource('our-partners','PartnerController');
+	Route::group(['prefix' => 'our-partners'],function(){
+		Route::post('/status', 'PartnerController@changeStatus');
+		Route::post('/{id}/delete','PartnerController@deletePartner');
+	});
+	
+
 //*************General Settings***********
 	Route::get('general-settings','GeneralSetting@settings');
 	Route::post('general-settings','GeneralSetting@changeSetting');

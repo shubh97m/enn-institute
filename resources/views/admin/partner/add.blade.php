@@ -5,10 +5,10 @@
     </div>
     <!-- /.box-header -->
     <div class="box-body">
-      <form role="add-slider" method="POST" action="{!! action('Admin\sliderController@store') !!}">
+      <form role="add-partner" method="POST" action="{!! action('Admin\PartnerController@store') !!}">
         {{csrf_field()}}
         <div class="form-group">
-          <label>Slider Image:</label>
+          <label>Partner's Image:</label>
           <div>
               <input onchange="readURL(this)" id="uploadFile" accept="image/*" name="image" type="file">
           </div>
@@ -17,17 +17,9 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-12">
-          <div class="form-group">
-            <label>Slider Description:</label>
-            <textarea id="description" name="text" rows="6" cols="80"></textarea>
-          </div>
-        </div>
-        </div>
          <div class="box-footer">
-          <a href="{{url('admin/sliders')}}" class="btn btn-default">Cancel</a>
-          <button type="button" data-request="ajax-submit" data-target='[role="add-slider"]' class="btn btn-info pull-right">Submit</button>
+          <a href="{{url('admin/our-partners')}}" class="btn btn-default">Cancel</a>
+          <button type="button" data-request="ajax-submit" data-target='[role="add-partner"]' class="btn btn-info pull-right">Submit</button>
         </div>
       </form>
     </div>

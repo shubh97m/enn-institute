@@ -45,6 +45,7 @@
 			                <div class="input-group">
 							    <div class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></div>
 							    <input type="password" class="form-control" name="password" placeholder="Password" id="inputPassword3">
+							    <input type="hidden" name="not_exists">
 							</div>
 						</div>
 		                 

@@ -6,7 +6,7 @@
     <!-- /.box-header -->
     <div class="box-body">
     <form role="edit-courses" method="POST" action="{{url('admin/sub-courses/edit/'.___encrypt($childcourses['id']))}}">
-        {{csrf_field()}}
+       {{csrf_field()}}
         <div class="col-md-12">
           <div class="form-group">
             <input type="hidden" id="id" name="id" class="form-control" value="{{!empty($childcourses['id'])?$childcourses['id']:''}}">
@@ -24,7 +24,7 @@
                </select>    
             {{-- <textarea id="description" name="" rows="6" cols="80"></textarea> --}}
           </div>
-        </div>
+         </div>
         </div>
         <div class="row">
         <div class="col-md-12">
