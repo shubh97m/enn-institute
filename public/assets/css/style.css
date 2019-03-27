@@ -772,6 +772,7 @@ ul.rightHeader li{
 #jsnn-project .js .animate-box{
   opacity: 1;
 }
+
 .jsnn-nav ul {
   margin: 0;
   align-items: center;
@@ -1337,20 +1338,20 @@ textarea.form-control{
         position: relative;
         }
         #jsnn-hero .flexslider .slides li .overlay {
-          /* position: absolute; */
-          /* top: 0; */
-          /* bottom: 0; */
-          /* left: 0; */
-          /* right: 0; */
-          /* opacity: .2; */
-          /* background: #838686; */
+          position: absolute; 
+          top: 0; 
+          bottom: 0; 
+          left: 0;
+          right: 0;
+           opacity: .2;
+           background: #838686;
           /* Old browsers */
           background: -moz-linear-gradient(45deg, #43DDE6 0%, #9870FC 100%);
           /* FF3.6-15 */
-          /* background: -webkit-linear-gradient(45deg, #43DDE6 0%, #9870FC 100%); */
+          background: -webkit-linear-gradient(45deg, #43DDE6 0%, #9870FC 100%);
           /* Chrome10-25,Safari5.1-6 */
           background: -o-linear-gradient(45deg, #43DDE6 0%, #9870FC 100%);
-          /* background: linear-gradient(45deg, #43DDE6 0%, #9870FC 100%); */
+          background: linear-gradient(45deg, #43DDE6 0%, #9870FC 100%);
           /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#43DDE6', endColorstr='#9870FC',GradientType=1 );
           /* IE6-9 fallback on horizontal gradient */
@@ -2147,11 +2148,25 @@ article {
   .popupmodal .modal-header{
     padding: 5px;
   }
+  .htop-wrap{
+  	display:none;
+  }
 }
 @media screen and (max-width: 420px){
   .popupmodal .modal-dialog {
     width: 300px !important;
   }
+  #jsnn-logo img{
+    width: 82px;
+  }
+  .jsnn-nav #jsnn-logo{
+  	margin: 6px 0px 0;
+  }
+}
+@media screen and (max-width: 340px){
+	#jsnn-logo img {
+	    width: 76px;
+	}
 }
 #jsnn-about {
   position: relative;
