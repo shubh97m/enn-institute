@@ -22,6 +22,7 @@ Route::get('/clear-cache', function() {
 Route::get('/','HomeController@index');
 Route::get('/about-us','HomeController@aboutUs');
 Route::get('/courses','HomeController@courses');
+Route::get('/courses/{id}','HomeController@courseView');
 Route::get('/contact','HomeController@contact');
 Route::post('contact','HomeController@contactStore');
 Route::get('/services','HomeController@services');
@@ -50,6 +51,14 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 		Route::post('/{id}/delete','sliderController@deleteSlider');
 	});
 	
+//******************Partners section*******
+	Route::resource('our-partners','PartnerController');
+	Route::group(['prefix' => 'our-partners'],function(){
+		Route::post('/status', 'PartnerController@changeStatus');
+		Route::post('/{id}/delete','PartnerController@deletePartner');
+	});
+	
+
 //*************General Settings***********
 	Route::get('general-settings','GeneralSetting@settings');
 	Route::post('general-settings','GeneralSetting@changeSetting');

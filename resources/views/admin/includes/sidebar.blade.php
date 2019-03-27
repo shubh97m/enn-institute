@@ -52,8 +52,8 @@
         </li>
          
         <li>
-          <a href="{{url('admin/client')}}">
-            <i class="fa fa-fw fa-sign-out"></i> <span>client</span>
+          <a href="{{url('admin/our-partners')}}">
+            <i class="fa fa-fw fa-sign-out"></i> <span>Our Partners</span>
           </a>
         </li>
          <li>

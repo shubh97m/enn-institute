@@ -38,7 +38,7 @@ class Validate
       'location'          => ['required','string'],
       'password'          => ['required','string','max:50','min:6'],
       'photo'             => ['required','mimes:jpg,jpeg,png'],
-      'course_img'             => ['mimes:jpg,jpeg,png'],
+      'course_img'        => ['mimes:jpg,jpeg,png'],
       'photomimes'        => ['nullable','mimes:jpg,jpeg,png'],
       'photo_null'        => ['nullable'],
       'slug_no_space'     => ['required','alpha_dash','max:255'],
@@ -145,6 +145,21 @@ class Validate
           ]);
           return $validator;     
         }
+
+       public function addPartner($action='add')
+        {
+          $validations = [
+          'image' =>$this->validation('photo'),
+          ];
+
+          $validator = \Validator::make($this->data->all(), $validations,[
+          'image.mimes'        => 'Image should be in .jpg,.jpeg,.png format.',
+          'image.required'     => 'Image is required '
+
+          ]);
+          return $validator;     
+
+        } 
 
         public function contact($action= 'add')
         {

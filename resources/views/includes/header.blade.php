@@ -32,8 +32,10 @@
 						
 					
 						<div class="row">
-							<div class="col-md-2 col-sm-3 col-xs-4">
-								<div id="jsnn-logo"><a href="javascript:void(0);"><img src="{{url('images/logo/logo.png')}}"></a></div>
+
+							<div class="col-xs-2  col-sm-3 col-xs-4">
+								<div id="jsnn-logo"><a href="{{url('/')}}"><img src="{{url('images/logo/logo.png')}}"></a></div>
+
 							</div>
 							<div class="col-md-10 col-sm-9 col-xs-8 text-right menu-1">
 								<ul class="menuListing">
