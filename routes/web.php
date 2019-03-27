@@ -26,6 +26,7 @@ Route::get('/courses/{id}','HomeController@courseView');
 Route::get('/contact','HomeController@contact');
 Route::post('contact','HomeController@contactStore');
 Route::get('/services','HomeController@services');
+Route::get('/search','HomeController@search');
 Route::get('/sub-course/{id}','HomeController@sub_courses');
 Route::get('/ask-a-demo','HomeController@askDemo');
 

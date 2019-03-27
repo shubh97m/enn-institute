@@ -58,10 +58,12 @@
 									
 									
 								</ul>
-								<div class="search-toggle">
-									<input type="text" name="seacrh">
-									<button class="btn-secarch"><i class="fa fa-search"></i></button>
-								</div>
+								<form method="GET" action="{{url('search')}}"> 
+									<div class="search-toggle">
+										<input type="text" name="search" placeholder="search Courses...">
+										<button type="submit" class="btn-secarch"><i class="fa fa-search"></i></button>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>
