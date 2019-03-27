@@ -24,6 +24,7 @@ class HomeController extends Controller
 	{
 		$data['view'] = 'front.index';
         $data['sliders'] =_arefy(Sliders::where('status','!=','trashed')->get());
+        $data['course']      =  _arefy(MainCourses::where('status','=','active')->get());
 		return view('front_home',$data);
 	}
 
@@ -39,6 +40,18 @@ class HomeController extends Controller
     	$data['view'] ='front.course';
     	return view('front_home', $data);
     	
+    }
+    public function courseView(Request $request,$id )
+    {
+        $id = ___decrypt($id);
+        $data['view'] = 'front.course_view';
+        $where = 'course_id='.$id;
+        $data['sub_course']    =  _arefy(SubCourses::list('array',$where));
+        $wherenot = 'id != '.$id;
+        $data['related_courses']    =  _arefy(MainCourses::list('array',$wherenot));
+        $data['course']      =  _arefy(MainCourses::where('id','=',$id)->first());
+
+        return view('front_home',$data);
     }
 
     public function sub_courses(Request $request,$id )

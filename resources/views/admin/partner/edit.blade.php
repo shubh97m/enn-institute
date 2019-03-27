@@ -5,7 +5,7 @@
     </div>
     <!-- /.box-header -->
     <div class="box-body">
-    <form role="edit-slider" method="POST" action="{{url('admin/sliders/'.___encrypt($slider['id'])) }}">
+    <form role="edit-slider" method="POST" action="{{url('admin/sliders/'.___encrypt($slider['id']))}}">
         {{csrf_field()}}
         <input type="hidden" value="PUT" name="_method">
         <div class="col-md-12">
