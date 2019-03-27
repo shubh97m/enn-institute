@@ -43,8 +43,8 @@
 	
 	<!-- Flaticons  -->
 	<!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
-	<link rel="stylesheet" href="{{asset('assets/fonts/flaticon/font/flaticon.css')}}">
-	<!-- <link rel="stylesheet" href="fonts/icomoon/icomoon.css"> -->
+	<link rel="stylesheet" href="{{asset('fonts/flaticon/font/flaticon.css')}}">
+	<!--<link rel="stylesheet" href="{{asset('fonts/icomoon/icomoon.css')}}"> -->
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
