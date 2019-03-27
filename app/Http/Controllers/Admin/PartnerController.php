@@ -83,7 +83,7 @@ class PartnerController extends Controller
     public function edit($id)
     {
      $data['view'] = '/admin/partner/edit';
-             $id = ___decrypt($id);
+    $id = ___decrypt($id);
     $data['partner'] = _arefy(OurPartners::where('id',$id)->first());
        return view('admin.home',$data);
                    
@@ -92,7 +92,6 @@ class PartnerController extends Controller
   
     public function update(Request $request, $id)
     {
-        pp($request->all());
          $id = ___decrypt($id);
         $validation = new Validations($request);
          $validator = $validation->addPartner('edit');
