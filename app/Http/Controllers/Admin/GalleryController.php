@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\GalleryCategory;
-
+use App\Models\Gallery;
 use Validations\Validate as Validations;
 
 class GalleryController extends Controller
@@ -17,8 +17,8 @@ class GalleryController extends Controller
      */
     public function index()
     {
-       $data['view'] ='admin.partner.list';
-       $data['partner']  = _arefy(OurPartners::where('status','!=','trashed')->get());
+       $data['view'] ='admin.gallery.list';
+       $data['gallery']  = _arefy(Gallery::list('array'));
        return view('admin.home')->with($data);
     }
 
@@ -38,7 +38,9 @@ class GalleryController extends Controller
     public function create()
     {
      
-     $data['view'] ='/admin/partner/add';
+     $data['view'] ='/admin/gallery/add';
+       $data['gallery_cat']  = _arefy(GalleryCategory::where('status','!=','trashed')->get());
+
         return view('admin/home', $data);
     }
 
@@ -52,19 +54,20 @@ class GalleryController extends Controller
      public function store(Request $request)
     {
          $validation = new Validations($request);
-        $validator  = $validation->addPartner();
+        $validator  = $validation->addGallery();
         if ($validator->fails())
         {
             $this->message = $validator->errors();
         }
         else
         {
-            $partner = new OurPartners();
-            $partner->fill($request->all());
+            $partner = new Gallery();
 
+            $partner->fill($request->all());
+            $request->request->add(['status'=>'active','created_at'=>date('Y-m-d H:i:s'),'updated_at'=>date('Y-m-d H:i:s')]);
             if ($file = $request->file('image')){
                 $photo_name = time().$request->file('image')->getClientOriginalName();
-                $file->move('assets/img/Partners',$photo_name);
+                $file->move('assets/img/gallery',$photo_name);
                 $partner['image'] = $photo_name;
             }
             $partner->save();
@@ -72,8 +75,8 @@ class GalleryController extends Controller
             $this->status   = true;
             $this->modal    = true;
             $this->alert    = true;
-            $this->message  = "Partners has been Added successfully.";
-            $this->redirect = url('admin/home');
+            $this->message  = "Gallery has been Added successfully.";
+            $this->redirect = url('admin/gallery');
         }
         return $this->populateresponse();
     }
@@ -123,12 +126,46 @@ class GalleryController extends Controller
      */
     public function edit($id)
     {
-     $data['view'] = '/admin/partner/edit';
-             $id = ___decrypt($id);
-    $data['partner'] = _arefy(OurPartners::where('id',$id)->first());
+     $data['view'] = '/admin/gallery/edit';
+    $id = ___decrypt($id);
+    $data['gallery'] = _arefy(Gallery::where('id',$id)->first());
        return view('admin.home',$data);
                    
     }
+
+     public function editCategory($id)
+    {
+        $data['view'] = '/admin/gallery/edit_category';
+        $id = ___decrypt($id);
+        $data['category'] = _arefy(GalleryCategory::where('id',$id)->first());
+        return view('admin.home',$data);
+                   
+    }
+     public function updateCategory(Request $request, $id)
+    {
+      
+        $id = ___decrypt($id);
+        $validation = new Validations($request);
+         $validator = $validation->addGalleryCategory('edit');
+        if($validator->fails()){
+           $this->message =$validator ->errors();     
+        }
+        else
+        {
+            $partner= GalleryCategory::findOrFail($id);
+            $data = $request->all();
+
+          
+            $partner->update($data);
+            $this->status =true;
+            $this->modal =true;
+            $this->alert =true;
+            $this->message ="Gallery Category has been updated successfully ";
+            $this->redirect = url('/admin/gallery-category');
+        }
+         return $this->populateresponse();
+    }
+
 
   
     public function update(Request $request, $id)
