@@ -156,7 +156,7 @@
 						<div class="col-md-3 col-sm-6 aside-stretch text-center animate-box">
 							<div class="counter-entry wow fadeInDown animated">
 								<span class="icon icon-white"><i class="icon-book-open"></i></span>
-								<span class="jsnn-counter js-counter" data-from="0" data-to="1539" data-speed="5000" data-refresh-interval="50"></span>
+								<span class="jsnn-counter js-counter" data-from="0" data-to="{{$total_courses}}" data-speed="5000" data-refresh-interval="50"></span>
 								<span class="jsnn-counter-label">TOTAL COURSES</span>
 							</div>
 						</div>
