@@ -8,8 +8,8 @@
 			   		<div class="overlay"></div>
 			   		<div class="container-fluid">
 			   			<div class="row">
-				   			<div class="col-md-8 col-sm-12 col-md-offset-2 slider-text">
-				   				<div class="slider-text-inner text-center">
+				   			<div class="col-md-8 col-sm-12 slider-text">
+				   				<div class="slider-text-inner">
 				   					<h1>
 				   					{!!$slider['text']!!} 		
 				   					</h1>
@@ -25,8 +25,8 @@
 			   		<div class="overlay"></div>
 			   		<div class="container-fluids">
 			   			<div class="row">
-				   			<div class="col-md-8 col-sm-12 col-md-offset-2 slider-text">
-				   				<div class="slider-text-inner text-center">
+				   			<div class="col-md-8 col-sm-12 slider-text">
+				   				<div class="slider-text-inner">
 				   					<h1><span class="color-span">Education</span> is a tool that helps us get Success</h1>
 				   					
 				   				</div>
@@ -38,7 +38,7 @@
 			   		<div class="overlay"></div>
 			   		<div class="container-fluids">
 			   			<div class="row">
-				   			<div class="col-md-8 col-sm-12 col-md-offset-2 slider-text">
+				   			<div class="col-md-8 col-sm-12 slider-text">
 				   				<div class="slider-text-inner text-center">
 				   					<h1>Best Database Management training institute in 
 									Delhi/NCR
