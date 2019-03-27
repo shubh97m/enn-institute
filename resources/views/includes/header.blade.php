@@ -32,13 +32,10 @@
 						
 					
 						<div class="row">
-<<<<<<< HEAD
-							<div class="col-xs-2">
+
+							<div class="col-xs-2  col-sm-3 col-xs-4">
 								<div id="jsnn-logo"><a href="{{url('/')}}"><img src="{{url('images/logo/logo.png')}}"></a></div>
-=======
-							<div class="col-md-2 col-sm-3 col-xs-4">
-								<div id="jsnn-logo"><a href="javascript:void(0);"><img src="{{url('images/logo/logo.png')}}"></a></div>
->>>>>>> 25977ca5f30c4173452ae2d893dc0418346bff66
+
 							</div>
 							<div class="col-md-10 col-sm-9 col-xs-8 text-right menu-1">
 								<ul class="menuListing">

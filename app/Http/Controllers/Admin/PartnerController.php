@@ -93,7 +93,7 @@ class PartnerController extends Controller
     public function update(Request $request, $id)
     {
         pp($request->all());
-         $id = ___decrypt($id);
+        $id = ___decrypt($id);
         $validation = new Validations($request);
          $validator = $validation->addPartner('edit');
         if($validator->fails()){
