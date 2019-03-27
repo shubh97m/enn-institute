@@ -51,7 +51,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 	});
 	
 //******************Partners section*******
-	Route::resource('our-partners', 'PartnerController');
+	Route::resource('our-partners','PartnerController');
 	Route::group(['prefix' => 'our-partners'],function(){
 		Route::post('/status', 'PartnerController@changeStatus');
 		Route::post('/{id}/delete','PartnerController@deletePartner');

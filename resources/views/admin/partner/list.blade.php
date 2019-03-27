@@ -15,9 +15,10 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Sliders List</h3>
+              <h3 class="box-title">Partners List</h3>
               <div class="pull-right">
-                <a href="{!! url('admin/sliders/create') !!}" class="btn btn-primary btn-add"><i class="fa fa-plus"></i> Add Slider</a>
+                <a href="{!! url('admin/our-partners/create') !!}" class="btn btn-primary btn-add"><i class="fa fa-plus"></i> Add Partner
+                </a>
               </div>
             </div>
 
@@ -27,8 +28,7 @@
                 <thead>
                 <tr>
                  <th>S.no</th>
-                  <th>Image</th>
-                  <th>Slider Text</th>
+                  <th>Partner Image</th>
                   <th>Status</th>
                   <th >Actions</th>
                 </tr>
@@ -37,22 +37,21 @@
                @php  
                  $i=0;
                 @endphp
-                @foreach($sliders as $slider)
+                @foreach($partner as $partners)
                 @php
                   $i++;
                 @endphp
                       <tr>
                         <td> {{$i}}</td>
                         <td> 
-                          <img src="{{asset('assets/img/Slider/'.$slider['image'])}}"
+                          <img src="{{asset('assets/img/Partners/'.$partners['image'])}}"
                           class="list_img" / >
                         </td>
-                        <td>{!!$slider['text']!!}</td>
-                        <td> {{$slider['status']}}</td>
+                        <td> {{$partners['status']}}</td>
                         <td>
-                           <a href="{{url(sprintf('admin/sliders/%s/edit',___encrypt($slider['id'])))}}"  title="Edit Detail"><i class="fa fa-edit"></i></a> |
+                           <a href="{{url(sprintf('admin/our-partners/%s/edit',___encrypt($partners['id'])))}}"  title="Edit Detail"><i class="fa fa-edit"></i></a> |
                         <a href="javascript:void(0);" 
-                        data-url="{{url(sprintf('admin/sliders/%s/delete',___encrypt($slider['id'])))}}" 
+                        data-url="{{url(sprintf('admin/our-partners/%s/delete',___encrypt($partners['id'])))}}" 
                         data-request="ajax-confirm"
                         data-ask_image="{{url('assets/img/delete.png')}}"
                         data-ask="Would you like to Delete?" title="Delete"><i class="fa fa-fw fa-trash"></i></a> |

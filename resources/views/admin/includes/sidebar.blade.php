@@ -52,7 +52,7 @@
         </li>
          
         <li>
-          <a href="{{url('admin/partners')}}">
+          <a href="{{url('admin/our-partners')}}">
             <i class="fa fa-fw fa-sign-out"></i> <span>Our Partners</span>
           </a>
         </li>
