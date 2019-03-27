@@ -178,6 +178,15 @@ class Validate
           'image' =>$this->validation('photo'),
           
           ];
+          if($action=='edit'){
+            $validations=[];
+            $validations = [
+               'gallery_category_id' =>$this->validation('id'),
+              'title' =>$this->validation('name'),
+              'image' =>$this->validation('photomimes'),
+              
+              ];
+          }
 
           $validator = \Validator::make($this->data->all(), $validations,[
           'image.mimes'        => 'Image should be in .jpg,.jpeg,.png format.',

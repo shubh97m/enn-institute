@@ -10,7 +10,7 @@ class Gallery extends Model
 	protected $fillable 	= ['id', 'title', 'image','gallery_category_id','status',  'created_at',  'updated_at'];
 
     public function category(){
-        return $this->hasOne('\App\Models\GalleryCategory','id','category_id');
+        return $this->hasOne('\App\Models\GalleryCategory','id','gallery_category_id');
     } 
 	public static function list($fetch='array',$where='',$keys=['*'],$order='id-desc'){
 		

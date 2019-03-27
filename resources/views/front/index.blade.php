@@ -200,53 +200,60 @@
 		            <div class="col-md-12">
 		             
 		              <div class="controls text-center">
-		                <a class="filter active btn btn-common" data-filter="all">
+		                {{-- <a class="filter active btn btn-common" data-filter=".all">
 		                  All 
-		                </a>
-		                <a class="filter btn btn-common" data-filter=".academy">
-		                  Academy 
-		                </a>
-		                <a class="filter btn btn-common" data-filter=".students">
-		                  Students
-		                </a>
-		                <a class="filter btn btn-common" data-filter=".awards">
-		                  Awards 
-		                </a>
+		                </a> --}}
+		                @if(!empty($gallery_category))
+			                @foreach($gallery_category as $cat)
+				                <a class="filter btn btn-common" data-filter=".{{$cat['id']}}">
+				                  Academy 
+				                </a>
+			                @endforeach
+		                @endif
+		                
 		              </div>
 		              
 		            </div>
 
-		            <div id="portfolio" class="row wow fadeInDown" data-wow-delay="0.4s">
-		              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix students awards">
-		                <div class="portfolio-item">
-		                  <div class="shot-item">
-		                    <img src="images/gallery/gallery.jpg" alt="projects"/>  
-		                    <div class="overlay">
-		                      <div class="icons">
-		                        <a class="lightbox preview" href="images/gallery/gallery.jpg">
-		                          <i class="fa fa-eye"></i>
-		                        </a>
-		                      </div>
-		                    </div>
-		                  </div>               
-		                </div>
-		              </div>
-	             
-		              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix students">
-		                <div class="portfolio-item">
-		                  <div class="shot-item">
-		                    <img src="images/gallery/gallery1.jpg" alt="gallery"/> 
-		                    <div class="overlay">
-		                      <div class="icons">
-		                        <a class="lightbox preview" href="images/gallery/gallery1.jpg">
-		                          <i class="fa fa-eye"></i>
-		                        </a>
-		                      </div>
-		                    </div>
-		                  </div>               
-		                </div>
-		              </div>
-		              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix students academy">
+		            {{-- @foreach($gallery as $gal)
+	                	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix students all">
+			                <div class="portfolio-item">
+			                  <div class="shot-item">
+			                    <img src="{{url('assets/img/gallery/'.$gal['image'])}}" alt="gallery" /> 
+			                    <div class="overlay">
+			                      <div class="icons">
+			                        <a class="lightbox preview" href="images/gallery/gallery2.jpg">
+			                          <i class="fa fa-eye"></i>
+			                        </a>
+			                      </div>
+			                    </div>
+			                  </div>               
+			                </div>
+			            </div>
+			        @endforeach --}}
+
+		              @if(!empty($gallery_category))
+			                @foreach($gallery_category as $cat)
+				                @foreach($cat['gallery'] as $gal)
+				                	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix students {{$cat['id']}}">
+						                <div class="portfolio-item">
+						                  <div class="shot-item">
+						                    <img src="{{url('assets/img/gallery/'.$gal['image'])}}" alt="gallery" /> 
+						                    <div class="overlay">
+						                      <div class="icons">
+						                        <a class="lightbox preview" href="images/gallery/gallery2.jpg">
+						                          <i class="fa fa-eye"></i>
+						                        </a>
+						                      </div>
+						                    </div>
+						                  </div>               
+						                </div>
+						            </div>
+			                	@endforeach
+			                @endforeach
+		                @endif
+		                
+		              {{-- <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix students academy">
 		                <div class="portfolio-item">
 		                  <div class="shot-item">
 		                    <img src="images/gallery/gallery2.jpg" alt="gallery" /> 
@@ -287,8 +294,8 @@
 		                    </div>
 		                  </div>               
 		                </div>
-		              </div>
-		              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 students">
+		              </div> --}}
+		              {{-- <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 students">
 		                <div class="portfolio-item">
 		                  <div class="shot-item">
 		                    <img src="images/gallery/gallery5.jpg" alt="projects"/>
@@ -301,7 +308,7 @@
 		                    </div>
 		                  </div>               
 		                </div>
-		              </div>
+		              </div> --}}
 		            </div>
 		          </div>
 		        </div>

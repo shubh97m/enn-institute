@@ -5,14 +5,16 @@
     </div>
     <!-- /.box-header -->
     <div class="box-body">
-      <form role="add-partner" method="POST" action="{!! action('Admin\GalleryController@store') !!}">
+      <form role="add-partner" method="POST" action="{{url('admin/gallery/'.___encrypt($gallery['id'])) }}">
+
         {{csrf_field()}}
+        <input type="hidden" name="_method" value="PUT">
          <div class="form-group">
             <label>Category Name:</label>
                <select class="form-control" name="gallery_category_id" id="gallery_category_id">
                  <option value="">Select Category</option>
                  @foreach($gallery_cat as $maincourses)
-                  <option value="{{!empty($maincourses['id'])?$maincourses['id']:''}}">{{!empty($maincourses['name'])?$maincourses['name']:''}}</option>
+                  <option @if(!empty($gallery['gallery_category_id']) && $gallery['gallery_category_id']==$maincourses['id']) selected @endif  value="{{!empty($maincourses['id'])?$maincourses['id']:''}}">{{!empty($maincourses['name'])?$maincourses['name']:''}}</option>
                  @endforeach
                </select>    
             {{-- <textarea id="description" name="" rows="6" cols="80"></textarea> --}}
@@ -20,7 +22,7 @@
             <div class="form-group">
               <label>Title:</label>
               <input type="text" class="form-control" placeholder="Enter Title..." 
-              name="title">    
+              name="title" value="{{!empty($gallery['title'])?$gallery['title']:''}}">    
             {{-- <textarea id="description" name="" rows="6" cols="80"></textarea> --}}
           </div>
          
@@ -28,6 +30,9 @@
           <label>Gallery's Image:</label>
           <div>
               <input onchange="readURL(this)" id="uploadFile" accept="image/*" name="image" type="file">
+          </div>
+           <div>
+              <img style="max-width: 250px;" src="{{asset('assets/img/gallery/'.$gallery['image'])}}" id="adminimg" alt="No Featured Image Added" class="list_mg">
           </div>
           <div>
             <img style="max-width: 250px;" src="{{asset('assets/img/avatar.png')}}" id="adminimg" alt="No Image Added">

@@ -128,6 +128,7 @@ class GalleryController extends Controller
     {
      $data['view'] = '/admin/gallery/edit';
     $id = ___decrypt($id);
+      $data['gallery_cat']  = _arefy(GalleryCategory::where('status','!=','trashed')->get());
     $data['gallery'] = _arefy(Gallery::where('id',$id)->first());
        return view('admin.home',$data);
                    
@@ -170,30 +171,30 @@ class GalleryController extends Controller
   
     public function update(Request $request, $id)
     {
-        pp($request->all());
+     
         $id = ___decrypt($id);
         $validation = new Validations($request);
-         $validator = $validation->addPartner('edit');
+         $validator = $validation->addGallery('edit');
         if($validator->fails()){
            $this->message =$validator ->errors();     
         }
         else
         {
-            $partner= OurPartners::findOrFail($id);
+            $partner= Gallery::findOrFail($id);
             $data = $request->all();
 
             if($file =$request ->file('image'))
             {
                 $photo_name =str_random(3).$request->file('image')->getClientOriginalName();
-                $file->move('assets/img/Partners',$photo_name);
+                $file->move('assets/img/gallery',$photo_name);
                 $data['image']=$photo_name;
             }
             $partner->update($data);
             $this->status =true;
             $this->modal =true;
             $this->alert =true;
-            $this->message ="Partner has been updated successfully ";
-            $this->redirect = url('/admin/our-partners');
+            $this->message ="Gallery has been updated successfully ";
+            $this->redirect = url('/admin/gallery');
         }
          return $this->populateresponse();
     }
