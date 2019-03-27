@@ -1,7 +1,7 @@
 <div class="content-wrapper">
   <div class="box box-warning">
     <div class="box-header with-border">
-      <h3 class="box-title">Add Slider</h3>
+      <h3 class="box-title">Add Partner</h3>
     </div>
     <!-- /.box-header -->
     <div class="box-body">
