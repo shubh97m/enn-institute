@@ -33,7 +33,8 @@
 					
 						<div class="row">
 
-							<div class="col-xs-2 col-sm-3 col-xs-4">
+							<div class="col-md-2 col-sm-3 col-xs-4">
+
 								<div id="jsnn-logo"><a href="{{url('/')}}"><img src="{{url('images/logo/logo.png')}}"></a></div>
 
 							</div>
