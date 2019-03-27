@@ -9,6 +9,7 @@ use App\Models\Sliders;
 use App\Models\Contact;
 use App\Models\MainCourses;
 use App\Models\SubCourses;
+use App\Models\OurPartners;
 use App\Models\ChildCourses;
 use Validations\Validate as Validations;
 use App\Models\generalSettings;
@@ -24,12 +25,22 @@ class HomeController extends Controller
 	public function index()
 	{
 		$data['view'] = 'front.index';
-        $data['sliders'] =_arefy(Sliders::where('status','!=','trashed')->get());
-        $data['course']      =  _arefy(MainCourses::where('status','=','active')->get());
-        $data['total_courses']      =  MainCourses::list('count')+SubCourses::list('count')+ChildCourses::list('count');
+        $data['sliders']        =_arefy(Sliders::where('status','!=','
+                                    trashed')->get());
+       $data['partner']         = _arefy(OurPartners::where('status','!=','
+                                    trashed')->get()); 
+        $data['course']         =  _arefy(MainCourses::where('status','=','
+                                    active')->get());
+        $data['total_courses']  =  MainCourses::list('count')+SubCourses::list('count')+ChildCourses::list('count');
 
 		return view('front_home',$data);
 	}
+    //********* ********
+public function askDemo()
+{
+    $data['view']='front.askDemo';
+    return view('front_home',$data);
+}
 
 	//********* aBOUT US********
     public function aboutUs(){
