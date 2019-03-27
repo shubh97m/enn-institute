@@ -5,7 +5,7 @@
     </div>
     <!-- /.box-header -->
     <div class="box-body">
-      <form role="add-mainCourses" method="POST" action="{{url('admin/main-courses/add')}}"">
+      <form role="add-mainCourses" method="POST" action="{{url('admin/main-courses/add')}}">
         {{csrf_field()}}
     
         <div class="form-row">
@@ -16,7 +16,7 @@
             </div>
           </div>
        <div class="form-group">
-              <label>Course image:</label>
+              <label>Course Image:</label>
               <div>
                 <input onchange="readURL(this)" id="uploadFile" accept="image/*" name="image" type="file">
               </div>

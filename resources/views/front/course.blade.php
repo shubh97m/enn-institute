@@ -18,9 +18,9 @@
 										<img src="{{url('assets/img/Courses')}}/{{$courses['image']}}" alt="course image" style="height:70px;width:60px">
 									</span>
 									<div class="desc">
-										<h3><a href="{{url('sub-course/'.___encrypt($courses['id']))}}">{{$courses['name']}}</a></h3>
+										<h3><a href="{{url('courses/'.___encrypt($courses['id']))}}">{{$courses['name']}}</a></h3>
 										<p>{!! str_limit(strip_tags($courses['description']),30) !!}</p>
-										 <a href="javascript:void(0);" class="read-more">Read More</a> 
+										 <a href="{{url('courses/'.___encrypt($courses['id']))}}" class="read-more">Read More</a> 
 									</div>
 								</div>
 							</div>

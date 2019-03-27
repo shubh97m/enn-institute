@@ -10,6 +10,7 @@ use App\Models\Contact;
 use App\Models\MainCourses;
 use App\Models\SubCourses;
 use App\Models\OurPartners;
+use App\Models\ChildCourses;
 use Validations\Validate as Validations;
 use App\Models\generalSettings;
 class HomeController extends Controller
@@ -26,6 +27,9 @@ class HomeController extends Controller
 		$data['view'] = 'front.index';
         $data['sliders'] =_arefy(Sliders::where('status','!=','trashed')->get());
        $data['partner']  = _arefy(OurPartners::where('status','!=','trashed')->get()); 
+        $data['course']      =  _arefy(MainCourses::where('status','=','active')->get());
+        $data['total_courses']      =  MainCourses::list('count')+SubCourses::list('count')+ChildCourses::list('count');
+
 		return view('front_home',$data);
 	}
 
@@ -41,6 +45,18 @@ class HomeController extends Controller
     	$data['view'] ='front.course';
     	return view('front_home', $data);
     	
+    }
+    public function courseView(Request $request,$id )
+    {
+        $id = ___decrypt($id);
+        $data['view'] = 'front.course_view';
+        $where = 'course_id='.$id;
+        $data['sub_course']    =  _arefy(SubCourses::list('array',$where));
+        $wherenot = 'id != '.$id;
+        $data['related_courses']    =  _arefy(MainCourses::list('array',$wherenot));
+        $data['course']      =  _arefy(MainCourses::where('id','=',$id)->first());
+
+        return view('front_home',$data);
     }
 
     public function sub_courses(Request $request,$id )

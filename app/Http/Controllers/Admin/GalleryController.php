@@ -4,11 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\OurPartners;
+use App\Models\GalleryCategory;
 
 use Validations\Validate as Validations;
 
-class PartnerController extends Controller
+class GalleryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -22,6 +22,14 @@ class PartnerController extends Controller
        return view('admin.home')->with($data);
     }
 
+    public function list()
+    {
+       $data['view'] ='admin.gallery.category_list';
+       $data['gallery_cat']  = _arefy(GalleryCategory::where('status','!=','trashed')->get());
+       return view('admin.home')->with($data);
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -31,6 +39,13 @@ class PartnerController extends Controller
     {
      
      $data['view'] ='/admin/partner/add';
+        return view('admin/home', $data);
+    }
+
+    public function addCategory()
+    {
+     
+     $data['view'] ='/admin/gallery/add_category';
         return view('admin/home', $data);
     }
 
@@ -63,6 +78,32 @@ class PartnerController extends Controller
         return $this->populateresponse();
     }
 
+    public function storeCategory(Request $request)
+    {
+         $validation = new Validations($request);
+        $validator  = $validation->addGalleryCategory();
+        if ($validator->fails())
+        {
+            $this->message = $validator->errors();
+        }
+        else
+        {
+            $partner = new GalleryCategory();
+            $request->request->add(['status'=>'active','created_at'=>date('Y-m-d H:i:s'),'updated_at'=>date('Y-m-d H:i:s')]);
+            $partner->fill($request->all());
+
+            
+            $partner->save();
+
+            $this->status   = true;
+            $this->modal    = true;
+            $this->alert    = true;
+            $this->message  = "Category for Gallery has been Added successfully.";
+            $this->redirect = url('admin/gallery-category');
+        }
+        return $this->populateresponse();
+    }
+
     /**
      * Display the specified resource.
      *
@@ -83,7 +124,7 @@ class PartnerController extends Controller
     public function edit($id)
     {
      $data['view'] = '/admin/partner/edit';
-    $id = ___decrypt($id);
+             $id = ___decrypt($id);
     $data['partner'] = _arefy(OurPartners::where('id',$id)->first());
        return view('admin.home',$data);
                    
@@ -92,8 +133,8 @@ class PartnerController extends Controller
   
     public function update(Request $request, $id)
     {
-         $id = ___decrypt($id);
-      
+        pp($request->all());
+        $id = ___decrypt($id);
         $validation = new Validations($request);
          $validator = $validation->addPartner('edit');
         if($validator->fails()){

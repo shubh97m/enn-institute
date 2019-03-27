@@ -13,9 +13,9 @@
 					<div class="col-md-3 jsnn-widget">
 					<h4>Useful Links</h4>
 						<ul class="jsnn-footer-links">
-							<li><a href="javascript:void(0);"><i class="fa fa-check"></i>About Us</a></li>
+							<li><a href="{{url('about-us')}}"><i class="fa fa-check"></i>About Us</a></li>
 							<li><a href="javascript:void(0);"><i class="fa fa-check"></i> FAQ</a></li>
-							<li><a href="javascript:void(0);"><i class="fa fa-check"></i>Conatct Us</a></li>
+							<li><a href="{{url('contact')}}"><i class="fa fa-check"></i>Contact Us</a></li>
 							<li><a href="javascript:void(0);"><i class="fa fa-check"></i> Terms & Conditions</a></li>
 						</ul>
 					</div>
@@ -28,8 +28,8 @@
 		@endphp
 							<li><i class="fa fa-map-marker" style="color:#67bfff;"></i> 
 							{{$settings['address']}}</li>
-							<li><a href="tel://011-46702233"><i class="fa fa-phone"></i> 011-{{$settings['skype_number']}}</a></li>
-							<li><a href="mailto:info@yoursite.com"><i class="fa fa-envelope"></i> {{$settings['email']}}</a></li>
+							<li><a href="tel://011-{{$settings['skype_number']}}"><i class="fa fa-phone"></i> 011-{{$settings['skype_number']}}</a></li>
+							<li><a href="mailto:{{$settings['email']}}"><i class="fa fa-envelope"></i> {{$settings['email']}}</a></li>
 							<!-- <li><a href="javascript:void(0);"><i class="fa fa-map-marker"></i> yourwebsite.com</a></li> -->
 						</ul>
 					</div>

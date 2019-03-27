@@ -56,6 +56,12 @@
             <i class="fa fa-fw fa-sign-out"></i> <span>Our Partners</span>
           </a>
         </li>
+
+         <li>
+          <a href="{{url('admin/gallery-category')}}">
+            <i class="fa fa-fw fa-sign-out"></i> <span>Gallery Category</span>
+          </a>
+        </li>
          <li>
           <a href="{{url('admin/logout')}}">
             <i class="fa fa-fw fa-sign-out"></i> <span>Logout</span>

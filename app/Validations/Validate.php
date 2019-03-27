@@ -61,6 +61,15 @@ class Validate
         ]);
         return $validator;    
   }
+  
+  public function addGalleryCategory(){
+        $validations = [
+      'name'                    => $this->validation('name'),
+     
+          ];
+        $validator = \Validator::make($this->data->all(), $validations,[]);
+        return $validator;    
+  }
   public function addSlider($action='add')
   {
     $validations = [

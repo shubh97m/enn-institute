@@ -4,7 +4,7 @@
 				<ul class="slides">
 					@foreach($sliders as $slider)
 									
-			   	<li style="background-image: url('{{asset('assets/img/Slider/'.$slider['image'])}}')"">
+			   	<li style="background-image: url('{{asset('assets/img/Slider/'.$slider['image'])}}')">
 			   		<div class="overlay"></div>
 			   		<div class="container-fluid">
 			   			<div class="row">
@@ -129,78 +129,20 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-4 text-center animate-box">
-							<div class="sub-courses">
-								<span class="icon">
-									<i class="icon-graduation"></i>
-								</span>
-								<div class="desc">
-									<h3>SAP Training</h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
-									<!-- <a href="javascript:void(0);" class="read-more">Read More</a> -->
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="sub-courses">
-								<span class="icon">
-									<i class="icon-graduation"></i>
-								</span>
-								<div class="desc">
-									<h3>Ethical Hacking</h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
-									<!-- <a href="javascript:void(0);" class="read-more">Read More</a> -->
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="sub-courses">
-								<span class="icon">
-									<i class="icon-graduation"></i>
-								</span>
-								<div class="desc">
-									<h3>Web Designing</h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
-									<!-- <a href="javascript:void(0);" class="read-more">Read More</a> -->
+						@foreach($course as $courses)
+							<div class="col-md-4 text-center animate-box">
+								<div class="sub-courses">
+									<span class="icon">
+										<img src="{{url('assets/img/Courses')}}/{{$courses['image']}}" alt="course image" style="height:70px;width:60px">
+									</span>
+									<div class="desc">
+										<h3><a href="{{url('courses/'.___encrypt($courses['id']))}}">{{$courses['name']}}</a></h3>
+										<p>{!! str_limit(strip_tags($courses['description']),30) !!}</p>
+										 <a href="{{url('courses/'.___encrypt($courses['id']))}}" class="read-more">Read More</a> 
 									</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="sub-courses">
-								<span class="icon">
-									<i class="icon-graduation"></i>
-								</span>
-								<div class="desc">
-									<h3>Java Training</h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
-									<!-- <a href="javascript:void(0);" class="read-more">Read More</a> -->
 								</div>
 							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="sub-courses">
-								<span class="icon">
-									<i class="icon-graduation"></i>
-								</span>
-								<div class="desc">
-									<h3>Python Training</h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
-									<!-- <a href="javascript:void(0);" class="read-more">Read More</a> -->
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="sub-courses">
-								<span class="icon">
-									<i class="icon-graduation"></i>
-								</span>
-								<div class="desc">
-									<h3>Oracle Training</h3>
-									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
-									<!-- <a href="javascript:void(0);" class="read-more">Read More</a> -->
-								</div>
-							</div>
-						</div>
+						@endforeach
 					</div>
 				</div>
 			</div>
@@ -214,7 +156,7 @@
 						<div class="col-md-3 col-sm-6 aside-stretch text-center animate-box">
 							<div class="counter-entry wow fadeInDown animated">
 								<span class="icon icon-white"><i class="icon-book-open"></i></span>
-								<span class="jsnn-counter js-counter" data-from="0" data-to="1539" data-speed="5000" data-refresh-interval="50"></span>
+								<span class="jsnn-counter js-counter" data-from="0" data-to="{{$total_courses}}" data-speed="5000" data-refresh-interval="50"></span>
 								<span class="jsnn-counter-label">TOTAL COURSES</span>
 							</div>
 						</div>

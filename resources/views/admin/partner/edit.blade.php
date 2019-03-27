@@ -7,6 +7,7 @@
     <div class="box-body">
  <form role="edit-partner" method="POST" action="{{url('admin/our-partners/'.___encrypt($partner['id'])) }}">
   {{csrf_field()}}
+
   <input type="hidden" name="_method" value="PUT">
            <div class="form-group">
           <label>Partner's Image:</label>

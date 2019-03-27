@@ -18,7 +18,7 @@
 									<!-- <a href="#modal-apply-form" data-toggle="modal" class="apply-now quadrat">Apply Now</a> -->
 								<!-- </div> -->
 							<!--</li>-->
-							<li class="rightListli boxli"><a href="javascript:void(0);"><i class="fa fa-caret-square-o-up" style="padding-right:5px;"></i>Ask a Demo</a></li>
+							<li class="rightListli boxli"><a href=""><i class="fa fa-caret-square-o-up" style="padding-right:5px;"></i>Ask a Demo</a></li>
 							<li class="rightListli boxli1"><a href="tel:7060471862"><img src="{{url('images/phone.gif')}}" style="padding-right:5px;height: 20px;"></i>Get a Call Back</a></li>
 						</ul>
 					</div>

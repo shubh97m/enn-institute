@@ -22,6 +22,7 @@ Route::get('/clear-cache', function() {
 Route::get('/','HomeController@index');
 Route::get('/about-us','HomeController@aboutUs');
 Route::get('/courses','HomeController@courses');
+Route::get('/courses/{id}','HomeController@courseView');
 Route::get('/contact','HomeController@contact');
 Route::post('contact','HomeController@contactStore');
 Route::get('/services','HomeController@services');
@@ -83,6 +84,18 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 	Route::post('/{id}/delete','CourseController@deleteChildCourses');
 	Route::get('child-courses/{id}/edit','CourseController@childcourseEdit');
 	Route::post('child-courses/{id}/edit','CourseController@childCourseUpdate');
+
+	Route::resource('gallery','GalleryController');
+	Route::group(['prefix' => 'gallery'],function(){
+		Route::post('/status', 'GalleryController@changeStatus');
+	
+	});
+	Route::get('gallery-category','GalleryController@list');
+	Route::get('gallery-category/create','GalleryController@addCategory');
+	Route::get('gallery-category/edit/{id}','GalleryController@editCategory');
+	Route::post('gallery-category/store','GalleryController@storeCategory');
+	Route::post('gallery-category/update/{id}','GalleryController@updateCategory');
+
 
 
 });
