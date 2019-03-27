@@ -36,7 +36,7 @@
 		                <h3 class=" text-center ">Sign in to Proceed</h3> 
 		                <div class="m-b-20 formLogin">  
 			                <div class="input-group">
-							    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+							    <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
 							    <input  id="inputEmail3" type="email" class="form-control" name="email" placeholder="Email">
 							</div>
 						</div>
@@ -50,7 +50,7 @@
 		                 </div> -->
 		                <div class="m-b-20 formLogin">
 			                <div class="input-group">
-							    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+							    <div class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></div>
 							    <input type="password" class="form-control" name="email" placeholder="Password" id="inputPassword3">
 							</div>
 						</div>
