@@ -36,11 +36,30 @@ class HomeController extends Controller
 		return view('front_home',$data);
 	}
     //********* ********
-public function askDemo()
-{
-    $data['view']='front.askDemo';
-    return view('front_home',$data);
-}
+    public function askDemo()
+    {
+        $data['view']='front.askDemo';
+        return view('front_home',$data);
+    }
+    public function askDemoStore(Request $request)
+    {
+     $validation = new Validations($request);
+        $validator  = $validation->askDemo();
+        if ($validator->fails()){
+            $this->message = $validator->errors();
+        }else{
+            $data = new askDemo();
+            $data->fill($request->all());
+            $data->save();
+              $this->status   = true;
+              $this->modal    = true;
+              $this->alert    = true;
+              $this->message  = "Thank you, our team will respond you as soon as possible.";
+              $this->redirect = url('index');
+        } 
+      return $this->populateresponse();
+    }
+    }
 
 	//********* aBOUT US********
     public function aboutUs(){
