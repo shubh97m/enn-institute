@@ -37,32 +37,17 @@
 		                <div class="m-b-20 formLogin">  
 			                <div class="input-group">
 							    <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
-							    <input  id="inputEmail3" type="email" class="form-control" name="email" placeholder="Email">
+							    <input  id="inputEmail3" type="text" class="form-control" name="email" placeholder="Email">
 							</div>
 						</div>
-		                <!-- <div class="form-row "> 
-		                  <div class="form-group col-md-2  ">
-		                    <label for="inputEmail3" class="control-label whites">Email</label>
-		         		  </div>			
-		                  <div class="form-group col-md-8 ">
-		                    <input type="email" name="email" class=" form-control" id="inputEmail3" placeholder="Email">
-		                   </div> 
-		                 </div> -->
+		               
 		                <div class="m-b-20 formLogin">
 			                <div class="input-group">
 							    <div class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></div>
-							    <input type="password" class="form-control" name="email" placeholder="Password" id="inputPassword3">
+							    <input type="password" class="form-control" name="password" placeholder="Password" id="inputPassword3">
 							</div>
 						</div>
-		                 <!-- <div class="form-row "> 
-		                  <div class="form-group col-md-2 mr-3 text-light">
-		                  	<label for="inputPassword3" class=" control-label whites">Password</label>
-		                   </div>
-		                	<div class="form-group col-md-8"> 
-		                    <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password">
-		                  	<input type="hidden" name="not_exists">
-		                   </div> 
-		                 </div>   -->
+		                 
 		                 <div class="form-row "> 
 		                  <div class="form-group whites">
 		                        <input type ="checkbox"> Remember me
