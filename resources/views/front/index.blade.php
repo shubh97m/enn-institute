@@ -156,7 +156,7 @@
 						<div class="col-md-3 col-sm-6 aside-stretch text-center animate-box">
 							<div class="counter-entry wow fadeInDown animated">
 								<span class="icon icon-white"><i class="icon-book-open"></i></span>
-								<span class="jsnn-counter js-counter" data-from="0" data-to="1539" data-speed="5000" data-refresh-interval="50"></span>
+								<span class="jsnn-counter js-counter" data-from="0" data-to="{{$total_courses}}" data-speed="5000" data-refresh-interval="50"></span>
 								<span class="jsnn-counter-label">TOTAL COURSES</span>
 							</div>
 						</div>
@@ -323,12 +323,22 @@
 						<div class="about-flex">
 							<!-- <div class="owl-carousel" id="our-partners"> -->
 							<marquee behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();" direction="left">
+								@if(!empty($partner))
+								@foreach($partner as $partners)
 								<div class="item">
 									<div class="partners">
-										<img src="images/partner.png" alt="partner">
+										<img src="{{url('assets/img/Partners/'.$partners['image'])}}" height="130" alt="partner">
 									</div>
 								</div>
-								<div class="item">
+								@endforeach
+								@else
+									<div class="item">
+										<div class="partners">
+											No Record Found.
+										</div>
+									</div>
+								@endif
+								{{-- <div class="item">
 									<img src="images/partner1.png" alt="partner">
 								</div>
 								<div class="item">
@@ -336,14 +346,8 @@
 								</div>
 								<div class="item">
 									<img src="images/partner3.png" alt="partner">
-								</div>
-								<div class="item">
-									<img src="images/partner4.png" alt="partner">
-								</div>
-								<div class="item">
-									<img src="images/partner5.png" alt="partner">
-								</div>
-							<!-- </div> -->
+								</div> --}}
+							
 							</marquee>
 						</div>
 					</div>

@@ -85,5 +85,17 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 	Route::get('child-courses/{id}/edit','CourseController@childcourseEdit');
 	Route::post('child-courses/{id}/edit','CourseController@childCourseUpdate');
 
+	Route::resource('gallery','GalleryController');
+	Route::group(['prefix' => 'gallery'],function(){
+		Route::post('/status', 'GalleryController@changeStatus');
+	
+	});
+	Route::get('gallery-category','GalleryController@list');
+	Route::get('gallery-category/create','GalleryController@addCategory');
+	Route::get('gallery-category/edit/{id}','GalleryController@editCategory');
+	Route::post('gallery-category/store','GalleryController@storeCategory');
+	Route::post('gallery-category/update/{id}','GalleryController@updateCategory');
+
+
 
 });

@@ -18,7 +18,7 @@
 									<!-- <a href="#modal-apply-form" data-toggle="modal" class="apply-now quadrat">Apply Now</a> -->
 								<!-- </div> -->
 							<!--</li>-->
-							<li class="rightListli boxli"><a href="javascript:void(0);"><i class="fa fa-caret-square-o-up" style="padding-right:5px;"></i>Ask a Demo</a></li>
+							<li class="rightListli boxli"><a href=""><i class="fa fa-caret-square-o-up" style="padding-right:5px;"></i>Ask a Demo</a></li>
 							<li class="rightListli boxli1"><a href="tel:7060471862"><img src="{{url('images/phone.gif')}}" style="padding-right:5px;height: 20px;"></i>Get a Call Back</a></li>
 						</ul>
 					</div>
@@ -32,10 +32,8 @@
 						
 					
 						<div class="row">
-
 							<div class="col-md-2 col-sm-3 col-xs-4">
-								<div id="jsnn-logo"><a href="{{url('/')}}"><img src="{{url('images/logo/logo.png')}}"></a></div>
-
+								<div id="jsnn-logo"><a href="javascript:void(0);"><img src="{{url('images/logo/logo.png')}}"></a></div>
 							</div>
 							<div class="col-md-10 col-sm-9 col-xs-8 text-right menu-1">
 								<ul class="menuListing">

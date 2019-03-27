@@ -4,14 +4,23 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ChildCourses extends Model
+class Gallery extends Model
 {
-    protected  $table 		='child_courses';
-	protected $fillable 	= ['course','sub_course','name','image','created_at','updated_at','status'];
+	protected  $table 		='gallery';
+	protected $fillable 	= ['id', 'title', 'image','gallery_category_id','status',  'created_at',  'updated_at'];
 
+    public function category(){
+        return $this->hasOne('\App\Models\GalleryCategory','id','category_id');
+    } 
 	public static function list($fetch='array',$where='',$keys=['*'],$order='id-desc'){
 		
-        $table_subcourse = self::select($keys)->where('status','active');        
+        $table_subcourse = self::select($keys)->where('status','active')
+        ->with([
+            'category' => function($q) {
+                $q->select('id', 'name');
+                
+            }
+        ]);        
         if($where){
             $table_subcourse->whereRaw($where);
         }
@@ -40,6 +49,5 @@ class ChildCourses extends Model
             return $table_subcourse->limit($limit)->get();
         }
     }
-
 
 }

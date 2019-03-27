@@ -61,6 +61,15 @@ class Validate
         ]);
         return $validator;    
   }
+  
+  public function addGalleryCategory(){
+        $validations = [
+      'name'                    => $this->validation('name'),
+     
+          ];
+        $validator = \Validator::make($this->data->all(), $validations,[]);
+        return $validator;    
+  }
   public function addSlider($action='add')
   {
     $validations = [
@@ -160,6 +169,25 @@ class Validate
           return $validator;     
 
         } 
+
+         public function addGallery($action='add')
+        {
+          $validations = [
+           'gallery_category_id' =>$this->validation('id'),
+          'title' =>$this->validation('name'),
+          'image' =>$this->validation('photo'),
+          
+          ];
+
+          $validator = \Validator::make($this->data->all(), $validations,[
+          'image.mimes'        => 'Image should be in .jpg,.jpeg,.png format.',
+          'image.required'     => 'Image is required '
+
+          ]);
+          return $validator;     
+
+        } 
+
 
         public function contact($action= 'add')
         {

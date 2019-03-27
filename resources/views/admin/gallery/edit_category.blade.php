@@ -1,23 +1,20 @@
 <div class="content-wrapper">
   <div class="box box-warning">
     <div class="box-header with-border">
-      <h3 class="box-title">Add Partners</h3>
+      <h3 class="box-title">Edit Gallery Category</h3>
     </div>
     <!-- /.box-header -->
     <div class="box-body">
- <form role="edit-partner" method="POST" action="{{url('admin/our-partners/'.___encrypt($partner['id'])) }}">
-  {{csrf_field()}}
 
-  <input type="hidden" name="_method" value="PUT">
-           <div class="form-group">
-          <label>Partner's Image:</label>
-          <div>
-              <input type="file" onchange="readURL(this)" id="uploadFile" class="form-control"  name="image" >
+ <form role="edit-partner" method="POST" action="{{url('admin/gallery-category/update/'.___encrypt($category['id'])) }}">
+  
+          <div class="form-row">
+            <div class="form-group">
+              <label>Category Name:</label>
+              <input type="text" class="form-control" placeholder="Enter Category Name..." 
+              name="name" value="{{!empty($category['name'])?$category['name']:''}}">
+            </div>
           </div>
-          <div>
-              <img style="max-width: 250px;" src="{{asset('assets/img/Partners/'.$partner['image'])}}" id="adminimg" alt="No Featured Image Added" class="list_mg">
-          </div>
-        </div>
 
          <div class="box-footer">
           <a href="{{url('admin/our-partners')}}" class="btn btn-default">Cancel</a>

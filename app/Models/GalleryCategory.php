@@ -4,10 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ChildCourses extends Model
+class GalleryCategory extends Model
 {
-    protected  $table 		='child_courses';
-	protected $fillable 	= ['course','sub_course','name','image','created_at','updated_at','status'];
+	protected  $table 		='gallery_category';
+	protected $fillable 	= ['id', 'name',    'status',  'created_at',  'updated_at'];
 
 	public static function list($fetch='array',$where='',$keys=['*'],$order='id-desc'){
 		
@@ -40,6 +40,5 @@ class ChildCourses extends Model
             return $table_subcourse->limit($limit)->get();
         }
     }
-
 
 }
