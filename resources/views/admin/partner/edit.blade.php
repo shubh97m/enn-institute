@@ -5,7 +5,7 @@
     </div>
     <!-- /.box-header -->
     <div class="box-body">
- <form role="edit-partner" enctype="mulipart/form-data" method="PUT" action="{{url('admin/our-partners/'.___encrypt($partner['id'])) }}">
+ <form role="edit-partner" method="PUT" action="{{url('admin/our-partners/'.___encrypt($partner['id'])) }}">
   <input type="hidden" name="_method" value="PUT">
            <div class="form-group">
           <label>Partner's Image:</label>
