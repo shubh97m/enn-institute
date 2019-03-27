@@ -44,6 +44,14 @@ class HomeController extends Controller
     	return view('front_home', $data);
     	
     }
+    public function search(Request $request)
+    {
+        $data['course']      =  _arefy(MainCourses::where('status','=','active')->where('name','like', '%' .$request->search. '%')->get());
+        $data['search']=$request->search;
+        $data['view'] ='front.search';
+        return view('front_home', $data);
+        
+    }
     public function courseView(Request $request,$id )
     {
         $id = ___decrypt($id);
