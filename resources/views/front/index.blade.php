@@ -133,7 +133,7 @@
 							<div class="col-md-4 text-center animate-box">
 								<div class="sub-courses">
 									<span class="icon">
-										<img src="{{url('assets/img/Courses')}}/{{$courses['image']}}" alt="course image" style="height:70px;width:60px">
+										<img src="{{url('assets/img/Courses')}}/{{$courses['image']}}" alt="course image">
 									</span>
 									<div class="desc">
 										<h3><a href="{{url('courses/'.___encrypt($courses['id']))}}">{{$courses['name']}}</a></h3>
