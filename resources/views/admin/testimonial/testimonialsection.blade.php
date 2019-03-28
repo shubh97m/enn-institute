@@ -45,8 +45,13 @@
                       <tr>
                         <td> {{$i}}</td>
                         <td> 
+                        @if(!empty($testimonial['image']))
                           <img src="{{asset('assets/img/testimonial/'.$testimonial['image'])}}"
                           class="list_img" / >
+                        @else
+                          <img src="{{asset('images/avatar1.png')}}"
+                          class="list_img" / >
+                        @endif
                         </td>
                         <td>{!!$testimonial['review']!!}</td>
                         <td> {{$testimonial['designation']}}</td>

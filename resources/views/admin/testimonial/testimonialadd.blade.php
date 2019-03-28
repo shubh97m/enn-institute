@@ -9,7 +9,7 @@
         <form method="POST" data-request="enable-enter" role="add-testimonial" action="{!! action('Admin\TestimonialController@store') !!}" class="form-horizontal form-label-left">
             {{csrf_field()}}
             <div class="item form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Client's Review<span class="required">*</span>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Review<span class="required">*</span>
 
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="item form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Client's Name<span class="required">*</span>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name<span class="required">*</span>
 
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
@@ -25,15 +25,15 @@
                 </div>
             </div>
             <div class="item form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="slug">Client's Designation<span class="required">*</span>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="slug">Designation<span class="required">*</span>
 
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <input id="slug" class="form-control col-md-7 col-xs-12" name="designation" placeholder="e.g CEO" type="text">
+                    <input id="slug" class="form-control col-md-7 col-xs-12" name="designation" placeholder="e.g Student" type="text">
                 </div>
             </div>
             <div class="item form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="slug">Client's Image<span class="required"></span>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="slug">Image<span class="required"></span>
 
                 </label>
                 <div class="col-md-6 col-sm-6 col-xs-12">

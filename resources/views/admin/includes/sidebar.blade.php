@@ -4,10 +4,12 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="{{url('assets/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
+
+         {{--  <img src="{{url('assets/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image"> --}}
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+         
+          <p>ENN Technologies</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -66,6 +68,11 @@
           <li>
           <a href="{{url('admin/gallery')}}">
             <i class="fa fa-fw fa-sign-out"></i> <span>Gallery</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{url('admin/testimonial')}}">
+            <i class="fa fa-fw fa-sign-out"></i> <span>Testimonial</span>
           </a>
         </li>
 

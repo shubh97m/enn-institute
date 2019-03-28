@@ -209,11 +209,11 @@ class GalleryController extends Controller
     {
         
     }
-    public function deletePartner(Request $request,$id)
+    public function deleteGallery(Request $request,$id)
     {
-        $isUpdated          = OurPartners::where('id',___decrypt($id))->delete();
+        $isUpdated          = Gallery::where('id',___decrypt($id))->delete();
         if($isUpdated){           
-            $this->message  = 'Course has been deleted successfully.';
+            $this->message  = 'Gallery image has been deleted successfully.';
             $this->status   = true;
             $this->redirect = true;
             $this->jsondata = [];

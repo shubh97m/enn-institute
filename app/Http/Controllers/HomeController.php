@@ -10,12 +10,14 @@ use App\Models\Contact;
 use App\Models\MainCourses;
 use App\Models\SubCourses;
 use App\Models\OurPartners;
+use App\Models\AskDemo;
 use App\Models\GalleryCategory;
 use App\Models\Gallery;
 use App\Models\Subscription;
 use App\Models\ChildCourses;
 use Validations\Validate as Validations;
 use App\Models\generalSettings;
+use App\Models\Testimonial;
 class HomeController extends Controller
 {
 	public function __construct(Request $request){
@@ -32,21 +34,22 @@ class HomeController extends Controller
         $data['sliders'] =_arefy(Sliders::where('status','!=','trashed')->get());
         $data['partner']  = _arefy(OurPartners::where('status','!=','trashed')->get());
         $data['gallery_category']  = _arefy(GalleryCategory::gallery_list('array'));
+       $data['gallery']  = _arefy(Gallery::list('array'));
+        $data['course']      =  _arefy(MainCourses::where('status','=','active')->get());
         
         $data['gallery']  = _arefy(Gallery::list('array'));
 
-        $data['course']      =  _arefy(MainCourses::where('status','=','active')->get());
+        $data['course']             =  _arefy(MainCourses::where('status','=','active')->get());
+        $data['testimonial']        =  _arefy(Testimonial::get());
         $data['total_courses']      =  MainCourses::list('count')+SubCourses::list('count')+ChildCourses::list('count');
-
-       
-
 
 		return view('front_home',$data);
 	}
     //********* ********
     public function askDemo()
     {
-        $data['view']='front.askDemo';
+      $data['view']='front.askDemo';
+      $data['course']   =  _arefy(MainCourses::where('status','=','active')->get());
         return view('front_home',$data);
     }
     public function askDemoStore(Request $request)
@@ -63,7 +66,7 @@ class HomeController extends Controller
               $this->modal    = true;
               $this->alert    = true;
               $this->message  = "Thank you, our team will respond you as soon as possible.";
-              $this->redirect = url('index');
+              $this->redirect = url('/');
         } 
       return $this->populateresponse();
     
