@@ -773,6 +773,11 @@ ul.rightHeader li{
   opacity: 1;
 }
 
+.sub-courses .icon img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 .jsnn-nav ul {
   margin: 0;
   align-items: center;

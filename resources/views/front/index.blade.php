@@ -133,7 +133,7 @@
 							<div class="col-md-4 text-center animate-box">
 								<div class="sub-courses">
 									<span class="icon">
-										<img src="{{url('assets/img/Courses')}}/{{$courses['image']}}" alt="course image" style="height:70px;width:60px">
+										<img src="{{url('assets/img/Courses')}}/{{$courses['image']}}" alt="course image">
 									</span>
 									<div class="desc">
 										<h3><a href="{{url('courses/'.___encrypt($courses['id']))}}">{{$courses['name']}}</a></h3>
@@ -200,9 +200,9 @@
 		            <div class="col-md-12">
 		             
 		              <div class="controls text-center">
-		                {{-- <a class="filter active btn btn-common" data-filter=".all">
+		                <a class="filter active btn btn-common" data-filter="all">
 		                  All 
-		                </a> --}}
+		                </a>
 		                @if(!empty($gallery_category))
 			                @foreach($gallery_category as $cat)
 				                <a class="filter btn btn-common" data-filter=".{{$cat['id']}}">
@@ -231,11 +231,11 @@
 			                </div>
 			            </div>
 			        @endforeach --}}
-
+			        <div id="portfolio" class="row wow fadeInDown" data-wow-delay="0.4s">
 		              @if(!empty($gallery_category))
 			                @foreach($gallery_category as $cat)
 				                @foreach($cat['gallery'] as $gal)
-				                	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix students {{$cat['id']}}">
+				                	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix {{$cat['id'] }} all" >
 						                <div class="portfolio-item">
 						                  <div class="shot-item">
 						                    <img src="{{url('assets/img/gallery/'.$gal['image'])}}" alt="gallery" /> 
@@ -252,7 +252,7 @@
 			                	@endforeach
 			                @endforeach
 		                @endif
-		                
+		            </div>
 		              {{-- <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix students academy">
 		                <div class="portfolio-item">
 		                  <div class="shot-item">

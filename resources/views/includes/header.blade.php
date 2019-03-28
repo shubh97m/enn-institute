@@ -18,7 +18,7 @@
 									<!-- <a href="#modal-apply-form" data-toggle="modal" class="apply-now quadrat">Apply Now</a> -->
 								<!-- </div> -->
 							<!--</li>-->
-							<li class="rightListli boxli"><a href=""><i class="fa fa-caret-square-o-up" style="padding-right:5px;"></i>Ask a Demo</a></li>
+							<li class="rightListli boxli"><a href="{{url('ask-a-demo')}}"><i class="fa fa-caret-square-o-up" style="padding-right:5px;"></i>Ask a Demo</a></li>
 							<li class="rightListli boxli1"><a href="tel:7060471862"><img src="{{url('images/phone.gif')}}" style="padding-right:5px;height: 20px;"></i>Get a Call Back</a></li>
 						</ul>
 					</div>
@@ -28,9 +28,7 @@
 			<nav class="jsnn-nav" role="navigation">
 				<div class="top-menu">
 					
-					<div class="container">
-						
-					
+					<div class="container">					
 						<div class="row">
 							<div class="col-md-2 col-sm-3 col-xs-4">
 								<div id="jsnn-logo"><a href="javascript:void(0);"><img src="{{url('images/logo/logo.png')}}"></a></div>
@@ -60,10 +58,12 @@
 									
 									
 								</ul>
-								<div class="search-toggle">
-									<input type="text" name="seacrh">
-									<button class="btn-secarch"><i class="fa fa-search"></i></button>
-								</div>
+								<form method="GET" action="{{url('search')}}"> 
+									<div class="search-toggle">
+										<input type="text" name="search" placeholder="search Courses...">
+										<button type="submit" class="btn-secarch"><i class="fa fa-search"></i></button>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>
