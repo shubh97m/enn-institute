@@ -1135,10 +1135,14 @@ textarea.form-control{
   background-color: transparent;
   right: 0;
 }
+.about-flex .partners {
+    max-width: 150px;
+    height: 90px;
+}
 .jsnn-about-img img{
-  max-width: 140px;
-  max-height: 130px;
-  text-align: center;
+  	height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 .jsnn-about-img .item{
   box-shadow: 0 0 4px #ccc;

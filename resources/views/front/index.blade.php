@@ -334,7 +334,7 @@
 								@foreach($partner as $partners)
 								<div class="item">
 									<div class="partners">
-										<img src="{{url('assets/img/Partners/'.$partners['image'])}}" height="130" alt="partner">
+										<img src="{{url('assets/img/Partners/'.$partners['image'])}}" alt="partner">
 									</div>
 								</div>
 								@endforeach
