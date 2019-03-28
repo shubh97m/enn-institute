@@ -4,9 +4,11 @@
 					<div class="col-md-3 jsnn-widget">
 						<h4>News Letter</h4>
 						<div class="newsletter">
-							<form>
-								<input type="text" name="name" placeholder="Subscribe">
-								<button class="btn-blue">Subscribe</button>
+							
+							<form role="add-subscribe" method="POST" action="{{url('subscribe')}}">
+								{{csrf_field()}}
+								<input type="text" name="email" placeholder="Subscribe">
+								<button type="button" data-request="ajax-submit" data-target='[role="add-subscribe"]' class="btn-blue">Subscribe</button>
 							</form>
 						</div>
 					</div>

@@ -20,34 +20,7 @@
 			   	</li>
 			   
 			   @endforeach
-			{{--    	
-			   	<li style="background-image: url(images/banner-1.jpg);">
-			   		<div class="overlay"></div>
-			   		<div class="container-fluids">
-			   			<div class="row">
-				   			<div class="col-md-8 col-sm-12 slider-text">
-				   				<div class="slider-text-inner">
-				   					<h1><span class="color-span">Education</span> is a tool that helps us get Success</h1>
-				   					
-				   				</div>
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>
-			   	<li style="background-image: url(images/banner-2.jpg);">
-			   		<div class="overlay"></div>
-			   		<div class="container-fluids">
-			   			<div class="row">
-				   			<div class="col-md-8 col-sm-12 slider-text">
-				   				<div class="slider-text-inner text-center">
-				   					<h1>Best Database Management training institute in 
-									Delhi/NCR
-				   					
-				   				</div>
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>	 --}}
+			
 			  	</ul>
 		  	</div>
 		</aside>
@@ -374,60 +347,30 @@
             </div>
             <div class="col-md-9 col-sm-9 col-xs-12">
                 <div  class="owl-carousel owl-loaded owl-drag" id="testimonials">
+                @foreach($testimonial as $testimonials)
 					<div class="item">
                         <div class="review_container">
                             <div class="shadow-effect">    
                                 <div class="item-details">
-                                    <p class="ctext">test</p>
+                                    <p class="ctext">{{$testimonials['review']}}</p>
                                     <div class="testimonialWrap clearfix">
                                         <div class="float-left circle-radius">
-                                            <img src="images/person1.jpg" alt="image">
+                                        	@if(!empty(!empty($testimonials['image'])))
+                                            	<img src="{{url('assets/img/testimonial/'.$testimonials['image'])}}" alt="image">
+                                            @else
+                                             	<img src="{{url('images/avatar1.png')}}" alt="image">
+                                            @endif
                                         </div>
                                         <div class="float-left margin-box client-info">
-                                            <h5>Vainhav</h5>
-                                            <p>designation</p>
+                                            <h5>{{$testimonials['client']}}</h5>
+                                            <p>{{$testimonials['designation']}}</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="review_container">
-                            <div class="shadow-effect">    
-                                <div class="item-details">
-                                    <p class="ctext">test</p>
-                                    <div class="testimonialWrap clearfix">
-                                        <div class="float-left circle-radius">
-                                            <img src="images/person1.jpg" alt="image">
-                                        </div>
-                                        <div class="float-left margin-box client-info">
-                                            <h5>Vainhav</h5>
-                                            <p>designation</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="review_container">
-                            <div class="shadow-effect">    
-                                <div class="item-details">
-                                    <p class="ctext">test</p>
-                                    <div class="testimonialWrap clearfix">
-                                        <div class="float-left circle-radius">
-                                            <img src="images/person1.jpg" alt="image">
-                                        </div>
-                                        <div class="float-left margin-box client-info">
-                                            <h5>Vainhav</h5>
-                                            <p>designation</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                   @endforeach
                 </div>
             </div>
         </div>

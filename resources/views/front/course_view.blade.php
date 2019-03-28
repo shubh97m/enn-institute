@@ -15,7 +15,7 @@
 										<li class="sub-sub-course">
 											<div class="sub-course-content">
 											<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample{{$sub_courses['id']}}" aria-expanded="false" aria-controls="collapseExample{{$sub_courses['id']}}">
-			<i class="fa fa-book" aria-hidden="true"></i>
+											<i class="fa fa-book" aria-hidden="true"></i>
 												   <span>{{$sub_courses['name']}}</span>
 												</button>
 												<ul class="sub-offered collapse" id="collapseExample{{$sub_courses['id']}}">
@@ -145,7 +145,7 @@
 									<div class="sub-couse-sub-courses">
 										<div class="subCourse">
 											<span class="icon">
-												<i class="icon-graduation"></i>
+												<img src="{{url('assets/img/Courses')}}/{{$related['image']}}" alt="course image">
 											</span>
 											<div class="desc">
 												<h3><a href="{{url('courses/'.___encrypt($related['id']))}}">{{$related['name']}}</a></h3>

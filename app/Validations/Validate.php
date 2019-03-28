@@ -44,7 +44,10 @@ class Validate
       'slug_no_space'     => ['required','alpha_dash','max:255'],
       'password_check'    => ['required'],
       'newpassword'       => ['required','max:10'],
-      'password_null'     => ['nullable']
+      'password_null'     => ['nullable'],
+      'review'        => ['required','string','max:300'],
+      'client'        => ['required','string'],
+      'designation'     => ['required','string'],
       
     ];
     return $validation[$key];
@@ -61,6 +64,19 @@ class Validate
         ]);
         return $validator;    
   }
+
+  public function subscribe(){
+        $validations = [
+      'email'                    => $this->validation('req_email'),
+  
+          ];
+        $validator = \Validator::make($this->data->all(), $validations,[
+            'email.required'     => 'E-mail is required.',
+         
+        ]);
+        return $validator;    
+  }
+  
   
   public function addGalleryCategory(){
         $validations = [
@@ -223,6 +239,36 @@ class Validate
           $validator = \Validator::make($this->data->all(), $validations,[]);
           return $validator;     
       }
+
+    public function addtestimonial($action='add'){
+      $validations = [
+          'review'          => $this->validation('review'),
+          'client'          => $this->validation('client'),
+          'designation'         => $this->validation('designation'),
+      ];
+
+      if ($action == 'edit') {
+        $validations["review"]    = $this->validation('review');
+        $validations["client"]    = $this->validation('name');
+        $validations["designation"] = $this->validation('name');
+      }
+
+      elseif ($action == 'testimonialsection') {
+        $validations = [
+            'testimonial_title'     => $this->validation('name'),
+            'testimonial_text'      => $this->validation('name'),
+        ];
+      }
+
+      $validator = \Validator::make($this->data->all(), $validations,[
+      'review.required'         =>  'Clients review is required.',
+      'client.required'         =>  'Clients Name is required',
+      'designation.required'      =>  'Clients Designation is required',
+      'testimonial_title.required'  =>  'Testimonial Title is required',
+      'testimonial_text.required'   =>  'Testimonial Text is required',
+      ]);
+      return $validator;
+    }
   
 
 }

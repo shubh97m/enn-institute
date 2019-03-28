@@ -25,7 +25,6 @@ class CourseController extends Controller
         $data['course']      =  _arefy(MainCourses::where('status','!=','trashed')->get());
         $where = 'status != "trashed"';
         $data['subcourse']  = _arefy(SubCourses::list('array',$where));
-       // dd($data['subcourse']);
         $data['childCourse'] =  _arefy(ChildCourses::where('status','!=','trashed')->get());
        
         return view('admin.home')->with($data);

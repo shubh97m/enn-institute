@@ -13,9 +13,11 @@ use App\Models\OurPartners;
 use App\Models\AskDemo;
 use App\Models\GalleryCategory;
 use App\Models\Gallery;
+use App\Models\Subscription;
 use App\Models\ChildCourses;
 use Validations\Validate as Validations;
 use App\Models\generalSettings;
+use App\Models\Testimonial;
 class HomeController extends Controller
 {
 	public function __construct(Request $request){
@@ -34,6 +36,11 @@ class HomeController extends Controller
         $data['gallery_category']  = _arefy(GalleryCategory::gallery_list('array'));
        $data['gallery']  = _arefy(Gallery::list('array'));
         $data['course']      =  _arefy(MainCourses::where('status','=','active')->get());
+        
+        $data['gallery']  = _arefy(Gallery::list('array'));
+
+        $data['course']             =  _arefy(MainCourses::where('status','=','active')->get());
+        $data['testimonial']        =  _arefy(Testimonial::get());
         $data['total_courses']      =  MainCourses::list('count')+SubCourses::list('count')+ChildCourses::list('count');
 
 		return view('front_home',$data);
@@ -84,6 +91,34 @@ class HomeController extends Controller
         $data['search']=$request->search;
         $data['view'] ='front.search';
         return view('front_home', $data);
+        
+    }
+
+    public function subscribe(Request $request)
+    {   
+        $validation = new Validations($request);
+        $validator  = $validation->subscribe();
+        if ($validator->fails()){
+            $this->message = $validator->errors();
+        }else{
+            
+            $data['email']      =  $request->email;
+            $data['status']      =  'active';
+            $data['created_at']      =  date('Y-m-d H:i:s');
+            $data['updated_at']      =   date('Y-m-d H:i:s');
+
+            $inser = Subscription::updateOrCreate([
+                'email' =>  $request->email
+                ],$data);
+     
+           
+              $this->status   = true;
+              $this->modal    = true;
+              $this->alert    = true;
+              $this->message  = "Thanks for subscribing";
+              $this->redirect = true;
+        } 
+        return $this->populateresponse();
         
     }
     public function courseView(Request $request,$id )

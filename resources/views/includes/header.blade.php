@@ -31,7 +31,7 @@
 					<div class="container">					
 						<div class="row">
 							<div class="col-md-2 col-sm-3 col-xs-4">
-								<div id="jsnn-logo"><a href="javascript:void(0);"><img src="{{url('images/logo/logo.png')}}"></a></div>
+								<div id="jsnn-logo"><a href="{{url('/')}}"><img src="{{url('images/logo/logo.png')}}"></a></div>
 							</div>
 							<div class="col-md-10 col-sm-9 col-xs-8 text-right menu-1">
 								<ul class="menuListing">
@@ -46,7 +46,7 @@
 											<li><a href="#">Online Training</a></li>
 										</ul>
 									</li>
-									
+									<li><a href="#">Classroom Training</a></li>
 									<li><a href="{{url('/about-us')}}">About Us</a></li>
 									<li><a href="{{url('/contact')}}">Contact Us</a></li>
 									<li><a href="javascript:void(0);" class="search-input search">
@@ -60,7 +60,7 @@
 								</ul>
 								<form method="GET" action="{{url('search')}}"> 
 									<div class="search-toggle">
-										<input type="text" name="search" placeholder="search Courses...">
+										<input type="text" name="search" placeholder="Search Courses...">
 										<button type="submit" class="btn-secarch"><i class="fa fa-search"></i></button>
 									</div>
 								</form>

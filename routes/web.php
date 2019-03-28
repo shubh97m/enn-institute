@@ -27,6 +27,7 @@ Route::get('/contact','HomeController@contact');
 Route::post('contact','HomeController@contactStore');
 Route::get('/services','HomeController@services');
 Route::get('/search','HomeController@search');
+Route::post('/subscribe','HomeController@subscribe');
 Route::get('/sub-course/{id}','HomeController@sub_courses');
 Route::get('/ask-a-demo','HomeController@askDemo');
 Route::post('/ask-a-demo','HomeController@askDemoStore');
@@ -86,9 +87,10 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 	Route::post('child-courses/{id}/edit','CourseController@childCourseUpdate');
 
 	Route::resource('gallery','GalleryController');
+	Route::post('testimonialDel/{id}/delete','TestimonialController@destroy');
+	Route::resource('testimonial','TestimonialController');
 	Route::group(['prefix' => 'gallery'],function(){
 		Route::post('/status', 'GalleryController@changeStatus');
-	
 	});
 	Route::get('gallery-category','GalleryController@list');
 	Route::get('gallery-category/create','GalleryController@addCategory');
