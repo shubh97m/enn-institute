@@ -64,6 +64,19 @@ class Validate
         ]);
         return $validator;    
   }
+
+  public function subscribe(){
+        $validations = [
+      'email'                    => $this->validation('req_email'),
+  
+          ];
+        $validator = \Validator::make($this->data->all(), $validations,[
+            'email.required'     => 'E-mail is required.',
+         
+        ]);
+        return $validator;    
+  }
+  
   
   public function addGalleryCategory(){
         $validations = [

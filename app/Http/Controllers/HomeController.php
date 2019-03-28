@@ -12,6 +12,7 @@ use App\Models\SubCourses;
 use App\Models\OurPartners;
 use App\Models\GalleryCategory;
 use App\Models\Gallery;
+use App\Models\Subscription;
 use App\Models\ChildCourses;
 use Validations\Validate as Validations;
 use App\Models\generalSettings;
@@ -89,6 +90,34 @@ class HomeController extends Controller
         $data['search']=$request->search;
         $data['view'] ='front.search';
         return view('front_home', $data);
+        
+    }
+
+    public function subscribe(Request $request)
+    {   
+        $validation = new Validations($request);
+        $validator  = $validation->subscribe();
+        if ($validator->fails()){
+            $this->message = $validator->errors();
+        }else{
+            
+            $data['email']      =  $request->email;
+            $data['status']      =  'active';
+            $data['created_at']      =  date('Y-m-d H:i:s');
+            $data['updated_at']      =   date('Y-m-d H:i:s');
+
+            $inser = Subscription::updateOrCreate([
+                'email' =>  $request->email
+                ],$data);
+     
+           
+              $this->status   = true;
+              $this->modal    = true;
+              $this->alert    = true;
+              $this->message  = "Thanks for subscribing";
+              $this->redirect = true;
+        } 
+        return $this->populateresponse();
         
     }
     public function courseView(Request $request,$id )
