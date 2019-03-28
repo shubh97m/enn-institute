@@ -1723,7 +1723,18 @@ textarea.form-control{
 
 .project-single {
   margin-bottom: 30px; }
-
+.mobile_search .search-input .searchIcon{
+	display:none;
+}
+.mobile_search .search-input .cross-icon{
+	display:block;
+}
+.search-input .cross-icon{
+	display:none;
+}
+.search-input .searchIcon{
+	display:block;
+}
 .thumb-wrap {
   display: block;
   width: 100%;
