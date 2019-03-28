@@ -6,8 +6,8 @@
 			   $settings= _arefy(App\Models\generalSettings::where('status','!=','trashed')->first()); @endphp
 
 					<ul class="htop-wrap float-left">
-						<li><a href="tel:+91-011-46702233"><i class="fa fa-phone"></i>{{$settings['phone']}}</a></li>
-							<li class="mobile-hide"><a href="tel:+91-7669620210"><i class="fa fa-mobile"></i>+91-{{$settings['phone2']}}</a></li>
+						<li class="mobile-hide"><a href="tel:{{$settings['phone']}}"><i class="fa fa-phone"></i>{{$settings['phone']}}</a></li>
+							<li ><a href="tel:+91-{{$settings['phone2']}}"><i class="fa fa-mobile"></i>+91-{{$settings['phone2']}}</a></li>
 							<li class="mobile-hide"><a href="mailto:admin@enntechnologies.in"><i class="fa fa-envelope"></i>{{$settings['email']}}</a></li>
 						</ul>
 						<ul class="rightHeader">
