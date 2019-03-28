@@ -15,6 +15,7 @@ use App\Models\Gallery;
 use App\Models\ChildCourses;
 use Validations\Validate as Validations;
 use App\Models\generalSettings;
+use App\Models\Testimonial;
 class HomeController extends Controller
 {
 	public function __construct(Request $request){
@@ -34,7 +35,8 @@ class HomeController extends Controller
         
         $data['gallery']  = _arefy(Gallery::list('array'));
 
-        $data['course']      =  _arefy(MainCourses::where('status','=','active')->get());
+        $data['course']             =  _arefy(MainCourses::where('status','=','active')->get());
+        $data['testimonial']        =  _arefy(Testimonial::get());
         $data['total_courses']      =  MainCourses::list('count')+SubCourses::list('count')+ChildCourses::list('count');
 
        
