@@ -85,19 +85,19 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 	Route::post('/{id}/delete','CourseController@deleteChildCourses');
 	Route::get('child-courses/{id}/edit','CourseController@childcourseEdit');
 	Route::post('child-courses/{id}/edit','CourseController@childCourseUpdate');
+//Gallery 
 
 	Route::resource('gallery','GalleryController');
 	Route::post('testimonialDel/{id}/delete','TestimonialController@destroy');
 	Route::resource('testimonial','TestimonialController');
 	Route::group(['prefix' => 'gallery'],function(){
-		Route::post('/status', 'GalleryController@changeStatus');
+	Route::post('/status', 'GalleryController@changeStatus');
+	Route::post('/{id}/delete','GalleryController@deleteGallery');	
 	});
 	Route::get('gallery-category','GalleryController@list');
 	Route::get('gallery-category/create','GalleryController@addCategory');
 	Route::get('gallery-category/edit/{id}','GalleryController@editCategory');
 	Route::post('gallery-category/store','GalleryController@storeCategory');
-	Route::delete('/{id}/delete','GalleryController@deleteGallery');
-
 	Route::post('gallery-category/update/{id}','GalleryController@updateCategory');
 
 
