@@ -14,8 +14,8 @@
 										@foreach($sub_course as $sub_courses)
 										<li class="sub-sub-course">
 											<div class="sub-course-content">
-												<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample{{$sub_courses['id']}}" aria-expanded="false" aria-controls="collapseExample{{$sub_courses['id']}}">
-													<i class="fa fa-book" aria-hidden="true"></i>
+											<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample{{$sub_courses['id']}}" aria-expanded="false" aria-controls="collapseExample{{$sub_courses['id']}}">
+			<i class="fa fa-book" aria-hidden="true"></i>
 												   <span>{{$sub_courses['name']}}</span>
 												</button>
 												<ul class="sub-offered collapse" id="collapseExample{{$sub_courses['id']}}">
