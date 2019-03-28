@@ -29,9 +29,7 @@ Route::get('/services','HomeController@services');
 Route::get('/search','HomeController@search');
 Route::get('/sub-course/{id}','HomeController@sub_courses');
 Route::get('/ask-a-demo','HomeController@askDemo');
-
-
-
+Route::post('/ask-a-demo','HomeController@askDemoStore');
 
 //************Admin section*************//
 Route::get('admin/login','Admin\loginController@login');
@@ -96,6 +94,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 	Route::get('gallery-category/create','GalleryController@addCategory');
 	Route::get('gallery-category/edit/{id}','GalleryController@editCategory');
 	Route::post('gallery-category/store','GalleryController@storeCategory');
+	Route::delete('/{id}/delete','GalleryController@deleteGallery');
+
 	Route::post('gallery-category/update/{id}','GalleryController@updateCategory');
 
 
