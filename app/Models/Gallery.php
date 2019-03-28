@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Gallery extends Model
 {
 	protected  $table 		='gallery';
-	protected $fillable 	= ['id', 'title', 'image','gallery_category_id','status',  'created_at',  'updated_at'];
+	protected  $fillable 	= ['id', 'title', 'image','gallery_category_id','status',  'created_at',  'updated_at'];
 
     public function category(){
         return $this->hasOne('\App\Models\GalleryCategory','id','gallery_category_id');
@@ -16,10 +16,9 @@ class Gallery extends Model
 		
         $table_subcourse = self::select($keys)->where('status','active')
         ->with([
-            'category' => function($q) {
-                $q->select('id', 'name');
-                
-            }
+        'category' => function($q) {
+        $q->select('id', 'name');
+        }
         ]);        
         if($where){
             $table_subcourse->whereRaw($where);

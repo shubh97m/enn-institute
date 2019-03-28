@@ -55,7 +55,7 @@
                         <td>
                            <a href="{{url(sprintf('admin/gallery/%s/edit',___encrypt($gal['id'])))}}"  title="Edit Detail"><i class="fa fa-edit"></i></a> |
                         <a href="javascript:void(0);" 
-                        data-url="{{url(sprintf('admin/gallery/%s/delete',___encrypt($gal['id'])))}}" 
+                        data-url="{{url(sprintf('admin/gallery-category/%s/delete',___encrypt($gal['id'])))}}" 
                         data-request="ajax-confirm"
                         data-ask_image="{{url('assets/img/delete.png')}}"
                         data-ask="Would you like to Delete?" title="Delete"><i class="fa fa-fw fa-trash"></i></a> |
