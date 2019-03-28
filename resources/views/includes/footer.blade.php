@@ -5,9 +5,10 @@
 						<h4>News Letter</h4>
 						<div class="newsletter">
 							
-							<form method="POST" action="{{url('subscribe')}}">
+							<form role="add-subscribe" method="POST" action="{{url('subscribe')}}">
+								{{csrf_field()}}
 								<input type="text" name="email" placeholder="Subscribe">
-								<button type="submit" class="btn-blue">Subscribe</button>
+								<button type="button" data-request="ajax-submit" data-target='[role="add-subscribe"]' class="btn-blue">Subscribe</button>
 							</form>
 						</div>
 					</div>
