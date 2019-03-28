@@ -89,9 +89,10 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 	Route::post('child-courses/{id}/edit','CourseController@childCourseUpdate');
 
 	Route::resource('gallery','GalleryController');
+	Route::post('testimonialDel/{id}/delete','TestimonialController@destroy');
+	Route::resource('testimonial','TestimonialController');
 	Route::group(['prefix' => 'gallery'],function(){
 		Route::post('/status', 'GalleryController@changeStatus');
-	
 	});
 	Route::get('gallery-category','GalleryController@list');
 	Route::get('gallery-category/create','GalleryController@addCategory');
