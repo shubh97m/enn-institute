@@ -65,8 +65,6 @@
           </div>
         </div>
 
-       
-
         <div class="box-footer">
           <a href="{{url('admin/courses')}}" class="btn btn-default">Cancel</a>
           <button type="button" data-request="ajax-submit" data-target='[role="edit-courses"]' class="btn btn-info pull-right">Submit</button>

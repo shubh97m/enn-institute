@@ -275,4 +275,16 @@ public function subcourseUpdate(Request $request, $id)
         }
         return $this->populateresponse();
     } 
+     public function deleteChildCourses(Request $request,$id)
+    {
+
+        $isUpdated          = ChildCourses::where('id',___decrypt($id))->delete();
+        if($isUpdated){           
+            $this->message  = 'Course has been deleted  successfully.';
+            $this->status   = true;
+            $this->redirect = true;
+            $this->jsondata = [];
+        }
+        return $this->populateresponse();
+    }  
 }

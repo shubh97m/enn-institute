@@ -30,8 +30,8 @@
                  <th>S.no</th>
                  <th>Title</th>
                   <th>Gallery Category</th>
-                   <th>Gallery Image</th>
-                  <th>Status</th>
+{{--                    <th>Gallery Image</th>
+ --}}                  <th>Status</th>
                   <th >Actions</th>
                 </tr>
                 </thead>

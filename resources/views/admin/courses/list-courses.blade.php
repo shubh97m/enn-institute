@@ -210,7 +210,7 @@
                         <td> {{$childCourses['status']}}</td>
                         <td>
                         <a href="javascript:void(0);" 
-                        data-url="{{url(sprintf('admin/list-courses/%s/delete',___encrypt($childCourses['id'])))}}" 
+                        data-url="{{url(sprintf('admin/child-courses/%s/delete',___encrypt($childCourses['id'])))}}" 
                         data-request="ajax-confirm"
                         data-ask_image="{{url('assets/img/delete.png')}}"
                         data-ask="Would you like to Delete?" title="Delete"><i class="fa fa-fw fa-trash"></i>
