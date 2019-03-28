@@ -41,6 +41,29 @@
             </div>
           </div>
         </div>
+
+        <div class="row">  
+          <div class="col-md-12">
+            <div class="form-group">
+              <label>Logo</label>
+              <div>
+                <input onchange="readURL(this)" id="uploadFile" accept="image/*" name="logo" type="file">
+              </div>
+              <div>
+                @if(!empty($settings['logo']))
+                  <img style="max-width: 250px;" src="{{asset('assets/img/'.$settings['logo'])}}" id="adminimg" alt="No Featured Image Added">
+                @else
+                   <img style="max-width: 250px;" src="{{asset('assets/img/avatar.png')}}" id="adminimg" alt="No Featured Image Added">
+                @endif
+              </div>
+            
+            </div>
+          </div>
+        </div>
+
+
+        
+       
        
       <div class="row">  
          <div class="col-md-12">
@@ -106,6 +129,17 @@
       nicEditors.findEditor( "description" ).setContent(val);
    });  
   </script>
+  <script>
+  function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#adminimg').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+      }
+</script>
 <!--to set value in any editor -->
 
 @endsection

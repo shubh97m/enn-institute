@@ -65,7 +65,7 @@
 						<div class="col-md-12 text-center">
 							<p>
 								<small class="block">	
-									<div class="do-copyright">Copyright © 2019 <a href="" class="link-website">ENN Technologies</a> All rights reserved. </div>
+									<div class="do-copyright">Copyright © 2019 <a href="" class="link-website">ENN Technologies</a> All rights reserved. <b>Developed By <a href="{{url('https://www.igniterpro.com')}}">IgniterPro</a></b></div>
 								</small>
 							</p>
 						</div>
