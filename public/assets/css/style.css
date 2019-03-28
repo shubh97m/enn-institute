@@ -540,17 +540,17 @@ ul.rightHeader li{
 }
 .sub-couse-sub-courses .icon {
   line-height: 58px;
-  box-shadow: 0 3px 6px #7f7b7b;
+    box-shadow: 0 3px 6px #7f7b7b;
     position: absolute;
-    top: 20px;
+    top: 30px;
     background-color: #0b0b3e;
-    width: 90px;
+    width: 70px;
     transition: .3s ease-in;
     /* border-radius: 10px; */
     margin: 0 auto;
     border-radius: 50%;
     left: 0;
-    height: 90px;
+    height: 70px;
     right: 0;
 }
 .swal2-modal .swal2-content{
@@ -616,6 +616,7 @@ ul.rightHeader li{
     margin: 60px 20px 0px 20px;
     border: 1px solid #ddd;
     background: #fff;
+    border-radius: 5px;
 }
 .new-offered-blink{
   position: relative;
@@ -648,10 +649,16 @@ ul.rightHeader li{
     font-size: 40px;
     color: #fff;
     display: flex;
-    height: 90px;
+    height: 70px;
     transition: .3s ease-in;
     align-items: center;
     justify-content: center;
+}
+.owl-theme .owl-controls .owl-nav [class*=owl-]:hover{
+	background: #142684;
+}
+.owl-theme .owl-controls .owl-nav [class*=owl-]{
+
 }
 .sub-couse-sub-courses .icon:hover {
     transform: scale(1.1);
@@ -1128,10 +1135,14 @@ textarea.form-control{
   background-color: transparent;
   right: 0;
 }
+.about-flex .partners {
+    max-width: 150px;
+    height: 90px;
+}
 .jsnn-about-img img{
-  max-width: 140px;
-  max-height: 130px;
-  text-align: center;
+  	height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 .jsnn-about-img .item{
   box-shadow: 0 0 4px #ccc;
@@ -1980,6 +1991,9 @@ article {
   .side-course{
     margin-top: 15px;
   }
+  .htop-wrap .mobile-hide{
+    display: none;
+  }
   .newsletter {
       margin-bottom: 20px;
   }
@@ -2026,9 +2040,7 @@ article {
   /*.htop-wrap{
     display: none;
   }*/
-  .htop-wrap .mobile-hide{
-    display: none;
-  }
+  
   #jsnn-hero .flexslider .slider-text{
     height: 250px !important;
   }
@@ -2453,6 +2465,7 @@ input[type="text"] {
 .newsletter input {
     border: none;
     height: 37px;
+    color: #000;
     border-radius: 5px;
     padding: 8px;
     /* background: transparent; */

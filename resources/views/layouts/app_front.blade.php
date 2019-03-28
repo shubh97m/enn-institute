@@ -19,11 +19,11 @@
 	<meta name="twitter:image" content="" />
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
-	<link rel="icon" type="image/png" href="images/logo/logo.png">
+	<link rel="icon" type="image/png" href="{{url('images/logo/logo.png')}}">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
 
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="{{asset('assets/css/animate')}}.css">
+	<link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" />
 	<!-- Icomoon Icon Fonts-->
