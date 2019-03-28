@@ -28,7 +28,8 @@ body {
   transition: 0.5s; }
   .offcanvas #page {
     overflow: hidden;
-    position: absolute; }
+    /*position: absolute; */ 
+}
     .offcanvas #page:after {
       -webkit-transition: 2s;
       -o-transition: 2s;
@@ -726,6 +727,9 @@ ul.rightHeader li{
   padding: 10px;
   background: #fff;
 }
+.jsnn-nav ul ul.training li{
+	padding-left:0;
+}
 .jsnn-nav ul ul.training li a:after{
   border: 1px solid transparent;
 
@@ -1167,7 +1171,12 @@ textarea.form-control{
 }
 @media screen and (max-width: 768px) {
     .jsnn-nav {
-      margin: 0; } }
+      margin: 0; 
+  	} 
+  	.jsnn-nav #jsnn-logo{
+  		margin: 1px 0px 0 !important;
+  	}
+  }
   
 
   .jsnn-nav #jsnn-logo {
@@ -2016,7 +2025,8 @@ article {
       margin: 90px auto;
   }
   .jsnn-nav ul li a{
-    font-size: 13px;
+    font-size: 12px;
+    padding:0;
   }
   .popup-img-left {
     display: none;
@@ -2203,7 +2213,7 @@ article {
     width: 82px;
   }
   .jsnn-nav #jsnn-logo{
-  	margin: 6px 0px 0;
+  	margin: 6px 0px 0 !important;
   }
 }
 @media screen and (max-width: 340px){
