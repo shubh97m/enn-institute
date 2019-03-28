@@ -206,7 +206,7 @@
 		                @if(!empty($gallery_category))
 			                @foreach($gallery_category as $cat)
 				                <a class="filter btn btn-common" data-filter=".{{$cat['id']}}">
-				                  Academy 
+				                  {{$cat['name']}}
 				                </a>
 			                @endforeach
 		                @endif
@@ -241,7 +241,7 @@
 						                    <img src="{{url('assets/img/gallery/'.$gal['image'])}}" alt="gallery" /> 
 						                    <div class="overlay">
 						                      <div class="icons">
-						                        <a class="lightbox preview" href="images/gallery/gallery2.jpg">
+						                        <a class="lightbox preview" href="{{url('assets/img/gallery/'.$gal['image'])}}">
 						                          <i class="fa fa-eye"></i>
 						                        </a>
 						                      </div>
