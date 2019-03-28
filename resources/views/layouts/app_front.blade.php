@@ -239,14 +239,15 @@
                 $(".submenu").toggle();
             });
             $(".search-input").click(function(){
-            	$(".searchIcon").css("display","none");
-            	$(".cross-icon").css("display","block");
+            	/*$(".searchIcon").css("display","none");
+            	$(".cross-icon").css("display","block");*/
                 $(".search-toggle").toggle();
                 
 			});
-			$(".cross-icon").click(function(){
-				$(".searchIcon").css("display","block");
-				$(".cross-icon").css("display","none");
+			$('.search-input').on('click',function(event){
+			   event.stopPropagation();
+			    
+			    $('.menuListing').toggleClass('mobile_search');
 			});
 			$("#img-modal").click(function(){
 				$("#modal-exam-form").modal("hide");
