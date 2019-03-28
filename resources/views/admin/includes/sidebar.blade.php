@@ -68,6 +68,11 @@
             <i class="fa fa-fw fa-sign-out"></i> <span>Gallery</span>
           </a>
         </li>
+        <li>
+          <a href="{{url('admin/testimonial')}}">
+            <i class="fa fa-fw fa-sign-out"></i> <span>Testimonial</span>
+          </a>
+        </li>
 
          <li>
           <a href="{{url('admin/logout')}}">

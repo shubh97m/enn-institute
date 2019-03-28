@@ -10,7 +10,7 @@
         {{csrf_field()}}
         <input name="_method" type="hidden" value="PATCH">
         <div class="item form-group">
-            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Client's Review<span class="required">*</span>
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Student Review<span class="required">*</span>
 
             </label>
             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="item form-group">
-            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Client's Name<span class="required">*</span>
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Student Name<span class="required">*</span>
 
             </label>
             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="item form-group">
-            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="slug">Client's Designation<span class="required">*</span>
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="slug">Student Designation<span class="required">*</span>
 
             </label>
             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="item form-group">
-            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="slug">Client's Image<span class="required"></span>
+            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="slug">Student Image<span class="required"></span>
 
             </label>
             <div class="col-md-6 col-sm-6 col-xs-12">
