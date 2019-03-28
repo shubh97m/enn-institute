@@ -6,7 +6,9 @@
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+       @php     
+         $settings= _arefy(App\Models\generalSettings::where('status','!=','trashed')->first()); @endphp
+      <span class="logo-lg"> <img src="{{url('assets/img/'.$settings['logo'])}}" class="img-circle" alt="User Image"></span>
     </a>
 
     <!-- Header Navbar: style can be found in header.less -->

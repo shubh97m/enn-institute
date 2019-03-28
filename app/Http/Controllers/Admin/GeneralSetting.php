@@ -45,6 +45,11 @@ class GeneralSetting extends Controller
         $data['social_sites'] = json_encode(array('facebook' =>$request->facebook_url,
                                                   'linkdin'  =>$request->linkdin_url ,
                                                   'twitter'  =>$request->twitter_url));
+        if ($file = $request->file('logo')){
+                $photo_name = time().$request->file('logo')->getClientOriginalName();
+                $file->move('assets/img/',$photo_name);
+                $data['logo'] = $photo_name;
+            }
 
         $inserId = generalSettings::where('id',1)->update($data);                
             $this->status     = true;
