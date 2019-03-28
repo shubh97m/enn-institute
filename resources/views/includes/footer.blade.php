@@ -4,9 +4,10 @@
 					<div class="col-md-3 jsnn-widget">
 						<h4>News Letter</h4>
 						<div class="newsletter">
-							<form>
-								<input type="text" name="name" placeholder="Subscribe">
-								<button class="btn-blue">Subscribe</button>
+							
+							<form method="POST" action="{{url('subscribe')}}">
+								<input type="text" name="email" placeholder="Subscribe">
+								<button type="submit" class="btn-blue">Subscribe</button>
 							</form>
 						</div>
 					</div>

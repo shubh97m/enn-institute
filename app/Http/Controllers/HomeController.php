@@ -89,6 +89,21 @@ class HomeController extends Controller
         return view('front_home', $data);
         
     }
+
+    public function subscribe(Request $request)
+    {   
+        if($request->email!=''){
+            $data['email']      =  $request->email;
+            Subscription::add($data);
+            
+
+        }
+        
+        
+        $data['view'] ='front.search';
+        return view('front_home', $data);
+        
+    }
     public function courseView(Request $request,$id )
     {
         $id = ___decrypt($id);
