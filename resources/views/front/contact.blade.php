@@ -48,17 +48,22 @@
 							<div class="col-md-12">
 								<div class="contact-info-wrap-flex">
 									<div class="con-info">
-										<p><span><i class="icon-pointer"></i></span> F-12 Preet Vihar Metro Gate No 2, Landmark:- Near ICICI Bank, Preet Vihar, New Delhi 110092</p>
+										<p><span><i class="icon-pointer"></i></span>{{$settings->address}}</p>
 									</div>
 									<div class="con-info">
-										<p><span><i class="icon-phone"></i></span> <a href="tel:+ +011-46702233"> 011-46702233</a></p>
+										<p>Skype:<span><i class="icon-phone"></i></span> <a href="tel:+ +011-{{$settings->skype_number}}"> 011-{{$settings->skype_number}}</a></p>
 									</div>
+									<div class="con-info">
+										<p>Phone:<span><i class="icon-phone"></i></span> <a href="tel:+91-{{$settings->phone}}">{{$settings->phone}}</a>,  <a href="tel:+91-{{$settings->phone2}}">{{$settings->phone2}}</a></p>
+									</div>
+								
+
 
 									<div class="con-info">
-										<p><span><i class="icon-envelope"></i></span> <a href="mailto:admin@enntechnologies.in">admin@enntechnologies.in</a></p>
+										<p><span><i class="icon-envelope"></i></span> <a href="mailto:{{$settings->email}}">{{$settings->email}}</a></p>
 									</div>
 									<div class="con-info">
-										<p><span><i class="icon-globe"></i></span> <a href="#">yourwebsite.com</a></p>
+										<p><span><i class="icon-globe"></i></span> <a href="http://enntechnologies.in">enntechnologies.in</a></p>
 									</div>
 								</div>
 							</div>
