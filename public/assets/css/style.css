@@ -1668,6 +1668,7 @@ a.search-input.search{
 .sub-courses {
   margin-bottom: 30px;
   position: relative;
+  border: 1px solid #0e1451;
   border-radius: 5px;
   background: #fff;
 }
@@ -1699,14 +1700,15 @@ a.search-input.search{
 }
 .sub-courses .desc {
   transition: .3s ease-in;
-  padding: 98px 20px 20px 20px; 
+  padding: 98px 13px 13px 13px; 
 }
 .sub-courses .desc p{
   color: #363333;
   font-weight: 400;
 }
 .sub-courses .desc h3{
-  font-size: 16px;
+  font-size: 12px;
+  line-height:19px;
   font-weight: 600;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -2139,6 +2141,7 @@ article {
   }
   #jsnn-hero .flexslider .slider-text > .slider-text-inner h1{
     font-size: 24px;
+    text-align:left !important;
   }
   #jsnn-intro .nav-tabs li{
     width: 50% !important;
