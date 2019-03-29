@@ -37,6 +37,10 @@
               <img style="max-width: 250px;" src="{{asset('assets/img/avatar.png')}}" id="adminimg" alt="No Featured Image Added">
             </div>
       </div>
+      <div class="form-group">
+            <label>Course Description:</label>
+            <textarea id="description" name="description" rows="6" cols="80"></textarea>
+      </div>
        
 
          <div class="box-footer">
@@ -57,9 +61,6 @@
             reader.readAsDataURL(input.files[0]);
         }
       }
-</script>
-
- {{--  <script type="text/javascript">
 
     $(document).ready(function(){
       var val = "{{$course['description']}}";
@@ -67,4 +68,3 @@
    });  
 
   </script>
- --}}
