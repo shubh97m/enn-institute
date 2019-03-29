@@ -136,6 +136,13 @@ class HomeController extends Controller
         return view('front_home',$data);
     }
 
+    public function view_course()
+    {
+        
+        $data['view'] = 'front.course-description';
+        return view('front_home',$data);
+    }
+
     public function sub_courses(Request $request,$id )
     {
         $id = ___decrypt($id);
