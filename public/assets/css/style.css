@@ -1621,7 +1621,8 @@ a.search-input.search{
             color: #fff; }
           #jsnn-hero .flexslider .slider-text > .slider-text-inner .btn:hover {
             background: #000 !important; }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) 
+{
 #jsnn-hero .flexslider .slider-text > .slider-text-inner .btn {
   width: 100%; 
 	}
@@ -1653,6 +1654,13 @@ a.search-input.search{
     	box-shadow: none;
 	    right:10px;
 	    background:transparent;
+	}
+	.mobile_search .cross-icon{
+		display: block;
+		padding-top: 5px;
+	}
+	.mobile_search .searchIcon{
+		display: none;
 	}
 }
 
