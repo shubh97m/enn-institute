@@ -114,6 +114,7 @@
                   <th>Sub Course Name</th>
                   <th>Main Course name</th>
                   <th>Image</th>
+                  <th>Description</th>
                   <th>Status</th>
                   <th>Actions</th>
                 </tr>
@@ -135,6 +136,7 @@
                         <td><img src="{{asset('assets/img/Courses/'.$subcourses['image'])}}"
                           class="list_img" / >
                         </td>
+                        <td>{!!($subcourses['description'])!!}</td>
                         <td> {{$subcourses['status']}}</td>
                         <td>
                         <a href="{{url(sprintf('admin/sub-courses/edit/%s',___encrypt($subcourses['id'])))}}" title="Edit Sub Courses"><i class="fa fa-edit"></i></a>|  
@@ -185,6 +187,7 @@
                  <th>S.no</th>
                   <th>Child Course Name</th>
                   <th>Image</th>
+                  <th>Description</th>
                   <th >Actions</th>
                 </tr>
                 </thead>
@@ -207,6 +210,7 @@
                         @else
                           <td>N/A</td>
                         @endif
+                       <td>{{$childCourses['description']}}</td>
                         <td> {{$childCourses['status']}}</td>
                         <td>
                         <a href="javascript:void(0);" 

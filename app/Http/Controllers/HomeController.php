@@ -32,17 +32,17 @@ class HomeController extends Controller
 	{
 		$data['view'] = 'front.index';
 
-        $data['sliders'] =_arefy(Sliders::where('status','!=','trashed')->get());
-        $data['partner']  = _arefy(OurPartners::where('status','!=','trashed')->get());
-        $data['gallery_category']  = _arefy(GalleryCategory::gallery_list('array'));
-        $data['gallery']  = _arefy(Gallery::list('array'));
-        $data['course']      =  _arefy(MainCourses::where('status','=','active')->get());
+        $data['sliders']        =     _arefy(Sliders::where('status','!=','trashed')->get());
+        $data['partner']        =     _arefy(OurPartners::where('status','!=','trashed')->get());
+        $data['gallery_category'] =   _arefy(GalleryCategory::gallery_list('array'));
+        $data['gallery']        =     _arefy(Gallery::list('array'));
+        $data['course']         =     _arefy(MainCourses::where('status','=','active')->get());
         
-        $data['gallery']  = _arefy(Gallery::list('array'));
+        $data['gallery']        =     _arefy(Gallery::list('array'));
 
-        $data['course']             =  _arefy(MainCourses::where('status','=','active')->get());
-        $data['testimonial']        =  _arefy(Testimonial::get());
-        $data['total_courses']      =  MainCourses::list('count')+SubCourses::list('count')+ChildCourses::list('count');
+        $data['course']         =     _arefy(MainCourses::where('status','=','active')->get());
+        $data['testimonial']    =     _arefy(Testimonial::get());
+        $data['total_courses']  =  MainCourses::list('count')+SubCourses::list('count')+ChildCourses::list('count');
 
 
 		return view('front_home',$data);

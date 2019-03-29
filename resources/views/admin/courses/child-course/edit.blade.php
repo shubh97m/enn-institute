@@ -64,6 +64,14 @@
             </div>
           </div>
         </div>
+      <div class="col-md-12">
+            <div class="form-group">
+              <label>Course Description:</label>
+            <textarea id="description" name="description" rows="6" cols="80" class="form-control" >{{!empty($childcourses['description'])?$childcourses['description']:''}}</textarea>
+            </div>
+          </div>
+        </div> 
+   
 
         <div class="box-footer">
           <a href="{{url('admin/courses')}}" class="btn btn-default">Cancel</a>

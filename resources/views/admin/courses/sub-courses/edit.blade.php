@@ -33,6 +33,14 @@
             </div>
           </div>
         </div>
+           <div class="row">  
+         <div class="col-md-12">
+            <div class="form-group">
+              <label>Course Description:</label>
+            <textarea id="description" name="description" rows="6" cols="80" class="form-control" >{{!empty($subcourses['description'])?$subcourses['description']:''}}</textarea>
+            </div>
+          </div>
+        </div> 
 
         <div class="col-md-12">
           <div class="form-group">
