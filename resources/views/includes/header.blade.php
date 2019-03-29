@@ -20,7 +20,18 @@
 							<!--</li>-->
 							<li class="rightListli boxli"><a href="{{url('ask-a-demo')}}"><i class="fa fa-caret-square-o-up" style="padding-right:5px;"></i>Ask a Demo</a></li>
 							<li class="rightListli boxli1"><a href="tel:7060471862"><img src="{{url('images/phone.gif')}}" style="padding-right:5px;height: 20px;"></i>Get a Call Back</a></li>
+							<li class="mobileBlock"><a href="javascript:void(0);" class="search-mobile-input search">
+								<i class="fa fa-search searchIcon"></i>
+								<i class="fa fa-times cross-icon"></i>
+								</a>
+							</li>
 						</ul>
+						<form method="GET" action="{{url('search')}}"> 
+							<div class="search-mobile-toggle forMobile">
+								<input type="text" name="search" placeholder="Search Courses...">
+								<button type="submit" class="btn-secarch"><i class="fa fa-search"></i></button>
+							</div>
+						</form>
 					</div>
 					<!-- admin@enntechnologies.in -->
 				</div>
@@ -49,7 +60,7 @@
 									<li><a href="#">Classroom Training</a></li>
 									<li><a href="{{url('/about-us')}}">About Us</a></li>
 									<li><a href="{{url('/contact')}}">Contact Us</a></li>
-									<li><a href="javascript:void(0);" class="search-input search">
+									<li class="mobileHide"><a href="javascript:void(0);" class="search-input search">
 										<i class="fa fa-search searchIcon"></i>
 										<i class="fa fa-times cross-icon"></i>
 										</a>
@@ -59,7 +70,7 @@
 									
 								</ul>
 								<form method="GET" action="{{url('search')}}"> 
-									<div class="search-toggle">
+									<div class="search-toggle forDesktop">
 										<input type="text" name="search" placeholder="Search Courses...">
 										<button type="submit" class="btn-secarch"><i class="fa fa-search"></i></button>
 									</div>
