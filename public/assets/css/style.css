@@ -1169,12 +1169,31 @@ textarea.form-control{
   /* text-align: center; */
   /* display: flex; */
 }
+.mobileHide{
+	display:block;
+}
+.mobileBlock{
+	display:none !important;
+}
+a.search-input.search{
+	position:fixed;
+	top:49px;
+}
+.header-hidden a.search-input.search{
+	top:15px;
+}
 @media screen and (max-width: 768px) {
     .jsnn-nav {
       margin: 0; 
   	} 
   	.jsnn-nav #jsnn-logo{
   		margin: 1px 0px 0 !important;
+  	}
+  	.mobileHide{
+  		display:none;
+  	}
+  	.mobileBlock{
+  		display:block !important;
   	}
   }
   
