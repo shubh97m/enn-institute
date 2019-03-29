@@ -249,6 +249,17 @@
 			    
 			    $('.menuListing').toggleClass('mobile_search');
 			});
+			$(".search-mobile-input").click(function(){
+            	/*$(".searchIcon").css("display","none");
+            	$(".cross-icon").css("display","block");*/
+                $(".search-mobile-toggle").toggle();
+                
+			});
+			$('.search-mobile-input').on('click',function(event){
+			   event.stopPropagation();
+			    
+			    $('.rightHeader').toggleClass('mobile_search');
+			});
 			$("#img-modal").click(function(){
 				$("#modal-exam-form").modal("hide");
 				$("#register-form-exam").show();

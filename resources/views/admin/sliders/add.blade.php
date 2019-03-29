@@ -8,9 +8,11 @@
       <form role="add-slider" method="POST" action="{!! action('Admin\sliderController@store') !!}">
         {{csrf_field()}}
         <div class="form-group">
-          <label>Slider Image:</label>
+          
+          <label>Slider Image(1349px * 450px):</label>
           <div>
-              <input onchange="readURL(this)" id="uploadFile" accept="image/*" name="image" type="file">
+              <input onchange="readURL(this)" id="uploadFile"  accept="image/*" name="image" type="file">
+              
           </div>
           <div>
             <img style="max-width: 250px;" src="{{asset('assets/img/avatar.png')}}" id="adminimg" alt="No Image Added">
