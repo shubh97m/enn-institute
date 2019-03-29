@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
+use App\Models\AskDemo;
 class StaticController extends Controller
 {
     /**
@@ -19,7 +20,14 @@ class StaticController extends Controller
      public function contact(Request $request)
     {
         $data['view'] = 'admin.contact.list';
-        $data['contact']  = _arefy(Contact::where('status','!=','trashed')->get());
+        $data['contact']  = _arefy(Contact::where('status','!=','trashed')->orderBy('id','desc')->get());
+        return view('admin.home')->with($data);
+    }
+
+    public function demo(Request $request)
+    {
+        $data['view'] = 'admin.contact.demo';
+        $data['contact']  = _arefy(AskDemo::where('status','!=','trashed')->orderBy('id','desc')->get());
         return view('admin.home')->with($data);
     }
 
