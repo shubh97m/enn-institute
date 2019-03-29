@@ -40,6 +40,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 
 	Route::get('home','loginController@home');
 	Route::get('contact','StaticController@contact');
+	Route::get('ask-demo','StaticController@demo');
 	Route::get('logout',function(){
 		\Auth::logout();
 	      return redirect('admin/login');

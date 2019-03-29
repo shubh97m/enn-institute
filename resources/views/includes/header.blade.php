@@ -55,9 +55,9 @@
 											<li><a href="#">Corporate Training</a></li>
 											<li><a href="#">Industrial Training</a></li>
 											<li><a href="#">Online Training</a></li>
+											<li><a href="#">Classroom Training</a></li>
 										</ul>
 									</li>
-									<li><a href="#">Classroom Training</a></li>
 									<li><a href="{{url('/about-us')}}">About Us</a></li>
 									<li><a href="{{url('/contact')}}">Contact Us</a></li>
 									<li class="mobileHide"><a href="javascript:void(0);" class="search-input search">
