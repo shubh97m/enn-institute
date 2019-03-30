@@ -1852,7 +1852,7 @@ a.search-input.search{
 }
 .sub-courses .desc {
   transition: .3s ease-in;
-  padding: 98px 13px 13px 13px; 
+  padding: 98px 5px 13px 5px; 
 }
 .sub-courses .desc p{
   color: #363333;
