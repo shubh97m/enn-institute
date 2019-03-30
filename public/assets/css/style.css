@@ -422,6 +422,12 @@ ul .search
   font-family: -webkit-pictograph;
   text-align: center;
 }
+.askademo-wrapper{
+	max-width: 600px;
+    padding: 20px;
+    margin: 0 auto 20px;
+    border: 1px solid #d5d5d5;
+}
 .content-training{
   display: flex;
   padding: 0;
@@ -786,6 +792,18 @@ ul.rightHeader li{
 }
 .contact-info-size{
   font-size: 30px;
+  padding-top: 30px;
+} 
+.askademo-wrapper input{
+	border: 1px solid #d5d5d5;
+	height: 40px !important;
+}
+.askademo-wrapper select{
+	border: 1px solid #d5d5d5;
+	height: 40px !important;
+}
+.askademo-wrapper .form-group{
+	margin-bottom: 15px;
 }
 .color-span{
   color:#141566;
@@ -1514,7 +1532,7 @@ a.search-input.search{
       #jsnn-hero .flexslider .slides li {
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: bottom center;
+        background-position: center center;
         /* min-height: 340px; */
         position: relative;
         }
