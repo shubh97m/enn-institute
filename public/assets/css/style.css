@@ -1556,7 +1556,7 @@ a.search-input.search{
           /* IE6-9 fallback on horizontal gradient */
           }
     #jsnn-hero .flexslider .flex-control-nav {
-      bottom: 7em;
+      bottom: 0;
       z-index: 1000;
       width: 0 auto; }
       #jsnn-hero .flexslider .flex-control-nav li a {
