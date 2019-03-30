@@ -8,7 +8,7 @@
       <!-- logo for regular state and mobile devices -->
        @php     
          $settings= _arefy(App\Models\generalSettings::where('status','!=','trashed')->first()); @endphp
-      <span class="logo-lg"> <img src="{{url('assets/img/'.$settings['logo'])}}" class="img-circle" alt="User Image"></span>
+      <span class="logo-lg"> <img src="{{url('assets/img/'.$settings['logo'])}}" alt="User Image" style="height:50px;"></span>
     </a>
 
     <!-- Header Navbar: style can be found in header.less -->
