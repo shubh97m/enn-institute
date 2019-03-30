@@ -258,9 +258,12 @@ h1, h2, h3, h4, h5, h6, figure {
     border-color: #67bfff;
     background: transparent;
 }
+.shot-item{
+	height: 250px;
+}
 .shot-item img {
     width: 100%;
-    height: 250px;
+    height: 100%;
 }
 .gallery-wrap{
   padding: 3em 0 2em;
@@ -1781,8 +1784,9 @@ a.search-input.search{
   display: block; 
 }
 .sub-courses-img img{
-  height: 320px;
-  width: 100%;
+  	height: 100%;
+	object-fit: contain;
+	width: 100%;
 }
 .apply-now a{
   color: #fff;
