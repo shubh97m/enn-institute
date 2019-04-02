@@ -45,9 +45,9 @@ class Validate
       'password_check'    => ['required'],
       'newpassword'       => ['required','max:10'],
       'password_null'     => ['nullable'],
-      'review'        => ['required','string','max:300'],
-      'client'        => ['required','string'],
-      'designation'     => ['required','string'],
+      'review'            => ['required','string','max:300'],
+      'client'            => ['required','string'],
+      'designation'       => ['required','string'],
       
     ];
     return $validation[$key];
@@ -270,7 +270,15 @@ class Validate
       ]);
       return $validator;
     }
-  
 
+    public function addTrainings($action='add')
+    {
+       $validations = [
+          'training_type'   =>$this->validation('name'),    
+          ];
+
+          $validator = \Validator::make($this->data->all(), $validations,[]);
+          return $validator;     
+        }   
 }
 

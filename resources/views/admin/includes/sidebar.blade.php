@@ -65,11 +65,16 @@
           </a>
         </li>
 
-          <li>
+        <li>
           <a href="{{url('admin/gallery')}}">
             <i class="fa fa-fw fa-sign-out"></i> <span>Gallery</span>
           </a>
         </li>
+         <li>
+          <a href="{{url('admin/trainings')}}">
+            <i class="fa fa-fw fa-sign-out"></i> <span>Trainings</span>
+          </a>
+        </li>    
         <li>
           <a href="{{url('admin/testimonial')}}">
             <i class="fa fa-fw fa-sign-out"></i> <span>Testimonial</span>
@@ -80,6 +85,7 @@
             <i class="fa fa-fw fa-sign-out"></i> <span>Ask Demo</span>
           </a>
         </li>
+        <li>
         <li>
           <a href="{{url('admin/contact')}}">
             <i class="fa fa-fw fa-sign-out"></i> <span>Contact</span>

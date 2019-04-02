@@ -33,6 +33,7 @@ Route::get('/view-course','HomeController@view_course');
 Route::get('/ask-a-demo','HomeController@askDemo');
 Route::post('/ask-a-demo','HomeController@askDemoStore');
 
+
 //************Admin section*************//
 Route::get('admin/login','Admin\loginController@login');
 Route::post('admin/login','Admin\loginController@authentication');
@@ -98,12 +99,16 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 	  Route::post('/{id}/delete','GalleryController@deleteGallery');	
 	});
 	Route::get('gallery-category','GalleryController@list');
-	Route::get('gallery-category/create','GalleryController@addCategory');
+//Gallery 
 	Route::get('gallery-category/edit/{id}',
 		'GalleryController@editCategory');
 	   Route::post('gallery-category/store','GalleryController@storeCategory');
 	   Route::post('gallery-category/update/{id}','GalleryController@updateCategory');
 
-
-
-});
+//trainings
+	Route::resource('trainings','TrainingController');
+		Route::group(['prefix' => 'trainings'],function(){
+		Route::post('/{id}/delete','TrainingController@deleteTraining');
+	});
+	
+	});

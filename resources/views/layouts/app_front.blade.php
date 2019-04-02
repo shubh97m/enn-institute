@@ -70,6 +70,7 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="fa fa-angle-up"></i></a>
 	</div>
+	@if(Request::segment(1)!='ask-a-demo')
 	<div class="popupmodal">
 	        <div id="modal-exam-form" class="modal fade" role="dialog">
 	           <div class="modal-dialog">
@@ -88,6 +89,7 @@
 	            </div>
 	        </div>
         </div>
+        @endif
 	<div class="popupmodal">
         <!-- Modal -->
 	        <div id="register-form-exam" class="modal fade" role="dialog">
