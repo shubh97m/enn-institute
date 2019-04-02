@@ -20,9 +20,10 @@
 							<!--</li>-->
 							<li class="rightListli boxli"><a href="{{url('ask-a-demo')}}"><i class="fa fa-caret-square-o-up" style="padding-right:5px;"></i>Ask a Demo</a></li>
 							<li class="rightListli boxli1"><a href="tel:7060471862"><img src="{{url('images/phone.gif')}}" style="padding-right:5px;height: 20px;"></i>Get a Call Back</a></li>
-							<li class="mobileBlock"><a href="javascript:void(0);" class="search-mobile-input search">
-								<i class="fa fa-search searchIcon"></i>
-								<i class="fa fa-times cross-icon"></i>
+							<li class="mobileBlock">
+								<a href="javascript:void(0);" class="search-mobile-input search">
+									<i class="fa fa-search searchIcon"></i>
+									<i class="fa fa-times cross-icon"></i>
 								</a>
 							</li>
 						</ul>

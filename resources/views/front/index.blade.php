@@ -4,7 +4,7 @@
 				<ul class="slides">
 					@foreach($sliders as $slider)
 									
-			   	<li style="background-image: url('{{asset('assets/img/Slider/'.$slider['image'])}}')">
+			   	<li style="background-image: url('{{asset('assets/img/Slider/'.$slider['image'])}}')" class="img-responsive">
 			   		<div class="overlay"></div>
 			   		<div class="container-fluid">
 			   			<div class="row">

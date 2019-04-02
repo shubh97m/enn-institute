@@ -258,9 +258,12 @@ h1, h2, h3, h4, h5, h6, figure {
     border-color: #67bfff;
     background: transparent;
 }
+.shot-item{
+	height: 250px;
+}
 .shot-item img {
     width: 100%;
-    height: 250px;
+    height: 100%;
 }
 .gallery-wrap{
   padding: 3em 0 2em;
@@ -421,6 +424,12 @@ ul .search
   font-weight: 600;
   font-family: -webkit-pictograph;
   text-align: center;
+}
+.askademo-wrapper{
+	max-width: 600px;
+    padding: 20px;
+    margin: 0 auto 20px;
+    border: 1px solid #d5d5d5;
 }
 .content-training{
   display: flex;
@@ -786,6 +795,18 @@ ul.rightHeader li{
 }
 .contact-info-size{
   font-size: 30px;
+  padding-top: 30px;
+} 
+.askademo-wrapper input{
+	border: 1px solid #d5d5d5;
+	height: 40px !important;
+}
+.askademo-wrapper select{
+	border: 1px solid #d5d5d5;
+	height: 40px !important;
+}
+.askademo-wrapper .form-group{
+	margin-bottom: 15px;
 }
 .color-span{
   color:#141566;
@@ -1514,7 +1535,7 @@ a.search-input.search{
       #jsnn-hero .flexslider .slides li {
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: bottom center;
+        background-position: center center;
         /* min-height: 340px; */
         position: relative;
         }
@@ -1538,7 +1559,7 @@ a.search-input.search{
           /* IE6-9 fallback on horizontal gradient */
           }
     #jsnn-hero .flexslider .flex-control-nav {
-      bottom: 7em;
+      bottom: 0;
       z-index: 1000;
       width: 0 auto; }
       #jsnn-hero .flexslider .flex-control-nav li a {
@@ -1621,7 +1642,8 @@ a.search-input.search{
             color: #fff; }
           #jsnn-hero .flexslider .slider-text > .slider-text-inner .btn:hover {
             background: #000 !important; }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) 
+{
 #jsnn-hero .flexslider .slider-text > .slider-text-inner .btn {
   width: 100%; 
 	}
@@ -1653,6 +1675,13 @@ a.search-input.search{
     	box-shadow: none;
 	    right:10px;
 	    background:transparent;
+	}
+	.mobile_search .cross-icon{
+		display: block;
+		padding-top: 5px;
+	}
+	.mobile_search .searchIcon{
+		display: none;
 	}
 }
 
@@ -1755,8 +1784,9 @@ a.search-input.search{
   display: block; 
 }
 .sub-courses-img img{
-  height: 320px;
-  width: 100%;
+  	height: 100%;
+	object-fit: contain;
+	width: 100%;
 }
 .apply-now a{
   color: #fff;
@@ -1822,7 +1852,7 @@ a.search-input.search{
 }
 .sub-courses .desc {
   transition: .3s ease-in;
-  padding: 98px 13px 13px 13px; 
+  padding: 98px 5px 13px 5px; 
 }
 .sub-courses .desc p{
   color: #363333;
