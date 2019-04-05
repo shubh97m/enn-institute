@@ -136,7 +136,6 @@
                         <td><img src="{{asset('assets/img/Courses/'.$subcourses['image'])}}"
                           class="list_img" / >
                         </td>
-                        <td>{!!($subcourses['description'])!!}</td>
                         <td> {{$subcourses['status']}}</td>
                         <td>
                         <a href="{{url(sprintf('admin/sub-courses/edit/%s',___encrypt($subcourses['id'])))}}" title="Edit Sub Courses"><i class="fa fa-edit"></i></a>|  

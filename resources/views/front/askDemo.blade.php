@@ -12,17 +12,19 @@
 
 			<div class="row form-group">
 				<div class="col-md-12">
-					<!-- <label for="email">Email</label> -->
-					<input type="text" name="email" id="email" class="form-control" placeholder="Your email address">
+					<!-- <label for="message">Message</label> -->
+					<input type="text" name="mobile" id="mobile" class="form-control" placeholder="Your Mobile Number">	
 				</div>
 			</div>
 
 			<div class="row form-group">
 				<div class="col-md-12">
-					<!-- <label for="message">Message</label> -->
-					<input type="text" name="mobile" id="mobile" class="form-control" placeholder="Your mobile number">	
+					<!-- <label for="email">Email</label> -->
+					<input type="text" name="email" id="email" class="form-control" placeholder="Your Email Address">
 				</div>
 			</div>
+			
+
 			<div class="row form-group">
 		    	<div class="col-md-12">
 					  <select class="form-control" name="courses">
@@ -31,6 +33,13 @@
 				  <option value="{{!empty($courses['name'])?$courses['name']:''}}">{{!empty($courses['name'])?$courses['name']:''}}</option>	@endforeach
 					  </select>     				
 				</div>	  	
+			</div>
+
+			<div class="row form-group">
+				<div class="col-md-12">
+					<!-- <label for="email">Email</label> -->
+					<input type="date" name="preferred date" id="date" class="form-control" >
+				</div>
 			</div>
 			
 			<div class="row form-group">

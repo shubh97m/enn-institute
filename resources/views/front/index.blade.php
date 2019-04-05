@@ -30,8 +30,8 @@
 				<div class="row">
 					<div class="col-md-12 tabulation animate-box">
 						<ul class="nav nav-tabs">
-							<li class="active"><a data-toggle="tab" href="#plan"><i class="flaticon-sketch"></i> About ENN Technologies</a></li>
-							<li><a data-toggle="tab" href="#general"><i class="icon-user"></i> Director's Message</a></li>
+							<li class="active"><a data-toggle="tab" href="#plan"><i class="flaticon-sketch"></i> Director's Message</a></li>
+							<li><a data-toggle="tab" href="#general"><i class="icon-user"></i> About ENN Technologies</a></li>
 							<!-- <li><a data-toggle="tab" href="#manage"><i class="flaticon-engineer"></i> Principal's Message</a></li> -->
 							<!-- <li><a data-toggle="tab" href="#modeling"><i class="flaticon-skyline"></i>  </a></li> -->
 						</ul>
@@ -40,12 +40,12 @@
 								<div class="row">
 									<div class="col-md-6">
 										<div class="sub-courses-img"> 
-											<img src="images/about.jpg" alt="about">
+											<img src="images/message.jpg" alt="about">
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="sub-courses-desc">
-											<h3>About ENN Technologies</h3>
+                                            <h3>Director's Message</h3>
 											<p>Enn technologies is Having Indiawide Name in IT field. We provide High quality Technologies training and consulting sub-courses that full fill Students.
 											Technologies training and consulting sub-courses that full fill Students, government and corporate Requirements. ENN Technologies is a Leading online and classroom training provider based in Delhi which provides training programs for both Corporate and individuals across the globe.</p>
 											<ul>
@@ -62,12 +62,12 @@
 				         	<div class="row">
 									<div class="col-md-6">
 										<div class="sub-courses-img"> 
-											<img src="images/message.jpg" alt="message">
+											<img src="images/about.jpg" alt="message">
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="sub-courses-desc">
-											<h3>Director's Message</h3>
+                                            <h3>About ENN Technologies</h3>
 											<p>Enn technologies is Having Indiawide Name in IT field. We provide High quality Technologies training and consulting sub-courses that full fill Students.
 											Technologies training and consulting sub-courses that full fill Students, government and corporate Requirements. ENN Technologies is a Leading online and classroom training provider based in Delhi which provides training programs for both Corporate and individuals across the globe.</p>
 											<ul>
@@ -121,6 +121,13 @@
 			</div>
 		</div>
 	</section>
+	<script>
+		function gridView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "50%";
+  }
+}
+	</script>
 	<section>
 		<div id="jsnn-counter" class="jsnn-counters" style="background-image: url(images/img_bg_4.jpg);" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
