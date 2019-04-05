@@ -703,7 +703,7 @@ ul.rightHeader li{
 .sub-sub-course {
   /* clear: both; */
   display: flex;
-  border-bottom: 1px solid #ddd;
+  /*border-bottom: 1px solid #ddd;*/
   /* padding: 5px 10px 0; */
   align-items: center;
 }
@@ -3285,4 +3285,7 @@ input[type="text"] {
 }
 .col-md-3.text-center.animate-box.grid-item.fadeInUp.animated-fast {
     padding: 0px;
+}
+.col-md-12 {
+    padding: 15px 0px;
 }
