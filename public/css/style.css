@@ -2697,3 +2697,11 @@ input[type="text"] {
 
 .js .animate-box {
   opacity: 1; }
+
+.grid-container {
+    display: grid;
+    padding: 0px;
+}
+.col-md-3.text-center.animate-box.grid-item.fadeInUp.animated-fast {
+    padding: 0px;
+}

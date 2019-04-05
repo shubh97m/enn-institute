@@ -101,9 +101,10 @@
 							<a href="{{url('/courses')}}">View All Course</a>
 						</div>
 					</div>
+					<div class="grid-container">
 					<div class="row">
 						@foreach($course as $courses)
-							<div class="col-md-2 text-center animate-box">
+							<div class="col-md-3 text-center animate-box grid-item">
 								<a href="{{url('courses/'.___encrypt($courses['id']))}}">
 								<div class="sub-courses">
 									<span class="icon">
@@ -118,16 +119,10 @@
 						@endforeach
 					</div>
 				</div>
+				</div>
 			</div>
 		</div>
 	</section>
-	<script>
-		function gridView() {
-  for (i = 0; i < elements.length; i++) {
-    elements[i].style.width = "50%";
-  }
-}
-	</script>
 	<section>
 		<div id="jsnn-counter" class="jsnn-counters" style="background-image: url(images/img_bg_4.jpg);" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
