@@ -418,7 +418,7 @@
 		            <div>
 		            <div class="col-md-7 col-sm-12 col-xs-12">
 		            	<div class="popup-img-left">
-		            		<img src="images/message.jpg" alt="register">
+		            		<img src="{{asset('images/message.jpg')}}" alt="register">
 		            	</div>
 		            </div>
 			        <div class="col-md-5 col-sm-12 col-xs-12">
@@ -493,14 +493,14 @@
         </div>
 @section('requirejs')
 <script type="text/javascript">
-		$(window).load(function(){        
-	   		$('#modal-exam-form').modal('show');
-	    });
-	    $("#img-modal").click(function(){
-				$("#modal-exam-form").modal("hide");
-				$("#register-form-exam").show();
-				
-			});
+	$(window).load(function(){        
+   		$('#modal-exam-form').modal('show');
+    });
+    $("#img-modal").click(function(){
+		$("#modal-exam-form").modal("hide");
+		$("#register-form-exam").show();
+		
+	});
 </script>
 @endsection
 
