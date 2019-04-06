@@ -259,6 +259,7 @@
 			$("#img-modal").click(function(){
 				$("#modal-exam-form").modal("hide");
 				$("#register-form-exam").show();
+				$(".jsnn-nav #jsnn-logo a").css("box-shadow","none");
 			});
             // window.addEventListener("keyup", function(e){ if(e.keyCode == 27) history.back(); }, false);
 
