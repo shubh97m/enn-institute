@@ -1560,7 +1560,8 @@ a.search-input.search{
           }
     #jsnn-hero .flexslider .flex-control-nav {
       bottom: 0;
-      z-index: 1000;
+      z-index: -1;
+      /*z-index: 1000;*/
       width: 0 auto; }
       #jsnn-hero .flexslider .flex-control-nav li a {
         background: rgb(103, 191, 255);
@@ -1572,7 +1573,7 @@ a.search-input.search{
           background: transparent;
           background: #142684; }
     #jsnn-hero .flexslider .flex-direction-nav {
-      display: none; }
+      display: block; }
     #jsnn-hero .flexslider .slider-text {
       max-width: 100%;
       display: table;
@@ -1791,6 +1792,9 @@ a.search-input.search{
 .apply-now a{
   color: #fff;
   padding: 2px 6px;
+}
+.modal-open .jsnn-nav #jsnn-logo a{
+  box-shadow: none;
 }
 @media screen and (max-width: 768px) {
     .sub-courses-img {

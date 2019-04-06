@@ -221,7 +221,8 @@
 	  	$('#jsnn-hero .flexslider').flexslider({
 			animation: "fade",
 			slideshowSpeed: 5000,
-			directionNav: true,
+			directionNav:true,
+    		controlNav:false,
 			start: function(){
 				setTimeout(function(){
 					$('.slider-text').removeClass('animated fadeInUp');
