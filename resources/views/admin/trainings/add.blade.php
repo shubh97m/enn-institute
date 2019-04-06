@@ -22,8 +22,8 @@
             <label>Courses Name </label>
             <select class="form-control" name="course_id" id="courseName" >
               <option value="">---Select courses to add---</option>
-                @foreach($course as $courses)
-                <option value="{{!empty($courses['id'])?$courses['id']:''}}">{{!empty($courses['name'])?$courses['name']:''}}</option>
+                @foreach($course as $trainings)
+                <option value="{{!empty($trainings['id'])?$trainings['id']:''}}">{{!empty($trainings['name'])?$trainings['name']:''}}</option>
                 @endforeach 
             </select>
           </div>

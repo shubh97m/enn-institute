@@ -20,7 +20,9 @@ class TrainingController extends Controller
     public function index()
     {
            $data['view'] ='admin.trainings.list';
-           $data['training']  = _arefy(Trainings::where('status','!=','trashed')->get());
+            $where = 'status != "trashed"';
+           $data['training']  = _arefy(Trainings::list('array',$where));
+           // dd($data['training']);
           return view('admin.home')->with($data);
     }
 
@@ -32,7 +34,7 @@ class TrainingController extends Controller
     public function create()
     {
         $data['view'] ='admin.trainings.add';
-        $data['course']      =  _arefy(MainCourses::where('status','!=','trashed')->get());
+        $data['course']     =  _arefy(MainCourses::where('status','!=','trashed')->get());
         return view('/admin/home',$data);
     }
 

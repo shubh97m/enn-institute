@@ -44,9 +44,9 @@
                 @endphp
                       <tr>
                         <td> {{$i}}</td>
-                        <td> {{$trainings['course_id']}}</td>
-                        <td> {{$trainings['training_type']['name']}}</td>
-                       <td> {{$trainings['status']}}</td>
+                        <td> {{$trainings['maincourse']['name']}}</td>
+                        <td> {{$trainings['training_type']}}</td>
+                        <td> {{$trainings['status']}}</td>
                         <td>
                            <a href="{{url(sprintf('admin/training/%s/edit',___encrypt($trainings['id'])))}}"  title="Edit Detail"><i class="fa fa-edit"></i></a> |
                         {{-- <a href="javascript:void(0);" 
