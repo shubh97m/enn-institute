@@ -144,7 +144,7 @@
 			                  <div class="inner-addon left-addon">
 			                  		<i class="fa fa-book fa-lg"></i>
 				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
-			                  		<input type="text" data-request="isnumeric" class="form-control" id="phone" name="name" value="" placeholder="Scholorship Date">
+			                  		<input type="text" data-request="isnumeric" class="form-control" id="course" name="name" value="" placeholder="Course">
 			                  	</div>
 			                </div>
 			                <div class="form-group">
@@ -170,13 +170,7 @@
 			                  		<input type="text" data-request="isnumeric" class="form-control" id="phone" name="name" value="" placeholder="College Name">
 			                  	</div>
 			                </div>
-			                 <div class="form-group">
-			                  <div class="inner-addon left-addon">
-			                  		<i class="fa fa-book fa-lg"></i>
-				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
-			                  		<input type="text" data-request="isnumeric" class="form-control" id="phone" name="name" value="" placeholder="Scholorship Technology Name">
-			                  	</div>
-			                </div>
+			                 
 			                <div class="form-group">
 			                  <button type="button" data-request="ajax-submit" data-target='[role="place-order"]' class="btn btn-blue">Submit</button>
 			                </div>

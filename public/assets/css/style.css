@@ -1072,7 +1072,7 @@ a.read-more:hover{
 }
 .popup-img-left img {
     width: 100%;
-    min-height: 340px;
+    min-height: 290px;
 }
 button.btn.btn-blue {
   color:#fff;
@@ -1269,7 +1269,7 @@ a.clsSection {
     padding: 5px;
 }
 #register-form-exam .modal-content{
-  height: 76%;
+  height: 67%;
 }
 .popupmodal .modal-dialog {
   display: inline-block;
@@ -1818,10 +1818,10 @@ a.search-input.search{
   }
 
 .sub-courses {
-  margin-bottom: 30px;
+  /*margin-bottom: 30px;*/
   position: relative;
   border: 1px solid #0e1451;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
   background: #fff;
 }
 .sub-courses .icon {
