@@ -1357,7 +1357,7 @@ a.search-input.search{
       top: 0;
       text-align: center;
       border-radius: 7px;
-      box-shadow: 1px 1px 4px rgba(0,0,0,0.45);
+      /*box-shadow: 1px 1px 4px rgba(0,0,0,0.45);*/
       /* display: flex; */
       display: block;
   }
@@ -3292,4 +3292,26 @@ input[type="text"] {
 }
 .col-md-3.text-center.animate-box.grid-item.fadeInUp.animated-fast {
     padding: 0px;
+}
+.programmer-wrap .sub-courses{
+  margin-bottom: 30px;
+}
+.progarmWrapper .sub-courses .icon{
+  height: 120px;
+  width: 210px;
+}
+.progarmWrapper .sub-courses .icon img{
+  height: 100%;
+  width: 100%;
+}
+.progarmWrapper .sub-courses .desc{
+  padding: 159px 5px 13px 5px;
+}
+.programmer-wrap .sub-courses .desc p{
+  margin-bottom: 4px;
+}
+.programmer-wrap .sub-courses .desc h3{
+  line-height: 7px;
+    font-weight: 600;
+    margin-bottom: 6px;
 }

@@ -378,6 +378,131 @@
         </div>
     </div>
 </section>
+@if(Request::segment(1)!='ask-a-demo')
+	<div class="popupmodal">
+	        <div id="modal-exam-form" class="modal fade" role="dialog">
+	           <div class="modal-dialog">
+		          <!-- Modal content-->
+		          	<div class="modal-content">
+			            <div class="modal-header">
+			              <button type="button" class="close" data-dismiss="modal">&times;</button>
+			            </div>
+			            <!--  -->
+		  				<a href="#register-form-exam" data-toggle="modal" style="cursor: pointer;">
+				            <div class="modal-body popupmodal-body">
+				              	<img src="{{url('images/Capture-img.jpg')}}" alt="capture" id="img-modal">
+				            </div>
+			        	</a>
+		          	</div>
+	            </div>
+	        </div>
+        </div>
+        @endif
+    <div class="popupmodal">
+        <!-- Modal -->
+	        <div id="register-form-exam" class="modal fade" role="dialog">
+	           <div class="modal-dialog modal-lg">
+	          <!-- Modal content-->
+	          <div class="modal-content">
+	            <div class="modal-header">
+	              	<button type="button" class="close" data-dismiss="modal">&times;</button>
+	              	<div class="logo-modal">
+		               <h4>Exam Register</h4>
+		            </div>
+	            </div>
+	           <!--  <div class="text-center img-logo-modal">
+	            	<img src="images/logo/logo.png" alt="logo">
+	            </div> -->
+	           
+	            <div class="modal-body popupmodal-body">
+		            <div>
+		            <div class="col-md-7 col-sm-12 col-xs-12">
+		            	<div class="popup-img-left">
+		            		<img src="images/message.jpg" alt="register">
+		            	</div>
+		            </div>
+			        <div class="col-md-5 col-sm-12 col-xs-12">
+			              <form role="place-order" method="POST" action="" class="popup-form">
+			                
+			                <input type="hidden" name="product_id" value="">
+			                <input type="hidden" name="user_id" value="">
+			                
+			               <div class="form-group">
+			               		<div class="inner-addon left-addon">
+			               			<i class="fa fa-user fa-lg"></i>
+				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
+			                  		<input type="text" data-request="isnumeric" class="form-control" id="phone" name="name" value="" placeholder="Full Name">
+			                  	</div>
+			                </div>
+			                <div class="form-group">
+			                 	<div class="inner-addon left-addon">
+			                 		<i class="fa fa-envelope fa-lg"></i>
+				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
+			                  		<input type="text" data-request="isnumeric" class="form-control" id="phone" name="name" value="" placeholder="Email">
+			                  	</div>
+			                </div>
+			                <div class="form-group">
+			                  <div class="inner-addon left-addon">
+			                  		<i class="fa fa-phone fa-lg"></i>
+				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
+			                  		<input type="text" data-request="isnumeric" class="form-control" id="phone" name="name" value="" placeholder="Phone no">
+			                  	</div>
+			                </div>
+			                <div class="form-group">
+			                  <div class="inner-addon left-addon">
+			                  		<i class="fa fa-book fa-lg"></i>
+				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
+			                  		<input type="text" data-request="isnumeric" class="form-control" id="course" name="name" value="" placeholder="Course">
+			                  	</div>
+			                </div>
+			                <div class="form-group">
+			                  <div class="inner-addon left-addon">
+			                  		<i class="fa fa-book fa-lg"></i>
+				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
+			                  		<select class="form-control">
+			                  			
+					                  	<option value="">Select Degree</option>
+					                  	<option>SAP </option>
+					                  	<option>SAP Basis</option>
+					                  	<option>SAP SM</option>
+					                  	<option>SAP ABAP</option>
+					                  	<option>Php</option>
+					                  	<option>Java</option>
+					                 </select>
+			                  	</div>
+			                </div>
+			                <div class="form-group">
+			                  <div class="inner-addon left-addon">
+			                  		<i class="fa fa-book fa-lg"></i>
+				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
+			                  		<input type="text" data-request="isnumeric" class="form-control" id="phone" name="name" value="" placeholder="College Name">
+			                  	</div>
+			                </div>
+			                 
+			                <div class="form-group">
+			                  <button type="button" data-request="ajax-submit" data-target='[role="place-order"]' class="btn btn-blue">Submit</button>
+			                </div>
+			             </form>
+		            </div>
+	            	</div>
+	            </div>
+	          </div>
+	          
+	            </div>
+	        </div>
+        </div>
+@section('requirejs')
+<script type="text/javascript">
+		$(window).load(function(){        
+	   		$('#modal-exam-form').modal('show');
+	    });
+	    $("#img-modal").click(function(){
+				$("#modal-exam-form").modal("hide");
+				$("#register-form-exam").show();
+				
+			});
+</script>
+@endsection
 
 
 	
