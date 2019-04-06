@@ -1325,6 +1325,9 @@ a.search-input.search{
 .header-hidden a.search-input.search{
 	top:15px;
 }
+.flex-direction-nav a{
+  line-height: 40px;
+}
 @media screen and (max-width: 768px) {
     .jsnn-nav {
       margin: 0; 

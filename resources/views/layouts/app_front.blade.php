@@ -35,7 +35,7 @@
 	<link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
 
 	<!-- Flexslider  -->
-	<link rel="stylesheet" href="{{asset('assets/css/flexslider.css')}}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.0/flexslider.css">
 
 	<!-- Owl Carousel -->
 	<link rel="stylesheet" href="{{asset('assets/css/owl.carousel.min.css')}}">
@@ -44,7 +44,7 @@
 	<!-- Flaticons  -->
 	<!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
 	<link rel="stylesheet" href="{{asset('fonts/flaticon/font/flaticon.css')}}">
-	<!--<link rel="stylesheet" href="{{asset('fonts/icomoon/icomoon.css')}}"> -->
+	
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
@@ -194,7 +194,7 @@
 	<!-- Stellar Parallax -->
 	<script src="{{asset('assets/js/jquery.stellar.min.js')}}"></script>
 	<!-- Flexslider -->
-	<script src="{{asset('assets/js/jquery.flexslider-min.js')}}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.0/jquery.flexslider.js"></script>
 	<!-- Owl carousel -->
 	<script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
 	<!-- Magnific Popup -->
