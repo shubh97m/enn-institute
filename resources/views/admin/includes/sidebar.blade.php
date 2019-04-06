@@ -86,12 +86,6 @@
           </a>
         </li>
         <li>
-        <li>
-          <a href="{{url('admin/contact')}}">
-            <i class="fa fa-fw fa-sign-out"></i> <span>Contact</span>
-          </a>
-        </li>
-
          <li>
           <a href="{{url('admin/logout')}}">
             <i class="fa fa-fw fa-sign-out"></i> <span>Logout</span>

@@ -48,12 +48,12 @@
                         <td> {{$trainings['training_type']}}</td>
                         <td> {{$trainings['status']}}</td>
                         <td>
-                           <a href="{{url(sprintf('admin/training/%s/edit',___encrypt($trainings['id'])))}}"  title="Edit Detail"><i class="fa fa-edit"></i></a> |
-                        {{-- <a href="javascript:void(0);" 
-                        data-url="{{url(sprintf('admin/our-partners/%s/delete',___encrypt($partners['id'])))}}" 
+                           <a href="{{url(sprintf('admin/trainings/%s/edit',___encrypt($trainings['id'])))}}"  title="Edit Detail"><i class="fa fa-edit"></i></a> |
+                        <a href="javascript:void(0);" 
+                        data-url="{{url(sprintf('admin/trainings/%s/delete',___encrypt($trainings['id'])))}}" 
                         data-request="ajax-confirm"
                         data-ask_image="{{url('assets/img/delete.png')}}"
-                        data-ask="Would you like to Delete?" title="Delete"><i class="fa fa-fw fa-trash"></i></a> | --}}
+                        data-ask="Would you like to Delete?" title="Delete"><i class="fa fa-fw fa-trash"></i></a> |
 
                         </td>
                         </tr>
