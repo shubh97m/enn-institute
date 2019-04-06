@@ -110,8 +110,8 @@ class Validate
           'phone'       =>$this->validation('phone'),
           'phone2'       =>$this->validation('phone2'),
           'email'       =>$this->validation('email'),
+          'logo'        => $this->validation('photo_null'),
           'address'     =>$this->validation('address'),
-          'logo'        => $this->validation('photo'),
           ];
 
          $validator = \Validator::make($this->data->all(), $validations,[
