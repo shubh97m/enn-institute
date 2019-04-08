@@ -99,6 +99,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 	  Route::post('/{id}/delete','GalleryController@deleteGallery');	
 	});
 	Route::get('gallery-category','GalleryController@list');
+	Route::post('gallery-category/{id}/delete','GalleryController@deleteGalleryCategory');
+
 //Gallery 
 	Route::get('gallery-category/edit/{id}',
 		'GalleryController@editCategory');
