@@ -8,11 +8,16 @@
 			   		<div class="overlay"></div>
 			   		<div class="container-fluid">
 			   			<div class="row">
-				   			<div class="col-md-8 col-sm-12 slider-text">
+				   			<div class="col-lg-8 col-md-12 col-sm-12 slider-text">
 				   				<div class="slider-text-inner">
 				   					<h1>
 				   					{!!$slider['text']!!} 		
 				   					</h1>
+				   					<div class="new-offered-blink">
+				   					<div class="quadrat"><a href="javascript:void(0);">
+				   						<i class="fa fa-gift"></i>
+				   					<div><i class="fa fa-hand-o-right"></i>Click Here!</div></a></div>
+				   				</div>
 				   				</div>
 				   			</div>
 				   		</div>
@@ -36,14 +41,14 @@
 							<!-- <li><a data-toggle="tab" href="#modeling"><i class="flaticon-skyline"></i>  </a></li> -->
 						</ul>
 						<div class="tab-content">
-							<div id="plan" class="tab-pane fade in active">
+							<div id="plan" class="tab-pane fade show active">
 								<div class="row">
-									<div class="col-md-6">
+									<div class="col-lg-6 col-md-12">
 										<div class="sub-courses-img"> 
 											<img src="images/message.jpg" alt="about">
 										</div>
 									</div>
-									<div class="col-md-6">
+									<div class="col-lg-6 col-md-12">
 										<div class="sub-courses-desc">
                                             <h3>Director's Message</h3>
 											<p>Enn technologies is Having Indiawide Name in IT field. We provide High quality Technologies training and consulting sub-courses that full fill Students.
@@ -60,12 +65,12 @@
 				         </div>
 				         <div id="general" class="tab-pane fade">
 				         	<div class="row">
-									<div class="col-md-6">
+									<div class="col-lg-6 col-md-12">
 										<div class="sub-courses-img"> 
 											<img src="images/about.jpg" alt="message">
 										</div>
 									</div>
-									<div class="col-md-6">
+									<div class="col-lg-6 col-md-12">
 										<div class="sub-courses-desc">
                                             <h3>About ENN Technologies</h3>
 											<p>Enn technologies is Having Indiawide Name in IT field. We provide High quality Technologies training and consulting sub-courses that full fill Students.
@@ -104,7 +109,7 @@
 					<div class="grid-container">
 					<div class="row">
 						@foreach($course as $courses)
-							<div class="col-md-3 text-center animate-box grid-item">
+							<div class="col-lg-3 col-md-12 text-center animate-box grid-item allcoursesBox">
 								<a href="{{url('courses/'.___encrypt($courses['id']))}}">
 								<div class="sub-courses">
 									<span class="icon">
@@ -128,28 +133,28 @@
 			<div class="overlay"></div>
 				<div class="container">
 					<div class="row no-gutter">
-						<div class="col-md-3 col-sm-6 aside-stretch text-center animate-box">
+						<div class="col-lg-3 col-md-6 col-sm-12 aside-stretch text-center animate-box">
 							<div class="counter-entry wow fadeInDown animated">
 								<span class="icon icon-white"><i class="icon-book-open"></i></span>
 								<span class="jsnn-counter js-counter" data-from="0" data-to="{{$total_courses}}" data-speed="5000" data-refresh-interval="50"></span>
 								<span class="jsnn-counter-label">TOTAL COURSES</span>
 							</div>
 						</div>
-						<div class="col-md-3 col-sm-6 text-center animate-box">
+						<div class="col-lg-3 col-md-6 col-sm-12 text-center animate-box">
 							<div class="counter-entry wow fadeInDown animated">
 								<span class="icon"><i class="icon-user"></i></span>
 								<span class="jsnn-counter js-counter" data-from="0" data-to="3653" data-speed="5000" data-refresh-interval="50"></span>
 								<span class="jsnn-counter-label">SELECTED STUDENTS</span>
 							</div>
 						</div>
-						<div class="col-md-3 col-sm-6 text-center animate-box">
+						<div class="col-lg-3 col-md-6 col-sm-12 text-center animate-box">
 							<div class="counter-entry wow fadeInDown animated">
 								<span class="icon"><i class="icon-people"></i></span>
 								<span class="jsnn-counter js-counter" data-from="0" data-to="5987" data-speed="5000" data-refresh-interval="50"></span>
 								<span class="jsnn-counter-label">TOTAL STUDENT</span>
 							</div>
 						</div>
-						<div class="col-md-3 col-sm-6 text-center animate-box">
+						<div class="col-lg-3 col-md-6 col-sm-12 text-center animate-box">
 							<div class="counter-entry wow fadeInDown animated">
 								<span class="icon"><i class="icon-trophy"></i></span>
 								<span class="jsnn-counter js-counter" data-from="0" data-to="3999" data-speed="5000" data-refresh-interval="50"></span>
@@ -405,23 +410,24 @@
 	          <!-- Modal content-->
 	          <div class="modal-content">
 	            <div class="modal-header">
-	              	<button type="button" class="close" data-dismiss="modal">&times;</button>
-	              	<div class="logo-modal">
+	            	<div class="logo-modal">
 		               <h4>Exam Register</h4>
 		            </div>
+	              	<button type="button" class="close" data-dismiss="modal">&times;</button>
+	              	
 	            </div>
 	           <!--  <div class="text-center img-logo-modal">
 	            	<img src="images/logo/logo.png" alt="logo">
 	            </div> -->
 	           
 	            <div class="modal-body popupmodal-body">
-		            <div>
-		            <div class="col-md-7 col-sm-12 col-xs-12">
+		            <div class="row">
+		            <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
 		            	<div class="popup-img-left">
 		            		<img src="{{asset('images/message.jpg')}}" alt="register">
 		            	</div>
 		            </div>
-			        <div class="col-md-5 col-sm-12 col-xs-12">
+			        <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
 			              <form role="place-order" method="POST" action="" class="popup-form">
 			                
 			                <input type="hidden" name="product_id" value="">

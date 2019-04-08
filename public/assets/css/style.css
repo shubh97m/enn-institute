@@ -231,6 +231,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .sub-course-offerred{
   padding: 0;
+  display: flex;
 }
 .sub-offered{
   /*padding: 0;*/
@@ -350,7 +351,7 @@ ul .search
 .sub-course-content button{
   border-radius: 5px; 
 }
-.sub-sub-course{
+.not-found{
   margin-left: 15px;
 }
 .sub-course-content button {
@@ -560,15 +561,15 @@ ul.rightHeader li{
   line-height: 58px;
     box-shadow: 0 3px 6px #7f7b7b;
     position: absolute;
-    top: 30px;
+    top: 8px;
     background-color: #0b0b3e;
-    width: 70px;
+    width: 100px;
     transition: .3s ease-in;
     /* border-radius: 10px; */
     margin: 0 auto;
     border-radius: 50%;
     left: 0;
-    height: 70px;
+    height: 100px;
     right: 0;
 }
 .sub-couse-sub-courses .icon img {
@@ -576,7 +577,7 @@ ul.rightHeader li{
     height: 100%;
     width: 100%;
     transition:.5s ease-in;
-    object-fit: cover;
+    object-fit: contain;
 }
 .sub-couse-sub-courses .icon img:hover{
 	transform: rotate(20deg);
@@ -708,11 +709,21 @@ ul.rightHeader li{
   bottom: -5px;
   font-size: 18px;
 }
+#modal-exam-form .modal-header .close{
+  padding: 0px;
+  margin: 0;
+  top: 0;
+  right: 10px;
+  position: absolute;
+
+}
 .sub-sub-course {
   /* clear: both; */
   display: flex;
+  width: 100%;
+    
   /*border-bottom: 1px solid #ddd;*/
-  /* padding: 5px 10px 0; */
+   padding: 5px 10px 0; 
   align-items: center;
 }
 .jsnn-nav ul ul.training li a {
@@ -1017,7 +1028,20 @@ a.read-more:hover{
 }
 .popupmodal .modal-header {
     border: transparent;
-    padding: 8px;
+    padding: 12px;
+}
+#register-form-exam .modal-header{
+  padding: 8px;
+  background-color: #313b3d;
+}
+.allcoursesBox{
+  padding:0;
+}
+#register-form-exam .modal-header .close{
+  padding:0;
+  margin: 0; 
+  position: absolute;
+  right: 10px;
 }
 #modal-apply-form .modal-content{
   /* padding: 20px; */
@@ -1061,7 +1085,7 @@ a.read-more:hover{
     border: 1px solid #67bfff;
 }
 .popupmodal-body {
-    padding: 0px 50px;
+    padding: 10px 50px;
 }
 .required-sup{
   color:red;
