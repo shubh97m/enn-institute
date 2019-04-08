@@ -1,74 +1,104 @@
-<section class="descriptionSection">
+<section class="offeredSection">
+	
 	<div class="container">
-		<div class="coursedescription-wrap">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="sideBar-course">
-						<div class="sideBarImg miniLogo">
-							<a href="javascript:void(0);">
-								<img src="{{url('images/course-img.png')}}" alt="course">
-								<div class="crs-left-title" style="background:#fd2822">
-					               <div>SAP 4 Online Training</div>
-					            </div>
-					            <div class="crs-left-tagline">Simply Easy Learning</div>
-							</a>
+		<div class="row">
+			<div class="col-lg-4 col-md-6 border-right">
+				<div class="offeredLeft">
+					<h2 class="offeredHeading wow fadeInUp">Offered Courses</h2>
+					<div class="card m-b-10">
+						<div class="card-heading">
+							<img src="{{asset('images/sap.jpg')}}" alt="images" style="height:74px;border: 1px solid #03489b;">
+							SAP Analysis
 						</div>
-						<div class="main-scroll">
-							<div class="scroller-course">
-								<ul class="scrollerMenu">
-									<li><a href="javascript:void(0);" class="clsSection">SAP Training</a>
-										<ul class="submenu-course">
-											<li>
-												<a href="javascript:void(0);">SAP - Home</a>
-											</li>
-											<li>
-												<a href="javascript:void(0);">SAP - Overview</a>
-											</li>
-											<li>
-												<a href="javascript:void(0);">SAP - Applications</a>
-											</li>
-											<li>
-												<a href="javascript:void(0);">SAP - Generation</a>
-											</li>
-											<li>
-												<a href="javascript:void(0);">SAP - Types</a>
-											</li>
-											<li>
-												<a href="javascript:void(0);">SAP - Component</a>
-											</li>
-											
-										</ul>
-									</li>
-								</ul>
-							</div>
+					</div>
+					<div class="card m-b-10">
+						<div class="card-heading">
+							<img src="{{asset('images/sap.jpg')}}" alt="images" style="height:74px;border: 1px solid #03489b;">
+							SAP Analysis
+						</div>
+					</div>
+					<div class="card m-b-10">
+						<div class="card-heading">
+							<img src="{{asset('images/sap.jpg')}}" alt="images" style="height:74px;border: 1px solid #03489b;">
+							SAP Analysis
+						</div>
+					</div>
+					<div class="card m-b-10">
+						<div class="card-heading">
+							<img src="{{asset('images/sap.jpg')}}" alt="images" style="height:74px;border: 1px solid #03489b;">
+							SAP Analysis
+						</div>
+					</div>
+					<div class="card m-b-10">
+						<div class="card-heading">
+							<img src="{{asset('images/sap.jpg')}}" alt="images" style="height:74px;border: 1px solid #03489b;">
+							SAP Analysis
 						</div>
 					</div>
 				</div>
-				<div class="col-md-8">
-					<div class="descriptioncourse">
-						<div class="sideBarImg-right">
-							<a href="javascript:void(0);" class="">
-								<div class="itemImg">
-									<img src="{{url('images/course-img.png')}}" alt="course">
-								</div>
-								<div class="itemImg">
-									<div class="crs-left-title" style="background:#fd2822">
-						               <div>SAP 4 Online Training</div>
-						            </div>
-						            <div class="crs-left-tagline">Simply Easy Learning</div>
-					            </div>
-							</a>
+			</div>
+			<div class="col-lg-8 col-md-6">
+				<div class="offeredRight">
+					<h2 class="offeredHeading wow fadeInUp">Apply Here !!</h2>
+					<form method="post">
+						<div class="offeredcourse-form">
+							<div class="form-group">
+			               		<div class="inner-addon left-addon">
+			               			<i class="fa fa-user fa-lg"></i>
+				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
+			                  		<input type="text" data-request="isnumeric" class="form-control" id="phone" name="name" value="" placeholder="Full Name">
+			                  	</div>
+			                </div>
+			                <div class="form-group">
+			                 	<div class="inner-addon left-addon">
+			                 		<i class="fa fa-envelope fa-lg"></i>
+				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
+			                  		<input type="text" data-request="isnumeric" class="form-control" id="phone" name="name" value="" placeholder="Email">
+			                  	</div>
+			                </div>
+			                <div class="form-group">
+			                  <div class="inner-addon left-addon">
+			                  		<i class="fa fa-phone fa-lg"></i>
+				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
+			                  		<input type="text" data-request="isnumeric" class="form-control" id="phone" name="name" value="" placeholder="Phone no">
+			                  	</div>
+			                </div>
+			                <div class="form-group">
+			                  <div class="inner-addon left-addon">
+			                  		<i class="fa fa-book fa-lg"></i>
+				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
+			                  		<input type="text" data-request="isnumeric" class="form-control" id="course" name="name" value="" placeholder="Course">
+			                  	</div>
+			                </div>
+			                <div class="form-group">
+			                  <div class="inner-addon left-addon">
+			                  		<i class="fa fa-book fa-lg"></i>
+				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
+			                  		<select class="form-control">
+			                  			
+					                  	<option value="">Select Degree</option>
+					                  	<option>SAP </option>
+					                  	<option>SAP Basis</option>
+					                  	<option>SAP SM</option>
+					                  	<option>SAP ABAP</option>
+					                  	<option>Php</option>
+					                  	<option>Java</option>
+					                 </select>
+			                  	</div>
+			                </div>
+			                <div class="form-group">
+			                  <div class="inner-addon left-addon">
+			                  		<i class="fa fa-book fa-lg"></i>
+				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
+			                  		<input type="text" data-request="isnumeric" class="form-control" id="phone" name="name" value="" placeholder="College Name">
+			                  	</div>
+			                </div>
+			                 
+			                <div class="form-group">
+			                  <button type="button" data-request="ajax-submit" data-target='[role="place-order"]' class="btn btn-blue">Submit</button>
+			                </div>
 						</div>
-						<div class="content-body">
-							<div class="courseHead">
-								<h2>SAP Training</h2>
-							</div>
-							<div>
-								<p>Swift is a programming language developed by apple, specially for application development of apple devices. Swift can be used to develop applications as well as for other advance programming like programming a server etc. In this tutorial we'll learn the basics of latest version of swift language, Swift4.</p>
-								<p>Swift is a programming language developed by apple, specially for application development of apple devices. Swift can be used to develop applications as well as for other advance programming like programming a server etc. In this tutorial we'll learn the basics of latest version of swift language, Swift4.</p>
-							</div>
-						</div>
-					</div>
+					</form>
 				</div>
 			</div>
 		</div>
