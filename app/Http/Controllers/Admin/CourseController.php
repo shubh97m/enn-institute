@@ -104,7 +104,6 @@ public function subcourseUpdate(Request $request, $id)
         {
           $data = SubCourses::findOrFail($id);
           $input = $request->all();
-          
         if ($file = $request->file('image'))
         {
           $photo_name = time().$request->file('image')->getClientOriginalName();

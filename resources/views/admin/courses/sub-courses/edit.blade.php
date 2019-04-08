@@ -45,7 +45,7 @@
         <div class="col-md-12">
           <div class="form-group">
             <label>Main course Name:</label>
-               <select class="form-control" name="courseName" id="courseName">
+               <select class="form-control" name="course_id" id="courseName">
                  <option value="">Select Main Course</option>
                  @foreach($course as $courses)
                   <option value="{{!empty($courses['id'])?$courses['id']:''}}" 
