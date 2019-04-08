@@ -2,6 +2,11 @@
 		<aside id="jsnn-hero">
 			<div class="flexslider">
 				<ul class="slides">
+					<div class="new-offered-blink">
+	   					<div class="quadrat"><a href="{{url('courseOffered')}}">Offered Courses
+	   						<i class="fa fa-gift"></i>
+	   					<div><i class="fa fa-hand-o-right"></i>Click Here!</div></a></div>
+	   				</div>
 					@foreach($sliders as $slider)
 									
 			   	<li style="background-image: url('{{asset('assets/img/Slider/'.$slider['image'])}}')" class="img-responsive">
@@ -13,11 +18,7 @@
 				   					<h1>
 				   					{!!$slider['text']!!} 		
 				   					</h1>
-				   					<div class="new-offered-blink">
-				   					<div class="quadrat"><a href="offered-course.blade.php">Offered Courses
-				   						<i class="fa fa-gift"></i>
-				   					<div><i class="fa fa-hand-o-right"></i>Click Here!</div></a></div>
-				   				</div>
+				   					
 				   				</div>
 				   			</div>
 				   		</div>
