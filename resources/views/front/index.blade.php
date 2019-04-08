@@ -380,7 +380,7 @@
 </section>
 @if(Request::segment(1)!='ask-a-demo')
 	<div class="popupmodal">
-	        <div id="modal-exam-form" class="modal fade" role="dialog">
+	        <div id="modal-exam-form" class="modal fade" role="dialog" style="overflow: hidden;">
 	           <div class="modal-dialog">
 		          <!-- Modal content-->
 		          	<div class="modal-content">
