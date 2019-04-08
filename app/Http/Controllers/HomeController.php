@@ -19,6 +19,8 @@ use App\Models\ChildCourses;
 use Validations\Validate as Validations;
 use App\Models\generalSettings;
 use App\Models\Testimonial;
+use App\Models\RegisterPopup;
+
 class HomeController extends Controller
 {
 	public function __construct(Request $request){
@@ -41,8 +43,7 @@ class HomeController extends Controller
         $data['course']         =     _arefy(MainCourses::where('status','=','active')->get());
         $data['testimonial']    =     _arefy(Testimonial::get());
         $data['total_courses']  =  MainCourses::list('count')+SubCourses::list('count')+ChildCourses::list('count');
-
-
+        $data['scholarship']    =     _arefy(RegisterPopup::get());
 		return view('front_home',$data);
 	}
     //********* ********
@@ -71,7 +72,7 @@ class HomeController extends Controller
       return $this->populateresponse();
     
     }
-
+ 
 	//********* aBOUT US********
     public function aboutUs(){
         $data['view']='front.about-us';
@@ -87,7 +88,7 @@ class HomeController extends Controller
     }
     public function search(Request $request)
     {
-        $data['course']      =  _arefy(MainCourses::where('status','=','active')->where('name','like', '%' .$request->search. '%')->get());
+        $data['course']   =  _arefy(MainCourses::where('status','=','active')->where('name','like', '%' .$request->search. '%')->get());
         $data['search']=$request->search;
         $data['view'] ='front.search';
         return view('front_home', $data);

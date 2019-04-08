@@ -32,6 +32,7 @@ Route::get('/sub-course/{id}','HomeController@sub_courses');
 Route::get('/view-course','HomeController@view_course');
 Route::get('/ask-a-demo','HomeController@askDemo');
 Route::post('/ask-a-demo','HomeController@askDemoStore');
+Route::post('/scholarship','HomeController@');
 
 
 //************Admin section*************//
@@ -62,6 +63,12 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 		Route::post('/{id}/delete','PartnerController@deletePartner');
 	});
 	
+//******************Partners section*******
+	Route::resource('scholarship','ScholarshipController');
+		Route::group(['prefix' => 'scholarship'],function(){
+		Route::post('/{id}/delete','sliderController@deleteScholarship');
+
+	});			
 
 //*************General Settings***********
 	Route::get('general-settings','GeneralSetting@settings');

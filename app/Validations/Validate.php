@@ -279,6 +279,18 @@ class Validate
 
           $validator = \Validator::make($this->data->all(), $validations,[]);
           return $validator;     
-        }   
+    }
+
+    public function addScholarship($action='add')
+    {
+       $validations = [
+          'name'   =>$this->validation('name'),  
+          'phone'  =>$this->validation('phone'),
+          'email'  =>$this->validation('email'),
+          ];
+
+          $validator = \Validator::make($this->data->all(), $validations,[]);
+          return $validator;     
+    }
 }
 
