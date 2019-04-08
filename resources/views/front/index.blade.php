@@ -2,6 +2,11 @@
 		<aside id="jsnn-hero">
 			<div class="flexslider">
 				<ul class="slides">
+					<div class="new-offered-blink">
+	   					<div class="quadrat"><a href="{{url('courseOffered')}}">Offered Courses
+	   						<i class="fa fa-gift"></i>
+	   					<div><i class="fa fa-hand-o-right"></i>Click Here!</div></a></div>
+	   				</div>
 					@foreach($sliders as $slider)
 									
 			   	<li style="background-image: url('{{asset('assets/img/Slider/'.$slider['image'])}}')" class="img-responsive">
@@ -13,11 +18,7 @@
 				   					<h1>
 				   					{!!$slider['text']!!} 		
 				   					</h1>
-				   					<div class="new-offered-blink">
-				   					<div class="quadrat"><a href="offered-course.blade.php">Offered Courses
-				   						<i class="fa fa-gift"></i>
-				   					<div><i class="fa fa-hand-o-right"></i>Click Here!</div></a></div>
-				   				</div>
+				   					
 				   				</div>
 				   			</div>
 				   		</div>
@@ -452,11 +453,26 @@
 			                  		<input type="text" data-request="isnumeric" class="form-control" id="phone" name="name" value="" placeholder="Phone no">
 			                  	</div>
 			                </div>
+			               {{--  <div class="form-group">
+			                  <div class="inner-addon left-addon">
+			                  		<i class="fa fa-book fa-lg"></i>
+				                  <label for="pwd">Email<sup class="required-sup">*</sup>:</label>
+			                  		<input type="text" data-request="isnumeric" class="form-control" id="course" name="name" value="" placeholder="Course">
+			                  	</div>
+			                </div> --}}
 			                <div class="form-group">
 			                  <div class="inner-addon left-addon">
 			                  		<i class="fa fa-book fa-lg"></i>
 				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
-			                  		<input type="text" data-request="isnumeric" class="form-control" id="course" name="name" value="" placeholder="Course">
+			                  		<select class="form-control">
+										<option value="">Select Course</option>
+					                  	<option>SAP </option>
+					                  	<option>SAP Basis</option>
+					                  	<option>SAP SM</option>
+					                  	<option>SAP ABAP</option>
+					                  	<option>Php</option>
+					                  	<option>Java</option>
+					                 </select>
 			                  	</div>
 			                </div>
 			                <div class="form-group">
@@ -464,13 +480,16 @@
 			                  		<i class="fa fa-book fa-lg"></i>
 				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
 			                  		<select class="form-control">
-	     			                  	<option value="">Select Degree</option>
-					                  	<option>SAP </option>
-					                  	<option>SAP Basis</option>
-					                  	<option>SAP SM</option>
-					                  	<option>SAP ABAP</option>
-					                  	<option>Php</option>
-					                  	<option>Java</option>
+			                  			
+					                  	<option value="">Select Degree</option>
+					                  	<option value="B.tech">B.tech</option>
+					                  	<option value="M.tech">M.tech</option>
+					                  	<option value="BCA">BCA</option>
+					                  	<option value="MCA">MCA</option>
+					                  	<option value="BBA">BBA</option>
+					                  	<option value="MBA">MBA</option>
+					                  	<option value="B.com">B.com</option>
+					                  	<option value="M.com">M.com</option>
 					                 </select>
 			                  	</div>
 			                </div>

@@ -30,9 +30,11 @@ Route::get('/search','HomeController@search');
 Route::post('/subscribe','HomeController@subscribe');
 Route::get('/sub-course/{id}','HomeController@sub_courses');
 Route::get('/view-course','HomeController@view_course');
+Route::get('/courseOffered','HomeController@offered_course');
 Route::get('/ask-a-demo','HomeController@askDemo');
 Route::post('/ask-a-demo','HomeController@askDemoStore');
 Route::post('/scholarship','HomeController@');
+
 
 
 //************Admin section*************//

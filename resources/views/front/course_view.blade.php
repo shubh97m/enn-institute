@@ -58,7 +58,7 @@
 									@if(!empty($sub_course))
 										@foreach($sub_course as $sub_courses)
 									
-										<li class="cardd sub-sub-course">
+										<li class="card sub-sub-course">
 											<div class="sub-course-content">
 											    <div class="cardheader" id="headingOne{{$sub_courses['id']}}">
 											      <h5 class="mb-0">
