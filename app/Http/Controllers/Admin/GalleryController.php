@@ -220,5 +220,16 @@ class GalleryController extends Controller
         }
         return $this->populateresponse();
     }
+    public function deleteGalleryCategory(Request $request,$id)
+    {
+        $isUpdated          = GalleryCategory::where('id',___decrypt($id))->delete();
+        if($isUpdated){           
+            $this->message  = 'Gallery image has been deleted successfully.';
+            $this->status   = true;
+            $this->redirect = true;
+            $this->jsondata = [];
+        }
+        return $this->populateresponse();
+    }
 
 }

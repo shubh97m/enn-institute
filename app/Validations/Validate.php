@@ -34,7 +34,7 @@ class Validate
       'profile_picture'   => ['required','mimes:doc,docx,pdf'],
       'pin_code'          => ['nullable','max:6','min:4'],
       'type'              => ['required','string'],
-      'phone'             => ['required','numeric','digits:10'],
+      'phone'             => ['required','numeric'],
       'location'          => ['required','string'],
       'password'          => ['required','string','max:50','min:6'],
       'photo'             => ['required','mimes:jpg,jpeg,png'],

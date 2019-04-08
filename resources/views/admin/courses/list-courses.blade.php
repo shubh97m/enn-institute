@@ -53,7 +53,7 @@
                  <th>S.no</th>
                   <th>Course Name</th>
                   <th>Image</th>
-                  <th>Course Description</th>
+                  
                   <th>Status</th>
                   <th >Actions</th>
                 </tr>
@@ -73,8 +73,8 @@
                         <td>   <img src="{{asset('assets/img/Courses/'.$courses['image'])}}"
                           class="list_img" / >
                         </td>
-                        <td> {!!($courses['description'])!!}</td>
-                        <td> {!!$courses['status']!!}</td>
+                      
+                        <td> {{ucfirst($courses['status'])}}</td>
                         <td>
                         <a href="{!!url(sprintf('admin/main-courses/%s/edit',___encrypt($courses['id'])))!!}"  title="Edit Courses"><i class="fa fa-edit"></i></a>|
                         <a href="javascript:void(0);" data-url="{{url(sprintf('admin/main-courses/%s/delete',___encrypt($courses['id'])))}}" 
@@ -114,7 +114,7 @@
                   <th>Sub Course Name</th>
                   <th>Main Course name</th>
                   <th>Image</th>
-                  <th>Description</th>
+                  
                   <th>Status</th>
                   <th>Actions</th>
                 </tr>
@@ -136,7 +136,7 @@
                         <td><img src="{{asset('assets/img/Courses/'.$subcourses['image'])}}"
                           class="list_img" / >
                         </td>
-                        <td> {{$subcourses['status']}}</td>
+                        <td> {{ucfirst($subcourses['status'])}}</td>
                         <td>
                         <a href="{{url(sprintf('admin/sub-courses/edit/%s',___encrypt($subcourses['id'])))}}" title="Edit Sub Courses"><i class="fa fa-edit"></i></a>|  
                         <a href="javascript:void(0);" 
@@ -186,7 +186,7 @@
                  <th>S.no</th>
                   <th>Child Course Name</th>
                   <th>Image</th>
-                  <th>Description</th>
+                  <th>Status</th>
                   <th >Actions</th>
                 </tr>
                 </thead>
@@ -209,8 +209,7 @@
                         @else
                           <td>N/A</td>
                         @endif
-                       <td>{{$childCourses['description']}}</td>
-                        <td> {{$childCourses['status']}}</td>
+                         <td> {{ucfirst($childCourses['status'])}}</td>
                         <td>
                         <a href="javascript:void(0);" 
                         data-url="{{url(sprintf('admin/child-courses/%s/delete',___encrypt($childCourses['id'])))}}" 
