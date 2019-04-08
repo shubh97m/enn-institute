@@ -29,7 +29,7 @@
 	<!-- Icomoon Icon Fonts-->
 	<!-- <link rel="stylesheet" href="css/icomoon.css"> -->
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
 	<!-- Magnific Popup -->
 	<link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
@@ -77,7 +77,7 @@
 	<!-- jQuery Easing -->
 	<script src="{{asset('assets/js/jquery.easing.1.3.js')}}"></script>
 	<!-- Bootstrap -->
-	<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<!-- Waypoints -->
 	<script src="{{asset('assets/js/jquery.waypoints.min.js')}}"></script>
 	<!-- Stellar Parallax -->

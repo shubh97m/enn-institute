@@ -51,12 +51,12 @@
 									<li class="has-dropdown">
 										<a href="{{url('/courses')}}">All Courses</a>
 									</li>
-									<li class="hidemenu"><a href="javascript:void(0);">Training</a>
+									<li class="hidemenu"><a href="{{url('/courses')}}">Training</a>
 										<ul class="training submenu">
-											<li><a href="#">Corporate Training</a></li>
-											<li><a href="#">Industrial Training</a></li>
-											<li><a href="#">Online Training</a></li>
-											<li><a href="#">Classroom Training</a></li>
+											<li><a href="{{url('/courses')}}">Corporate Training</a></li>
+											<li><a href="{{url('/courses')}}">Industrial Training</a></li>
+											<li><a href="{{url('/courses')}}">Online Training</a></li>
+											<li><a href="{{url('/courses')}}">Classroom Training</a></li>
 										</ul>
 									</li>
 									<li><a href="{{url('/about-us')}}">About Us</a></li>
