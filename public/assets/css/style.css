@@ -649,8 +649,14 @@ ul.rightHeader li{
 }
 .new-offered-blink{
   position: relative;
+  max-width: 200px;
+  border-radius: 30%; 
+  margin-left: 40px;
 }
-
+.quadrat {
+    border-radius: 40%;
+    text-align: center;
+}
 .quadrat {
   /*position: absolute;
   top: 75%;

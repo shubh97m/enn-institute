@@ -14,7 +14,7 @@
 				   					{!!$slider['text']!!} 		
 				   					</h1>
 				   					<div class="new-offered-blink">
-				   					<div class="quadrat"><a href="javascript:void(0);">
+				   					<div class="quadrat"><a href="offered-course.blade.php">Offered Courses
 				   						<i class="fa fa-gift"></i>
 				   					<div><i class="fa fa-hand-o-right"></i>Click Here!</div></a></div>
 				   				</div>
