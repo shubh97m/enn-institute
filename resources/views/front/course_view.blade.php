@@ -8,7 +8,7 @@
 					</div>
 					<div class="subcourseWrap">
 						<div class="row">
-							<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0;">
 								<ul class="sub-course-offerred">
 									@if(!empty($sub_course))
 										@foreach($sub_course as $sub_courses)
@@ -17,9 +17,12 @@
 												<li class="sub-sub-course">
 													<div class="sub-course-content">
 													<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample{{$sub_courses['id']}}" aria-expanded="false" aria-controls="collapseExample{{$sub_courses['id']}}">
-													<i class="fa fa-book" aria-hidden="true"></i>
-														   <span>{{$sub_courses['name']}}</span>
-														</button>
+													<!-- <i class="fa fa-book" aria-hidden="true"></i> -->
+													<div class="text-center">
+														<img src="{{asset('images/sap.jpg')}}" alt="images" style="height:74px;margin-bottom: 10px;">
+													</div>
+														<span>{{$sub_courses['name']}}</span>
+													</button>
 														<ul class="sub-offered collapse" id="collapseExample{{$sub_courses['id']}}">
 															@php
 																$childCourse = App\Models\ChildCourses::where('sub_course',$sub_courses['id'])->get();

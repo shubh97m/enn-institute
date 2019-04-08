@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #000;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  margin: 0 0 20px 0;
+  margin: 0 0 10px 0;
   }
 
 ::-webkit-selection {
@@ -136,6 +136,9 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .circle-radius img {
     border-radius: 50%;
+}
+.subcourseWrap {
+    margin-bottom: 20px;
 }
 #testimonials .item-details p {
     font-size: 14px;
@@ -338,6 +341,7 @@ ul .search
 }
 .sub-course-content{
   width: 100%;
+  margin-bottom: 17px;
 }
 .sub-sub-course:hover{
   /*background-color: #67bfff;*/
@@ -346,9 +350,13 @@ ul .search
 .sub-course-content button{
   border-radius: 5px; 
 }
+.sub-sub-course{
+  margin-left: 15px;
+}
 .sub-course-content button {
   /*border-radius: 4px;*/
   text-align: center;
+  padding: 12px 8px;
   width: 100%;
   /*font-size: 28px;*/
   transition: all 0.5s;
@@ -1178,6 +1186,9 @@ textarea.form-control{
     overflow: auto;
     overflow-x: hidden;
 }
+ul.sub-course-offerred .col-md-3 {
+    /*margin-left: -15px;*/
+}
 ul.submenu-course {
     padding-left: 24px;
     padding-right: 16px;
@@ -1355,9 +1366,9 @@ a.search-input.search{
       position: relative;
       /*color: #fff;*/
       top: 0;
-      text-align: center;
+      /*text-align: center;*/
       border-radius: 7px;
-      box-shadow: 1px 1px 4px rgba(0,0,0,0.45);
+      /*box-shadow: 1px 1px 4px rgba(0,0,0,0.45);*/
       /* display: flex; */
       display: block;
   }
@@ -2228,6 +2239,12 @@ article {
 @media screen and (max-width: 991px){
   .side-course{
     margin-top: 15px;
+  }
+  .sub-course-content{
+    margin-bottom: 0;
+  }
+  ul.sub-course-offerred .col-md-3 {
+      margin-left: -9px;
   }
   .htop-wrap .mobile-hide{
     display: none;
@@ -3292,4 +3309,26 @@ input[type="text"] {
 }
 .col-md-3.text-center.animate-box.grid-item.fadeInUp.animated-fast {
     padding: 0px;
+}
+.programmer-wrap .sub-courses{
+  margin-bottom: 30px;
+}
+.progarmWrapper .sub-courses .icon{
+  height: 120px;
+  width: 210px;
+}
+.progarmWrapper .sub-courses .icon img{
+  height: 100%;
+  width: 100%;
+}
+.progarmWrapper .sub-courses .desc{
+  padding: 159px 5px 13px 5px;
+}
+.programmer-wrap .sub-courses .desc p{
+  margin-bottom: 4px;
+}
+.programmer-wrap .sub-courses .desc h3{
+  line-height: 7px;
+    font-weight: 600;
+    margin-bottom: 6px;
 }
