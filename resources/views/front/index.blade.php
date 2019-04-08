@@ -488,12 +488,12 @@
 	            </div>
 	          </div>
 	          
-	            </div>
 	        </div>
-        </div>
+	    </div>
+    </div>
 @section('requirejs')
 <script type="text/javascript">
-	$(window).load(function(){        
+	$(window).load(function(){     
    		$('#modal-exam-form').modal('show');
     });
     $("#img-modal").click(function(){

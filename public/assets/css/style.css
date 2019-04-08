@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #000;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  margin: 0 0 20px 0;
+  margin: 0 0 10px 0;
   }
 
 ::-webkit-selection {
@@ -136,6 +136,9 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .circle-radius img {
     border-radius: 50%;
+}
+.subcourseWrap {
+    margin-bottom: 20px;
 }
 #testimonials .item-details p {
     font-size: 14px;
@@ -1178,6 +1181,9 @@ textarea.form-control{
     overflow: auto;
     overflow-x: hidden;
 }
+ul.sub-course-offerred .col-md-3 {
+    margin-left: -15px;
+}
 ul.submenu-course {
     padding-left: 24px;
     padding-right: 16px;
@@ -1355,7 +1361,7 @@ a.search-input.search{
       position: relative;
       /*color: #fff;*/
       top: 0;
-      text-align: center;
+      /*text-align: center;*/
       border-radius: 7px;
       /*box-shadow: 1px 1px 4px rgba(0,0,0,0.45);*/
       /* display: flex; */

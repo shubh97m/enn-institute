@@ -152,6 +152,7 @@
 		};
 	    
 	</script>
+	@yield('requirejs')
 	</body>
 </html>
 
