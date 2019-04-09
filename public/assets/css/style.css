@@ -2512,10 +2512,14 @@ article {
     padding: 4px 15px;
   }
   .new-offered-blink{
-    right: 10px;
+    right: 50px;
   }
   .quadrat a {
     font-size: 14px;
+  }
+  .new-offered-blink{
+    max-width: 133px;
+    height: 116px;
   }
 }
 @media screen and (max-width: 480px){
