@@ -56,7 +56,7 @@ class HomeController extends Controller
     public function offered_course()
     {
       $data['view']='front.offered-course';
-      // $data['course']   =  _arefy(MainCourses::where('status','=','active')->get());
+      $data['course']   =  _arefy(MainCourses::where('status','=','active')->get());
         return view('front_home',$data);
     }
     public function askDemoStore(Request $request)
@@ -180,6 +180,23 @@ class HomeController extends Controller
               $this->alert    = true;
               $this->message  = "Thanks For Conatcting us.We will contact you as soon as possible.";
               $this->redirect = url('contact');
+        } 
+      return $this->populateresponse();
+    }
+    public function Register(Request $request){
+        $validation = new Validations($request);
+        $validator  = $validation->Register();
+        if ($validator->fails()){
+            $this->message = $validator->errors();
+        }else{
+            $data = new RegisterPopup();
+            $data->fill($request->all());
+            $data->save();
+              $this->status   = true;
+              $this->modal    = true;
+              $this->alert    = true;
+              $this->message  = "Thanks For Rgister.We will contact you as soon as possible.";
+              $this->redirect = url('/');
         } 
       return $this->populateresponse();
     }

@@ -40,62 +40,77 @@
 			<div class="col-lg-8 col-md-6">
 				<div class="offeredRight">
 					<h2 class="offeredHeading wow fadeInUp">Apply Here !!</h2>
-					<form method="post">
+					<form method="post" action="{{url('scholarship')}}" role="scholarship">
+						{{csrf_field()}}
+						<input type="hidden" name="type" value="offer">
 						<div class="offeredcourse-form">
 							<div class="form-group">
 			               		<div class="inner-addon left-addon">
 			               			<i class="fa fa-user fa-lg"></i>
 				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
-			                  		<input type="text" data-request="isnumeric" class="form-control" id="phone" name="name" value="" placeholder="Full Name">
+			                  		<input type="text"  class="form-control" name="name"  placeholder="Full Name">
 			                  	</div>
 			                </div>
 			                <div class="form-group">
 			                 	<div class="inner-addon left-addon">
 			                 		<i class="fa fa-envelope fa-lg"></i>
 				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
-			                  		<input type="text" data-request="isnumeric" class="form-control" id="phone" name="name" value="" placeholder="Email">
+			                  		<input type="text"  class="form-control" name="email"  placeholder="Email">
 			                  	</div>
 			                </div>
 			                <div class="form-group">
 			                  <div class="inner-addon left-addon">
 			                  		<i class="fa fa-phone fa-lg"></i>
 				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
-			                  		<input type="text" data-request="isnumeric" class="form-control" id="phone" name="name" value="" placeholder="Phone no">
+			                  		<input type="text"  class="form-control" name="phone"  placeholder="Phone no">
+			                  	</div>
+			                </div>
+			                
+			                <div class="form-group">
+			                  <div class="inner-addon left-addon">
+			                  		<i class="fa fa-book fa-lg"></i>
+				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
+			                  		<select class="form-control" name="course">
+										<option value="">Select Course</option>
+										@if(!empty($course))
+											@foreach($course as $courses)
+					                  			<option value="{{$courses['name']}}">{{$courses['name']}}</option>
+					                  		@endforeach
+					                  	@else
+					                  			<option value="">No Course Found. </option>
+					                  	@endif
+
+			                 		</select>
 			                  	</div>
 			                </div>
 			                <div class="form-group">
 			                  <div class="inner-addon left-addon">
 			                  		<i class="fa fa-book fa-lg"></i>
 				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
-			                  		<input type="text" data-request="isnumeric" class="form-control" id="course" name="name" value="" placeholder="Course">
-			                  	</div>
-			                </div>
-			                <div class="form-group">
-			                  <div class="inner-addon left-addon">
-			                  		<i class="fa fa-book fa-lg"></i>
-				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
-			                  		<select class="form-control">
-			                  			
+			                  		<select class="form-control" name="degree">
 					                  	<option value="">Select Degree</option>
-					                  	<option>SAP </option>
-					                  	<option>SAP Basis</option>
-					                  	<option>SAP SM</option>
-					                  	<option>SAP ABAP</option>
-					                  	<option>Php</option>
-					                  	<option>Java</option>
+					                  	<option value="B.tech">B.tech</option>
+					                  	<option value="M.tech">M.tech</option>
+					                  	<option value="BCA">BCA</option>
+					                  	<option value="MCA">MCA</option>
+					                  	<option value="BBA">BBA</option>
+					                  	<option value="MBA">MBA</option>
+					                  	<option value="B.com">B.com</option>
+					                  	<option value="M.com">M.com</option>
 					                 </select>
 			                  	</div>
+			                  	</div>
 			                </div>
 			                <div class="form-group">
 			                  <div class="inner-addon left-addon">
 			                  		<i class="fa fa-book fa-lg"></i>
 				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
-			                  		<input type="text" data-request="isnumeric" class="form-control" id="phone" name="name" value="" placeholder="College Name">
+			                  		<input type="text"  class="form-control" name="college_name"  placeholder="College Name">
 			                  	</div>
 			                </div>
 			                 
 			                <div class="form-group">
-			                  <button type="button" data-request="ajax-submit" data-target='[role="place-order"]' class="btn btn-blue">Submit</button>
+			                  <button type="button" data-request="ajax-submit" data-target='[role="scholarship"]' class="btn btn-blue">Submit</button>
 			                </div>
 						</div>
 					</form>
