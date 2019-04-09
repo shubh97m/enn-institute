@@ -91,6 +91,16 @@
           </a>
         </li>
         <li>
+          <a href="{{url('admin/list/scholarship')}}">
+            <i class="fa fa-fw fa-sign-out"></i> <span>Scholarship</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{url('admin/list/offer')}}">
+            <i class="fa fa-fw fa-sign-out"></i> <span>Offer</span>
+          </a>
+        </li>
+        <li>
          <li>
           <a href="{{url('admin/logout')}}">
             <i class="fa fa-fw fa-sign-out"></i> <span>Logout</span>

@@ -53,6 +53,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 
 //******************SLiders section*******
 	Route::resource('sliders', 'sliderController');
+	Route::get('list/{type}', 'ScholarshipController@index');
 	Route::group(['prefix' => 'sliders'],function(){
 		Route::post('/status', 'sliderController@changeStatus');
 		Route::post('/{id}/delete','sliderController@deleteSlider');

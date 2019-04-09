@@ -16,10 +16,10 @@
           <div class="box">
             <div class="box-header">
               <h3 class="box-title">Scholarship List</h3>
-                <div class="pull-right">
+                {{-- <div class="pull-right">
                 <a href="{!! url('admin/scholarship/create') !!}" class="btn btn-primary btn-add"><i class="fa fa-plus"></i> Add Scholarship
                 </a>
-              </div>
+              </div> --}}
               </div>
 
             <!-- /.box-header -->
@@ -34,7 +34,7 @@
                   <th>Course</th>
                   <th>Degree</th>
                   <th>College Name</th>
-                  <th >Actions</th>
+                  {{-- <th >Actions</th> --}}
                 </tr>
                 </thead>
                 <tbody>
@@ -51,8 +51,9 @@
                         <td> {{$scholarships['email']}}</td>
                         <td> {{$scholarships['phone']}}</td>
                         <td> {{$scholarships['course']}}</td>
+                        <td> {{$scholarships['degree']}}</td>
                         <td> {{$scholarships['college_name']}}</td>
-                        <td>
+                        {{-- <td>
                            <a href="{{url(sprintf('admin/scholarship/%s/edit',___encrypt($scholarships['id'])))}}"  title="Edit Detail"><i class="fa fa-edit"></i>.
                            </a> |
                         <a href="javascript:void(0);" 
@@ -61,7 +62,7 @@
                         data-ask_image="{{url('assets/img/delete.png')}}"
                         data-ask="Would you like to Delete?" title="Delete"><i class="fa fa-fw fa-trash"></i></a> |
 
-                        </td>
+                        </td> --}}
                         </tr>
                     @endforeach
            

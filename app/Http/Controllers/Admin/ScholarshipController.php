@@ -16,9 +16,9 @@ class ScholarshipController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($type)
     {
-        $data['scholarship'] = _arefy(RegisterPopup::all());
+        $data['scholarship'] = _arefy(RegisterPopup::where('type',$type)->get());
         $data['view'] = 'admin.scholarship.list';
         return view('admin.home', $data);        
     }
