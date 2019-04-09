@@ -32,6 +32,7 @@
                   <th>Email</th>
                   <th>Phone</th>
                   <th>Course</th>
+                  <th>Degree</th>
                   <th>College Name</th>
                   <th >Actions</th>
                 </tr>

@@ -33,7 +33,7 @@ Route::get('/view-course','HomeController@view_course');
 Route::get('/courseOffered','HomeController@offered_course');
 Route::get('/ask-a-demo','HomeController@askDemo');
 Route::post('/ask-a-demo','HomeController@askDemoStore');
-Route::post('/scholarship','HomeController@');
+Route::post('/scholarship','HomeController@Register');
 
 
 

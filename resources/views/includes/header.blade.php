@@ -34,7 +34,6 @@
 							</div>
 						</form>
 					</div>
-					<!-- admin@enntechnologies.in -->
 				</div>
 			</div>
 			<nav class="jsnn-nav" role="navigation">
@@ -65,7 +64,6 @@
 										<i class="fa fa-search searchIcon"></i>
 										<i class="fa fa-times cross-icon"></i>
 										</a>
-										<!-- <a href="javascript:void(0);" class="search-input"></a> -->
 									</li>
 									
 									

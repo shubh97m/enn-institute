@@ -3,7 +3,7 @@
 			<div class="flexslider">
 				<ul class="slides">
 					<div class="new-offered-blink">
-	   					<div class="quadrat"><a href="{{url('courseOffered')}}">Offered Courses
+	   					<div class="quadrat"><a href="{{url('courseOffered')}}">Summer Training upto 50% Off
 	   						<i class="fa fa-gift"></i>
 	   					<div><i class="fa fa-hand-o-right"></i>Click Here!</div></a></div>
 	   				</div>
@@ -38,7 +38,6 @@
 						<ul class="nav nav-tabs">
 							<li class="active"><a data-toggle="tab" href="#plan"><i class="flaticon-sketch"></i> Director's Message</a></li>
 							<li><a data-toggle="tab" href="#general"><i class="icon-user"></i> About ENN Technologies</a></li>
-							<!-- <li><a data-toggle="tab" href="#manage"><i class="flaticon-engineer"></i> Principal's Message</a></li> -->
 							<!-- <li><a data-toggle="tab" href="#modeling"><i class="flaticon-skyline"></i>  </a></li> -->
 						</ul>
 						<div class="tab-content">
@@ -195,23 +194,6 @@
 		              </div>
 		              
 		            </div>
-
-		            {{-- @foreach($gallery as $gal)
-	                	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix students all">
-			                <div class="portfolio-item">
-			                  <div class="shot-item">
-			                    <img src="{{url('assets/img/gallery/'.$gal['image'])}}" alt="gallery" /> 
-			                    <div class="overlay">
-			                      <div class="icons">
-			                        <a class="lightbox preview" href="images/gallery/gallery2.jpg">
-			                          <i class="fa fa-eye"></i>
-			                        </a>
-			                      </div>
-			                    </div>
-			                  </div>               
-			                </div>
-			            </div>
-			        @endforeach --}}
 			        <div id="portfolio" class="row wow fadeInDown" data-wow-delay="0.4s">
 		              @if(!empty($gallery_category))
 			                @foreach($gallery_category as $cat)
@@ -234,62 +216,7 @@
 			                @endforeach
 		                @endif
 		            </div>
-		              {{-- <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix students academy">
-		                <div class="portfolio-item">
-		                  <div class="shot-item">
-		                    <img src="images/gallery/gallery2.jpg" alt="gallery" /> 
-		                    <div class="overlay">
-		                      <div class="icons">
-		                        <a class="lightbox preview" href="images/gallery/gallery2.jpg">
-		                          <i class="fa fa-eye"></i>
-		                        </a>
-		                      </div>
-		                    </div>
-		                  </div>               
-		                </div>
-		              </div>
-		              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix students">
-		                <div class="portfolio-item">
-		                  <div class="shot-item">
-		                    <img src="images/gallery/gallery3.jpg" alt="gallery"/> 
-		                    <div class="overlay">
-		                      <div class="icons">
-		                        <a class="lightbox preview" href="images/gallery/gallery3.jpg">
-		                          <i class="fa fa-eye"></i>
-		                        </a>
-		                      </div>
-		                    </div>
-		                  </div>               
-		                </div>
-		              </div>
-		              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix academy">
-		                <div class="portfolio-item">
-		                  <div class="shot-item">
-		                    <img src="images/gallery/gallery4.jpg" alt="gallery"/>
-		                    <div class="overlay">
-		                      <div class="icons">
-		                        <a class="lightbox preview" href="images/gallery/gallery4.jpg">
-		                          <i class="fa fa-eye"></i>
-		                        </a>
-		                      </div>
-		                    </div>
-		                  </div>               
-		                </div>
-		              </div> --}}
-		              {{-- <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 students">
-		                <div class="portfolio-item">
-		                  <div class="shot-item">
-		                    <img src="images/gallery/gallery5.jpg" alt="projects"/>
-		                    <div class="overlay">
-		                      <div class="icons">
-		                        <a class="lightbox preview" href="images/gallery/gallery5.jpg">
-		                          <i class="fa fa-eye"></i>
-		                        </a>
-		                      </div>
-		                    </div>
-		                  </div>               
-		                </div>
-		              </div> --}}
+		           
 		            </div>
 		          </div>
 		        </div>
@@ -417,10 +344,7 @@
 	              	<button type="button" class="close" data-dismiss="modal">&times;</button>
 	              	
 	            </div>
-	           <!--  <div class="text-center img-logo-modal">
-	            	<img src="images/logo/logo.png" alt="logo">
-	            </div> -->
-	           
+
 	            <div class="modal-body popupmodal-body">
 		            <div class="row">
 		            <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
@@ -429,60 +353,52 @@
 		            	</div>
 		            </div>
 			        <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
-			              <form role="place-order" method="POST" action="" class="popup-form">
-			                
-			                <input type="hidden" name="product_id" value="">
-			                <input type="hidden" name="user_id" value="">
-			                
+
+			              <form role="scholarship" method="POST" action="{{url('scholarship')}}" class="popup-form">
+			              	{{csrf_field()}}
+			               
+			                <input type="hidden" name="type" value="scholarship">
+
 			               <div class="form-group">
 			               		<div class="inner-addon left-addon">
 			               			<i class="fa fa-user fa-lg"></i>
-				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
-			                  		<input type="text" data-request="isnumeric" class="form-control" id="phone" name="name" value="" placeholder="Full Name">
+			                  		<input type="text"  class="form-control"  name="name" value="" placeholder="Full Name">
 			                  	</div>
 			                </div>
 			                <div class="form-group">
 			                 	<div class="inner-addon left-addon">
 			                 		<i class="fa fa-envelope fa-lg"></i>
-				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
-			                  		<input type="text" data-request="isnumeric" class="form-control" id="phone" name="name" value="" placeholder="Email">
+			                  		<input type="text"  class="form-control"  name="email" value="" placeholder="Email">
 			                  	</div>
 			                </div>
 			                <div class="form-group">
 			                  <div class="inner-addon left-addon">
 			                  		<i class="fa fa-phone fa-lg"></i>
-				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
-			                  		<input type="text" data-request="isnumeric" class="form-control" id="phone" name="name" value="" placeholder="Phone no">
+			                  		<input type="text" data-request="isnumeric" class="form-control"  name="phone" value="" placeholder="Phone no">
 			                  	</div>
 			                </div>
-			               {{--  <div class="form-group">
-			                  <div class="inner-addon left-addon">
-			                  		<i class="fa fa-book fa-lg"></i>
-				                  <label for="pwd">Email<sup class="required-sup">*</sup>:</label>
-			                  		<input type="text" data-request="isnumeric" class="form-control" id="course" name="name" value="" placeholder="Course">
-			                  	</div>
-			                </div> --}}
+			               
 			                <div class="form-group">
 			                  <div class="inner-addon left-addon">
 			                  		<i class="fa fa-book fa-lg"></i>
-				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
-			                  		<select class="form-control">
-			                  			
-					                  	<option value="">Select Course</option>
-					                  	<option>SAP </option>
-					                  	<option>SAP Basis</option>
-					                  	<option>SAP SM</option>
-					                  	<option>SAP ABAP</option>
-					                  	<option>Php</option>
-					                  	<option>Java</option>
+
+			                  		<select class="form-control" name="course">
+										<option value="">Select Course</option>
+										@if(!empty($course))
+											@foreach($course as $courses)
+					                  			<option value="{{$courses['name']}}">{{$courses['name']}}</option>
+					                  		@endforeach
+					                  	@else
+					                  			<option value="">No Course Found. </option>
+					                  	@endif
 					                 </select>
+
 			                  	</div>
 			                </div>
 			                <div class="form-group">
 			                  <div class="inner-addon left-addon">
 			                  		<i class="fa fa-book fa-lg"></i>
-				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
-			                  		<select class="form-control">
+			                  		<select class="form-control" name="degree">
 			                  			
 					                  	<option value="">Select Degree</option>
 					                  	<option value="B.tech">B.tech</option>
@@ -499,13 +415,12 @@
 			                <div class="form-group">
 			                  <div class="inner-addon left-addon">
 			                  		<i class="fa fa-book fa-lg"></i>
-				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
-			                  		<input type="text" data-request="isnumeric" class="form-control" id="phone" name="name" value="" placeholder="College Name">
+			                  		<input type="text"  class="form-control"  name="college_name" value="" placeholder="College Name">
 			                  	</div>
 			                </div>
 			                 
 			                <div class="form-group">
-			                  <button type="button" data-request="ajax-submit" data-target='[role="place-order"]' class="btn btn-blue">Submit</button>
+			                  <button type="button" data-request="ajax-submit" data-target='[role="scholarship"]' class="btn btn-blue">Submit</button>
 			                </div>
 			             </form>
 		            </div>

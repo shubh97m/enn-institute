@@ -227,6 +227,20 @@ class Validate
 
           $validator = \Validator::make($this->data->all(), $validations,[]);
           return $validator;     
+        }
+        public function Register($action= 'add')
+        {
+          $validations = [
+          'name'      =>$this->validation('name'),    
+          'email'           =>$this->validation('req_email'),
+          'phone'       =>$this->validation('name'),    
+          'course'       =>$this->validation('name'),    
+          'degree'         =>$this->validation('name'),
+          'college_name'         =>$this->validation('name'),
+          ];
+
+          $validator = \Validator::make($this->data->all(), $validations,[]);
+          return $validator;     
         }   
       public function askDemo($action='add')
       {
