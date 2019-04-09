@@ -100,7 +100,7 @@
 					                 </select>
 			                  	</div>
 			                  	</div>
-			                </div>
+			                
 			                <div class="form-group">
 			                  <div class="inner-addon left-addon">
 			                  		<i class="fa fa-book fa-lg"></i>
@@ -108,7 +108,7 @@
 			                  		<input type="text"  class="form-control" name="college_name"  placeholder="College Name">
 			                  	</div>
 			                </div>
-			                 
+			                </div> 
 			                <div class="form-group">
 			                  <button type="button" data-request="ajax-submit" data-target='[role="scholarship"]' class="btn btn-blue">Submit</button>
 			                </div>

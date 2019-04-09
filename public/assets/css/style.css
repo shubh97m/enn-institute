@@ -651,18 +651,20 @@ ul.rightHeader li{
 }
 .new-offered-blink{
   position: absolute;
-  max-width: 240px;
+  max-width: 193px;
+  height: 186px;
   /* padding: 20px; */
   right: 50px;
   top: 20px;
   z-index: 20;
-  border-radius: 30%;
+  border-radius: 50%;
   margin-left: 40px;
 }
 .quadrat {
     /* max-width: 300px; */
     padding: 10px 20px;
-    border-radius: 40%;
+    height: 100%;
+    border-radius: 50%;
     text-align: center;
 }
 .quadrat {
@@ -2506,14 +2508,22 @@ article {
       margin-left: 15px;
       margin-bottom: 15px;
   }
+  #jsnn-hero .flexslider .slider-text > .slider-text-inner h1{
+    margin-top: 20px;
+  }
   .quadrat{
     padding: 4px 15px;
   }
   .new-offered-blink{
-    right: 10px;
+    right: 50px;
+    top:3px;
   }
   .quadrat a {
     font-size: 14px;
+  }
+  .new-offered-blink{
+    max-width: 133px;
+    height: 116px;
   }
 }
 @media screen and (max-width: 480px){
