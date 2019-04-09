@@ -419,7 +419,8 @@
 	            </div>
 	           <!--  <div class="text-center img-logo-modal">
 	            	<img src="images/logo/logo.png" alt="logo">
-	            </div> -->	           
+	            </div> -->
+	           
 	            <div class="modal-body popupmodal-body">
 		            <div class="row">
 		            <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
@@ -429,6 +430,7 @@
 		            </div>
 			        <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
 			              <form role="place-order" method="POST" action="" class="popup-form">
+			                
 			                <input type="hidden" name="product_id" value="">
 			                <input type="hidden" name="user_id" value="">
 			                
@@ -465,7 +467,8 @@
 			                  		<i class="fa fa-book fa-lg"></i>
 				                  <!-- <label for="pwd">Email<sup class="required-sup">*</sup>:</label> -->
 			                  		<select class="form-control">
-										<option value="">Select Course</option>
+			                  			
+					                  	<option value="">Select Course</option>
 					                  	<option>SAP </option>
 					                  	<option>SAP Basis</option>
 					                  	<option>SAP SM</option>
