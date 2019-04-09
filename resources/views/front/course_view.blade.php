@@ -9,51 +9,7 @@
 					<div class="subcourseWrap">
 						<div class="row">
 							<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0;">
-								<!-- <ul class="sub-course-offerred" id="accordionExample">
-									@if(!empty($sub_course))
-										@foreach($sub_course as $sub_courses)
-										
-											<div class="col-md-3">
-												<li class="sub-sub-course">
-													<div class="sub-course-content">
-													<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample{{$sub_courses['id']}}" aria-expanded="false" aria-controls="collapseExample{{$sub_courses['id']}}" >
-													
-													<div class="text-center">
-														<img src="{{asset('images/sap.jpg')}}" alt="images" style="height:74px;margin-bottom: 10px;">
-													</div>
-														<span>{{$sub_courses['name']}}</span>
-													</button>
-														<ul class="sub-offered collapse" id="collapseExample{{$sub_courses['id']}}">
-															@php
-																$childCourse = App\Models\ChildCourses::where('sub_course',$sub_courses['id'])->get();
-															@endphp
-															@if(!empty($childCourse))
-																@foreach($childCourse as $childCourses)
-																	<li>{{$childCourses->name}}</li>
-																@endforeach
-																@else
-																<li>No child Courses found.</li>
-															@endif
-															{{-- <li>SAP BASIS (For Networking, H/W, DBA, System admin.)</li>
-															<li>SAP SM (Sol Man or Solution Manager)</li>
-															<li>SAP BO (Business Objects)</li>
-															<li>SAP PI (Process Integration)</li>
-															<li>SAP HANA</li>
-															<li>SAP Workflow</li>
-															<li>SAP Webdynpro</li>
-															<li>SAP Netweaver</li>
-															<li>SAP Security</li>	 --}}
-														</ul>
-													</div>
-												</li>
-											</div>
-												@endforeach
-												@else
-										<li class="sub-sub-course not-found">No Sub Courses Found.</li>
-									@endif
-									
-										
-								</ul> -->
+								
 								<ul class="sub-course-offerred accordion" id="accordionExample">
 									@if(!empty($sub_course))
 										@foreach($sub_course as $sub_courses)
@@ -64,7 +20,7 @@
 											      <h5 class="mb-0">
 											        <button class="btn btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample{{$sub_courses['id']}}" aria-expanded="false" aria-controls="collapseExample{{$sub_courses['id']}}">
 											         <div class="text-center">
-															<img src="{{asset('images/sap.jpg')}}" alt="images" style="height:74px;margin-bottom: 10px;">
+															<img src="{{asset('assets/img/Courses/'.$sub_courses['image'])}}" alt="images" style="height:74px;margin-bottom: 10px;">
 														</div>
 															<span>{{$sub_courses['name']}}</span>
 											        </button>
