@@ -2508,11 +2508,15 @@ article {
       margin-left: 15px;
       margin-bottom: 15px;
   }
+  #jsnn-hero .flexslider .slider-text > .slider-text-inner h1{
+    margin-top: 20px;
+  }
   .quadrat{
     padding: 4px 15px;
   }
   .new-offered-blink{
     right: 50px;
+    top:3px;
   }
   .quadrat a {
     font-size: 14px;
