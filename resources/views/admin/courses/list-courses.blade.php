@@ -53,7 +53,7 @@
                  <th>S.no</th>
                   <th>Course Name</th>
                   <th>Image</th>
-                  
+                  <th>Is Offered</th>
                   <th>Status</th>
                   <th >Actions</th>
                 </tr>
@@ -71,10 +71,10 @@
                         <td> {!!$courses['name']!!}
                         </td>
                         <td>   <img src="{{asset('assets/img/Courses/'.$courses['image'])}}"
-                          class="list_img" / >
+                          class="list_img" />
                         </td>
-                      
-                        <td> {{ucfirst($courses['status'])}}</td>
+                        <td>{{ucfirst($courses['offered'])}}</td>
+                        <td>{{ucfirst($courses['status'])}}</td>
                         <td>
                         <a href="{!!url(sprintf('admin/main-courses/%s/edit',___encrypt($courses['id'])))!!}"  title="Edit Courses"><i class="fa fa-edit"></i></a>|
                         <a href="javascript:void(0);" data-url="{{url(sprintf('admin/main-courses/%s/delete',___encrypt($courses['id'])))}}" 

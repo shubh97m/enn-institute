@@ -56,7 +56,7 @@ class HomeController extends Controller
     public function offered_course()
     {
       $data['view']='front.offered-course';
-      $data['course']   =  _arefy(MainCourses::where('status','=','active')->get());
+      $data['course']   =  _arefy(MainCourses::where('status','=','active')->where('offered','=','yes')->get());
         return view('front_home',$data);
     }
     public function askDemoStore(Request $request)

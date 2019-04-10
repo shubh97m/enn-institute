@@ -64,6 +64,14 @@ public function mainCourseEdit(Request $request,$id)
           $file->move('assets/img/Courses',$photo_name);
           $input['image'] = $photo_name;
         }
+        if ($request->offered)
+        {
+          
+          $input['offered'] = $request->offered;
+        }else{
+          $input['offered'] = 'no';
+
+        }
             $data->update($input);
 
             $this->status   = true;
