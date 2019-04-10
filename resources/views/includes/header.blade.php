@@ -41,10 +41,17 @@
 					
 					<div class="container">					
 						<div class="row">
-							<div class="col-md-2 col-sm-3 col-xs-4">
+							<div class="col-md-4 col-sm-3 col-xs-4">
 								<div id="jsnn-logo"><a href="{{url('/')}}"><img src="{{url('images/logo/logo.png')}}"></a></div>
+								<div class="new-offered-blink1">
+				   					<div class="quadrat_s"><a href="{{url('courseOffered')}}">Summer Training/Internship
+				   						<div class="new_round">
+				   							<img src="{{asset('images/new_red.gif')}}" alt="new">
+				   						</div>
+				   					</a></div>
+				   				</div>
 							</div>
-							<div class="col-md-10 col-sm-9 col-xs-8 text-right menu-1">
+							<div class="col-md-8 col-sm-9 col-xs-8 text-right menu-1">
 								<ul class="menuListing">
 									<li class=""><a href="{{url('/')}}">Home</a></li>
 									<li class="has-dropdown">
