@@ -661,7 +661,7 @@ ul.rightHeader li{
 }
 .new_round {
     position: absolute;
-    top: -5px;
+    top: -1px;
     right: 0;
 }
 @keyframes rotate {
@@ -680,7 +680,7 @@ ul.rightHeader li{
   padding: 2px;
   right: 18px;
 
-  background: linear-gradient(to right, red, purple);
+  /*background: linear-gradient(to right, red, purple);*/
     top: 18px;
   z-index: 20;
   border-radius: 45%;
