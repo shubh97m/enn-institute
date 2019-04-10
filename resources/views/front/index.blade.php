@@ -7,6 +7,13 @@
 	   						<i class="fa fa-gift"></i>
 	   					<div><i class="fa fa-hand-o-right"></i>Click Here!</div></a></div>
 	   				</div> -->
+	   				<div class="new-offered-blink1">
+	   					<div class="quadrat_s"><a href="{{url('courseOffered')}}">Summer Training / Internship
+	   						<div class="new_round">
+	   							<img src="{{asset('images/new_red.gif')}}" alt="new">
+	   						</div>
+	   					</a></div>
+	   				</div>
 					@foreach($sliders as $slider)
 									
 			   	<li style="background-image: url('{{asset('assets/img/Slider/'.$slider['image'])}}')" class="img-responsive">
@@ -36,7 +43,7 @@
 				<div class="row">
 					<div class="col-md-12 tabulation animate-box">
 						<ul class="nav nav-tabs">
-							<li class="active"><a data-toggle="tab" href="#plan"><i class="flaticon-sketch"></i> Director's Message</a></li>
+							<li><a data-toggle="tab" href="#plan" class="active"><i class="flaticon-sketch"></i> Director's Message</a></li>
 							<li><a data-toggle="tab" href="#general"><i class="icon-user"></i> About ENN Technologies</a></li>
 							<!-- <li><a data-toggle="tab" href="#modeling"><i class="flaticon-skyline"></i>  </a></li> -->
 						</ul>

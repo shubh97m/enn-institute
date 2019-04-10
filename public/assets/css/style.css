@@ -661,14 +661,26 @@ ul.rightHeader li{
 }
 .new_round {
     position: absolute;
-    top: 0;
+    top: -5px;
     right: 0;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 .new-offered-blink1{
   position: absolute;
   /*max-width: 178px;*/
   /* padding: 20px; */
+  padding: 2px;
   right: 10px;
+
+  background: linear-gradient(to right, red, purple);
     top: 9px;
   z-index: 20;
   border-radius: 45%;
@@ -677,7 +689,10 @@ ul.rightHeader li{
 .quadrat_s {
     /* max-width: 300px; */
     padding: 10px 20px;
+    /*animation: rotate 3.33s linear infinite;*/
     height: 100%;
+    background: #fff;
+    
     text-align: center;
     border-radius: 45%;
 }
@@ -1059,6 +1074,7 @@ a.read-more:hover{
 }
 #jsnn-intro .nav-tabs li a i {
   font-size: 18px;
+  padding-right: 10px;
 }
 #jsnn-intro .tab-content {
   padding: 2em 2em !important;
@@ -1886,12 +1902,17 @@ a.search-input.search{
       #jsnn-intro .nav-tabs li.active {
         border-bottom: 1px solid #fff;
         }
-#jsnn-intro .nav-tabs li.active a {
-  background-color: #142684;
+#jsnn-intro .nav-tabs li a.active {
+ background-color: #142684;
   color: #fff;
+  
   bottom: 0 !important;
 }
-
+#jsnn-intro .nav-tabs li a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .sub-courses-img {
   height: 320px;
   display: block; 
