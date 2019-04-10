@@ -75,11 +75,7 @@
             <i class="fa fa-fw fa-sign-out"></i> <span>Trainings</span>
           </a>
         </li>
-        <li>
-          <a href="{{url('admin/scholarship')}}">
-            <i class="fa fa-fw fa-sign-out"></i> <span>Scholarship</span>
-          </a>
-        </li>    
+        
         <li>
           <a href="{{url('admin/testimonial')}}">
             <i class="fa fa-fw fa-sign-out"></i> <span>Testimonial</span>
@@ -88,6 +84,16 @@
         <li>
           <a href="{{url('admin/ask-demo')}}">
             <i class="fa fa-fw fa-sign-out"></i> <span>Ask Demo</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{url('admin/list/scholarship')}}">
+            <i class="fa fa-fw fa-sign-out"></i> <span>Scholarship</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{url('admin/list/offer')}}">
+            <i class="fa fa-fw fa-sign-out"></i> <span>Offer</span>
           </a>
         </li>
         <li>

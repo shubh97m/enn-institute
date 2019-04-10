@@ -5,7 +5,17 @@
 			<div class="col-lg-4 col-md-6 border-right">
 				<div class="offeredLeft">
 					<h2 class="offeredHeading wow fadeInUp">Offered Courses</h2>
-					<div class="card m-b-10">
+					@if(!empty($course))
+						@foreach($course as $courses)
+						<div class="card m-b-10">
+							<div class="card-heading">
+								<img src="{{asset('assets/img/Courses/'.$courses['image'])}}" alt="images" style="height:74px;border: 1px solid #03489b;">
+								{{$courses['name']}}
+							</div>
+						</div>
+						@endforeach
+					@endif
+					{{-- <div class="card m-b-10">
 						<div class="card-heading">
 							<img src="{{asset('images/sap.jpg')}}" alt="images" style="height:74px;border: 1px solid #03489b;">
 							SAP Analysis
@@ -28,13 +38,7 @@
 							<img src="{{asset('images/sap.jpg')}}" alt="images" style="height:74px;border: 1px solid #03489b;">
 							SAP Analysis
 						</div>
-					</div>
-					<div class="card m-b-10">
-						<div class="card-heading">
-							<img src="{{asset('images/sap.jpg')}}" alt="images" style="height:74px;border: 1px solid #03489b;">
-							SAP Analysis
-						</div>
-					</div>
+					</div> --}}
 				</div>
 			</div>
 			<div class="col-lg-8 col-md-6">
