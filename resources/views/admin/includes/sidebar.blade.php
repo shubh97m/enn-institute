@@ -5,7 +5,7 @@
       <div class="user-panel">
         <div class="pull-left image">
 
-          <img src="{{url('assets/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
+          <img src="{{url('assets/dist/img/user2-160x160.jpg')}}" alt="User Image">
         </div>
         <div class="pull-left info">
          
@@ -74,7 +74,8 @@
           <a href="{{url('admin/trainings')}}">
             <i class="fa fa-fw fa-sign-out"></i> <span>Trainings</span>
           </a>
-        </li>    
+        </li>
+        
         <li>
           <a href="{{url('admin/testimonial')}}">
             <i class="fa fa-fw fa-sign-out"></i> <span>Testimonial</span>
@@ -86,12 +87,16 @@
           </a>
         </li>
         <li>
-        <li>
-          <a href="{{url('admin/contact')}}">
-            <i class="fa fa-fw fa-sign-out"></i> <span>Contact</span>
+          <a href="{{url('admin/list/scholarship')}}">
+            <i class="fa fa-fw fa-sign-out"></i> <span>Scholarship</span>
           </a>
         </li>
-
+        <li>
+          <a href="{{url('admin/list/offer')}}">
+            <i class="fa fa-fw fa-sign-out"></i> <span>Offer</span>
+          </a>
+        </li>
+        <li>
          <li>
           <a href="{{url('admin/logout')}}">
             <i class="fa fa-fw fa-sign-out"></i> <span>Logout</span>

@@ -8,3 +8,10 @@ img.list_img{
 .list_mg{
 	padding: 9px auto;
 }
+.main-header .logo .logo-lg {
+    display: block;
+    height: 50px !important;
+}
+span.logo-lg img {
+    height: 100%;
+}

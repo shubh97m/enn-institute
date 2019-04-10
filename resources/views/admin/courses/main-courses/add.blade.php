@@ -32,6 +32,14 @@
           </div>
         </div>
         </div>
+        <div class="row">
+          <div class="col-md-12">
+          <div class="form-group">
+            <label>Is Offered:</label>
+            <input type="checkbox" name="offered" value="yes">
+          </div>
+        </div>
+        </div>
 
          <div class="box-footer">
           <a href="{{url('admin/list-courses')}}" class="btn btn-default">Cancel</a>

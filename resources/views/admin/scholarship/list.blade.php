@@ -5,7 +5,7 @@
     
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Gallery Category</li>
+        <li class="active">Scholarship Applicants</li>
       </ol>
     </section>
 
@@ -15,12 +15,12 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Gallery Category List</h3>
-              <div class="pull-right">
-                <a href="{!! url('admin/gallery-category/create') !!}" class="btn btn-primary btn-add"><i class="fa fa-plus"></i> Add Gallery Category
+              <h3 class="box-title">Scholarship List</h3>
+                {{-- <div class="pull-right">
+                <a href="{!! url('admin/scholarship/create') !!}" class="btn btn-primary btn-add"><i class="fa fa-plus"></i> Add Scholarship
                 </a>
+              </div> --}}
               </div>
-            </div>
 
             <!-- /.box-header -->
             <div class="box-body">
@@ -29,33 +29,40 @@
                 <tr>
                  <th>S.no</th>
                   <th>Name</th>
-                 
-                  <th >Actions</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Course</th>
+                  <th>Degree</th>
+                  <th>College Name</th>
+                  {{-- <th >Actions</th> --}}
                 </tr>
                 </thead>
                 <tbody>
                @php  
                  $i=0;
                 @endphp
-                @foreach($gallery_cat as $cat)
+                @foreach($scholarship as $scholarships)
                 @php
                   $i++;
                 @endphp
                       <tr>
                         <td> {{$i}}</td>
-                        <td> 
-                        {{$cat['name']}}
-                        </td>
-                       
-                        <td>
-                           <a href="{{url(sprintf('admin/gallery-category/edit/%s',___encrypt($cat['id'])))}}"  title="Edit Detail"><i class="fa fa-edit"></i></a> |
+                        <td>{!!$scholarships['name']!!}</td>
+                        <td> {{$scholarships['email']}}</td>
+                        <td> {{$scholarships['phone']}}</td>
+                        <td> {{$scholarships['course']}}</td>
+                        <td> {{$scholarships['degree']}}</td>
+                        <td> {{$scholarships['college_name']}}</td>
+                        {{-- <td>
+                           <a href="{{url(sprintf('admin/scholarship/%s/edit',___encrypt($scholarships['id'])))}}"  title="Edit Detail"><i class="fa fa-edit"></i>.
+                           </a> |
                         <a href="javascript:void(0);" 
-                        data-url="{{url(sprintf('admin/gallery-category/%s/delete',___encrypt($cat['id'])))}}" 
+                        data-url="{{url(sprintf('admin/scholarship/destroy',___encrypt($scholarships['id'])))}}" 
                         data-request="ajax-confirm"
                         data-ask_image="{{url('assets/img/delete.png')}}"
-                        data-ask="Would you like to Delete?" title="Delete"><i class="fa fa-fw fa-trash"></i></a> 
+                        data-ask="Would you like to Delete?" title="Delete"><i class="fa fa-fw fa-trash"></i></a> |
 
-                        </td>
+                        </td> --}}
                         </tr>
                     @endforeach
            

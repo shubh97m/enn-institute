@@ -2,17 +2,30 @@
 		<aside id="jsnn-hero">
 			<div class="flexslider">
 				<ul class="slides">
+					<!-- <div class="new-offered-blink">
+	   					<div class="quadrat"><a href="{{url('courseOffered')}}">Summer Training upto 50% Off
+	   						<i class="fa fa-gift"></i>
+	   					<div><i class="fa fa-hand-o-right"></i>Click Here!</div></a></div>
+	   				</div> -->
+	   				<div class="new-offered-blink1">
+	   					<div class="quadrat_s"><a href="{{url('courseOffered')}}">Summer Training / Internship
+	   						<div class="new_round">
+	   							<img src="{{asset('images/new_red.gif')}}" alt="new">
+	   						</div>
+	   					</a></div>
+	   				</div>
 					@foreach($sliders as $slider)
 									
 			   	<li style="background-image: url('{{asset('assets/img/Slider/'.$slider['image'])}}')" class="img-responsive">
 			   		<div class="overlay"></div>
 			   		<div class="container-fluid">
 			   			<div class="row">
-				   			<div class="col-md-8 col-sm-12 slider-text">
+				   			<div class="col-lg-8 col-md-12 col-sm-12 slider-text">
 				   				<div class="slider-text-inner">
 				   					<h1>
 				   					{!!$slider['text']!!} 		
 				   					</h1>
+				   					
 				   				</div>
 				   			</div>
 				   		</div>
@@ -30,20 +43,19 @@
 				<div class="row">
 					<div class="col-md-12 tabulation animate-box">
 						<ul class="nav nav-tabs">
-							<li class="active"><a data-toggle="tab" href="#plan"><i class="flaticon-sketch"></i> Director's Message</a></li>
+							<li><a data-toggle="tab" href="#plan" class="active"><i class="flaticon-sketch"></i> Director's Message</a></li>
 							<li><a data-toggle="tab" href="#general"><i class="icon-user"></i> About ENN Technologies</a></li>
-							<!-- <li><a data-toggle="tab" href="#manage"><i class="flaticon-engineer"></i> Principal's Message</a></li> -->
 							<!-- <li><a data-toggle="tab" href="#modeling"><i class="flaticon-skyline"></i>  </a></li> -->
 						</ul>
 						<div class="tab-content">
-							<div id="plan" class="tab-pane fade in active">
+							<div id="plan" class="tab-pane fade show active">
 								<div class="row">
-									<div class="col-md-6">
+									<div class="col-lg-6 col-md-12">
 										<div class="sub-courses-img"> 
 											<img src="images/message.jpg" alt="about">
 										</div>
 									</div>
-									<div class="col-md-6">
+									<div class="col-lg-6 col-md-12">
 										<div class="sub-courses-desc">
                                             <h3>Director's Message</h3>
 											<p>Enn technologies is Having Indiawide Name in IT field. We provide High quality Technologies training and consulting sub-courses that full fill Students.
@@ -60,12 +72,12 @@
 				         </div>
 				         <div id="general" class="tab-pane fade">
 				         	<div class="row">
-									<div class="col-md-6">
+									<div class="col-lg-6 col-md-12">
 										<div class="sub-courses-img"> 
 											<img src="images/about.jpg" alt="message">
 										</div>
 									</div>
-									<div class="col-md-6">
+									<div class="col-lg-6 col-md-12">
 										<div class="sub-courses-desc">
                                             <h3>About ENN Technologies</h3>
 											<p>Enn technologies is Having Indiawide Name in IT field. We provide High quality Technologies training and consulting sub-courses that full fill Students.
@@ -104,7 +116,7 @@
 					<div class="grid-container">
 					<div class="row">
 						@foreach($course as $courses)
-							<div class="col-md-3 text-center animate-box grid-item">
+							<div class="col-lg-3 col-md-12 text-center animate-box grid-item allcoursesBox">
 								<a href="{{url('courses/'.___encrypt($courses['id']))}}">
 								<div class="sub-courses">
 									<span class="icon">
@@ -128,28 +140,28 @@
 			<div class="overlay"></div>
 				<div class="container">
 					<div class="row no-gutter">
-						<div class="col-md-3 col-sm-6 aside-stretch text-center animate-box">
+						<div class="col-lg-3 col-md-6 col-sm-12 aside-stretch text-center animate-box">
 							<div class="counter-entry wow fadeInDown animated">
 								<span class="icon icon-white"><i class="icon-book-open"></i></span>
 								<span class="jsnn-counter js-counter" data-from="0" data-to="{{$total_courses}}" data-speed="5000" data-refresh-interval="50"></span>
 								<span class="jsnn-counter-label">TOTAL COURSES</span>
 							</div>
 						</div>
-						<div class="col-md-3 col-sm-6 text-center animate-box">
+						<div class="col-lg-3 col-md-6 col-sm-12 text-center animate-box">
 							<div class="counter-entry wow fadeInDown animated">
 								<span class="icon"><i class="icon-user"></i></span>
 								<span class="jsnn-counter js-counter" data-from="0" data-to="3653" data-speed="5000" data-refresh-interval="50"></span>
 								<span class="jsnn-counter-label">SELECTED STUDENTS</span>
 							</div>
 						</div>
-						<div class="col-md-3 col-sm-6 text-center animate-box">
+						<div class="col-lg-3 col-md-6 col-sm-12 text-center animate-box">
 							<div class="counter-entry wow fadeInDown animated">
 								<span class="icon"><i class="icon-people"></i></span>
 								<span class="jsnn-counter js-counter" data-from="0" data-to="5987" data-speed="5000" data-refresh-interval="50"></span>
 								<span class="jsnn-counter-label">TOTAL STUDENT</span>
 							</div>
 						</div>
-						<div class="col-md-3 col-sm-6 text-center animate-box">
+						<div class="col-lg-3 col-md-6 col-sm-12 text-center animate-box">
 							<div class="counter-entry wow fadeInDown animated">
 								<span class="icon"><i class="icon-trophy"></i></span>
 								<span class="jsnn-counter js-counter" data-from="0" data-to="3999" data-speed="5000" data-refresh-interval="50"></span>
@@ -189,23 +201,6 @@
 		              </div>
 		              
 		            </div>
-
-		            {{-- @foreach($gallery as $gal)
-	                	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix students all">
-			                <div class="portfolio-item">
-			                  <div class="shot-item">
-			                    <img src="{{url('assets/img/gallery/'.$gal['image'])}}" alt="gallery" /> 
-			                    <div class="overlay">
-			                      <div class="icons">
-			                        <a class="lightbox preview" href="images/gallery/gallery2.jpg">
-			                          <i class="fa fa-eye"></i>
-			                        </a>
-			                      </div>
-			                    </div>
-			                  </div>               
-			                </div>
-			            </div>
-			        @endforeach --}}
 			        <div id="portfolio" class="row wow fadeInDown" data-wow-delay="0.4s">
 		              @if(!empty($gallery_category))
 			                @foreach($gallery_category as $cat)
@@ -228,62 +223,7 @@
 			                @endforeach
 		                @endif
 		            </div>
-		              {{-- <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix students academy">
-		                <div class="portfolio-item">
-		                  <div class="shot-item">
-		                    <img src="images/gallery/gallery2.jpg" alt="gallery" /> 
-		                    <div class="overlay">
-		                      <div class="icons">
-		                        <a class="lightbox preview" href="images/gallery/gallery2.jpg">
-		                          <i class="fa fa-eye"></i>
-		                        </a>
-		                      </div>
-		                    </div>
-		                  </div>               
-		                </div>
-		              </div>
-		              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix students">
-		                <div class="portfolio-item">
-		                  <div class="shot-item">
-		                    <img src="images/gallery/gallery3.jpg" alt="gallery"/> 
-		                    <div class="overlay">
-		                      <div class="icons">
-		                        <a class="lightbox preview" href="images/gallery/gallery3.jpg">
-		                          <i class="fa fa-eye"></i>
-		                        </a>
-		                      </div>
-		                    </div>
-		                  </div>               
-		                </div>
-		              </div>
-		              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix academy">
-		                <div class="portfolio-item">
-		                  <div class="shot-item">
-		                    <img src="images/gallery/gallery4.jpg" alt="gallery"/>
-		                    <div class="overlay">
-		                      <div class="icons">
-		                        <a class="lightbox preview" href="images/gallery/gallery4.jpg">
-		                          <i class="fa fa-eye"></i>
-		                        </a>
-		                      </div>
-		                    </div>
-		                  </div>               
-		                </div>
-		              </div> --}}
-		              {{-- <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 students">
-		                <div class="portfolio-item">
-		                  <div class="shot-item">
-		                    <img src="images/gallery/gallery5.jpg" alt="projects"/>
-		                    <div class="overlay">
-		                      <div class="icons">
-		                        <a class="lightbox preview" href="images/gallery/gallery5.jpg">
-		                          <i class="fa fa-eye"></i>
-		                        </a>
-		                      </div>
-		                    </div>
-		                  </div>               
-		                </div>
-		              </div> --}}
+		           
 		            </div>
 		          </div>
 		        </div>
@@ -378,6 +318,138 @@
         </div>
     </div>
 </section>
+@if(Request::segment(1)!='ask-a-demo')
+	<div class="popupmodal">
+	        <div id="modal-exam-form" class="modal fade" role="dialog" style="overflow: hidden;">
+	           <div class="modal-dialog">
+		          <!-- Modal content-->
+		          	<div class="modal-content">
+			            <div class="modal-header">
+			              <button type="button" class="close" data-dismiss="modal">&times;</button>
+			            </div>
+			            <!--  -->
+		  				<a href="#register-form-exam" data-toggle="modal" style="cursor: pointer;">
+				            <div class="modal-body popupmodal-body">
+				              	<img src="{{url('images/Capture-img.jpg')}}" alt="capture" id="img-modal">
+				            </div>
+			        	</a>
+		          	</div>
+	            </div>
+	        </div>
+        </div>
+        @endif
+    <div class="popupmodal">
+        <!-- Modal -->
+	        <div id="register-form-exam" class="modal fade" role="dialog">
+	           <div class="modal-dialog modal-lg">
+	          <!-- Modal content-->
+	          <div class="modal-content">
+	            <div class="modal-header">
+	            	<div class="logo-modal">
+		               <h4>Exam Register</h4>
+		            </div>
+	              	<button type="button" class="close" data-dismiss="modal">&times;</button>
+	              	
+	            </div>
+
+	            <div class="modal-body popupmodal-body">
+		            <div class="row">
+		            <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+		            	<div class="popup-img-left">
+		            		<img src="{{asset('images/message.jpg')}}" alt="register">
+		            	</div>
+		            </div>
+			        <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+
+			              <form role="scholarship" method="POST" action="{{url('scholarship')}}" class="popup-form">
+			              	{{csrf_field()}}
+			               
+			                <input type="hidden" name="type" value="scholarship">
+
+			               <div class="form-group">
+			               		<div class="inner-addon left-addon">
+			               			<i class="fa fa-user fa-lg"></i>
+			                  		<input type="text"  class="form-control"  name="name" value="" placeholder="Full Name">
+			                  	</div>
+			                </div>
+			                <div class="form-group">
+			                 	<div class="inner-addon left-addon">
+			                 		<i class="fa fa-envelope fa-lg"></i>
+			                  		<input type="text"  class="form-control"  name="email" value="" placeholder="Email">
+			                  	</div>
+			                </div>
+			                <div class="form-group">
+			                  <div class="inner-addon left-addon">
+			                  		<i class="fa fa-phone fa-lg"></i>
+			                  		<input type="text" data-request="isnumeric" class="form-control"  name="phone" value="" placeholder="Phone no">
+			                  	</div>
+			                </div>
+			               
+			                <div class="form-group">
+			                  <div class="inner-addon left-addon">
+			                  		<i class="fa fa-book fa-lg"></i>
+
+			                  		<select class="form-control" name="course">
+										<option value="">Select Course</option>
+										@if(!empty($course))
+											@foreach($course as $courses)
+					                  			<option value="{{$courses['name']}}">{{$courses['name']}}</option>
+					                  		@endforeach
+					                  	@else
+					                  			<option value="">No Course Found. </option>
+					                  	@endif
+					                 </select>
+
+			                  	</div>
+			                </div>
+			                <div class="form-group">
+			                  <div class="inner-addon left-addon">
+			                  		<i class="fa fa-book fa-lg"></i>
+			                  		<select class="form-control" name="degree">
+			                  			
+					                  	<option value="">Select Degree</option>
+					                  	<option value="B.tech">B.tech</option>
+					                  	<option value="M.tech">M.tech</option>
+					                  	<option value="BCA">BCA</option>
+					                  	<option value="MCA">MCA</option>
+					                  	<option value="BBA">BBA</option>
+					                  	<option value="MBA">MBA</option>
+					                  	<option value="B.com">B.com</option>
+					                  	<option value="M.com">M.com</option>
+					                 </select>
+			                  	</div>
+			                </div>
+			                <div class="form-group">
+			                  <div class="inner-addon left-addon">
+			                  		<i class="fa fa-book fa-lg"></i>
+			                  		<input type="text"  class="form-control"  name="college_name" value="" placeholder="College Name">
+			                  	</div>
+			                </div>
+			                 
+			                <div class="form-group">
+			                  <button type="button" data-request="ajax-submit" data-target='[role="scholarship"]' class="btn btn-blue">Submit</button>
+			                </div>
+			             </form>
+		            </div>
+	            	</div>
+	            </div>
+	          </div>
+	          
+	        </div>
+	    </div>
+    </div>
+@section('requirejs')
+<script type="text/javascript">
+	$(window).load(function(){     
+   		$('#modal-exam-form').modal('show');
+    });
+    $("#img-modal").click(function(){
+		$("#modal-exam-form").modal("hide");
+		$("#register-form-exam").show();
+		
+	});
+</script>
+@endsection
 
 
 	

@@ -20,7 +20,9 @@ class TrainingController extends Controller
     public function index()
     {
            $data['view'] ='admin.trainings.list';
-           $data['training']  = _arefy(Trainings::where('status','!=','trashed')->get());
+            $where = 'status != "trashed"';
+           $data['training']  = _arefy(Trainings::list('array',$where));
+           // dd($data['training']);
           return view('admin.home')->with($data);
     }
 
@@ -32,7 +34,7 @@ class TrainingController extends Controller
     public function create()
     {
         $data['view'] ='admin.trainings.add';
-        $data['course']      =  _arefy(MainCourses::where('status','!=','trashed')->get());
+        $data['course']     =  _arefy(MainCourses::where('status','!=','trashed')->get());
         return view('/admin/home',$data);
     }
 
@@ -83,7 +85,11 @@ class TrainingController extends Controller
      */
     public function edit($id)
     {
-        //
+       $data['view'] = 'admin.trainings.edit';
+        $id = ___decrypt($id);
+        $data['course']     =  _arefy(MainCourses::where('status','!=','trashed')->get());
+        $data['trainings'] =  _arefy(Trainings::where('id','=',$id)->where('status','!=','trashed')->first());
+        return view('admin.home',$data);
     }
 
     /**
@@ -94,10 +100,31 @@ class TrainingController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        //
+      {
+        $id = ___decrypt($id);
+        $validation = new Validations($request);
+        $validator  = $validation->addTrainings('add');
+        if ($validator->fails()) {
+            $this->message = $validator->errors();
+        }else{
+        $trainings = Trainings::findOrFail($id);
+        $data = $request->all();
+        // if ($file = $request->file('image'))
+        // {
+        //   $photo_name = time().$request->file('image')->getClientOriginalName();
+        //   $file->move('assets/img/Trainings',$photo_name);
+        //   $data['image'] = $photo_name;
+        // }
+         
+        $trainings->update($data);
+            $this->status   = true;
+            $this->modal    = true;
+            $this->alert    = true;
+            $this->message  = "Trainings has been Updated successfully.";
+            $this->redirect = url('admin/home');
+        }
+        return $this->populateresponse();
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -108,4 +135,14 @@ class TrainingController extends Controller
     {
         //
     }
+    public function deleteTraining(Request $request,$id)
+    {
+      $isUpdated       = Trainings::where('id',___decrypt($id))->delete();
+        if($isUpdated){           
+            $this->message  = 'Trainings has been deleted successfully.';
+            $this->status   = true;
+            $this->redirect = true;
+            $this->jsondata = [];
+        }
+        return $this->populateresponse();    }
 }

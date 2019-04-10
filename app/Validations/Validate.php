@@ -34,7 +34,7 @@ class Validate
       'profile_picture'   => ['required','mimes:doc,docx,pdf'],
       'pin_code'          => ['nullable','max:6','min:4'],
       'type'              => ['required','string'],
-      'phone'             => ['required','numeric','digits:10'],
+      'phone'             => ['required','numeric'],
       'location'          => ['required','string'],
       'password'          => ['required','string','max:50','min:6'],
       'photo'             => ['required','mimes:jpg,jpeg,png'],
@@ -110,8 +110,8 @@ class Validate
           'phone'       =>$this->validation('phone'),
           'phone2'       =>$this->validation('phone2'),
           'email'       =>$this->validation('email'),
+          'logo'        => $this->validation('photo_null'),
           'address'     =>$this->validation('address'),
-          'logo'        => $this->validation('photo'),
           ];
 
          $validator = \Validator::make($this->data->all(), $validations,[
@@ -227,6 +227,20 @@ class Validate
 
           $validator = \Validator::make($this->data->all(), $validations,[]);
           return $validator;     
+        }
+        public function Register($action= 'add')
+        {
+          $validations = [
+          'name'      =>$this->validation('name'),    
+          'email'           =>$this->validation('req_email'),
+          'phone'       =>$this->validation('name'),    
+          'course'       =>$this->validation('name'),    
+          'degree'         =>$this->validation('name'),
+          'college_name'         =>$this->validation('name'),
+          ];
+
+          $validator = \Validator::make($this->data->all(), $validations,[]);
+          return $validator;     
         }   
       public function askDemo($action='add')
       {
@@ -279,6 +293,18 @@ class Validate
 
           $validator = \Validator::make($this->data->all(), $validations,[]);
           return $validator;     
-        }   
+    }
+
+    public function addScholarship($action='add')
+    {
+       $validations = [
+          'name'   =>$this->validation('name'),  
+          'phone'  =>$this->validation('phone'),
+          'email'  =>$this->validation('email'),
+          ];
+
+          $validator = \Validator::make($this->data->all(), $validations,[]);
+          return $validator;     
+    }
 }
 

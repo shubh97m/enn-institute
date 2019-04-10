@@ -17,7 +17,7 @@
 							<!-- <li><a data-toggle="tab" href="#modeling"><i class="flaticon-skyline"></i>  </a></li> -->
 						</ul>
 						<div class="tab-content">
-							<div id="plan" class="tab-pane fade in active">
+							<div id="plan" class="tab-pane fade show active">
 								<div class="row">
 									<div class="col-md-6">
 										<div class="sub-courses-img"> 

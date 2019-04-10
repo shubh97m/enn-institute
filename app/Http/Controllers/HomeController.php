@@ -19,6 +19,8 @@ use App\Models\ChildCourses;
 use Validations\Validate as Validations;
 use App\Models\generalSettings;
 use App\Models\Testimonial;
+use App\Models\RegisterPopup;
+
 class HomeController extends Controller
 {
 	public function __construct(Request $request){
@@ -41,8 +43,7 @@ class HomeController extends Controller
         $data['course']         =     _arefy(MainCourses::where('status','=','active')->get());
         $data['testimonial']    =     _arefy(Testimonial::get());
         $data['total_courses']  =  MainCourses::list('count')+SubCourses::list('count')+ChildCourses::list('count');
-
-
+        $data['scholarship']    =     _arefy(RegisterPopup::get());
 		return view('front_home',$data);
 	}
     //********* ********
@@ -50,6 +51,12 @@ class HomeController extends Controller
     {
       $data['view']='front.askDemo';
       $data['course']   =  _arefy(MainCourses::where('status','=','active')->get());
+        return view('front_home',$data);
+    }
+    public function offered_course()
+    {
+      $data['view']='front.offered-course';
+      $data['course']   =  _arefy(MainCourses::where('status','=','active')->where('offered','=','yes')->get());
         return view('front_home',$data);
     }
     public function askDemoStore(Request $request)
@@ -71,7 +78,7 @@ class HomeController extends Controller
       return $this->populateresponse();
     
     }
-
+ 
 	//********* aBOUT US********
     public function aboutUs(){
         $data['view']='front.about-us';
@@ -87,7 +94,7 @@ class HomeController extends Controller
     }
     public function search(Request $request)
     {
-        $data['course']      =  _arefy(MainCourses::where('status','=','active')->where('name','like', '%' .$request->search. '%')->get());
+        $data['course']   =  _arefy(MainCourses::where('status','=','active')->where('name','like', '%' .$request->search. '%')->get());
         $data['search']=$request->search;
         $data['view'] ='front.search';
         return view('front_home', $data);
@@ -173,6 +180,23 @@ class HomeController extends Controller
               $this->alert    = true;
               $this->message  = "Thanks For Conatcting us.We will contact you as soon as possible.";
               $this->redirect = url('contact');
+        } 
+      return $this->populateresponse();
+    }
+    public function Register(Request $request){
+        $validation = new Validations($request);
+        $validator  = $validation->Register();
+        if ($validator->fails()){
+            $this->message = $validator->errors();
+        }else{
+            $data = new RegisterPopup();
+            $data->fill($request->all());
+            $data->save();
+              $this->status   = true;
+              $this->modal    = true;
+              $this->alert    = true;
+              $this->message  = "Thanks For Rgister.We will contact you as soon as possible.";
+              $this->redirect = url('/');
         } 
       return $this->populateresponse();
     }

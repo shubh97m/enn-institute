@@ -30,8 +30,11 @@ Route::get('/search','HomeController@search');
 Route::post('/subscribe','HomeController@subscribe');
 Route::get('/sub-course/{id}','HomeController@sub_courses');
 Route::get('/view-course','HomeController@view_course');
+Route::get('/courseOffered','HomeController@offered_course');
 Route::get('/ask-a-demo','HomeController@askDemo');
 Route::post('/ask-a-demo','HomeController@askDemoStore');
+Route::post('/scholarship','HomeController@Register');
+
 
 
 //************Admin section*************//
@@ -50,6 +53,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 
 //******************SLiders section*******
 	Route::resource('sliders', 'sliderController');
+	Route::get('list/{type}', 'ScholarshipController@index');
 	Route::group(['prefix' => 'sliders'],function(){
 		Route::post('/status', 'sliderController@changeStatus');
 		Route::post('/{id}/delete','sliderController@deleteSlider');
@@ -62,6 +66,12 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 		Route::post('/{id}/delete','PartnerController@deletePartner');
 	});
 	
+//******************Partners section*******
+	Route::resource('scholarship','ScholarshipController');
+		Route::group(['prefix' => 'scholarship'],function(){
+		Route::post('/{id}/delete','sliderController@deleteScholarship');
+
+	});			
 
 //*************General Settings***********
 	Route::get('general-settings','GeneralSetting@settings');
@@ -99,6 +109,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 	  Route::post('/{id}/delete','GalleryController@deleteGallery');	
 	});
 	Route::get('gallery-category','GalleryController@list');
+	Route::post('gallery-category/{id}/delete','GalleryController@deleteGalleryCategory');
+
 //Gallery 
 	Route::get('gallery-category/edit/{id}',
 		'GalleryController@editCategory');

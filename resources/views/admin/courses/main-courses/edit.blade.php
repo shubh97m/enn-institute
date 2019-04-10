@@ -44,9 +44,20 @@
             </div>
           </div>
         </div>
-
+        <div class="row">
+          <div class="col-md-12">
+          <div class="form-group">
+            <label>Is Offered:</label>
+            @if($courses['offered']=='yes')
+              <input type="checkbox" name="offered"  checked value="yes">
+            @else
+              <input type="checkbox" name="offered"   value="yes">
+            @endif
+          </div>
+        </div>
+        </div>
         <div class="box-footer">
-          <a href="{{url('admin/courses')}}" class="btn btn-default">Cancel</a>
+          <a href="{{url('admin/list-courses')}}" class="btn btn-default">Cancel</a>
           <button type="button" data-request="ajax-submit" data-target='[role="edit-courses"]' class="btn btn-info pull-right">Submit</button>
         </div>
       </form>

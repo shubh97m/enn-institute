@@ -34,7 +34,6 @@
 							</div>
 						</form>
 					</div>
-					<!-- admin@enntechnologies.in -->
 				</div>
 			</div>
 			<nav class="jsnn-nav" role="navigation">
@@ -42,21 +41,22 @@
 					
 					<div class="container">					
 						<div class="row">
-							<div class="col-md-2 col-sm-3 col-xs-4">
+							<div class="col-md-4 col-sm-3 col-xs-4">
 								<div id="jsnn-logo"><a href="{{url('/')}}"><img src="{{url('images/logo/logo.png')}}"></a></div>
+								
 							</div>
-							<div class="col-md-10 col-sm-9 col-xs-8 text-right menu-1">
+							<div class="col-md-8 col-sm-9 col-xs-8 text-right menu-1">
 								<ul class="menuListing">
 									<li class=""><a href="{{url('/')}}">Home</a></li>
 									<li class="has-dropdown">
 										<a href="{{url('/courses')}}">All Courses</a>
 									</li>
-									<li class="hidemenu"><a href="javascript:void(0);">Training</a>
+									<li class="hidemenu"><a href="{{url('/courses')}}">Training</a>
 										<ul class="training submenu">
-											<li><a href="#">Corporate Training</a></li>
-											<li><a href="#">Industrial Training</a></li>
-											<li><a href="#">Online Training</a></li>
-											<li><a href="#">Classroom Training</a></li>
+											<li><a href="{{url('/courses')}}">Corporate Training</a></li>
+											<li><a href="{{url('/courses')}}">Industrial Training</a></li>
+											<li><a href="{{url('/courses')}}">Online Training</a></li>
+											<li><a href="{{url('/courses')}}">Classroom Training</a></li>
 										</ul>
 									</li>
 									<li><a href="{{url('/about-us')}}">About Us</a></li>
@@ -65,7 +65,6 @@
 										<i class="fa fa-search searchIcon"></i>
 										<i class="fa fa-times cross-icon"></i>
 										</a>
-										<!-- <a href="javascript:void(0);" class="search-input"></a> -->
 									</li>
 									
 									

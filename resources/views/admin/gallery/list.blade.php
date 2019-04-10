@@ -30,8 +30,8 @@
                  <th>S.no</th>
                  <th>Title</th>
                   <th>Gallery Category</th>
-{{--                    <th>Gallery Image</th>
- --}}                  <th>Status</th>
+                   <th>Gallery Image</th>
+                  <th>Status</th>
                   <th >Actions</th>
                 </tr>
                 </thead>
@@ -45,12 +45,12 @@
                 @endphp
                       <tr>
                         <td> {{$i}}</td>
-                       {{--  <td> 
-                          <img src="{{asset('assets/img/Partners/'.$partners['image'])}}"
-                          class="list_img" / >
-                        </td> --}}
                         <td> {{$gal['title']}}</td>
                         <td> {{$gal['category']['name']}}</td>
+                        <td> 
+                          <img src="{{asset('assets/img/Gallery/'.$gal['image'])}}"
+                          class="list_img" / >
+                        </td> 
                         <td> {{$gal['status']}}</td>
                         <td>
                            <a href="{{url(sprintf('admin/gallery/%s/edit',___encrypt($gal['id'])))}}"  title="Edit Detail"><i class="fa fa-edit"></i></a> |
@@ -59,7 +59,6 @@
                         data-request="ajax-confirm"
                         data-ask_image="{{url('assets/img/delete.png')}}"
                         data-ask="Would you like to Delete?" title="Delete"><i class="fa fa-fw fa-trash"></i></a> | 
-
                         </td>
                         </tr>
                     @endforeach

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class MainCourses extends Model
 {
 	protected  $table 		='courses';
-	protected $fillable 	= ['name','image','description','created_at','updated_at','status'];
+	protected $fillable 	= ['name','image','description','offered','created_at','updated_at','status'];
 
 	public static function list($fetch='array',$where='',$keys=['*'],$order='id-desc'){
 		
