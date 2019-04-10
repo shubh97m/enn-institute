@@ -678,10 +678,10 @@ ul.rightHeader li{
   /*max-width: 178px;*/
   /* padding: 20px; */
   padding: 2px;
-  right: 10px;
+  right: 18px;
 
   background: linear-gradient(to right, red, purple);
-    top: 9px;
+    top: 18px;
   z-index: 20;
   border-radius: 45%;
   margin-left: 40px;
