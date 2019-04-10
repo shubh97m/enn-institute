@@ -126,5 +126,6 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 		Route::get('staticpages','StaticController@staticpageList');
 		Route::get('staticpages/{id}/edit','StaticController@editStaticPage');
 		Route::post('staticpages/edit/{id}','StaticController@staticpageUpdate');
+		Route::get('subscriber','StaticController@subscriberList');
 	
 	});

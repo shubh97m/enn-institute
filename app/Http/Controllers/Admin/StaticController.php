@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Contact;
 use App\Models\AskDemo;
 use App\Models\StaticPages;
+use App\Models\Subscription;
 use Illuminate\Support\Facades\Validator;
 use Validations\Validate as Validations;
 
@@ -38,6 +39,11 @@ class StaticController extends Controller
     public function staticpageList(Request $request){
         $data['view'] = 'admin.staticpages.list';
         $data['staticpages'] = _arefy(StaticPages::where('status','!=','trashed')->get());
+        return view('admin.home')->with($data);
+    }
+    public function subscriberList(Request $request){
+        $data['view'] = 'admin.contact.subscriberlist';
+        $data['subscription'] = _arefy(Subscription::where('status','!=','trashed')->get());
         return view('admin.home')->with($data);
     }
 

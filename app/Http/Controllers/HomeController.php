@@ -111,20 +111,19 @@ class HomeController extends Controller
             $this->message = $validator->errors();
         }else{
             
-            $data['email']      =  $request->email;
-            $data['status']      =  'active';
+            $data['email']           =  $request->email;
             $data['created_at']      =  date('Y-m-d H:i:s');
             $data['updated_at']      =   date('Y-m-d H:i:s');
 
             $inser = Subscription::updateOrCreate([
-                'email' =>  $request->email
+                    'email' =>  $request->email
                 ],$data);
      
            
               $this->status   = true;
               $this->modal    = true;
               $this->alert    = true;
-              $this->message  = "Thanks for subscribing";
+              $this->message  = "Thanks for Subscribing";
               $this->redirect = true;
         } 
         return $this->populateresponse();
@@ -177,11 +176,21 @@ class HomeController extends Controller
             $data = new Contact();
             $data->fill($request->all());
             $data->save();
-              $this->status   = true;
-              $this->modal    = true;
-              $this->alert    = true;
-              $this->message  = "Thanks For Conatcting us.We will contact you as soon as possible.";
-              $this->redirect = url('contact');
+
+            $to = 'rajat.igniterpro@gmail.com';
+            $subject = 'Regarding Customer Contact';
+            $message = "You have got a contact mail from " .$data['first_name']. ' ' .$data['last_name']. " whose E-mail-id is " . $data['email'].".You can Contact him regarding any of their query. -Enn Institutes.";
+
+            $headers = "From: test@gmail.com\n";
+            $headers .= "MIME-Version: 1.0\n";
+
+            mail($to,$subject,$message,$headers);
+
+            $this->status   = true;
+            $this->modal    = true;
+            $this->alert    = true;
+            $this->message  = "ThankYou For Contacting us!!!.We will contact you as soon as possible.";
+            $this->redirect = url('/');
         } 
       return $this->populateresponse();
     }
