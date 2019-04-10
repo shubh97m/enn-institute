@@ -1,5 +1,4 @@
-
-		<aside id="jsnn-hero">
+<aside id="jsnn-hero">
 			<div class="flexslider">
 				<ul class="slides">
 					<!-- <div class="new-offered-blink">
@@ -37,8 +36,8 @@
 				<div class="row">
 					<div class="col-md-12 tabulation animate-box">
 						<ul class="nav nav-tabs">
-							<li><a data-toggle="tab" href="#plan" class="active"><i class="flaticon-sketch"></i> Director's Message</a></li>
-							<li><a data-toggle="tab" href="#general"><i class="icon-user"></i> About ENN Technologies</a></li>
+							<li><a data-toggle="tab" href="#plan" class="active"><i class="flaticon-sketch"></i> {{$static[1]['name']}}</a></li>
+							<li><a data-toggle="tab" href="#general"><i class="icon-user"></i> {{$static[0]['name']}}</a></li>
 							<!-- <li><a data-toggle="tab" href="#modeling"><i class="flaticon-skyline"></i>  </a></li> -->
 						</ul>
 						<div class="tab-content">
@@ -51,15 +50,8 @@
 									</div>
 									<div class="col-lg-6 col-md-12">
 										<div class="sub-courses-desc">
-                                            <h3>Director's Message</h3>
-											<p>Enn technologies is Having Indiawide Name in IT field. We provide High quality Technologies training and consulting sub-courses that full fill Students.
-											Technologies training and consulting sub-courses that full fill Students, government and corporate Requirements. ENN Technologies is a Leading online and classroom training provider based in Delhi which provides training programs for both Corporate and individuals across the globe.</p>
-											<ul>
-												<li>Materiality & Interpretation</li>
-												<li>Design Management and Cultural Enterprise</li>
-												<li>Experience Design (XD)</li>
-												<li>Sound Design; Social Media and SEO</li>
-											</ul>
+                                            <h3>{{$static[1]['name']}}</h3>
+											<p>{!! $static[1]['description'] !!}</p>
 										</div>
 									</div>
 								</div>
@@ -73,15 +65,8 @@
 									</div>
 									<div class="col-lg-6 col-md-12">
 										<div class="sub-courses-desc">
-                                            <h3>About ENN Technologies</h3>
-											<p>Enn technologies is Having Indiawide Name in IT field. We provide High quality Technologies training and consulting sub-courses that full fill Students.
-											Technologies training and consulting sub-courses that full fill Students, government and corporate Requirements. ENN Technologies is a Leading online and classroom training provider based in Delhi which provides training programs for both Corporate and individuals across the globe.</p>
-											<ul>
-												<li>Materiality & Interpretation</li>
-												<li>Design Management and Cultural Enterprise</li>
-												<li>Experience Design (XD)</li>
-												<li>Sound Design; Social Media and SEO</li>
-											</ul>
+                                            <h3>{{$static[0]['name']}}</h3>
+											<p>{!! $static[0]['description'] !!}</p>
 										</div>
 									</div>
 								</div>
@@ -137,28 +122,28 @@
 						<div class="col-lg-3 col-md-6 col-sm-12 aside-stretch text-center animate-box">
 							<div class="counter-entry wow fadeInDown animated">
 								<span class="icon icon-white"><i class="icon-book-open"></i></span>
-								<span class="jsnn-counter js-counter" data-from="0" data-to="{{$total_courses}}" data-speed="5000" data-refresh-interval="50"></span>
+								<span class="jsnn-counter js-counter" data-from="0" data-to="{{$generalsettings[0]['courses']}}" data-speed="5000" data-refresh-interval="50"></span>
 								<span class="jsnn-counter-label">TOTAL COURSES</span>
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-6 col-sm-12 text-center animate-box">
 							<div class="counter-entry wow fadeInDown animated">
 								<span class="icon"><i class="icon-user"></i></span>
-								<span class="jsnn-counter js-counter" data-from="0" data-to="3653" data-speed="5000" data-refresh-interval="50"></span>
+								<span class="jsnn-counter js-counter" data-from="0" data-to="{{$generalsettings[0]['selected_std']}}" data-speed="5000" data-refresh-interval="50"></span>
 								<span class="jsnn-counter-label">SELECTED STUDENTS</span>
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-6 col-sm-12 text-center animate-box">
 							<div class="counter-entry wow fadeInDown animated">
 								<span class="icon"><i class="icon-people"></i></span>
-								<span class="jsnn-counter js-counter" data-from="0" data-to="5987" data-speed="5000" data-refresh-interval="50"></span>
+								<span class="jsnn-counter js-counter" data-from="0" data-to="{{$generalsettings[0]['total_std']}}" data-speed="5000" data-refresh-interval="50"></span>
 								<span class="jsnn-counter-label">TOTAL STUDENT</span>
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-6 col-sm-12 text-center animate-box">
 							<div class="counter-entry wow fadeInDown animated">
 								<span class="icon"><i class="icon-trophy"></i></span>
-								<span class="jsnn-counter js-counter" data-from="0" data-to="3999" data-speed="5000" data-refresh-interval="50"></span>
+								<span class="jsnn-counter js-counter" data-from="0" data-to="{{$generalsettings[0]['awards']}}" data-speed="5000" data-refresh-interval="50"></span>
 								<span class="jsnn-counter-label">AWARDS RECEIVED</span>
 							</div>
 						</div>

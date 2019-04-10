@@ -87,6 +87,19 @@ class Validate
         $validator = \Validator::make($this->data->all(), $validations,[]);
         return $validator;    
   }
+
+  public function createstaticpage($action='edit'){
+        $validations = [
+          'name'     => $this->validation('name'),
+          'description'   => $this->validation('name'),
+      ];
+
+        $validator = \Validator::make($this->data->all(), $validations,[
+        'name.required'      =>  'Title is required',
+        'description.required'    =>  'Description is required',
+      ]);
+        return $validator;    
+  }
   public function addSlider($action='add')
   {
     $validations = [
@@ -112,6 +125,10 @@ class Validate
           'phone2'       =>$this->validation('phone2'),
           'email'       =>$this->validation('email'),
           'logo'        => $this->validation('photo_null'),
+          'courses'     => $this->validation('phone3'),
+          'selected_std'     => $this->validation('phone3'),
+          'total_std'     => $this->validation('phone3'),
+          'awards'     => $this->validation('phone3'),
           'address'     =>$this->validation('address'),
           ];
 
@@ -120,6 +137,11 @@ class Validate
           'phone.numeric'        => 'Phone should be in numeric format.',
           'phone2.numeric'       => 'Phone should be in numeric',
           'email.required'       => 'Email is required.',
+          'logo.required'       => 'Logo is required.',
+          'courses.required'       => 'Total Number of Courses is required.',
+          'selected_std.required'       => 'Total Number of Selected Students is required.',
+          'total_std.required'       => 'Total Number of Students is required.',
+          'awards.required'       => 'Total Number of Awards recieved is required.',
           'address.required'     => 'Address is Required.',
           ]);
           return $validator;            

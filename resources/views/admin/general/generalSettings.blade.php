@@ -61,10 +61,6 @@
           </div>
         </div>
 
-
-        
-       
-       
       <div class="row">  
          <div class="col-md-12">
             <div class="form-group">
@@ -99,6 +95,33 @@
               <label>Skype Number</label>
            <input type="text" name ="skype_number" class="form-control" value="
              {{(!empty($settings['skype_number'])?$settings['skype_number']:'')}}">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">  
+          <div class="col-md-3">
+            <div class="form-group">
+              <label>Total Courses</label>
+                <input type="text" name ="courses" class="form-control" value="{{(!empty($settings['courses'])?$settings['courses']:'')}}">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label>Selected Students</label>
+                <input type="text" name ="selected_std" class="form-control" value="{{(!empty($settings['selected_std'])?$settings['selected_std']:'')}}">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label>Total Students</label>
+                <input type="text" name ="total_std" class="form-control" value="{{(!empty($settings['total_std'])?$settings['total_std']:'')}}">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label>Awards Recieved</label>
+                <input type="text" name ="awards" class="form-control" value="{{(!empty($settings['awards'])?$settings['awards']:'')}}">
             </div>
           </div>
         </div>

@@ -4,7 +4,7 @@
     
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Slider</li>
+        <li class="active">Static Pages</li>
       </ol>
     </section>
 
@@ -14,9 +14,9 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Sliders List</h3>
+              <h3 class="box-title">Static Pages List</h3>
               <div class="pull-right">
-                <a href="{!! url('admin/sliders/create') !!}" class="btn btn-primary btn-add"><i class="fa fa-plus"></i> Add Slider</a>
+                <!-- <a href="{!! url('admin/staticpages/create') !!}" class="btn btn-primary btn-add"><i class="fa fa-plus"></i> Add Static Page</a> -->
               </div>
             </div>
 
@@ -27,7 +27,8 @@
                 <tr>
                  <th>S.no</th>
                   <th>Image</th>
-                  <th>Slider Text</th>
+                  <th>Static Page Name</th>
+                  <th>Description</th>
                   <th>Status</th>
                   <th >Actions</th>
                 </tr>
@@ -36,26 +37,19 @@
                @php  
                  $i=0;
                 @endphp
-                @foreach($sliders as $slider)
+                @foreach($staticpages as $staticpage)
                 @php
                   $i++;
                 @endphp
                       <tr>
                         <td> {{$i}}</td>
-                        <td> 
-                          <img src="{{asset('assets/img/Slider/'.$slider['image'])}}"
-                          class="list_img" / >
-                        </td>
-                        <td>{!!$slider['text']!!}</td>
-                        <td> {{$slider['status']}}</td>
+                        <td><img src="{{asset('assets/img/staticpage/'.$staticpage['image'])}}"
+                          class="list_img" /></td>
+                        <td>{!!$staticpage['name']!!}</td>
+                        <td> {{$staticpage['description']}}</td>
+                        <td> {{$staticpage['status']}}</td>
                         <td>
-                           <a href="{{url(sprintf('admin/sliders/%s/edit',___encrypt($slider['id'])))}}"  title="Edit Detail"><i class="fa fa-edit"></i></a> |
-                        <a href="javascript:void(0);" 
-                        data-url="{{url(sprintf('admin/sliders/%s/delete',___encrypt($slider['id'])))}}" 
-                        data-request="ajax-confirm"
-                        data-ask_image="{{url('assets/img/delete.png')}}"
-                        data-ask="Would you like to Delete?" title="Delete"><i class="fa fa-fw fa-trash"></i></a> |
-
+                        <a href="{{url(sprintf('admin/staticpages/%s/edit',___encrypt($staticpage['id'])))}}"  title="Edit Detail"><i class="fa fa-edit"></i></a> |
                         </td>
                         </tr>
                     @endforeach

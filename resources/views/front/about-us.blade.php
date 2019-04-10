@@ -11,8 +11,8 @@
 				<div class="row">
 					<div class="col-md-12 tabulation animate-box">
 						<ul class="nav nav-tabs">
-							<li class="active"><a data-toggle="tab" href="#plan"><i class="flaticon-sketch"></i> About ENN Technologies</a></li>
-							<li><a data-toggle="tab" href="#general"><i class="icon-user"></i> Director's Message</a></li>
+							<li class="active"><a data-toggle="tab" href="#plan"><i class="flaticon-sketch"></i> {{$static[0]['name']}}</a></li>
+							<li><a data-toggle="tab" href="#general"><i class="icon-user"></i> {{$static[1]['name']}}</a></li>
 							<!-- <li><a data-toggle="tab" href="#manage"><i class="flaticon-engineer"></i> Principal's Message</a></li> -->
 							<!-- <li><a data-toggle="tab" href="#modeling"><i class="flaticon-skyline"></i>  </a></li> -->
 						</ul>
@@ -26,15 +26,8 @@
 									</div>
 									<div class="col-md-6">
 										<div class="sub-courses-desc">
-											<h3>About ENN Technologies</h3>
-											<p>Enn technologies is Having Indiawide Name in IT field. We provide High quality Technologies training and consulting sub-courses that full fill Students.
-											Technologies training and consulting sub-courses that full fill Students, government and corporate Requirements. ENN Technologies is a Leading online and classroom training provider based in Delhi which provides training programs for both Corporate and individuals across the globe.</p>
-											<ul>
-												<li>Materiality & Interpretation</li>
-												<li>Design Management and Cultural Enterprise</li>
-												<li>Experience Design (XD)</li>
-												<li>Sound Design; Social Media and SEO</li>
-											</ul>
+											<h3>{{$static[0]['name']}}</h3>
+											<p>{!! $static[0]['description'] !!}</p>
 										</div>
 									</div>
 								</div>
@@ -48,14 +41,8 @@
 									</div>
 									<div class="col-md-6">
 										<div class="sub-courses-desc">
-											<h3>Director's Message</h3>
-											<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-											<ul>
-												<li>It is a paradisematic country in which</li>
-												<li>Even the all-powerful Pointing has no control</li>
-												<li>When she reached the first hills of the Italic Mountains</li>
-												<li>Alphabet Village and the subline of her own road</li>
-											</ul>
+											<h3>{{$static[1]['name']}}</h3>
+											<p>{!! $static[1]['description'] !!}</p>
 										</div>
 									</div>
 								</div>

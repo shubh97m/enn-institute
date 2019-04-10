@@ -73,6 +73,11 @@
           </a>
         </li>
         <li>
+          <a href="{{url('admin/staticpages')}}">
+            <i class="fa fa-sliders"></i> <span>Static Pages</span>
+          </a>
+        </li>
+        <li>
          <li>
           <a href="{{url('admin/logout')}}">
             <i class="fa fa-fw fa-sign-out"></i> <span>Logout</span>

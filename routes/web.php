@@ -122,5 +122,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 		Route::group(['prefix' => 'trainings'],function(){
 		Route::post('/{id}/delete','TrainingController@deleteTraining');
 	});
+
+		Route::get('staticpages','StaticController@staticpageList');
+		Route::get('staticpages/{id}/edit','StaticController@editStaticPage');
+		Route::post('staticpages/edit/{id}','StaticController@staticpageUpdate');
 	
 	});
