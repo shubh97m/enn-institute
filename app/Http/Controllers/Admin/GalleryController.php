@@ -38,7 +38,7 @@ class GalleryController extends Controller
     public function create()
     {
      
-     $data['view'] ='/admin/gallery/add';
+        $data['view'] ='/admin/gallery/add';
        $data['gallery_cat']  = _arefy(GalleryCategory::where('status','!=','trashed')->get());
 
         return view('admin/home', $data);

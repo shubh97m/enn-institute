@@ -52,12 +52,16 @@
 										<a href="{{url('/courses')}}">All Courses</a>
 									</li>
 									<li class="hidemenu"><a href="{{url('/courses')}}">Training</a>
+									@if(\App\Models\Trainings::where('status','active')->count() >0)
+									@php
+					                    $menus = \App\Models\Trainings::where('status','active')->orderBy('training_type','desc')->get();
+					                @endphp
 										<ul class="training submenu">
-											<li><a href="{{url('/courses')}}">Corporate Training</a></li>
-											<li><a href="{{url('/courses')}}">Industrial Training</a></li>
-											<li><a href="{{url('/courses')}}">Online Training</a></li>
-											<li><a href="{{url('/courses')}}">Classroom Training</a></li>
+										@foreach($menus as $menu)
+											<li><a href="javascript:void(0);">{{$menu->training_type}}</a></li>
+										@endforeach
 										</ul>
+									@endif
 									</li>
 									<li><a href="{{url('/about-us')}}">About Us</a></li>
 									<li><a href="{{url('/contact')}}">Contact Us</a></li>

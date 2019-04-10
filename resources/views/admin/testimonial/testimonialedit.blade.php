@@ -47,7 +47,7 @@
             </label>
             <div class="col-md-6 col-sm-6 col-xs-12">
                 @if(!empty($testimonial->image))
-                    <img src="{{url('assets/images/testimonial/'.$testimonial->image)}}" >
+                    <img src="{{url('assets/img/testimonial/'.$testimonial->image)}}" >
                 @else
                     <img src="{{url('assets/images/testimonial/avatar.png')}}" >
                 @endif

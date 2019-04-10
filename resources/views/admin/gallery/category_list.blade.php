@@ -29,7 +29,6 @@
                 <tr>
                  <th>S.no</th>
                   <th>Name</th>
-                 
                   <th >Actions</th>
                 </tr>
                 </thead>

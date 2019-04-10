@@ -11,14 +11,6 @@
         <div class="row">
          <div class="col-md-12">
           <div class="form-group">
-            <label>Training Catagory:</label>
-            <input type ="text" name="training_type" class="form-control" placeholder="Enter Training's Catagory ">
-          </div>
-         </div>
-        </div>
-        <div class="row">
-         <div class="col-md-12">
-          <div class="form-group">
             <label>Courses Name </label>
             <select class="form-control" name="course_id" id="courseName" >
               <option value="">---Select courses to add---</option>
@@ -30,8 +22,16 @@
          </div>
         </div>
        
+        <div class="row">
+         <div class="col-md-12">
+          <div class="form-group">
+            <label>Training Catagory:</label>
+            <input type ="text" name="training_type" class="form-control" placeholder="Enter Training's Catagory ">
+          </div>
+         </div>
+        </div>
          <div class="box-footer">
-          <a href="{{url('admin/sliders')}}" class="btn btn-default">Cancel</a>
+          <a href="{{url('admin/trainings')}}" class="btn btn-default">Cancel</a>
           <button type="button" data-request="ajax-submit" data-target='[role="add-training"]' class="btn btn-info pull-right">Submit</button>
         </div>
       </form>

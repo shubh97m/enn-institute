@@ -21,8 +21,7 @@
         <!-- small box -->
         <div class="small-box bg-green">
           <div class="inner">
-            <h3>1</h3>
-
+            <h3>{{ \App\Models\MainCourses::count() }}</h3>
             <p>Courses</p>
           </div>
           <div class="icon">

@@ -90,8 +90,8 @@ class TestimonialController extends Controller
      */
     public function edit($id)
     {
-        $data['testimonial'] = Testimonial::findOrFail(___decrypt($id));
         $data['view'] = 'admin.testimonial.testimonialedit';
+        $data['testimonial'] = Testimonial::findOrFail(___decrypt($id));
         return view('admin.home',$data);
 
     }

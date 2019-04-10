@@ -11,8 +11,7 @@
           
           <label>Slider Image(1349px * 450px):</label>
           <div>
-              <input onchange="readURL(this)" id="uploadFile"  accept="image/*" name="image" type="file">
-              
+              <input onchange="readURL(this)" id="uploadFile" accept="image/*" name="image" type="file">
           </div>
           <div>
             <img style="max-width: 250px;" src="{{asset('assets/img/avatar.png')}}" id="adminimg" alt="No Image Added">
@@ -34,7 +33,8 @@
       </form>
     </div>
    </div>
- </div>   
+ </div>
+@section('requirejs')  
 <script>
   function readURL(input) {
         if (input.files && input.files[0]) {
@@ -46,3 +46,4 @@
         }
       }
 </script>
+@endsection

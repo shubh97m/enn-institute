@@ -4,7 +4,8 @@
     <!-- Logo -->
     <a href="{{url('admin/home')}}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-mini"><b>E</b>NN</span>
+      <!-- <span class="logo-lg"><b>Enn-Institute</b></span> -->
       <!-- logo for regular state and mobile devices -->
        @php     
          $settings= _arefy(App\Models\generalSettings::where('status','!=','trashed')->first()); @endphp

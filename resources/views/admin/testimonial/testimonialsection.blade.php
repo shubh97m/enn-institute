@@ -53,7 +53,7 @@
                           class="list_img" / >
                         @endif
                         </td>
-                        <td>{!!$testimonial['review']!!}</td>
+                        <td title="{{$testimonial['review']}}">{!! str_limit($testimonial['review'],150) !!}</td>
                         <td> {{$testimonial['designation']}}</td>
                         <td> {{$testimonial['client']}}</td>
                         <td>
@@ -62,7 +62,7 @@
                         data-url="{{url(sprintf('admin/testimonialDel/%s/delete',___encrypt($testimonial['id'])))}}" 
                         data-request="ajax-confirm"
                         data-ask_image="{{url('assets/img/delete.png')}}"
-                        data-ask="Would you like to Delete?" title="Delete"><i class="fa fa-fw fa-trash"></i></a> |
+                        data-ask="Would you like to Delete?" title="Delete"><i class="fa fa-fw fa-trash"></i></a>
 
                         </td>
                         </tr>

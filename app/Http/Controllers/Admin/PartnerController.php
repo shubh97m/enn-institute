@@ -58,7 +58,7 @@ class PartnerController extends Controller
             $this->modal    = true;
             $this->alert    = true;
             $this->message  = "Partners has been Added successfully.";
-            $this->redirect = url('admin/home');
+            $this->redirect = url('admin/our-partners');
         }
         return $this->populateresponse();
     }

@@ -24,6 +24,7 @@ class Validate
       'last_name'         => ['nullable','string'],
       'phone_code'        => ['nullable','required_with:mobile_number','string'],
       'phone2'            => ['nullable', 'numeric'],
+      'phone3'            => ['required', 'numeric'],
       'mobile_number'     => ['required','numeric'],
       'req_mobile_number' => ['required','required_with:phone_code','numeric'],
       'country'           => ['required','string'],
@@ -34,7 +35,7 @@ class Validate
       'profile_picture'   => ['required','mimes:doc,docx,pdf'],
       'pin_code'          => ['nullable','max:6','min:4'],
       'type'              => ['required','string'],
-      'phone'             => ['required','numeric'],
+      'phone'             => ['required','numeric','digits:10'],
       'location'          => ['required','string'],
       'password'          => ['required','string','max:50','min:6'],
       'photo'             => ['required','mimes:jpg,jpeg,png'],
@@ -45,7 +46,7 @@ class Validate
       'password_check'    => ['required'],
       'newpassword'       => ['required','max:10'],
       'password_null'     => ['nullable'],
-      'review'            => ['required','string','max:300'],
+      'review'            => ['required','string','max:3000'],
       'client'            => ['required','string'],
       'designation'       => ['required','string'],
       
@@ -107,7 +108,7 @@ class Validate
    public function addSetting($action= 'add')
       {
         $validations = [
-          'phone'       =>$this->validation('phone'),
+          'phone'       =>$this->validation('phone3'),
           'phone2'       =>$this->validation('phone2'),
           'email'       =>$this->validation('email'),
           'logo'        => $this->validation('photo_null'),
@@ -139,16 +140,38 @@ class Validate
     
           ]);
           return $validator;     
+         }
+
+      public function askDemo()
+         {
+        $validations = [
+          'name'              =>$this->validation('name'),    
+          'mobile'            =>$this->validation('phone'),
+          'email'             =>$this->validation('req_email'),
+          'courses'           =>$this->validation('name'),
+          ];
+
+        $validator = \Validator::make($this->data->all(), $validations,[
+          'name.required'              => 'Name is required.',
+          'mobile.required'            => 'Contact Number is required ',
+          'mobile.numeric'             => 'Contact Number should be numeric ',
+          'email.required'             => 'E-mail is required.',
+          'courses.required'             => 'Course is required.',
+    
+          ]);
+          return $validator;     
          }  
 
       public function addSub($action= 'add')
          {
           $validations = [
+            'course_id'       =>$this->validation('name'),
           'name'              =>$this->validation('name'),    
           'image'             =>$this->validation('course_img'),
           ];
 
         $validator = \Validator::make($this->data->all(), $validations,[
+          'course_id.required' => 'Main Course Name is required',
         'name.required'        => 'Course Name is required.',
         'image.mimes'           => 'Course image should be in .jpg,.jpeg,.png format.',
     
@@ -177,6 +200,10 @@ class Validate
           $validations = [
           'image' =>$this->validation('photo'),
           ];
+
+          if($action =='edit'){
+            $validations['image']   = $this->validation('photo_null');
+          }
 
           $validator = \Validator::make($this->data->all(), $validations,[
           'image.mimes'        => 'Image should be in .jpg,.jpeg,.png format.',
@@ -241,19 +268,7 @@ class Validate
 
           $validator = \Validator::make($this->data->all(), $validations,[]);
           return $validator;     
-        }   
-      public function askDemo($action='add')
-      {
-             $validations = [
-          'name'      =>$this->validation('name'),    
-          'email'       =>$this->validation('email'),    
-          'mobile'         =>$this->validation('phone'),
-          
-          ];
-
-          $validator = \Validator::make($this->data->all(), $validations,[]);
-          return $validator;     
-      }
+        }  
 
     public function addtestimonial($action='add'){
       $validations = [

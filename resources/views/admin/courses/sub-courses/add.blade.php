@@ -28,15 +28,15 @@
               name="name">
             </div>
           </div>
-       <div class="form-group">
-            <label>Course image:</label>
-            <div>
-              <input onchange="readURL(this)" id="uploadFile" accept="image/*" name="image" type="file">
-            </div>
-            <div>
-              <img style="max-width: 250px;" src="{{asset('assets/img/avatar.png')}}" id="adminimg" alt="No Featured Image Added">
-            </div>
-      </div>
+         <div class="form-group">
+              <label>Course image:</label>
+              <div>
+                <input onchange="readURL(this)" id="uploadFile" accept="image/*" name="image" type="file">
+              </div>
+              <div>
+                <img style="max-width: 250px;" src="{{asset('assets/img/avatar.png')}}" id="adminimg" alt="No Featured Image Added">
+              </div>
+        </div>
         <div class="row">
           <div class="col-md-12">
           <div class="form-group">
@@ -54,7 +54,8 @@
       </form>
     </div>
    </div>
- </div>   
+ </div> 
+ @section('requirejs')  
 <script>
   function readURL(input) {
         if (input.files && input.files[0]) {
@@ -65,6 +66,5 @@
             reader.readAsDataURL(input.files[0]);
         }
       }
-
-   
   </script>
+@endsection

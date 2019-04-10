@@ -40,7 +40,7 @@
             </div>
           </div>
        <div class="form-group">
-            <label>child ourse image:</label>
+            <label>child Course image:</label>
             <div>
               <input onchange="readURL(this)" id="uploadFile" accept="image/*" name="image" type="file">
             </div>

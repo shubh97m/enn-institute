@@ -41,7 +41,8 @@
       </form>
     </div>
    </div>
- </div>   
+ </div>  
+ @section('reqiuirejs') 
 <script>
   function readURL(input) {
         if (input.files && input.files[0]) {
@@ -53,3 +54,4 @@
         }
       }
 </script>
+@endsection

@@ -62,7 +62,7 @@ class TrainingController extends Controller
             $this->modal    = true;
             $this->alert    = true;
             $this->message  = "Trainings catagory has been Added successfully.";
-            $this->redirect = url('admin/home');
+            $this->redirect = url('admin/trainings');
         }
         return $this->populateresponse();
     }
