@@ -7,13 +7,7 @@
 	   						<i class="fa fa-gift"></i>
 	   					<div><i class="fa fa-hand-o-right"></i>Click Here!</div></a></div>
 	   				</div> -->
-	   				<div class="new-offered-blink1">
-	   					<div class="quadrat_s"><a href="{{url('courseOffered')}}">Summer Training / Internship
-	   						<div class="new_round">
-	   							<img src="{{asset('images/new_red.gif')}}" alt="new">
-	   						</div>
-	   					</a></div>
-	   				</div>
+	   				
 					@foreach($sliders as $slider)
 									
 			   	<li style="background-image: url('{{asset('assets/img/Slider/'.$slider['image'])}}')" class="img-responsive">

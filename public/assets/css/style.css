@@ -678,17 +678,16 @@ ul.rightHeader li{
   /*max-width: 178px;*/
   /* padding: 20px; */
   padding: 2px;
-  right: 18px;
-
-  /*background: linear-gradient(to right, red, purple);*/
-    top: 18px;
+  right: 0;
+  /* background: linear-gradient(to right, red, purple); */
+  top: 6px;
   z-index: 20;
   border-radius: 45%;
-  margin-left: 40px;
+  /*margin-left: 40px;*/
 }
 .quadrat_s {
     /* max-width: 300px; */
-    padding: 10px 20px;
+    padding: 10px 20px 4px;
     /*animation: rotate 3.33s linear infinite;*/
     height: 100%;
     background: #fff;
@@ -713,13 +712,24 @@ ul.rightHeader li{
   -o-animation: NAME-YOUR-ANIMATION 1s infinite;  /* Opera 12+ */
   animation: NAME-YOUR-ANIMATION 1s infinite;  /* IE 10+, Fx 29+ */
 }
+@-webkit-keyframes blinker {
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+@-webkit-keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
 .quadrat a{
   color: #fff !important;
   font-size: 15px;
+ 
 }
 .quadrat_s a{
   color: #000 !important;
   font-size: 15px;
+  animation: blinker 1s linear infinite;
   font-weight: 700;
 }
 @-webkit-keyframes NAME-YOUR-ANIMATION {
@@ -1450,6 +1460,9 @@ a.search-input.search{
     .jsnn-nav {
       margin: 0; 
     } 
+    .new-offered-blink1{
+          right: -280px;
+    }
     .jsnn-nav #jsnn-logo{
       margin: 1px 0px 0 !important;
     }
@@ -2562,6 +2575,9 @@ article {
       margin-left: 15px;
       margin-bottom: 15px;
   }
+  .new-offered-blink1{
+    right: 120px;
+  }
   #jsnn-hero .flexslider .slider-text > .slider-text-inner h1{
     margin-top: 20px;
   }
@@ -2584,6 +2600,12 @@ article {
   .popupmodal .modal-dialog {
     width: 370px !important;
   }
+  .new-offered-blink1{
+    right: 90px;
+  }
+  .quadrat_s a{
+    font-size: 12px;
+  }
   .popupmodal .modal-header{
     padding: 5px;
   }
@@ -2598,13 +2620,27 @@ article {
   #jsnn-logo img{
     width: 82px;
   }
+  .quadrat_s{
+    padding: 10px 0px 4px;
+  }
+  .new_round{
+    right: -11px;
+  }
   .jsnn-nav #jsnn-logo{
     margin: 6px 0px 0 !important;
+  }
+}
+@media screen and (max-width: 360px){
+  .new-offered-blink1 {
+    right: 79px;
   }
 }
 @media screen and (max-width: 340px){
   #jsnn-logo img {
       width: 76px;
+  }
+  .new-offered-blink1 {
+    right: 63px;
   }
 }
 #jsnn-about {
