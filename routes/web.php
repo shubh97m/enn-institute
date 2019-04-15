@@ -47,6 +47,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 	Route::get('contact','StaticController@contact');
 	Route::get('ask-demo','StaticController@demo');
 	Route::get('ask-demo/export','StaticController@exportDemo');
+	Route::get('ask-demo/print','StaticController@demopdf');
 	Route::get('logout',function(){
 		\Auth::logout();
 	      return redirect('admin/login');
@@ -102,6 +103,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 	Route::post('child-courses/{id}/edit','CourseController@childCourseUpdate');
 
 //Gallery 
+	Route::get('callback/print', 'TestimonialController@pdfcallBack');
 	Route::get('callback/export', 'TestimonialController@exportcallBack');
 	Route::get('callback','TestimonialController@callBackList');
 	Route::resource('gallery','GalleryController');

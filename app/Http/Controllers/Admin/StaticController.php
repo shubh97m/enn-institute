@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use PDF;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
@@ -86,10 +87,18 @@ class StaticController extends Controller
         return $this->populateresponse();
     }
 
+    public function demopdf(Request $request){
+        $data['demopdf'] = _arefy(AskDemo::where('status','!=','trashed')->get());
+        $data['demopdfs'] = _arefy($data['demopdf']);
+        $excel_name='askdemo_data';
+        $pdf = PDF::loadView('admin.askdemopdfview', $data);
+        return $pdf->download('askdemo_pdf.pdf');
+    }
+
     public function exportDemo(Request $request){
         $askdemo  = _arefy(AskDemo::where('status','!=','trashed')->get());
         // dd($agent);
-        $type='xlsx';
+        $type='csv';
         $excel_name='askdemo_data';
         Excel::create($excel_name, function($excel) use ($askdemo) {
                 $excel->sheet('mySheet', function($sheet) use ($askdemo){

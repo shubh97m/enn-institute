@@ -17,6 +17,7 @@
               <h3 class="box-title">CallBack List</h3>
               <div class="pull-right">
                 <a href="{{url('admin/callback/export')}}" class="btn btn-primary btn-add"><i class="fa fa-plus"></i><span class="hidden-480">Export</span>
+                <a href="{{url('admin/callback/print')}}" class="btn btn-primary btn-add"><i class="fa fa-print"></i><span class="hidden-480">Print</span>
                 </a>
               </div>
             </div>

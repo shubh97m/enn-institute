@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use PDF;
 use App\Models\Testimonial;
 use App\Models\Callback;
 use Illuminate\Http\Request;
@@ -40,10 +41,18 @@ class TestimonialController extends Controller
         return view('admin.home',$data);
     }
 
+    public function pdfcallBack(Request $request){
+        $data['callBack'] = _arefy(Callback::where('status','!=','trashed')->get());
+        $data['callbacks'] = _arefy($data['callBack']);
+        $excel_name='callback_data';
+        $pdf = PDF::loadView('admin.callbackpdfview', $data);
+        return $pdf->download('callback_pdf.pdf');
+    }
+
     public function exportcallBack(Request $request){
         $callback  = _arefy(Callback::where('status','!=','trashed')->get());
         // dd($agent);
-        $type='xlsx';
+        $type='csv';
         $excel_name='callback_data';
         Excel::create($excel_name, function($excel) use ($callback) {
                 $excel->sheet('mySheet', function($sheet) use ($callback){
