@@ -1,11 +1,10 @@
-
  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
     
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Contact</li>
+        <li class="active">CallBack List</li>
       </ol>
     </section>
 
@@ -15,9 +14,10 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Query List</h3>
+              <h3 class="box-title">CallBack List</h3>
               <div class="pull-right">
-                <a href="{!! url('admin/ask-demo/export') !!}" class="btn btn-primary btn-add"><i class="fa fa-plus"></i> Export</a>
+                <a href="{{url('admin/callback/export')}}" class="btn btn-primary btn-add"><i class="fa fa-plus"></i><span class="hidden-480">Export</span>
+                </a>
               </div>
             </div>
 
@@ -28,38 +28,30 @@
                 <tr>
                  <th>S.no</th>
                   <th>Name</th>
-                  <th>Email</th>
-                  <th>Mobile</th>
-                   <th>Course</th>
-                  {{-- <th >Actions</th> --}}
+                  <th>E-mail</th>
+                  <th>Mobile Number</th>
+                  <th >Course</th>
+                  <th >Message</th>
+                  <th >Status</th>
                 </tr>
                 </thead>
                 <tbody>
                @php  
                  $i=0;
                 @endphp
-                @foreach($contact as $contacts)
+                @foreach($callback as $callbacks)
                 @php
                   $i++;
                 @endphp
                       <tr>
                         <td> {{$i}}</td>
-                        <td> 
-                          {{$contacts['name']}}
-                        </td>
-                        <td>{{$contacts['email']}}</td>
-                        <td>{{$contacts['mobile']}}</td>
-                        <td>{{$contacts['courses']}}</td>
-                       {{--  <td>
-                           <a href="{{url(sprintf('admin/sliders/%s/edit',___encrypt($contacts['id'])))}}"  title="Edit Detail"><i class="fa fa-edit"></i></a> |
-                        <a href="javascript:void(0);" 
-                        data-url="{{url(sprintf('admin/contacts/%s/delete',___encrypt($contacts['id'])))}}" 
-                        data-request="ajax-confirm"
-                        data-ask_image="{{url('assets/img/delete.png')}}"
-                        data-ask="Would you like to Delete?" title="Delete"><i class="fa fa-fw fa-trash"></i></a> |
-
-                        </td> --}}
-                        </tr>
+                        <td> {{$callbacks['name']}}</td>
+                        <td> {{$callbacks['email']}}</td>
+                        <td> {{$callbacks['mobile']}}</td>
+                        <td> {{$callbacks['courses']}}</td>
+                        <td> {{$callbacks['message']}}</td>
+                        <td> {{ucfirst($callbacks['status'])}}</td>
+                      </tr>
                     @endforeach
            
                 </tbody>

@@ -10,6 +10,8 @@ use App\Models\StaticPages;
 use App\Models\Subscription;
 use Illuminate\Support\Facades\Validator;
 use Validations\Validate as Validations;
+use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Facades\Excel;
 
 class StaticController extends Controller
 {
@@ -82,6 +84,49 @@ class StaticController extends Controller
             $this->redirect = url('admin/staticpages');
         }
         return $this->populateresponse();
+    }
+
+    public function exportDemo(Request $request){
+        $askdemo  = _arefy(AskDemo::where('status','!=','trashed')->get());
+        // dd($agent);
+        $type='xlsx';
+        $excel_name='askdemo_data';
+        Excel::create($excel_name, function($excel) use ($askdemo) {
+                $excel->sheet('mySheet', function($sheet) use ($askdemo){
+                    $headings = [
+                        'Name',
+                        'E-mail',
+                        'Contact',
+                        'DOB',
+                        'Course',
+                    ];
+
+                    $sheet->row(1, $headings);
+                    $sheet->cell('A1:I1', function($cell) {
+                        $cell->setFontWeight('bold');
+                    });
+                    $total=count($askdemo)+1;
+                    $sheet->setBorder('A1:I'.$total, 'thin');
+
+                    $i=2;
+                    $j=1;
+                    foreach ($askdemo as $key => $value) {
+                        if($value){
+                            
+            
+                            $sheet->row($i,[
+                                ucfirst($value['name']),
+                                $value['email'],
+                                $value['mobile'],
+                                $value['dob'],
+                                $value['courses'],
+                            ]);
+                        }
+                        $i++;
+                        $j++;
+                    }
+                });
+            })->download($type);
     }
 
     /**

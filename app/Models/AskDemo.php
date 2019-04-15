@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class AskDemo extends Model
 {
         protected  $table 		='askdemo';
-		protected $fillable 	= ['name','email','mobile','courses','status','created_at','updated_at'];
+		protected $fillable 	= ['name','email','mobile','dob','courses','status','created_at','updated_at'];
 }
