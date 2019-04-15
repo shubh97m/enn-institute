@@ -1203,7 +1203,7 @@ a.read-more:hover{
 }
 .popup-img-left img {
     width: 100%;
-    min-height: 290px;
+    min-height: 380px;
 }
 button.btn.btn-blue {
   color:#fff;
@@ -1557,11 +1557,7 @@ a.search-input.search{
     .jsnn-nav {
       margin: 0; 
     } 
-    .popupmodal #askdemo .modal-dialog {
-      max-width: 800px !important;
-      margin: 55px auto;
-      width: unset;
-    }
+    
     .askdempwrap .logo-modal h4{
       font-size: 20px;
     }
@@ -2680,6 +2676,11 @@ article {
       margin-left: 15px;
       margin-bottom: 15px;
   }
+  .popupmodal #askdemo .modal-dialog {
+      max-width: 800px !important;
+      margin: 55px auto;
+      width: unset;
+    }
   .new-offered-blink1{
     right: 120px;
   }
