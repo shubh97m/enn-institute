@@ -43,7 +43,7 @@
                       <tr>
                         <td> {{$i}}</td>
                         <td> 
-                          <img src="{{asset('assets/img/Slider/'.$slider['image'])}}"
+                          <img src="{{asset('assets/img/Sliders/'.$slider['image'])}}"
                           class="list_img" / >
                         </td>
                         <td>{!!$slider['text']!!}</td>

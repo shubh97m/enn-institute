@@ -1647,7 +1647,7 @@ a.search-input.search{
     transform: scale(1.1); }
 
 #jsnn-hero {
-  min-height: 450px;
+  min-height: 500px;
   background: #fff url(../images/loader.gif) no-repeat center center;
   width: 100%;
   float: left;
@@ -1712,7 +1712,7 @@ a.search-input.search{
       max-width: 100%;
       display: table;
       opacity: 0;
-      height: 450px;
+      height: 500px;
       z-index: 9;
       }
       #jsnn-hero .flexslider .slider-text > .slider-text-inner {

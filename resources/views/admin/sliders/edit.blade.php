@@ -23,7 +23,7 @@
                   <input onchange="readURL(this)" id="uploadFile" accept="image/*" name="image" type="file">
               </div>
               <div>
-                  <img style="max-width: 250px;" src="{{asset('assets/img/Slider/'.$slider['image'])}}" id="adminimg" alt="No Featured Image Added" class="list_mg">
+                  <img style="max-width: 250px;" src="{{asset('assets/img/Sliders/'.$slider['image'])}}" id="adminimg" alt="No Featured Image Added" class="list_mg">
               </div>
             </div>
           </div>
