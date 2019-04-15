@@ -59,8 +59,8 @@
                 </tr>
                 </thead>
                 <tbody>
-            @php  
-                 $i=0;
+                @php  
+                  $i=0;
                 @endphp
                 @foreach($course as $courses)
                 @php
