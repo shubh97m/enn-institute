@@ -62,7 +62,7 @@
 	<body>
 		
 	<div class="jsnn-loader"></div>
-
+	<div id="cover"></div>
 	<div id="page">
 		@yield('content')
 	</div>

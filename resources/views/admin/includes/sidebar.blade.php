@@ -18,6 +18,11 @@
             <i class="fa fa-dashboard"></i> <span>Contact</span>
           </a>        
         </li>
+        <li>
+          <a href="{{url('admin/subscriber')}}">
+            <i class="fa fa-fw fa-users"></i> <span>Subscribers</span>
+          </a>        
+        </li>
          <li>
           <a href="{{url('admin/sliders')}}">
             <i class="fa fa-fw fa-sign-out"></i> <span>Sliders</span>

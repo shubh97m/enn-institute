@@ -16,7 +16,19 @@ body {
   font-size: 15px;
   line-height: 1.7;
   color: gray;
-  background: whitesmoke; }
+  background: whitesmoke; 
+}
+
+#cover {
+  background: url("../images/loader.gif") no-repeat scroll center center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+  background-color: white;
+  background-size: 100px;
+  color: #797979;
+}
 
 #page {
   position: relative;
