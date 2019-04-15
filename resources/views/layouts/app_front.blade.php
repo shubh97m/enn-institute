@@ -66,7 +66,95 @@
 	<div id="page">
 		@yield('content')
 	</div>
+	 <div class="popupmodal askdempwrap">
+        <!-- Modal -->
+	        <div id="askdemo" class="modal fade" role="dialog">
+	           <div class="modal-dialog modal-lg">
+	          <!-- Modal content-->
+	          <div class="modal-content">
+	            <div class="modal-header">
+	            	<div class="logo-modal">
+		               <h4 style="text-transform: uppercase;">Schedule A Demo</h4>
+		            </div>
+	              	<button type="button" class="close" data-dismiss="modal">&times;</button>
+	              	
+	            </div>
 
+	            <div class="modal-body popupmodal-body">
+		            <div class="row">
+		            	<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+		            		<div class="askhead">
+				               <h6>Demo as per your choice</h6>
+				            </div>
+		            		<div class="ask-demo-head">
+		            		    <h6>Please fill the information here:</h6>
+		            		</div>
+			              	<form role="scholarship" method="POST" action="" class="popup-form">
+			              	
+			               
+			                <input type="hidden" name="type" value="scholarship">
+
+			               <div class="form-group">
+			               		<div class="inner-addon left-addon">
+			                  		<input type="text"  class="form-control"  name="name" value="" placeholder="Full Name">
+			                  	</div>
+			                </div>
+			                <div class="form-group">
+			                 	<div class="inner-addon left-addon">
+			                 		<!-- <i class="fa fa-envelope fa-lg"></i> -->
+			                  		<input type="text"  class="form-control"  name="email" value="" placeholder="Email">
+			                  	</div>
+			                </div>
+			                <div class="form-group">
+			                  <div class="inner-addon left-addon">
+			                  		<!-- <i class="fa fa-phone fa-lg"></i> -->
+			                  		<input type="text" data-request="isnumeric" class="form-control"  name="phone" value="" placeholder="Phone no">
+			                  	</div>
+			                </div>
+			               <div class="form-group">
+			                  <div class="inner-addon left-addon">
+			                  		<span class="glyphicon glyphicon-calendar"></span>
+			                  		<input type="date"  class="form-control"  name="" value="" placeholder="Enter Date">
+			                  	</div>
+			                </div>
+			                <div class="form-group">
+			                  <div class="inner-addon left-addon">
+			                  		<!-- <i class="fa fa-book fa-lg"></i> -->
+
+			                  		<select class="form-control" name="course">
+										<option value="">Select Course</option>
+										<option value=""></option>
+					                 </select>
+
+			                  	</div>
+			                </div>
+			                <div class="form-group">
+								<div class="checkbox">
+								   <input type="checkbox" value="1" name="tos" id="iq_check_callback" class="css-checkbox">
+								   <label for="iq_check_callback" class="css-label human" style="background-position: 0px 0px;">I am Human.</label>
+								   <input type="hidden" class="hidden_human" value="" name="iq_human">
+								</div>
+							</div>
+			                
+			                 
+			                <div class="form-group">
+			                  <button type="button" data-request="ajax-submit" data-target='[role="scholarship"]' class="btn btn-blue">Submit</button>
+			                </div>
+			             </form>
+		            	</div>
+			            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 borderleft">
+			            	<div class="popup-img-left">
+			            		<img src="{{asset('images/askdemo.jpg')}}" alt="askdemo">
+			            	</div>
+			            </div>
+			        
+	            	</div>
+	            </div>
+	          </div>
+	          
+	        </div>
+	    </div>
+    </div>
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="fa fa-angle-up"></i></a>
 	</div>
@@ -152,6 +240,7 @@
 		};
 	    
 	</script>
+	
 	@yield('requirejs')
 	</body>
 </html>
