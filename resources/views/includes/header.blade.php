@@ -27,27 +27,28 @@
 
                                 <span class="ttl">Provide Your Detail</span>
 
-                                <form role="callback" action="{{url('callback')}}" method="POST" id="iq_form">
-                                	{{csrf_field()}}
+                                <form action="/ajax/send-enquiry" method="POST" id="iq_form">
                                     <div class="form-group">
-										<input type="text" class="form-control" name="name" id="iq_name" placeholder="Enter Name">
+										<input type="text" class="form-control" name="iq_name" id="iq_name" placeholder="Enter Name">
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" class="form-control" name="email" id="iq_email" placeholder="Enter Email">
+                                        <input type="email" class="form-control" name="iq_email" id="iq_email" placeholder="Enter Email">
                                     </div>
                                     <div class="form-group">
-                                        <input type="tel" class="form-control" name="mobile" id="iq_mobile" placeholder="Enter Mobile No.">
+                                        <input type="tel" class="form-control" name="iq_mobile" id="iq_mobile" placeholder="Enter Mobile No.">
                                     </div>
 									<div class="form-group">
-										<select class="form-control" name="courses">
-											<option value="">Select Course</option>
-												@foreach($course as $courses)
-									  			<option value="{{!empty($courses['name'])?$courses['name']:''}}">{{!empty($courses['name'])?$courses['name']:''}}</option>	
-									  		@endforeach
-					                	</select>
+                                        <input type="text" class="form-control" name="iq_course" id="iq_course" placeholder="Enter Course">
+                                    </div>
+									<!--div class="form-group">
+                                        <select class="form-control chosen-select" id="iq_participant" name="iq_participant" data-placeholder="Select type of Participant" tabindex="2">
+                                          										</select>
                                     </div>
 									<div class="form-group">
-                                        <textarea class="form-control" name="message" rows="3" placeholder="Enter your message"></textarea>
+                                        <input type="text" class="form-control" name="iq_city" placeholder="Enter City/Area (In case of Delhi)">
+                                    </div-->
+									<div class="form-group">
+                                        <textarea class="form-control" name="iq_message" rows="3" placeholder="Enter your message"></textarea>
                                     </div>
 									<div class="form-group">
 										<div class="checkbox">
@@ -56,7 +57,8 @@
 										   <input type="hidden" class="hidden_human" value="" name="iq_human">
 										</div>
 									</div>
-									<button type="button" data-request="ajax-submit" data-target='[role="callback"]' class="btn btn-blue">Send Enquiry</button> 
+									<input type="submit" class="btn btn-default btn-stick-submit btn-black" value="Send Enquiry">
+									
                                 </form>
                             </div>
                         </div>
@@ -98,23 +100,7 @@
 									<li class=""><a href="{{url('/')}}">Home</a></li>
 									<li class="has-dropdown">
 										<a href="{{url('/courses')}}">All Courses</a>
-										<ul class="training submenu">
-											<li class="has-dropdown bordermd"><a href="javascript:void(0);">SAP Technical</a>
-												<ul class="all-course submenu">
-													<li class="bordermd"><a href="javascript:void(0);">SAP Technical</a></li>
-													<li class="bordermd"><a href="javascript:void(0);">Java</a></li>
-													<li class="bordermd"><a href="javascript:void(0);">Industry Specific Course</a></li>
-													<li class="bordermd"><a href="javascript:void(0);">Sap cloud platform</a></li>
-													<li class="bordermd"><a href="javascript:void(0);">SAP Functional</a></li>
-
-												</ul>
-											</li>
-											<li class=" bordermd"><a href="javascript:void(0);">Java</a></li>
-											<li class="bordermd"><a href="javascript:void(0);">Industry Specific Course</a></li>
-											<li class="bordermd"><a href="javascript:void(0);">Sap cloud platform</a></li>
-											<li class=" bordermd"><a href="javascript:void(0);">SAP Functional</a></li>
-
-										</ul>
+										
 									</li>
 									<li class="hidemenu"><a href="{{url('/courses')}}">Training</a>
 									@if(\App\Models\Trainings::where('status','active')->count() >0)
