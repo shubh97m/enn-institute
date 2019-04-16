@@ -30,7 +30,7 @@
 	<!-- <link rel="stylesheet" href="css/icomoon.css"> -->
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css">
 	<!-- Magnific Popup -->
 	<link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
 
@@ -44,7 +44,6 @@
 	<!-- Flaticons  -->
 	<!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
 	<link rel="stylesheet" href="{{asset('fonts/flaticon/font/flaticon.css')}}">
-	
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
@@ -106,20 +105,24 @@
 			                  	<input type="text" class="form-control" name="mobile" placeholder="Phone no">
 			                  	</div>
 			                </div>
-			               <div class="form-group">
-			                  <div class="inner-addon left-addon">
-		                  		<input type="date" class="form-control" name="dob" placeholder="Enter Date">
-			                  </div>
-			                </div>
+			              <div class="form-group">
+					            <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+					                <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1" placeholder="Demo date and time">
+					                <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+					                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+					                </div>
+					            </div>
+					        </div>
+			               
 			                <div class="form-group">
-			                  <div class="inner-addon left-addon">
+			                  	<div class="inner-addon left-addon">
 			                  		<select class="form-control" name="courses">
-														<option value="">Select Course</option>
-															@foreach($course as $courses)
-												  			<option value="{{!empty($courses['name'])?$courses['name']:''}}">{{!empty($courses['name'])?$courses['name']:''}}</option>	
-												  		@endforeach
+										<option value="">Select Course</option>
+											@foreach($course as $courses)
+								  			<option value="{{!empty($courses['name'])?$courses['name']:''}}">{{!empty($courses['name'])?$courses['name']:''}}</option>	
+								  		@endforeach
 					                </select>
-			                  </div>
+			                  	</div>
 			                </div>
 			                <div class="form-group">
 											<div class="checkbox">
@@ -157,6 +160,8 @@
 	<script src="{{asset('assets/js/jquery.easing.1.3.js')}}"></script>
 	<!-- Bootstrap -->
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
 	<!-- Waypoints -->
 	<script src="{{asset('assets/js/jquery.waypoints.min.js')}}"></script>
 	<!-- Stellar Parallax -->
@@ -172,6 +177,7 @@
 	<!-- Counters -->
 	<script src="{{asset('assets/js/jquery.countTo.js')}}"></script>
 	<!-- Main -->
+	
 	
 	<script src="{{asset('assets/js/main.js')}}"></script>
 	<script src="{{asset('assets/js/custom.js')}}"></script>
@@ -220,6 +226,9 @@
 			    
 			    $('.rightHeader').toggleClass('mobile_search');
 			});
+			// $('#datetimepicker1').datetimepicker({
+			// 	format:'DD/MM/YYYY hh:mm a'
+			// });
 			
             // window.addEventListener("keyup", function(e){ if(e.keyCode == 27) history.back(); }, false);
 
@@ -231,6 +240,11 @@
 		};
 	    
 	</script>
+	 <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
 	
 	@yield('requirejs')
 	<!--Start of Tawk.to Script-->
