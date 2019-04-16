@@ -87,6 +87,7 @@ class HomeController extends Controller
     public function aboutUs(){
         $data['view']='front.about-us';
         $data['static']           =     _arefy(StaticPages::get());
+        $data['course']      =  _arefy(MainCourses::where('status','=','active')->get());
         return view('front_home',$data);
     }
 	//********* Courses Section********
@@ -190,6 +191,7 @@ class HomeController extends Controller
     {
     	$data['view'] ='front.contact';
         $data['settings'] = generalSettings::where('id',1)->get()->first();
+        $data['course']      =  _arefy(MainCourses::where('status','=','active')->get());
     	return view('front_home', $data);
     	
     }
