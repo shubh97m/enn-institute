@@ -10,24 +10,24 @@
 						<div class="row">
 							<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0;">
 								
-								<ul class="sub-course-offerred accordion" id="accordionExample">
+								<ul class="sub-course-offerred">
 									@if(!empty($sub_course))
 										@foreach($sub_course as $sub_courses)
 									
-										<li class="card sub-sub-course">
+										<li class="sub-sub-course">
 											<div class="sub-course-content">
 											    <div class="cardheader" id="headingOne{{$sub_courses['id']}}">
-											      <h5 class="mb-0">
-											        <button class="btn btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample{{$sub_courses['id']}}" aria-expanded="false" aria-controls="collapseExample{{$sub_courses['id']}}">
-											         <div class="text-center">
-															<img src="{{asset('assets/img/Courses/'.$sub_courses['image'])}}" alt="images" style="height:74px;margin-bottom: 10px;">
-														</div>
-															<span>{{$sub_courses['name']}}</span>
-											        </button>
-											      </h5>
+												    <h5 class="mb-0">
+												        <button class="btn btn btn-primary" type="button"  data-target="#collapseExample{{$sub_courses['id']}}" aria-expanded="false" aria-controls="collapseExample{{$sub_courses['id']}}">
+												         <div class="text-center">
+																<img src="{{asset('assets/img/Courses/'.$sub_courses['image'])}}" alt="images" style="height:74px;margin-bottom: 10px;">
+															</div>
+																<span>{{$sub_courses['name']}}</span>
+												        </button>
+												    </h5>
 										    	</div>
 
-											    <div id="collapseExample{{$sub_courses['id']}}" class="collapse" aria-labelledby="headingOne{{$sub_courses['id']}}" data-parent="#accordionExample">
+											    <div id="collapseExample{{$sub_courses['id']}}" aria-labelledby="headingOne{{$sub_courses['id']}}" class="view-child-course">
 											      	<div class="cardbody">
 											        	<ul class="sub-offered">
 															@php

@@ -835,13 +835,18 @@ section .offeredcourse-form select{
 #portfolio .mix {
     display: none;
 }
+ul.training.submenu li {
+    height: 30px;
+}
 .jsnn-nav ul ul.training{
-  display: block;
+  display: none;
   width: 230px;
-  box-shadow: 0 2px 2px #686565;
+  -webkit-box-shadow: 0 2px 40px 8px rgba(15, 15, 15, 0.15);
+  box-shadow: 0 2px 40px 8px rgba(15, 15, 15, 0.15);
+  transition-duration: 400ms;
   transition: .3s ease-in;
   position: absolute;
-   top: 40px; 
+   top: 60px;
   opacity: 0;
   text-align: left;
   padding: 10px;
@@ -855,21 +860,44 @@ section .offeredcourse-form select{
   border: 1px solid transparent;
 
 }
-.menuListing li:hover ul.training{
-  opacity: 1;
+ul.menuListing {
+    position: relative;
 }
-.menuListing li:hover ul.all-course{
+.jsnn-nav ul li:hover ul.training{
   opacity: 1;
- 
+  display: block;
 }
-.menuListing li ul.all-course{
+
+li.sub-sub-course{
+  transition: .3s ease-in;
+}
+.jsnn-nav ul li.sub-sub-course:hover div.view-child-course {
+    opacity: 1;
+    display: block;
+}
+div.view-child-course{
+    opacity: 0;
+    display: none;
+}
+.jsnn-nav ul li ul.all-course{
   opacity: 0;
+  display: block;
+  padding: 10px;
+  width: 230px;
   position: absolute;
-    left: 100px;
+  left: 200px;
+  background-color: #fff;
+  text-align:left;
+  -webkit-box-shadow: 0 2px 40px 8px rgba(15, 15, 15, 0.15);
+  box-shadow: 0 2px 40px 8px rgba(15, 15, 15, 0.15);
+  transition-duration: 400ms;
   /*display: none;*/
 }
-.menuListing li ul.all-course li{
+/*.menuListing li ul.all-course li{
   display: block;
+}*/
+ul.training li:hover ul.all-course{
+  opacity: 1;
 }
 .all-course li{
   display: inline-block;
@@ -955,6 +983,7 @@ section .offeredcourse-form select{
 }
 .jsnn-nav ul {
   margin: 0;
+  position: relative;
   align-items: center;
   /*display: flex;*/
   display: flex;
@@ -1610,6 +1639,12 @@ a.search-input.search{
       /* display: flex; */
       display: block;
   }
+  .training li.bordermd{
+    border-bottom: 1px solid #ddd;
+  }
+  .training li.bordermd:last-child{
+    border-bottom: none;
+  }
 @media screen and (max-width: 768px) {
     .jsnn-nav .menu-1 {
       display: none; } }
@@ -1617,6 +1652,9 @@ a.search-input.search{
     .jsnn-nav ul li {
       padding: 0;
       margin: 0;
+      height: 63px;
+      display: flex;
+      align-items: center;
       padding-left: 17px;
       position: relative;
       list-style: none;
@@ -1626,7 +1664,9 @@ a.search-input.search{
         .jsnn-nav ul li a:hover {
           color: #142684; }
       .jsnn-nav ul li.has-dropdown {
-        position: relative; }
+        position: relative; 
+        z-index: 10;
+      }
         .jsnn-nav ul li.has-dropdown .dropdown {
           width: 140px;
           -webkit-box-shadow: 0px 14px 33px -9px rgba(0, 0, 0, 0.75);
