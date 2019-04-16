@@ -100,6 +100,23 @@
 									<li class=""><a href="{{url('/')}}">Home</a></li>
 									<li class="has-dropdown">
 										<a href="{{url('/courses')}}">All Courses</a>
+										<ul class="training submenu">
+											<li><a href="javascript:void(0);">SAP Technical</a>
+												<!-- <ul class="all-course submenu">
+													<li><a href="javascript:void(0);">SAP Technical</a></li>
+													<li><a href="javascript:void(0);">Java</a></li>
+													<li><a href="javascript:void(0);">Industry Specific Course</a></li>
+													<li><a href="javascript:void(0);">Sap cloud platform</a></li>
+													<li><a href="javascript:void(0);">SAP Functional</a></li>
+
+												</ul> -->
+											</li>
+											<li><a href="javascript:void(0);">Java</a></li>
+											<li><a href="javascript:void(0);">Industry Specific Course</a></li>
+											<li><a href="javascript:void(0);">Sap cloud platform</a></li>
+											<li><a href="javascript:void(0);">SAP Functional</a></li>
+
+										</ul>
 									</li>
 									<li class="hidemenu"><a href="{{url('/courses')}}">Training</a>
 									@if(\App\Models\Trainings::where('status','active')->count() >0)
