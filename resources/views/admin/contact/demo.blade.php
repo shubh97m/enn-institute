@@ -16,9 +16,10 @@
           <div class="box">
             <div class="box-header">
               <h3 class="box-title">Query List</h3>
-              {{-- <div class="pull-right">
-                <a href="{!! url('admin/contact/create') !!}" class="btn btn-primary btn-add"><i class="fa fa-plus"></i> Add Contact</a>
-              </div> --}}
+              <div class="pull-right">
+                <a href="{!! url('admin/ask-demo/export') !!}" class="btn btn-primary btn-add"><i class="fa fa-plus"></i> Export</a>
+                <a href="{!! url('admin/ask-demo/print') !!}" class="btn btn-primary btn-add"><i class="fa fa-plus"></i> Print</a>
+              </div>
             </div>
 
             <!-- /.box-header -->

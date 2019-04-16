@@ -88,59 +88,52 @@
 		            		<div class="ask-demo-head">
 		            		    <h6>Please fill the information here:</h6>
 		            		</div>
-			              	<form role="scholarship" method="POST" action="" class="popup-form">
-			              	
-			               
-			                <input type="hidden" name="type" value="scholarship">
-
-			               <div class="form-group">
+			              	<form role="askDemo" method="POST" action="{{url('askdemo')}}" class="popup-form">
+			              		{{csrf_field()}}
+			               	<div class="form-group">
 			               		<div class="inner-addon left-addon">
 			                  		<input type="text"  class="form-control"  name="name" value="" placeholder="Full Name">
 			                  	</div>
 			                </div>
 			                <div class="form-group">
 			                 	<div class="inner-addon left-addon">
-			                 		<!-- <i class="fa fa-envelope fa-lg"></i> -->
 			                  		<input type="text"  class="form-control"  name="email" value="" placeholder="Email">
 			                  	</div>
 			                </div>
 			                <div class="form-group">
 			                  <div class="inner-addon left-addon">
-			                  		<!-- <i class="fa fa-phone fa-lg"></i> -->
-			                  		<input type="text" data-request="isnumeric" class="form-control"  name="phone" value="" placeholder="Phone no">
+			                  	<input type="text" class="form-control" name="mobile" placeholder="Phone no">
 			                  	</div>
 			                </div>
 			              <div class="form-group">
 					            <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
-					                <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker10"/>
+					                <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1" placeholder="Demo date and time">
 					                <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
 					                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
 					                </div>
 					            </div>
 					        </div>
+			               
 			                <div class="form-group">
-			                  <div class="inner-addon left-addon">
-			                  		<!-- <i class="fa fa-book fa-lg"></i> -->
-
-			                  		<select class="form-control" name="course">
+			                  	<div class="inner-addon left-addon">
+			                  		<select class="form-control" name="courses">
 										<option value="">Select Course</option>
-										<option value=""></option>
-					                 </select>
-
+											@foreach($course as $courses)
+								  			<option value="{{!empty($courses['name'])?$courses['name']:''}}">{{!empty($courses['name'])?$courses['name']:''}}</option>	
+								  		@endforeach
+					                </select>
 			                  	</div>
 			                </div>
 			                <div class="form-group">
-								<div class="checkbox">
-								   <input type="checkbox" value="1" name="tos" id="iq_check_callback" class="css-checkbox">
-								   <label for="iq_check_callback" class="css-label human" style="background-position: 0px 0px;">I am Human.</label>
-								   <input type="hidden" class="hidden_human" value="" name="iq_human">
-								</div>
-							</div>
-			                
-			                 
-			                <div class="form-group">
-			                  <button type="button" data-request="ajax-submit" data-target='[role="scholarship"]' class="btn btn-blue">Submit</button>
-			                </div>
+											<div class="checkbox">
+											   <input type="checkbox" value="1" name="tos" id="iq_check_callback" class="css-checkbox">
+											   <label for="iq_check_callback" class="css-label human" style="background-position: 0px 0px;">I am Human.</label>
+											   <input type="hidden" class="hidden_human" value="" name="iq_human">
+											</div>
+										</div>
+		                <div class="form-group">
+		                  <button type="button" data-request="ajax-submit" data-target='[role="askDemo"]' class="btn btn-blue">Submit</button>
+		                </div>
 			             </form>
 		            	</div>
 			            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 borderleft">

@@ -68,6 +68,11 @@
           </a>
         </li>
         <li>
+          <a href="{{url('admin/callback')}}">
+            <i class="fa fa-phone"></i> <span>Call Back</span>
+          </a>
+        </li>
+        <li>
           <a href="{{url('admin/list/scholarship')}}">
             <i class="fa fa-fw fa-sign-out"></i> <span>Scholarship</span>
           </a>

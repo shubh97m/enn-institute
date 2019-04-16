@@ -32,8 +32,9 @@ Route::get('/sub-course/{id}','HomeController@sub_courses');
 Route::get('/view-course','HomeController@view_course');
 Route::get('/courseOffered','HomeController@offered_course');
 Route::get('/ask-a-demo','HomeController@askDemo');
-Route::post('/ask-a-demo','HomeController@askDemoStore');
+Route::post('/askdemo','HomeController@askDemoStore');
 Route::post('/scholarship','HomeController@Register');
+Route::post('/callback','HomeController@callBack');
 
 
 
@@ -45,6 +46,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 	Route::get('home','loginController@home');
 	Route::get('contact','StaticController@contact');
 	Route::get('ask-demo','StaticController@demo');
+	Route::get('ask-demo/export','StaticController@exportDemo');
+	Route::get('ask-demo/print','StaticController@demopdf');
 	Route::get('logout',function(){
 		\Auth::logout();
 	      return redirect('admin/login');
@@ -100,7 +103,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin','middleware'=>'admin']
 	Route::post('child-courses/{id}/edit','CourseController@childCourseUpdate');
 
 //Gallery 
-
+	Route::get('callback/print', 'TestimonialController@pdfcallBack');
+	Route::get('callback/export', 'TestimonialController@exportcallBack');
+	Route::get('callback','TestimonialController@callBackList');
 	Route::resource('gallery','GalleryController');
 	Route::post('testimonialDel/{id}/delete','TestimonialController@destroy');
 	Route::resource('testimonial','TestimonialController');

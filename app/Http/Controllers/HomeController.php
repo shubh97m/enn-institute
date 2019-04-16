@@ -7,6 +7,7 @@ use Hash;
 use Illuminate\Http\Request;
 use App\Models\Sliders;
 use App\Models\Contact;
+use App\Models\Callback;
 use App\Models\MainCourses;
 use App\Models\SubCourses;
 use App\Models\OurPartners;
@@ -60,6 +61,7 @@ class HomeController extends Controller
       $data['course'] = _arefy(MainCourses::where('status','=','active')->where('offered','=','yes')->get());
         return view('front_home',$data);
     }
+
     public function askDemoStore(Request $request)
     {
      $validation = new Validations($request);
@@ -67,7 +69,8 @@ class HomeController extends Controller
         if ($validator->fails()){
             $this->message = $validator->errors();
         }else{
-            $data = new askDemo();
+            $data = new AskDemo();
+
             $data->fill($request->all());
             $data->save();
               $this->status   = true;
@@ -129,6 +132,29 @@ class HomeController extends Controller
         return $this->populateresponse();
         
     }
+
+    public function callBack(Request $request)
+    {
+        $validation = new Validations($request);
+        $validator  = $validation->callback();
+        if ($validator->fails()){
+            $this->message = $validator->errors();
+        }else{
+            $data = new Callback();
+
+            $data->fill($request->all());
+
+            $data->save();
+              $this->status   = true;
+              $this->modal    = true;
+              $this->alert    = true;
+              $this->message  = "Thank you, our team will respond you as soon as possible.";
+              $this->redirect = url('/');
+        } 
+      return $this->populateresponse();
+    
+    }
+
     public function courseView(Request $request,$id )
     {
         $id = ___decrypt($id);

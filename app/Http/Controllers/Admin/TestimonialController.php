@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers\Admin;
 
+use PDF;
 use App\Models\Testimonial;
+use App\Models\Callback;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Validations\Validate as Validations;
 use Intervention\Image\ImageManagerStatic as Image;
 use App\Http\Controllers\Controller;
+use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Facades\Excel;
+
 class TestimonialController extends Controller
 {
 
@@ -23,9 +28,68 @@ class TestimonialController extends Controller
      */
     public function index()
     {
-        $data['testimonials'] = _arefy(Testimonial::all());
         $data['view'] = 'admin.testimonial.testimonialsection';
+        $data['testimonials'] = _arefy(Testimonial::all());
         return view('admin.home',$data);
+    }
+
+    public function callBackList()
+    {
+        $data['view'] = 'admin.callbacklist';
+        $data['callback'] = _arefy(Callback::all());
+        // dd($data['callback']);
+        return view('admin.home',$data);
+    }
+
+    public function pdfcallBack(Request $request){
+        $data['callBack'] = _arefy(Callback::where('status','!=','trashed')->get());
+        $data['callbacks'] = _arefy($data['callBack']);
+        $excel_name='callback_data';
+        $pdf = PDF::loadView('admin.callbackpdfview', $data);
+        return $pdf->download('callback_pdf.pdf');
+    }
+
+    public function exportcallBack(Request $request){
+        $callback  = _arefy(Callback::where('status','!=','trashed')->get());
+        // dd($agent);
+        $type='csv';
+        $excel_name='callback_data';
+        Excel::create($excel_name, function($excel) use ($callback) {
+                $excel->sheet('mySheet', function($sheet) use ($callback){
+                    $headings = [
+                        'Name',
+                        'E-mail',
+                        'Contact',
+                        'Course',
+                        'Message',
+                    ];
+
+                    $sheet->row(1, $headings);
+                    $sheet->cell('A1:I1', function($cell) {
+                        $cell->setFontWeight('bold');
+                    });
+                    $total=count($callback)+1;
+                    $sheet->setBorder('A1:I'.$total, 'thin');
+
+                    $i=2;
+                    $j=1;
+                    foreach ($callback as $key => $value) {
+                        if($value){
+                            
+            
+                            $sheet->row($i,[
+                                ucfirst($value['name']),
+                                $value['email'],
+                                $value['mobile'],
+                                $value['courses'],
+                                $value['message'],
+                            ]);
+                        }
+                        $i++;
+                        $j++;
+                    }
+                });
+            })->download($type);
     }
 
     /**
