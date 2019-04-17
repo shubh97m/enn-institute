@@ -12,7 +12,7 @@
 						{{-- row starts here --}}
 						<div class="row">
 							@foreach($course as $courses)
-							<div class="col-lg-4 col-md-6 text-center animate-box">
+							<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 col-12 text-center animate-box">
 								<a href="{{url('courses/'.___encrypt($courses['id']))}}">
 								<div class="sub-courses">
 									<span class="icon">

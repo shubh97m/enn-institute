@@ -95,7 +95,7 @@
 					<div class="grid-container">
 					<div class="row">
 						@foreach($course as $courses)
-							<div class="col-lg-3 col-md-12 text-center animate-box grid-item allcoursesBox">
+							<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 col-6 text-center animate-box grid-item allcoursesBox">
 								<a href="{{url('courses/'.___encrypt($courses['id']))}}">
 								<div class="sub-courses">
 									<span class="icon">
