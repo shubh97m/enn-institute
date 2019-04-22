@@ -13,17 +13,19 @@
 						<div class="row">
 						@if(!empty($course))
 							@foreach($course as $courses)
-							<div class="col-md-4 text-center animate-box">
+							<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 col-12 text-center animate-box">
+								<a href="{{url('courses/'.___encrypt($courses['id']))}}">
 								<div class="sub-courses">
 									<span class="icon">
-										<img src="{{url('assets/img/Courses')}}/{{$courses['image']}}" alt="course image" style="height:70px;width:60px">
+										<img src="{{url('assets/img/Courses')}}/{{$courses['image']}}" alt="course image">
 									</span>
 									<div class="desc">
-										<h3><a href="{{url('courses/'.___encrypt($courses['id']))}}">{{$courses['name']}}</a></h3>
+										<h3>{{$courses['name']}}</h3>
 										<p>{!! str_limit(strip_tags($courses['description']),30) !!}</p>
 										 <a href="{{url('courses/'.___encrypt($courses['id']))}}" class="read-more">Read More</a> 
 									</div>
 								</div>
+								</a>
 							</div>
 							@endforeach
 							@else
