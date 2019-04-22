@@ -173,6 +173,7 @@ class HomeController extends Controller
     {
         
         $data['view'] = 'front.course-description';
+        $data['course']      =  _arefy(MainCourses::where('id','=',1)->first());
         return view('front_home',$data);
     }
 

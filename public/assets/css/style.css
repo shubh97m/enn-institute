@@ -373,6 +373,7 @@ ul .search
 
 .sub-course-content button span {
   cursor: pointer;
+  color: #fff;
   display: inline-block;
   position: relative;
   font-size: 14px;
@@ -909,8 +910,9 @@ div.view-child-course{
   display: inline-block;
 }
 .sub-sub-course a {
-    display: flex;
-    align-items: center;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
 }
 .sub-course-right {
     position: relative;
@@ -1067,7 +1069,7 @@ header {
     margin-bottom: 0;
 }
 #jsnn-course-wrap .progarmWrapper{
-  padding: 30px 30px 10px;
+  padding: 20px 30px 13px;
 }
 .jsnn-course-warp{
   padding: 1em 0 2em;
@@ -1430,12 +1432,15 @@ ul.submenu-course li{
     height: 36px;
     line-height: 28px;
     text-align: center;
-    background: #07833c;
+    background: #fd2822;
     color: #fafafa;
     font-size: 18px;
     padding: 4px 5px;
     margin: 0px 0px 2px 0px;
     overflow: hidden;
+}
+.cardbody a {
+    display: block;
 }
 .crs-left-tagline {
     font-family: 'IBM Plex Sans Condensed', sans-serif;

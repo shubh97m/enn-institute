@@ -19,10 +19,13 @@
 											    <div class="cardheader" id="headingOne{{$sub_courses['id']}}">
 												    <h5 class="mb-0">
 												        <button class="btn btn btn-primary" type="button"  data-target="#collapseExample{{$sub_courses['id']}}" aria-expanded="false" aria-controls="collapseExample{{$sub_courses['id']}}">
-												         <div class="text-center">
-																<img src="{{asset('assets/img/Courses/'.$sub_courses['image'])}}" alt="images" style="height:74px;margin-bottom: 10px;">
-															</div>
-																<span>{{$sub_courses['name']}}</span>
+												        	<a href="{{url('view-course')}}">
+													         	<div class="text-center">
+																	<img src="{{asset('assets/img/Courses/'.$sub_courses['image'])}}" alt="images" style="height:74px;width:80px;margin-bottom: 10px;">
+																</div>
+
+															<span>{{$sub_courses['name']}}</span>
+															</a>
 												        </button>
 												    </h5>
 										    	</div>
