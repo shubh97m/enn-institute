@@ -1504,6 +1504,9 @@ a.clsSection {
   color:#fff;
   margin-bottom: 0;
 }
+.proindex .sub-courses{
+  height: 170px;
+}
 .borderleft{
   border-left: 1px dashed #ccc;
 }
@@ -2131,6 +2134,7 @@ a.search-input.search{
 .sub-courses {
   margin-bottom: 5px;
   position: relative;
+  height: 260px;
   /*border: 1px solid #0e1451;*/
   /*border-radius: 5px;*/
   background: #fff;

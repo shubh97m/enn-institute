@@ -83,7 +83,7 @@
 	<section>
 		<div id="jsnn-program" class="jsnn-program">
 			<div class="container">
-				<div class="progarmWrapper">
+				<div class="progarmWrapper proindex">
 					<div class="clearfix">
 						<div class="float-left">
 							<h3>Course</h3>
