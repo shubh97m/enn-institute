@@ -350,13 +350,14 @@
 		owl.owlCarousel({
 		   animateOut: 'fadeOut',
 		   animateIn: 'fadeIn',
-			autoplay: true,
+			autoplaySpeed: 500,
+            autoplay:true,
 			items: 5,
 		   loop: true,
 		   // margin: 30,
 		   responsiveClass: true,
 		   nav: false,
-		   dots: true,
+		   dots: false,
 		   autoplayHoverPause: true,
 		   smartSpeed: 500,
 		   // navText: [
@@ -373,7 +374,7 @@
                 },
 
                 567: {
-                    items: 2
+                    items: 4
                 },
 
                 1170: {

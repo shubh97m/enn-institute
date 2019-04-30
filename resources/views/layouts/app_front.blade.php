@@ -36,7 +36,7 @@
 
 	<!-- Flexslider  -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.0/flexslider.css">
-
+	<link rel="stylesheet" type="text/css" href="{{asset('assets/css/thumbnail-slider.css')}}">
 	<!-- Owl Carousel -->
 	<link rel="stylesheet" href="{{asset('assets/css/owl.carousel.min.css')}}">
 	<link rel="stylesheet" href="{{asset('assets/css/owl.theme.default.min.css')}}">
@@ -169,6 +169,7 @@
 	<!-- Flexslider -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.0/jquery.flexslider.js"></script>
 	<!-- Owl carousel -->
+	<script type="text/javascript" src="{{asset('assets/js/thumbnail-slider.js')}}"></script>
 	<script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
 	<!-- Magnific Popup -->
 	<script src="{{asset('assets/js/jquery.magnific-popup.min.js')}}"></script>

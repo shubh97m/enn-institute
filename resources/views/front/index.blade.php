@@ -219,11 +219,11 @@
 						<h2>Our Partners</h2>
 					</div>
 				</div> -->
-				<div class="row">
-					<div class="col-md-12 animate-box">
+				
+					<!-- <div class="col-md-12 animate-box">
 						<div class="about-flex">
-							<!-- <div class="owl-carousel" id="our-partners"> -->
-							<marquee behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();" direction="left">
+							<div class="owl-carousel" id="our-partners">
+							
 								@if(!empty($partner))
 								@foreach($partner as $partners)
 								<div class="item">
@@ -249,12 +249,35 @@
 									<img src="images/partner3.png" alt="partner">
 								</div> --}}
 							
-							</marquee>
+							
 						</div>
+					</div> -->
+					<div>
+				<div id="thumbnail-slider">
+					
+					<div class="inner">
+						<ul>
+							@if(!empty($partner))
+								@foreach($partner as $partners)
+								<li class="">
+								<a href="javascript:void(0);" class="thumb">
+									<img src="{{url('assets/img/Partners/'.$partners['image'])}}"  alt="img">
+								</a>
+								</li>
+								@endforeach
+							@else
+								<li class="">
+								<a href="javascript:void(0);" class="thumb" alt="" cursor: pointer;>No record Found</a>
+								</li>
+							@endif
+						
+						</ul>
 					</div>
+				
+				</div>
 				</div>
 			</div>
-		</div>
+		
 	</div>
 </section>
 

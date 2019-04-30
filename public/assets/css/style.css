@@ -370,7 +370,10 @@ ul .search
   cursor: pointer;
   /*margin: 5px;*/
 }
-
+#thumbnail-slider li.loading::after{
+  content: "";
+  display: none !important;
+}
 .sub-course-content button span {
   cursor: pointer;
   color: #fff;
@@ -1162,7 +1165,7 @@ a.read-more:hover{
   height: 268px;
 }
 .jsnn-about-img .item{
-  width: 190px;
+  width: 212px;
   margin: 2px;
   padding: 20px;
 }
@@ -1539,11 +1542,17 @@ a.clsSection {
 .about-flex .partners {
     max-width: 150px;
     height: 90px;
+    margin: 0 auto;
 }
 .jsnn-about-img img{
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
+}
+#thumbnail-slider ul li {
+    width: 145px !important;
+    height: 96px !important;
+    border: 1px solid #ddd !important;
 }
 .call-back-form {
     position: absolute;
@@ -2543,6 +2552,7 @@ article {
   .side-course{
     margin-top: 15px;
   }
+
   section .border-right{
       border-right:none !important;
   }
@@ -2649,6 +2659,10 @@ article {
   .jsnn-about-img .item {
       width: 150px;
       padding: 20px;
+  }
+  #portfolio .shot-item{
+    margin-right:10px;
+    margin-left:10px;
   }
   .shot-item{
     margin-right: 135px;
@@ -2803,6 +2817,10 @@ article {
   }
   #jsnn-logo img{
     width: 82px;
+  }
+  #jsnn-program .col-6.text-center.animate-box.grid-item.fadeInUp.animated-fast{
+    padding-left: 6px;
+    padding-right: 5px;
   }
   .quadrat_s{
     padding: 10px 0px 4px;
