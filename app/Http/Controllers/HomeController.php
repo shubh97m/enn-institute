@@ -106,7 +106,25 @@ class HomeController extends Controller
         return view('front_home', $data);
         
     }
+    //********* FAQ Section********
+    public function faq()
+    {
+        $data['course']      =  _arefy(MainCourses::where('status','=','active')->get());
+        $data['view'] ='front.faq';
+        return view('front_home', $data);
+        
+    }
 
+    //********* GALLERY Section********
+    public function gallery()
+    {
+        $data['course']      =  _arefy(MainCourses::where('status','=','active')->get());
+         $data['gallery_category'] =     _arefy(GalleryCategory::gallery_list('array'));
+        $data['gallery']          =     _arefy(Gallery::list('array'));
+        $data['view'] ='front.gallery';
+        return view('front_home', $data);
+        
+    }
     public function subscribe(Request $request)
     {   
         $validation = new Validations($request);

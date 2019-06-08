@@ -51,6 +51,8 @@
 	<!-- Modernizr JS -->
 	<script src="{{asset('assets/js/modernizr-2.6.2.min.js')}}"></script>
 	<link rel="stylesheet" href="{{asset('assets/css/sweetalert2.css')}}">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+	 <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -61,7 +63,7 @@
 	<body>
 		
 	<div class="jsnn-loader"></div>
-	<div id="cover"></div>
+	
 	<div id="page">
 		@yield('content')
 	</div>
@@ -184,6 +186,8 @@
 	<script src="{{asset('assets/js/custom.js')}}"></script>
 	<script src="{{asset('assets/js/sweetalert2.js')}}"></script>
 	<script src="{{asset('assets/js/script.js')}}"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" type="text/javascript"></script>
 	<script>
 	      $(window).scroll(function () { 
 	       if ($(this).scrollTop() < 20) {
@@ -227,11 +231,44 @@
 			    
 			    $('.rightHeader').toggleClass('mobile_search');
 			});
+			
 			// $('#datetimepicker1').datetimepicker({
 			// 	format:'DD/MM/YYYY hh:mm a'
 			// });
+
+			$("#testimonials-user").owlCarousel({
+                  // items:4,
+                  loop:true,
+                  margin:10,
+                  nav:false,
+                  dots:false,
+                  slideTransition: 'linear',
+                  autoplaySpeed: 2000,
+                  autoplay:true,
+                  // autoplayTimeout:3000,
+                  // autoplayHoverPause:true,
+                  responsive: {
+                    0: {
+                        items: 1
+                    },
+                    360: {
+                        items: 1
+                    },
+                    500: {
+                        items: 1
+                    },
+                    991: {
+                        items: 2
+                    },
+                    1600: {
+                        items: 2
+                    }
+                }
+              });
+
 			
             // window.addEventListener("keyup", function(e){ if(e.keyCode == 27) history.back(); }, false);
+
 
 	    });
 	    document.onkeydown = function(e){ 
@@ -239,6 +276,32 @@
 		      history.go(-1);
 		   }
 		};
+		$(document).ready(function() {
+			$(".fancybox-button").fancybox({
+				prevEffect		: 'none',
+				nextEffect		: 'none',
+				closeBtn		: false,
+				helpers		: {
+					title	: { type : 'inside' },
+					buttons	: {}
+				}
+				
+			});
+		});
+		$(document).ready(function() {
+	        $('img').bind('contextmenu', function(e) {
+			    return false;
+			});
+			$('.fancybox').bind('contextmenu', function(e) {
+				e.preventDefault();
+			    return false;
+			});
+			$('.fancybox-inner').bind('contextmenu', function(e) {
+				alert( "Handler for .contextmenu() called." );
+			    return false;
+			});
+			
+	    }); 
 	    
 	</script>
 	 <script type="text/javascript">
@@ -246,6 +309,12 @@
                 $('#datetimepicker1').datetimepicker();
             });
         </script>
+         <script type="text/javascript">
+        AOS.init({
+          duration: 1200,
+          disable: 'mobile'
+        })
+    </script>
 	
 	@yield('requirejs')
 	<!--Start of Tawk.to Script-->

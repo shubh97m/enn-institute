@@ -3,14 +3,26 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 col-md-6 border-right">
-				<div class="offeredLeft">
+				<div>
 					<h2 class="offeredHeading wow fadeInUp">Offered Courses</h2>
+				</div>
+				<div class="offeredLeft">
+					
 					@if(!empty($course))
 						@foreach($course as $courses)
 						<div class="card m-b-10">
 							<div class="card-heading">
-								<img src="{{asset('assets/img/Courses/'.$courses['image'])}}" alt="images" style="height:74px;border: 1px solid #03489b;">
-								{{$courses['name']}}
+								<div class="b-polygons">
+							        <a href="javascript:void(0);" class="b-polygon b-polygon_hexagon">
+							            <span class="b-polygon-part">
+							                <span class="b-polygon-part b-polygon-part_content">
+							                    <img src="{{asset('assets/img/Courses/'.$courses['image'])}}" alt="images" style="border: 1px solid #03489b;">
+												
+							                </span>
+							            </span>
+							        </a>	
+								</div>
+								<div class="offeredname">{{$courses['name']}}</div>
 							</div>
 						</div>
 						@endforeach
@@ -41,6 +53,7 @@
 					</div> --}}
 				</div>
 			</div>
+		
 			<div class="col-lg-8 col-md-6">
 				<div class="offeredRight">
 					<h2 class="offeredHeading wow fadeInUp">Apply Here !!</h2>
