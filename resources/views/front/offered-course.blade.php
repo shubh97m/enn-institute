@@ -2,7 +2,7 @@
 	
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-4 col-md-6 border-right">
+			<div class="col-lg-3 col-md-4 border-right" data-aos="fade-up">
 				<div>
 					<h2 class="offeredHeading wow fadeInUp">Offered Courses</h2>
 				</div>
@@ -21,9 +21,9 @@
 							                </span>
 							            </span>
 							        </a>	
-								</div>
-								<div class="offeredname">{{$courses['name']}}</div>
+								</div>	
 							</div>
+							<div class="offeredname">{{$courses['name']}}</div>
 						</div>
 						@endforeach
 					@endif
@@ -54,7 +54,7 @@
 				</div>
 			</div>
 		
-			<div class="col-lg-8 col-md-6">
+			<div class="col-lg-9 col-md-8" data-aos="fade-up">
 				<div class="offeredRight">
 					<h2 class="offeredHeading wow fadeInUp">Apply Here !!</h2>
 					<form method="post" action="{{url('scholarship')}}" role="scholarship">

@@ -130,7 +130,7 @@
          <div class="col-md-12">
             <div class="form-group">
               <label>Address</label>
-            <textarea id="description" name="address" rows="6" cols="80" ></textarea>
+            <textarea name="address" rows="6" cols="80" ></textarea>
             </div>
           </div>
         </div>

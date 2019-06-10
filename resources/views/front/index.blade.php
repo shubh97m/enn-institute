@@ -157,7 +157,7 @@
 		        <div class="row">
 		              <div class="col-12" data-aos="fade-up">
 		                  <div class="section-heading wow fadeInUp">
-		                      <h2>Our Gallery</h2>  
+		                      <h2><span>Our Gallery</span></h2>  
 		                  </div>
 		              </div>
 		        </div>       
@@ -277,7 +277,7 @@
 		<div class="row">
               <div class="col-12" data-aos="fade-up">
                   <div class="section-heading wow fadeInUp">
-                      <h2>What Our Students Say</h2>  
+                      <h2><span>What Our Students Say</span></h2>  
                   </div>
               </div>
         </div>

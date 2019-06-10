@@ -1,8 +1,8 @@
 	<section class="jsnn-course" data-aos="fade-up">
 			<div class="container">
-				<div class="our-course">
-					<h3>About Us</h3>
-				</div>
+				<div class="section-heading">
+                  	<h2><span>About Us</span></h2>  
+             	</div>
 			</div>
 		</section>
 	<section class="about-section">
@@ -11,7 +11,7 @@
 				<div class="row">
 					<div class="col-md-12 tabulation animate-box">
 						<ul class="nav nav-tabs" data-aos="fade-up">
-							<li class="active"><a data-toggle="tab" href="#plan"><i class="flaticon-sketch"></i> {{$static[0]['name']}}</a></li>
+							<li class="active"><a data-toggle="tab" href="#plan" class="active"><i class="flaticon-sketch"></i> {{$static[0]['name']}}</a></li>
 							<li><a data-toggle="tab" href="#general"><i class="icon-user"></i> {{$static[1]['name']}}</a></li>
 							<!-- <li><a data-toggle="tab" href="#manage"><i class="flaticon-engineer"></i> Principal's Message</a></li> -->
 							<!-- <li><a data-toggle="tab" href="#modeling"><i class="flaticon-skyline"></i>  </a></li> -->

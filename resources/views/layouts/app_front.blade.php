@@ -277,6 +277,16 @@
 		   }
 		};
 		$(document).ready(function() {
+	  //       $('img').bind('contextmenu', function(e) {
+			//     return false;
+			// });
+			// $('body').bind('contextmenu', function(e) {
+			// 	e.preventDefault();
+			//     return false;
+			// });
+
+	    }); 
+		$(document).ready(function() {
 			$(".fancybox-button").fancybox({
 				prevEffect		: 'none',
 				nextEffect		: 'none',
@@ -288,20 +298,7 @@
 				
 			});
 		});
-		$(document).ready(function() {
-	        $('img').bind('contextmenu', function(e) {
-			    return false;
-			});
-			$('.fancybox').bind('contextmenu', function(e) {
-				e.preventDefault();
-			    return false;
-			});
-			$('.fancybox-inner').bind('contextmenu', function(e) {
-				alert( "Handler for .contextmenu() called." );
-			    return false;
-			});
-			
-	    }); 
+		
 	    
 	</script>
 	 <script type="text/javascript">

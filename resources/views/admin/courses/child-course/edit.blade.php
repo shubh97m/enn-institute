@@ -67,7 +67,7 @@
       <div class="col-md-12">
             <div class="form-group">
               <label>Course Description:</label>
-            <textarea id="description" name="description" rows="6" cols="80" class="form-control" >{{!empty($childcourses['description'])?$childcourses['description']:''}}</textarea>
+            <textarea name="description" rows="6" cols="80" class="form-control" >{{!empty($childcourses['description'])?$childcourses['description']:''}}</textarea>
             </div>
           </div>
         </div> 
