@@ -2257,6 +2257,9 @@ span.pd-left>p {
   .programmer-wrap .sub-courses .desc p{
     font-size: 13px;
   }
+  .new-offered-blink1{
+    right: -124px;
+  }
 }
 @media screen and (max-width: 992px) {
   .jsnn-video {
@@ -2319,9 +2322,6 @@ span.pd-left>p {
   }
   .askdempwrap .logo-modal h4{
     font-size: 20px;
-  }
-  .new-offered-blink1{
-        right: -280px;
   }
   .jsnn-nav #jsnn-logo{
     margin: 1px 0px 0 !important;
@@ -2594,21 +2594,21 @@ span.pd-left>p {
 
 .testmonialsection:before, .testmonialsection:after {
     content: "";
-    width: 70vmax;
-    height: 70vmax;
+    width: 50vmax;
+    height: 50vmax;
     position: absolute;
-    left: -20vmin;
+    left: 0;
     top: -20vmin;
     animation: morph 15s linear infinite alternate, spin 20s linear infinite;
     will-change: border-radius, transform;
-    transform-origin: 55% 55%;
+    transform-origin: 45% 45%;
     pointer-events: none;
     background-color: #dadada;
      opacity: 0.4; 
 }
 .testmonialsection:before{
-  width: 70vmin;
-    height: 70vmin;
+  width: 40vmin;
+    height: 40vmin;
     left: auto;
     right: -10vmin;
     top: auto;
@@ -2759,6 +2759,7 @@ article {
   .side-course{
     margin-top: 15px;
   }
+  
 
   section .border-right{
       border-right:none !important;
@@ -2812,6 +2813,9 @@ article {
   .jsnn-nav-toggle {
       display: block;
       top: 39px !important;
+  }
+  .new-offered-blink1 {
+      right: -280px;
   }
   .sub-sub-course{
     flex:0 98%;
@@ -2987,6 +2991,9 @@ article {
   .programmer-wrap .sub-courses .desc p{
     height: auto;
   }
+  #portfolio {
+    width: auto;
+  }
   .sub-courses .desc h3{
     min-height: auto;
   }
@@ -3046,10 +3053,7 @@ article {
   #jsnn-logo img{
     width: 82px;
   }
-  #jsnn-program .col-6.text-center.animate-box.grid-item.fadeInUp.animated-fast{
-    padding-left: 6px;
-    padding-right: 5px;
-  }
+  
   .quadrat_s{
     padding: 10px 0px 4px;
   }

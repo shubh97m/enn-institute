@@ -1,4 +1,10 @@
-
+<section class="jsnn-course" data-aos="fade-down">
+    <div class="container">
+        <div class="section-heading wow fadeInUp">
+              <h2><span>FAQ</span></h2>  
+          </div>
+    </div>
+</section>
 <section class="faqsection">
     <div class="container">
         <div id="bootstrap-accordion_475" class="panel-group accordionStyles accordion" role="tablist" aria-multiselectable="true">
