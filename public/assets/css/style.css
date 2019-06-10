@@ -324,7 +324,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .search-toggle input{
   width: 100%;
   border: none;
-  box-shadow: 0 2px 2px;
+  box-shadow: 0 2px 9px 0px rgba(7, 5, 4, 0.15);
   border-radius: 5px;
   padding: 8px 40px 8px 8px;
   max-width: 400px;
@@ -1592,7 +1592,7 @@ a.clsSection {
     border: 1px solid #ddd;
 }
 .call-back-form input.btn.btn-default.btn-stick-submit.btn-black {
-    background: #a3a3a3;
+    background: #13247f;
     color: #fff;
 }
 .call-form-field.text-left {
@@ -3006,9 +3006,9 @@ article {
     padding-right: 2px;
   }
   .popupmodal #askdemo .modal-dialog {
-    max-width: 800px !important;
-    margin: 55px auto;
-    width: unset;
+    max-width: 340px !important;
+    width: auto !important;
+    margin: 115px auto;
   }
   .new-offered-blink1{
     right: 120px;
@@ -3244,7 +3244,7 @@ article {
     width: 100%;
     border: 1px solid #67bfff;
     padding: .5em;
-    margin-bottom: 20px; 
+    margin-bottom: 15px; 
   }
     .contact-info-wrap-flex .con-info:first-child {
       margin-left: 0; }
