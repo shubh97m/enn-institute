@@ -5,7 +5,7 @@
     </div>
     <!-- /.box-header -->
     <div class="box-body">
-    <form role="edit-courses" method="POST" action="{{url('admin/sub-courses/edit/'.___encrypt($childcourses['id']))}}">
+    <form role="edit-courses" method="POST" action="{{url('admin/child-courses/'.___encrypt($childcourses['id']).'/edit')}}">
        {{csrf_field()}}
         <div class="col-md-12">
           <div class="form-group">
