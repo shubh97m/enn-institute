@@ -27,8 +27,15 @@
 						@php
 						$settings = _arefy(App\Models\generalSettings::where('status','!=','trashed')->first())		
 						@endphp
-							<li><i classs="fa fa-map-marker" style="color:#67bfff;"></i> 
-							{{$settings['address']}}</li>
+							{{-- <li><i classs="fa fa-map-marker" style="color:#67bfff;"></i> 
+							{{$settings['address']}}</li> --}}
+							<li class="flex-address"><i class="fa fa-map-marker" style="color:#67bfff;padding-top: 5px;"></i> 
+								<address style="padding-left: 5px;margin-bottom: 0;">ENN Technologies <br>
+								Headquarters: F-12 <br>
+								Preet Vihar<br>
+								Near ICICI Bank <br>
+								Delhi-110092</address>
+							</li>
 							<li><a href="tel://011-{{$settings['skype_number']}}"><i class="fa fa-phone"></i> 011-{{$settings['skype_number']}}</a></li>
 							<li><a href="mailto:{{$settings['email']}}"><i class="fa fa-envelope"></i> {{$settings['email']}}</a></li>
 							<!-- <li><a href="javascript:void(0);"><i class="fa fa-map-marker"></i> yourwebsite.com</a></li> -->

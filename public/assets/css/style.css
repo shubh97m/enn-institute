@@ -2249,10 +2249,14 @@ span.pd-left>p {
   background-repeat: no-repeat;
   position: relative; }
 
-.aside-stretch {
-  /*background: #142684;*/
+.sub-couse-sub-courses .desc p{
+  height: 46px;
+  line-height: 19px;
 }
-
+#jsnn-footer
+{
+    width: 100%;
+}
 @media screen and (max-width: 1200px){
   .programmer-wrap .sub-courses .desc p{
     font-size: 13px;
@@ -2273,6 +2277,15 @@ span.pd-left>p {
   .sub-courses-desc {
     padding: 0; 
   } 
+  .sub-couse-sub-courses{
+    margin: 60px 10px 0px 10px;
+  }
+  .subCourse h3{
+    font-size: 15px;
+  }
+  .sub-couse-sub-courses .desc p {
+    height: 70px;
+  }
   #jsnn-intro .nav-tabs li {
     font-size: 10px; 
   } 
@@ -2387,7 +2400,9 @@ span.pd-left>p {
     display: none;
   }
 }
-
+.flex-address{
+  display: flex !important;
+}
 
 
 
@@ -2989,8 +3004,9 @@ article {
       margin-bottom: 15px;
   }
   .programmer-wrap .sub-courses .desc p{
-    height: auto;
+    height: auto !important;
   }
+
   #portfolio {
     width: auto;
   }
@@ -3937,6 +3953,7 @@ input[type="text"] {
 }
 .programmer-wrap .sub-courses .desc p{
   margin-bottom: 4px;
+  height: 50px;
 }
 .programmer-wrap .sub-courses .desc h3{
     font-weight: 600;

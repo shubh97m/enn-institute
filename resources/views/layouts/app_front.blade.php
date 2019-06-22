@@ -10,15 +10,9 @@
 	<meta name="author" content="" />
 	<meta name="google-site-verification" content="91j39t4YkHbQztL5T1wCSXA9z3QhwAPPHq98pjsPUCY" />
   <!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
 	<meta property="og:site_name" content=""/>
 	<meta property="og:description" content=""/>
 	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
 	<link rel="icon" type="image/png" href="{{url('images/logo/logo.png')}}">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
 
@@ -302,16 +296,30 @@
 	    
 	</script>
 	 <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker1').datetimepicker();
-            });
-        </script>
-         <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker1').datetimepicker();
+        });
+    </script>
+    <script type="text/javascript">
         AOS.init({
           duration: 1200,
           disable: 'mobile'
         })
     </script>
+
+    <script>
+
+    $(document).ready(function() {
+
+     var docHeight = $(window).height();
+     var footerHeight = $('#jsnn-footer').height();
+     var footerTop = $('#jsnn-footer').position().top + footerHeight;
+
+     if (footerTop < docHeight) {
+      $('#jsnn-footer').css('margin-top', 2+ (docHeight - footerTop) + 'px');
+     }
+    });
+   </script>
 	
 	@yield('requirejs')
 	<!--Start of Tawk.to Script-->

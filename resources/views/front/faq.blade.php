@@ -1,4 +1,4 @@
-<section class="jsnn-course" data-aos="fade-down">
+<section class="jsnn-course" data-aos="fade-down" style="background: whitesmoke;">
     <div class="container">
         <div class="section-heading wow fadeInUp">
               <h2><span>FAQ</span></h2>  
