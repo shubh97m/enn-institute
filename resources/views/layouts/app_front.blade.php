@@ -291,10 +291,17 @@
 				}
 				
 			});
+			
+			$(".allcourse-main .hover-menu").on('mouseenter', function(event) {
+			  $('.allcourse-main .hover-menu').removeClass("child-active");
+			  $(this).addClass("child-active");
+
+			});
 		});
 		
 	    
 	</script>
+	
 	 <script type="text/javascript">
         $(function () {
             $('#datetimepicker1').datetimepicker();

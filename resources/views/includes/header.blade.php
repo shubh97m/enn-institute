@@ -100,7 +100,100 @@
 									<li class=""><a href="{{url('/')}}">Home</a></li>
 									<li class="has-dropdown">
 										<a href="{{url('/courses')}}">All Courses</a>
-										
+										<div class="dropdownMenu">
+											<i class="caret-up"></i>
+											<ul class="allcourse-main">
+												<li class="menu-item-1 hover-menu child-active">
+													<a href="javascript:void(0);" title="CS/IT"><i class="fa fa-fw fa-code"></i><br>CS/IT</a>
+													<ul class="sub-allcourse-main">
+														<li>
+															<a title="Programming Language" href="javascript:void(0);">Programming Language</a>
+															<ul class="sub-allcourse-main">
+																<li><a title="Web Development" href="javascript:void(0);">Web Development</a></li>
+																<li><a title="Software Testing" href="javascript:void(0);">Software Testing</a></li>
+																<li><a title="Automation Testing" href="javascript:void(0);">Automation Testing</a></li>
+																<li><a title="Oracle DBA/Developer" href="javascript:void(0);">Oracle DBA/Developer</a></li>
+																<li><a title="Microsoft SQL Server" href="javascript:void(0);">Microsoft SQL Server</a></li>
+																<li><a title="Cloud Computing" href="javascript:void(0);">Cloud Computing</a></li>
+																<li><a title="Mobile Development" href="javascript:void(0);">Mobile Development</a></li>
+																<li><a title="Networking" href="javascript:void(0);">Networking</a></li>
+															</ul>
+														</li>
+														<li><a title="Web Development" href="javascript:void(0);">Web Development</a></li>
+														<li><a title="Software Testing" href="javascript:void(0);">Software Testing</a></li>
+														<li><a title="Automation Testing" href="javascript:void(0);">Automation Testing</a></li>
+														<li><a title="Oracle DBA/Developer" href="javascript:void(0);">Oracle DBA/Developer</a></li>
+														<li><a title="Microsoft SQL Server" href="javascript:void(0);">Microsoft SQL Server</a></li>
+														<li><a title="Cloud Computing" href="javascript:void(0);">Cloud Computing</a></li>
+														<li><a title="Mobile Development" href="javascript:void(0);">Mobile Development</a></li>
+														<li><a title="Networking" href="javascript:void(0);">Networking</a></li>
+													</ul>
+												</li>
+												<li class="menu-item-1 hover-menu">
+													<a href="javascript:void(0);" title="Professional Programs"><i class="fa fa-fw fa-database"></i><br>Professional Programs</a>
+													<ul class="sub-allcourse-main">
+														<li><a title="Programming Language" href="javascript:void(0);">Programming Language</a>
+															<ul class="sub-allcourse-main">
+																<li>
+																	<a title="Web Development" href="javascript:void(0);">Web Development</a></li>
+																<li>
+																	<a title="Software Testing" href="javascript:void(0);">Software Testing</a>
+																</li>
+															</ul>
+														</li>
+														
+													</ul>
+												</li>
+												<li class="menu-item-1 hover-menu">
+													<a href="javascript:void(0);" title="Advance Programs"><i class="fa fa-fw fa-graduation-cap"></i><br>Advance Programs</a>
+													<ul class="sub-allcourse-main">
+														<li><a title="Programming Language" href="javascript:void(0);">Programming Language</a>
+															<ul class="sub-allcourse-main">
+																<li>
+																	<a title="Web Development" href="javascript:void(0);">Web Development</a></li>
+																<li>
+																	<a title="Software Testing" href="javascript:void(0);">Software Testing</a>
+																</li>
+															</ul>
+														</li>
+														<li><a title="Web Development" href="javascript:void(0);">Web Development</a></li>
+														<li><a title="Software Testing" href="javascript:void(0);">Software Testing</a></li>
+														
+													</ul>
+												</li>
+												<li class="menu-item-1 hover-menu">
+													<a href="javascript:void(0);" title="Management & Quality"><i class="fa fa-fw fa-bandcamp"></i><br>Management & Quality</a>
+													<ul class="sub-allcourse-main">
+														<li><a title="Programming Language" href="javascript:void(0);">Programming Language</a>
+															<ul class="sub-allcourse-main">
+																<li>
+																	<a title="Web Development" href="javascript:void(0);">Web Development</a></li>
+																<li>
+																	<a title="Software Testing" href="javascript:void(0);">Software Testing</a>
+																</li>
+															</ul></li>
+														<li><a title="Web Development" href="javascript:void(0);">Web Development</a></li>
+														<li><a title="Software Testing" href="javascript:void(0);">Software Testing</a></li>
+														
+													</ul>
+												</li>
+												<li class="menu-item-1 hover-menu">
+													<a href="javascript:void(0);" title="EC/EI/EEE Programs"><i class="fa fa-fw fa-microchip"></i><br>EC/EI/EEE Programs</a>
+													<ul class="sub-allcourse-main">
+														<li><a title="Programming Language" href="javascript:void(0);">Programming Language</a>
+															<ul class="sub-allcourse-main">
+																<li>
+																	<a title="Web Development" href="javascript:void(0);">Web Development</a>
+																</li>
+																<li>
+																	<a title="Software Testing" href="javascript:void(0);">Software Testing</a>
+																</li>
+															</ul>
+														</li>	
+													</ul>
+												</li>
+											</ul>
+										</div>
 									</li>
 									<li class="hidemenu"><a href="{{url('/courses')}}">Training</a>
 									@if(\App\Models\Trainings::where('status','active')->count() >0)
@@ -126,10 +219,18 @@
 								</ul>
 								<form method="GET" action="{{url('search')}}"> 
 									<div class="search-toggle forDesktop">
-										<input type="text" name="search" placeholder="Search Courses...">
+										<input type="text" name="search" placeholder="Search for courses">
 										<button type="submit" class="btn-secarch"><i class="fa fa-search"></i></button>
 									</div>
 								</form>
+								{{-- <div class="new-offered-blink1">
+				   					<div class="quadrat_s"><a href="{{url('courseOffered')}}">
+				   						Summer Training / Internship
+				   						<div class="new_round">
+				   							<img src="{{asset('images/new_red.gif')}}" alt="new">
+				   						</div>
+				   					</a></div>
+				   				</div> --}}
 							</div>
 						</div>
 					</div>
