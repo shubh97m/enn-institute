@@ -92,32 +92,32 @@
 											<ul class="allcourse-main">
 											@if(!empty($course))
 												@foreach($course as $courses)
-												<li class="menu-item-1 hover-menu child-active">
-													<a href="javascript:void(0);" title="CS/IT"><i class="fa fa-fw fa-code"></i><br>CS/IT</a>
+													<li class="menu-item-1 hover-menu child-active">
+													<a href="javascript:void(0);" title="CS/IT"><i class="fa fa-fw fa-code"></i><br>{{-- CS/IT --}}{{$courses['name']}}</a>
 													<ul class="sub-allcourse-main sub-hover">
+														@php
+														$sub_course =_arefy(App\Models\SubCourses::where(['course_id'=>$courses['id'],'status'=>'active'])->get());
+														@endphp
+														@if(!empty($sub_course))
+															@foreach($sub_course as $sub_courses)
 														<li class="sub-sub-allcourse-list">
-															<a title="Programming Language" href="javascript:void(0);">Programming Language</a>
+															<a title="Programming Language" href="javascript:void(0);">{{$sub_courses['name']}}</a>
 															<ul class="sub-allcourse-main">
-																<li><a title="Web Development" href="javascript:void(0);">Web Development</a></li>
-																<li><a title="Software Testing" href="javascript:void(0);">Software Testing</a></li>
-																<li><a title="Automation Testing" href="javascript:void(0);">Automation Testing</a></li>
-																<li><a title="Oracle DBA/Developer" href="javascript:void(0);">Oracle DBA/Developer</a></li>
-																<li><a title="Microsoft SQL Server" href="javascript:void(0);">Microsoft SQL Server</a></li>
-																<li><a title="Cloud Computing" href="javascript:void(0);">Cloud Computing</a></li>
-																<li><a title="Mobile Development" href="javascript:void(0);">Mobile Development</a></li>
-																<li><a title="Networking" href="javascript:void(0);">Networking</a></li>
+															@php
+															$child_course =_arefy(App\Models\ChildCourses::where(['sub_course'=>$sub_courses['id'],'status'=>'active'])->get());
+															@endphp
+																@if(!empty($child_course))
+																@foreach($child_course as $child_courses)
+																<li><a title="Web Development" href="javascript:void(0);">{{$child_courses['name']}}</a></li>
+																@endforeach
+																@endif
 															</ul>
 														</li>
-														<li class="sub-sub-allcourse-list"><a title="Web Development" href="javascript:void(0);">Web Development</a></li>
-														<li class="sub-sub-allcourse-list"><a title="Software Testing" href="javascript:void(0);">Software Testing</a></li>
-														<li class="sub-sub-allcourse-list"><a title="Automation Testing" href="javascript:void(0);">Automation Testing</a></li>
-														<li class="sub-sub-allcourse-list"><a title="Oracle DBA/Developer" href="javascript:void(0);">Oracle DBA/Developer</a></li>
-														<li class="sub-sub-allcourse-list"><a title="Microsoft SQL Server" href="javascript:void(0);">Microsoft SQL Server</a></li>
-														<li class="sub-sub-allcourse-list"><a title="Cloud Computing" href="javascript:void(0);">Cloud Computing</a></li>
-														<li class="sub-sub-allcourse-list"><a title="Mobile Development" href="javascript:void(0);">Mobile Development</a></li>
-														<li class="sub-sub-allcourse-list"><a title="Networking" href="javascript:void(0);">Networking</a></li>
+														@endforeach
+														@endif
+														
 													</ul>
-												</li>
+													</li>
 												@endforeach
 											@endif
 												<li class="menu-item-1 hover-menu">
