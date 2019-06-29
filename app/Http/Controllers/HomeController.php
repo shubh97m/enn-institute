@@ -39,8 +39,6 @@ class HomeController extends Controller
         $data['gallery_category'] =     _arefy(GalleryCategory::gallery_list('array'));
         $data['gallery']          =     _arefy(Gallery::list('array'));
         $data['course']           =     _arefy(MainCourses::where('status','=','active')->get());
-        $data['gallery']          =     _arefy(Gallery::list('array'));
-        $data['course']           =     _arefy(MainCourses::where('status','=','active')->get());
         $data['testimonial']      =     _arefy(Testimonial::get());
         $data['total_courses']    =      MainCourses::list('count')+SubCourses::list('count')+ChildCourses::list('count');
         $data['scholarship']      =     _arefy(RegisterPopup::get());
