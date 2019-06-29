@@ -735,7 +735,7 @@ ul.rightHeader li{
 }
 .dropdownMenu > ul {
   position: absolute;
-  top: 6px;
+  top: 0;
   left: 0;
   width: 110px;
   background: #507aa3;
@@ -745,6 +745,7 @@ ul.rightHeader li{
     /*padding-top: 20px;*/
     position: absolute;
     height: 410px;
+    background: #666666;
     width: 710px;
     top: 30px;
     overflow-y: auto;
@@ -785,6 +786,9 @@ ul.rightHeader li{
   opacity: 0;
 }
 .child-active .sub-allcourse-main > li.sub-active > ul > li{
+  opacity: 1;
+}
+.child-active .sub-allcourse-main > li > ul > li.sub-active{
   opacity: 1;
 }
 .jsnn-nav .dropdownMenu > ul > li > ul > li{
