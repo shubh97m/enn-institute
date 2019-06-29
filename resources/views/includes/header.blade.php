@@ -91,7 +91,7 @@
 											<i class="caret-up"></i>
 											<ul class="allcourse-main">
 												<li class="menu-item-1 hover-menu child-active">
-													<a href="javascript:void(0);" title="CS/IT"><i class="fa fa-fw fa-code"></i><br>CS/IT</a>
+													<a href="javascript:void(0);" title="CS/IT"><br>CS/IT</a>
 													<ul class="sub-allcourse-main sub-hover">
 														<li class="sub-sub-allcourse-list">
 															<a title="Programming Language" href="javascript:void(0);">Programming Language</a>
