@@ -11,16 +11,9 @@
 							<li class="mobile-hide"><a href="mailto:admin@enntechnologies.in"><i class="fa fa-envelope"></i>{{$settings['email']}}</a></li>
 						</ul>
 						<ul class="rightHeader">
-							<!-- <li><a href="#login-modal" data-toggle="modal">Login</a></li>
-							<li><a href="#register-modal" data-toggle="modal">Register</a></li> -->
-							<!-- <li class="new-offered-blink">-->
-								<!-- <div class="float-right apply-now"> -->
-									<!-- <a href="#modal-apply-form" data-toggle="modal" class="apply-now quadrat">Apply Now</a> -->
-								<!-- </div> -->
-							<!--</li>-->
 							<li class="rightListli boxli"><a href="#askdemo" data-toggle="modal"><i class="fa fa-caret-square-o-up" style="padding-right:5px;"></i>Ask a Demo</a></li>
 							<li class="rightListli boxli1"><a href="#call-back" data-toggle="collapse" aria-expanded="true" aria-controls="call-back" class="call-back-bt"><img src="{{url('images/phone.gif')}}" style="padding-right:5px;height: 20px;"></i>Get a Call Back</a>
-								<div class="call-back-form collapse in" id="call-back" aria-expanded="true" style="">
+							<div class="call-back-form collapse in" id="call-back" aria-expanded="true" style="">
 
                             <div class="call-form-field text-left">
                                 <button type="button" onclick="$('.call-back-form').removeClass('show');" class="close" data-dismiss="collapse" aria-label="Close"><span aria-hidden="false">×</span></button>
@@ -40,13 +33,7 @@
 									<div class="form-group">
                                         <input type="text" class="form-control" name="iq_course" id="iq_course" placeholder="Enter Course">
                                     </div>
-									<!--div class="form-group">
-                                        <select class="form-control chosen-select" id="iq_participant" name="iq_participant" data-placeholder="Select type of Participant" tabindex="2">
-                                          										</select>
-                                    </div>
-									<div class="form-group">
-                                        <input type="text" class="form-control" name="iq_city" placeholder="Enter City/Area (In case of Delhi)">
-                                    </div-->
+									
 									<div class="form-group">
                                         <textarea class="form-control" name="iq_message" rows="3" placeholder="Enter your message"></textarea>
                                     </div>
@@ -99,7 +86,7 @@
 								<ul class="menuListing">
 									<li class=""><a href="{{url('/')}}">Home</a></li>
 									<li class="has-dropdown">
-										<a href="{{url('/courses')}}">All Courses</a>
+										<a href="javascript:void(0);">All Courses</a>
 										<div class="dropdownMenu">
 											<i class="caret-up"></i>
 											<ul class="allcourse-main">

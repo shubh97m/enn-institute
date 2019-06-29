@@ -2429,7 +2429,30 @@ span.pd-left>p {
 @media screen and (max-width: 768px) {
   .jsnn-nav {
     margin: 0; 
+  }
+  /*.dropdownMenu{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -6px;
+    left: 0;
   } 
+  .dropdownMenu > ul{
+    position: absolute;
+    top:0;
+    padding-top: 50px !important;
+    height: 100%;
+    width: 100%;
+  }
+  .dropdownMenu > ul > li > .sub-allcourse-main{
+    left: 0;
+    height: 100%;
+    visibility: hidden;
+    width: 100%;
+  }
+  li.menu-item-1.hover-menu {
+    text-align: center;
+  }*/
   .sub-courses-desc {
     padding: 0; 
   } 
