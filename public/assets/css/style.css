@@ -785,6 +785,7 @@ ul.rightHeader li{
 .child-active .sub-allcourse-main > li > ul > li{
   opacity: 0;
 }
+
 .child-active .sub-allcourse-main > li.sub-active > ul > li{
   opacity: 1;
 }
@@ -858,7 +859,7 @@ ul.rightHeader li{
   padding: 7px 10px;
 }
 .jsnn-nav .dropdownMenu ul li:first-child{
-  padding: 7px 10px;
+  padding: 7px 8px;
 }
 .jsnn-nav .dropdownMenu ul li:hover{
   background-color: #222;
