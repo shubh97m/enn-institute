@@ -1,8 +1,8 @@
-		<section class="jsnn-course">
+		<section class="jsnn-course" data-aos="fade-down">
 			<div class="container">
-				<div class="our-course">
-					<h3>All Courses</h3>
-				</div>
+				<div class="section-heading wow fadeInUp">
+                      <h2><span>All Courses</span></h2>  
+                  </div>
 			</div>
 		</section>
 		<section>
@@ -12,7 +12,7 @@
 						{{-- row starts here --}}
 						<div class="row">
 							@foreach($course as $courses)
-							<div class="col-lg-4 col-md-6 text-center animate-box">
+							<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 col-12 text-center" data-aos="fade-up">
 								<a href="{{url('courses/'.___encrypt($courses['id']))}}">
 								<div class="sub-courses">
 									<span class="icon">

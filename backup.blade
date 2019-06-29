@@ -1,0 +1,39 @@
+<section class="testimonials hideme" id="testimonials-wrap">
+    <div class="container img-section">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="section-title-testimonial">
+                    <h2>Student Says</h2>   
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-9 col-xs-12">
+                <div  class="owl-carousel owl-loaded owl-drag" id="testimonials">
+                @foreach($testimonial as $testimonials)
+					<div class="item">
+                        <div class="review_container">
+                            <div class="shadow-effect">    
+                                <div class="item-details">
+                                    <p class="ctext">{{$testimonials['review']}}</p>
+                                    <div class="testimonialWrap clearfix">
+                                        <div class="float-left circle-radius">
+                                        	@if(!empty(!empty($testimonials['image'])))
+                                            	<img src="{{url('assets/img/testimonial/'.$testimonials['image'])}}" alt="image">
+                                            @else
+                                             	<img src="{{url('images/avatar1.png')}}" alt="image">
+                                            @endif
+                                        </div>
+                                        <div class="float-left margin-box client-info">
+                                            <h5>{{$testimonials['client']}}</h5>
+                                            <p>{{$testimonials['designation']}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

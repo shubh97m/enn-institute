@@ -28,7 +28,7 @@
           <div class="col-md-12">
           <div class="form-group">
             <label>Course Description:</label>
-            <textarea id="description" name="description" rows="6" cols="80"></textarea>
+            <textarea name="description" rows="6" cols="80"></textarea>
           </div>
         </div>
         </div>

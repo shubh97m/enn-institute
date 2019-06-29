@@ -5,7 +5,7 @@
     </div>
     <!-- /.box-header -->
     <div class="box-body">
-      <form role="add-mainCourses" method="POST" action="{{url('admin/sub-courses/add')}}"">
+      <form role="add-mainCourses" method="POST" action="{{url('admin/sub-courses/add')}}">
         {{csrf_field()}}
       <div class="row">
           <div class="col-md-12">
@@ -41,7 +41,7 @@
           <div class="col-md-12">
           <div class="form-group">
             <label>Course Description:</label>
-            <textarea id="description" name="description" rows="6" cols="80"></textarea>
+            <textarea name="description" rows="6" cols="80"></textarea>
           </div>
         </div>
         </div>

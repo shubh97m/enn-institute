@@ -1,7 +1,7 @@
 	<footer id="jsnn-footer">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-3 jsnn-widget">
+					{{-- <div class="col-md-3 jsnn-widget">
 						<h4>News Letter</h4>
 						<div class="newsletter">
 							
@@ -11,31 +11,37 @@
 								<button type="button" data-request="ajax-submit" data-target='[role="add-subscribe"]' class="btn-blue">Subscribe</button>
 							</form>
 						</div>
-					</div>
-					<div class="col-md-3 jsnn-widget">
+					</div> --}}
+					<div class="col-md-4 jsnn-widget" data-aos="fade-right">
 					<h4>Useful Links</h4>
 						<ul class="jsnn-footer-links">
 							<li><a href="{{url('about-us')}}"><i class="fa fa-check"></i>About Us</a></li>
-							<li><a href="javascript:void(0);"><i class="fa fa-check"></i> FAQ</a></li>
-							<li><a href="{{url('contact')}}"><i class="fa fa-check"></i>Contact Us</a></li>
-							<li><a href="javascript:void(0);"><i class="fa fa-check"></i> Terms & Conditions</a></li>
+							<li><a href="{{url('faq')}}"><i class="fa fa-check"></i> FAQ</a></li>
+							
 						</ul>
 					</div>
 
-					<div class="col-md-3  jsnn-widget">
+					<div class="col-md-4  jsnn-widget" data-aos="fade-down">
 						<h4>Contact Info</h4>
 						<ul class="jsnn-footer-links">
 						@php
 						$settings = _arefy(App\Models\generalSettings::where('status','!=','trashed')->first())		
 						@endphp
-							<li><i classs="fa fa-map-marker" style="color:#67bfff;"></i> 
-							{{$settings['address']}}</li>
+							{{-- <li><i classs="fa fa-map-marker" style="color:#67bfff;"></i> 
+							{{$settings['address']}}</li> --}}
+							<li class="flex-address"><i class="fa fa-map-marker" style="color:#67bfff;padding-top: 5px;"></i> 
+								<address style="padding-left: 5px;margin-bottom: 0;">ENN Technologies <br>
+								Headquarters: F-12 <br>
+								Preet Vihar<br>
+								Near ICICI Bank <br>
+								Delhi-110092</address>
+							</li>
 							<li><a href="tel://011-{{$settings['skype_number']}}"><i class="fa fa-phone"></i> 011-{{$settings['skype_number']}}</a></li>
 							<li><a href="mailto:{{$settings['email']}}"><i class="fa fa-envelope"></i> {{$settings['email']}}</a></li>
 							<!-- <li><a href="javascript:void(0);"><i class="fa fa-map-marker"></i> yourwebsite.com</a></li> -->
 						</ul>
 					</div>
-					<div class="col-md-3 jsnn-widget">
+					<div class="col-md-4 jsnn-widget" data-aos="fade-left"> 
 						<!-- <h4>Contact Us</h4> -->
 						<div class="mapsection">
                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.6385473239793!2d77.29242101455978!3d28.640593290468118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb50f3139a0f%3A0x423c97213415e690!2sICICI+Bank+Preet+Vihar%2C+Delhi+-+Branch+%26+ATM!5e0!3m2!1sen!2sin!4v1552164127712" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -218,3 +224,4 @@
 	            </div>
 	        </div>
         </div>
+    

@@ -1,8 +1,8 @@
-	<section class="jsnn-course">
+	<section class="jsnn-course" data-aos="fade-up">
 			<div class="container">
-				<div class="our-course">
-					<h3>About Us</h3>
-				</div>
+				<div class="section-heading">
+                  	<h2><span>About Us</span></h2>  
+             	</div>
 			</div>
 		</section>
 	<section class="about-section">
@@ -10,8 +10,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 tabulation animate-box">
-						<ul class="nav nav-tabs">
-							<li class="active"><a data-toggle="tab" href="#plan"><i class="flaticon-sketch"></i> {{$static[0]['name']}}</a></li>
+						<ul class="nav nav-tabs" data-aos="fade-up">
+							<li class="active"><a data-toggle="tab" href="#plan" class="active"><i class="flaticon-sketch"></i> {{$static[0]['name']}}</a></li>
 							<li><a data-toggle="tab" href="#general"><i class="icon-user"></i> {{$static[1]['name']}}</a></li>
 							<!-- <li><a data-toggle="tab" href="#manage"><i class="flaticon-engineer"></i> Principal's Message</a></li> -->
 							<!-- <li><a data-toggle="tab" href="#modeling"><i class="flaticon-skyline"></i>  </a></li> -->
@@ -19,12 +19,12 @@
 						<div class="tab-content">
 							<div id="plan" class="tab-pane fade show active">
 								<div class="row">
-									<div class="col-md-6">
+									<div class="col-lg-6 col-md-12" data-aos="fade-right">
 										<div class="sub-courses-img"> 
 											<img src="images/about.jpg" alt="about">
 										</div>
 									</div>
-									<div class="col-md-6">
+									<div class="col-lg-6 col-md-12" data-aos="fade-left">
 										<div class="sub-courses-desc">
 											<h3>{{$static[0]['name']}}</h3>
 											<p>{!! $static[0]['description'] !!}</p>

@@ -34,8 +34,8 @@
 		<div id="jsnn-intro">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12 tabulation animate-box">
-						<ul class="nav nav-tabs">
+					<div class="col-md-12 tabulation">
+						<ul class="nav nav-tabs" data-aos="fade-up">
 							<li><a data-toggle="tab" href="#plan" class="active"><i class="flaticon-sketch"></i> {{$static[1]['name']}}</a></li>
 							<li><a data-toggle="tab" href="#general"><i class="icon-user"></i> {{$static[0]['name']}}</a></li>
 							<!-- <li><a data-toggle="tab" href="#modeling"><i class="flaticon-skyline"></i>  </a></li> -->
@@ -43,15 +43,15 @@
 						<div class="tab-content">
 							<div id="plan" class="tab-pane fade show active">
 								<div class="row">
-									<div class="col-lg-6 col-md-12">
+									<div class="col-lg-6 col-md-12" data-aos="fade-right">
 										<div class="sub-courses-img"> 
 											<img src="images/message.jpg" alt="about">
 										</div>
 									</div>
-									<div class="col-lg-6 col-md-12">
+									<div class="col-lg-6 col-md-12" data-aos="fade-left">
 										<div class="sub-courses-desc">
                                             <h3>{{$static[1]['name']}}</h3>
-											<p>{!! $static[1]['description'] !!}</p>
+											{!! $static[1]['description'] !!}
 										</div>
 									</div>
 								</div>
@@ -83,8 +83,8 @@
 	<section>
 		<div id="jsnn-program" class="jsnn-program">
 			<div class="container">
-				<div class="progarmWrapper">
-					<div class="clearfix">
+				<div class="progarmWrapper proindex">
+					<div class="clearfix"  data-aos="fade-up">
 						<div class="float-left">
 							<h3>Course</h3>
 						</div>
@@ -95,7 +95,7 @@
 					<div class="grid-container">
 					<div class="row">
 						@foreach($course as $courses)
-							<div class="col-lg-3 col-md-12 text-center animate-box grid-item allcoursesBox">
+							<div class="col-lg-2 col-md-3 col-sm-4 col-xs-6 col-6 text-center animate-box grid-item allcoursesBox" data-aos="fade-up">
 								<a href="{{url('courses/'.___encrypt($courses['id']))}}">
 								<div class="sub-courses">
 									<span class="icon">
@@ -115,7 +115,7 @@
 		</div>
 	</section>
 	<section>
-		<div id="jsnn-counter" class="jsnn-counters" style="background-image: url(images/img_bg_4.jpg);" data-stellar-background-ratio="0.5">
+		<div id="jsnn-counter" class="jsnn-counters" style="background-image: url(images/img_bg_4.jpg);" data-stellar-background-ratio="0.5" data-aos="fade-up">
 			<div class="overlay"></div>
 				<div class="container">
 					<div class="row no-gutter">
@@ -152,78 +152,66 @@
 		</div>
 	</section>
 	<section id="gallery" class="gallery-wrap">
-	        
-	        <div class="container"> 
-		        <div class="row">
-		              <div class="col-12">
-		                  <div class="section-heading wow fadeInUp">
-		                      <h2>Our Gallery</h2>  
-		                  </div>
-		              </div>
-		        </div>       
-	          
-		        <div class="row">          
-		            <div class="col-md-12">
-		             
-		              <div class="controls text-center">
-		                <a class="filter active btn btn-common" data-filter="all">
+        <div class="container"> 
+	        <div class="row">
+	              <div class="col-12" data-aos="fade-up">
+	                  <div class="section-heading wow fadeInUp">
+	                      <h2><span>Our Gallery</span></h2>  
+	                  </div>
+	              </div>
+	        </div>       
+          
+	        <div class="row">          
+	            <div class="col-md-12">
+		            <div class="controls text-center">
+		                <a class="filter active btn btn-common" data-filter="all" href="{{url("gallery")}}">
 		                  All 
 		                </a>
-		                @if(!empty($gallery_category))
-			                @foreach($gallery_category as $cat)
-				                <a class="filter btn btn-common" data-filter=".{{$cat['id']}}">
-				                  {{$cat['name']}}
-				                </a>
-			                @endforeach
-		                @endif
-		                
-		              </div>
-		              
-		            </div>
-			        <div id="portfolio" class="row wow fadeInDown" data-wow-delay="0.4s">
-		              @if(!empty($gallery_category))
-			                @foreach($gallery_category as $cat)
-				                @foreach($cat['gallery'] as $gal)
-				                	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix {{$cat['id'] }} all" >
-						                <div class="portfolio-item">
-						                  <div class="shot-item">
-						                    <img src="{{url('assets/img/gallery/'.$gal['image'])}}" alt="gallery" /> 
-						                    <div class="overlay">
-						                      <div class="icons">
-						                        <a class="lightbox preview" href="{{url('assets/img/gallery/'.$gal['image'])}}">
-						                          <i class="fa fa-eye"></i>
-						                        </a>
-						                      </div>
-						                    </div>
-						                  </div>               
-						                </div>
-						            </div>
-			                	@endforeach
-			                @endforeach
-		                @endif
-		            </div>
-		           
-		            </div>
-		          </div>
-		        </div>
-		      
-		    </section>
+		            </div> 
+	            </div>
+		        <div id="portfolio" class="row wow fadeInDown" data-wow-delay="0.4s">
+	              @if(!empty($gallery_category))
+		                @foreach($gallery_category as $cat)
+			                @foreach($cat['gallery'] as $gal)
+			                	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mix {{$cat['id'] }} all" >
+					                <div class="portfolio-item">
+					                  <div class="shot-item">
+					                  	<a class="fancybox" rel="fancybox-thumb" data-fancybox="images" href="{{url('assets/img/gallery/'.$gal['image'])}}">
+					                    <img src="{{url('assets/img/gallery/'.$gal['image'])}}" alt="gallery" /> 
+					                    <div class="overlay">
+					                      <div class="icons">
+					                        
+					                          <i class="fa fa-eye"></i>
+					                        
+					                      </div>
+
+					                    </div>
+					                    </a>
+					                  </div>               
+					                </div>
+					            </div>
+		                	@endforeach
+		                @endforeach
+	                @endif
+	            </div>
+	        </div>
+	    </div>      
+	</section>
 
 <section>
-	<div class="about-wrap">
+	<div class="about-wrap" data-aos="fade-up">
 		<div id="jsnn-about" class="jsnn-about-img">
-			<!-- <div class="overlay"></div> -->
 			<div class="container">
 				<!-- <div class="row">
 					<div class="col-md-12 text-center jsnn-heading jsnn-heading2 animate-box">
 						<h2>Our Partners</h2>
 					</div>
 				</div> -->
-				<div class="row">
-					<div class="col-md-12 animate-box">
+				
+					<!-- <div class="col-md-12 animate-box">
 						<div class="about-flex">
-							<!-- <div class="owl-carousel" id="our-partners"> -->
-							<marquee behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();" direction="left">
+							<div class="owl-carousel" id="our-partners">
+							
 								@if(!empty($partner))
 								@foreach($partner as $partners)
 								<div class="item">
@@ -249,54 +237,71 @@
 									<img src="images/partner3.png" alt="partner">
 								</div> --}}
 							
-							</marquee>
+							
+						</div>
+					</div> -->
+					<div>
+				<div id="thumbnail-slider">
+					
+					<div class="inner">
+						<ul>
+							@if(!empty($partner))
+								@foreach($partner as $partners)
+								<li class="">
+								<a href="javascript:void(0);" class="thumb">
+									<img src="{{url('assets/img/Partners/'.$partners['image'])}}"  alt="img">
+								</a>
+								</li>
+								@endforeach
+							@else
+								<li class="">
+								<a href="javascript:void(0);" class="thumb" alt="" cursor: pointer;>No record Found</a>
+								</li>
+							@endif
+						
+						</ul>
+					</div>
+				
+				</div>
+				</div>
+			</div>
+		
+	</div>
+</section>
+<section class="testmonialsection testimonials hideme" id="testimonials-wrap">
+	<div class="container">
+		<div class="row">
+              <div class="col-12" data-aos="fade-up">
+                  <div class="section-heading wow fadeInUp">
+                      <h2><span>What Our Students Say</span></h2>  
+                  </div>
+              </div>
+        </div>
+		<div class="owl-carousel" id="testimonials-user" data-aos="fade-up">
+			 @foreach($testimonial as $testimonials)
+				<div class="item">
+					<div class="testimonial-text">
+						<p>{{$testimonials['review']}}</p>
+					</div>
+					<div class="testimonial-user-wrapper">
+						<div class="testimonial-user">
+							<span>
+								@if(!empty(!empty($testimonials['image'])))
+                                	<img src="{{url('assets/img/testimonial/'.$testimonials['image'])}}" alt="image">
+                                @else
+                                 	<img src="{{url('images/avatar1.png')}}" alt="image">
+                                @endif
+                            </span>
+							<span class="pd-left" style="color:#384047;"><p>{{$testimonials['client']}}</p><p class="testimonial-name">{{$testimonials['designation']}}</p>
+							</span>
 						</div>
 					</div>
 				</div>
-			</div>
+			@endforeach
 		</div>
 	</div>
 </section>
 
-<section class="testimonials hideme" id="testimonials-wrap">
-    <div class="container img-section">
-        <div class="row">
-            <div class="col-md-3 col-sm-3 col-xs-12">
-                <div class="section-title-testimonial">
-                    <h2>Student Says</h2>   
-                </div>
-            </div>
-            <div class="col-md-9 col-sm-9 col-xs-12">
-                <div  class="owl-carousel owl-loaded owl-drag" id="testimonials">
-                @foreach($testimonial as $testimonials)
-					<div class="item">
-                        <div class="review_container">
-                            <div class="shadow-effect">    
-                                <div class="item-details">
-                                    <p class="ctext">{{$testimonials['review']}}</p>
-                                    <div class="testimonialWrap clearfix">
-                                        <div class="float-left circle-radius">
-                                        	@if(!empty(!empty($testimonials['image'])))
-                                            	<img src="{{url('assets/img/testimonial/'.$testimonials['image'])}}" alt="image">
-                                            @else
-                                             	<img src="{{url('images/avatar1.png')}}" alt="image">
-                                            @endif
-                                        </div>
-                                        <div class="float-left margin-box client-info">
-                                            <h5>{{$testimonials['client']}}</h5>
-                                            <p>{{$testimonials['designation']}}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   @endforeach
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 @if(Request::segment(1)!='ask-a-demo')
 	<div class="popupmodal">
 	        <div id="modal-exam-form" class="modal fade" role="dialog" style="overflow: hidden;">
@@ -309,7 +314,7 @@
 			            <!--  -->
 		  				<a href="#register-form-exam" data-toggle="modal" style="cursor: pointer;">
 				            <div class="modal-body popupmodal-body">
-				              	<img src="{{url('images/Capture-img.jpg')}}" alt="capture" id="img-modal">
+				              	<img src="{{url('images/Capture-img.png')}}" alt="capture" id="img-modal">
 				            </div>
 			        	</a>
 		          	</div>

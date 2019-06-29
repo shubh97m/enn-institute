@@ -19,10 +19,13 @@
 											    <div class="cardheader" id="headingOne{{$sub_courses['id']}}">
 												    <h5 class="mb-0">
 												        <button class="btn btn btn-primary" type="button"  data-target="#collapseExample{{$sub_courses['id']}}" aria-expanded="false" aria-controls="collapseExample{{$sub_courses['id']}}">
-												         <div class="text-center">
-																<img src="{{asset('assets/img/Courses/'.$sub_courses['image'])}}" alt="images" style="height:74px;margin-bottom: 10px;">
-															</div>
-																<span>{{$sub_courses['name']}}</span>
+												        	<a href="javascript:void();">
+													         	<div class="text-center">
+																	<img src="{{asset('assets/img/Courses/'.$sub_courses['image'])}}" alt="images" style="height:74px;width:80px;margin-bottom: 10px;">
+																</div>
+
+															<span>{{$sub_courses['name']}}</span>
+															</a>
 												        </button>
 												    </h5>
 										    	</div>
@@ -82,7 +85,7 @@
 											</span>
 											<div class="desc">
 												<h3><a href="{{url('courses/'.___encrypt($related['id']))}}">{{$related['name']}}</a></h3>
-												<p>{!! str_limit(strip_tags($related['description']),30) !!}</p>
+												<p title="{{($related['description'])}}">{{str_limit($related['description']),30}}</p>
 											</div>
 										</div>
 									</div>
@@ -169,9 +172,8 @@
 							</div>
 						</div>
 					</div> -->
-				</div>
 			</div>
-		
-		</section>
+		</div>
+	</section>
 	
 		

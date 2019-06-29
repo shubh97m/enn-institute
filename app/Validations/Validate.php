@@ -168,41 +168,17 @@ class Validate
          {
         $validations = [
           'name'              =>$this->validation('name'),    
+          'mobile'            =>$this->validation('phone'),
           'email'             =>$this->validation('req_email'),
-          'mobile'             =>$this->validation('phone'),
-          'dob'               =>$this->validation('name'),
           'courses'           =>$this->validation('name'),
           ];
 
         $validator = \Validator::make($this->data->all(), $validations,[
           'name.required'              => 'Name is required.',
+          'mobile.required'            => 'Contact Number is required ',
+          'mobile.numeric'             => 'Contact Number should be numeric ',
           'email.required'             => 'E-mail is required.',
-          'mobile.required'             => 'Contact Number is required ',
-          'mobile.numeric'              => 'Contact Number should be numeric ',
-          'dob.required'               => 'Date Of Birth is required. ',
-          'courses.required'           => 'Course is required.',
-    
-          ]);
-          return $validator;     
-         }  
-
-      public function callback()
-         {
-        $validations = [
-          'name'              =>$this->validation('name'),    
-          'email'             =>$this->validation('req_email'),
-          'mobile'             =>$this->validation('phone'),
-          'courses'           =>$this->validation('name'),
-          'message'               =>$this->validation('name'),
-          ];
-
-        $validator = \Validator::make($this->data->all(), $validations,[
-          'name.required'              => 'Name is required.',
-          'email.required'             => 'E-mail is required.',
-          'mobile.required'             => 'Contact Number is required ',
-          'mobile.numeric'              => 'Contact Number should be numeric ',
-          'courses.required'           => 'Course is required.',
-          'message.required'               => 'Message is required. ',
+          'courses.required'             => 'Course is required.',
     
           ]);
           return $validator;     

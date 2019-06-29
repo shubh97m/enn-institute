@@ -21,6 +21,8 @@ Route::get('/clear-cache', function() {
 
 Route::get('/','HomeController@index');
 Route::get('/about-us','HomeController@aboutUs');
+Route::get('/faq','HomeController@faq');
+Route::get('/gallery','HomeController@gallery');
 Route::get('/courses','HomeController@courses');
 Route::get('/courses/{id}','HomeController@courseView');
 Route::get('/contact','HomeController@contact');
