@@ -94,8 +94,8 @@
 												@foreach($course as $courses)
 												<li class="menu-item-1 hover-menu child-active">
 													<a href="javascript:void(0);" title="CS/IT"><i class="fa fa-fw fa-code"></i><br>CS/IT</a>
-													<ul class="sub-allcourse-main">
-														<li>
+													<ul class="sub-allcourse-main sub-hover">
+														<li class="sub-sub-allcourse-list">
 															<a title="Programming Language" href="javascript:void(0);">Programming Language</a>
 															<ul class="sub-allcourse-main">
 																<li><a title="Web Development" href="javascript:void(0);">Web Development</a></li>
@@ -108,22 +108,22 @@
 																<li><a title="Networking" href="javascript:void(0);">Networking</a></li>
 															</ul>
 														</li>
-														<li><a title="Web Development" href="javascript:void(0);">Web Development</a></li>
-														<li><a title="Software Testing" href="javascript:void(0);">Software Testing</a></li>
-														<li><a title="Automation Testing" href="javascript:void(0);">Automation Testing</a></li>
-														<li><a title="Oracle DBA/Developer" href="javascript:void(0);">Oracle DBA/Developer</a></li>
-														<li><a title="Microsoft SQL Server" href="javascript:void(0);">Microsoft SQL Server</a></li>
-														<li><a title="Cloud Computing" href="javascript:void(0);">Cloud Computing</a></li>
-														<li><a title="Mobile Development" href="javascript:void(0);">Mobile Development</a></li>
-														<li><a title="Networking" href="javascript:void(0);">Networking</a></li>
+														<li class="sub-sub-allcourse-list"><a title="Web Development" href="javascript:void(0);">Web Development</a></li>
+														<li class="sub-sub-allcourse-list"><a title="Software Testing" href="javascript:void(0);">Software Testing</a></li>
+														<li class="sub-sub-allcourse-list"><a title="Automation Testing" href="javascript:void(0);">Automation Testing</a></li>
+														<li class="sub-sub-allcourse-list"><a title="Oracle DBA/Developer" href="javascript:void(0);">Oracle DBA/Developer</a></li>
+														<li class="sub-sub-allcourse-list"><a title="Microsoft SQL Server" href="javascript:void(0);">Microsoft SQL Server</a></li>
+														<li class="sub-sub-allcourse-list"><a title="Cloud Computing" href="javascript:void(0);">Cloud Computing</a></li>
+														<li class="sub-sub-allcourse-list"><a title="Mobile Development" href="javascript:void(0);">Mobile Development</a></li>
+														<li class="sub-sub-allcourse-list"><a title="Networking" href="javascript:void(0);">Networking</a></li>
 													</ul>
 												</li>
 												@endforeach
 											@endif
 												<li class="menu-item-1 hover-menu">
 													<a href="javascript:void(0);" title="Professional Programs"><i class="fa fa-fw fa-database"></i><br>Professional Programs</a>
-													<ul class="sub-allcourse-main">
-														<li><a title="Programming Language" href="javascript:void(0);">Programming Language</a>
+													<ul class="sub-allcourse-main sub-hover">
+														<li class="sub-sub-allcourse-list"><a title="Programming Language" href="javascript:void(0);">Programming Language</a>
 															<ul class="sub-allcourse-main">
 																<li>
 																	<a title="Web Development" href="javascript:void(0);">Web Development</a></li>
@@ -132,14 +132,14 @@
 																</li>
 															</ul>
 														</li>
-														<li><a title="Networking" href="javascript:void(0);">Networking</a></li>
+														<li class="sub-sub-allcourse-list"><a title="Networking" href="javascript:void(0);">Networking</a></li>
 														
 													</ul>
 												</li>
 												<li class="menu-item-1 hover-menu">
 													<a href="javascript:void(0);" title="Advance Programs"><i class="fa fa-fw fa-graduation-cap"></i><br>Advance Programs</a>
-													<ul class="sub-allcourse-main">
-														<li><a title="Programming Language" href="javascript:void(0);">Programming Language</a>
+													<ul class="sub-allcourse-main sub-hover">
+														<li class="sub-sub-allcourse-list"><a title="Programming Language" href="javascript:void(0);">Programming Language</a>
 															<ul class="sub-allcourse-main">
 																<li>
 																	<a title="Web Development" href="javascript:void(0);">Web Development</a></li>
@@ -148,15 +148,15 @@
 																</li>
 															</ul>
 														</li>
-														<li><a title="Web Development" href="javascript:void(0);">Web Development</a></li>
-														<li><a title="Software Testing" href="javascript:void(0);">Software Testing</a></li>
+														<li class="sub-sub-allcourse-list"><a title="Web Development" href="javascript:void(0);">Web Development</a></li>
+														<li class="sub-sub-allcourse-list"><a title="Software Testing" href="javascript:void(0);">Software Testing</a></li>
 														
 													</ul>
 												</li>
 												<li class="menu-item-1 hover-menu">
 													<a href="javascript:void(0);" title="Management & Quality"><i class="fa fa-fw fa-bandcamp"></i><br>Management & Quality</a>
-													<ul class="sub-allcourse-main">
-														<li><a title="Programming Language" href="javascript:void(0);">Programming Language</a>
+													<ul class="sub-allcourse-main sub-hover">
+														<li class="sub-sub-allcourse-list"><a title="Programming Language" href="javascript:void(0);">Programming Language</a>
 															<ul class="sub-allcourse-main">
 																<li>
 																	<a title="Web Development" href="javascript:void(0);">Web Development</a></li>
@@ -164,15 +164,15 @@
 																	<a title="Software Testing" href="javascript:void(0);">Software Testing</a>
 																</li>
 															</ul></li>
-														<li><a title="Web Development" href="javascript:void(0);">Web Development</a></li>
-														<li><a title="Software Testing" href="javascript:void(0);">Software Testing</a></li>
+														<li class="sub-sub-allcourse-list"><a title="Web Development" href="javascript:void(0);">Web Development</a></li>
+														<li class="sub-sub-allcourse-list"><a title="Software Testing" href="javascript:void(0);">Software Testing</a></li>
 														
 													</ul>
 												</li>
 												<li class="menu-item-1 hover-menu">
 													<a href="javascript:void(0);" title="EC/EI/EEE Programs"><i class="fa fa-fw fa-microchip"></i><br>EC/EI/EEE Programs</a>
 													<ul class="sub-allcourse-main sub-hover">
-														<li><a title="Programming Language" href="javascript:void(0);">Programming Language</a>
+														<li class="sub-sub-allcourse-list"><a title="Programming Language" href="javascript:void(0);">Programming Language</a>
 															<ul class="sub-allcourse-main">
 																<li>
 																	<a title="Web Development" href="javascript:void(0);">Web Development</a>
@@ -182,7 +182,7 @@
 																</li>
 															</ul>
 														</li>
-														<li><a title="Programming Language" href="javascript:void(0);">Programming</a>
+														<li class="sub-sub-allcourse-list"><a title="Programming Language" href="javascript:void(0);">Programming</a>
 															<ul class="sub-allcourse-main">
 																<li>
 																	<a title="Web Development" href="javascript:void(0);">Web </a>

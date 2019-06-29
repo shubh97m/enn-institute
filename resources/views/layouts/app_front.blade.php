@@ -299,8 +299,8 @@
 			  $(this).addClass("child-active");
 
 			});
-			$(".hover-menu .sub-hover li").on('mouseenter', function(event) {
-			  $('.hover-menu .sub-hover li').removeClass("sub-active");
+			$(".hover-menu .sub-hover .sub-sub-allcourse-list").on('mouseenter', function(event) {
+			  $('.hover-menu .sub-hover .sub-sub-allcourse-list').removeClass("sub-active");
 			  $(this).addClass("sub-active");
 
 			});
