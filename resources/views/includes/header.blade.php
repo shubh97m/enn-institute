@@ -12,7 +12,7 @@
 						</ul>
 						<ul class="rightHeader">
 							<li class="rightListli boxli"><a href="#askdemo" data-toggle="modal"><i class="fa fa-caret-square-o-up" style="padding-right:5px;"></i>Ask a Demo</a></li>
-							<li class="rightListli boxli1"><a href="#call-back" data-toggle="collapse" aria-expanded="true" aria-controls="call-back" class="call-back-bt"><img src="{{url('images/phone.gif')}}" style="padding-right:5px;height: 20px;"></i>Get a Call Back</a>
+							<li class="rightListli boxli1"><a href="#call-back" data-toggle="collapse" aria-expanded="true" aria-controls="call-back" class="call-back-bt"><img src="{{url('images/phone.gif')}}" style="padding-right:5px;height: 20px;">Get a Call Back</a>
 							<div class="call-back-form collapse in" id="call-back" aria-expanded="true" style="">
 
                             <div class="call-form-field text-left">
