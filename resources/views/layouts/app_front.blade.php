@@ -299,6 +299,11 @@
 			  $(this).addClass("child-active");
 
 			});
+			$(".hover-menu .sub-hover li").on('mouseenter', function(event) {
+			  $('.hover-menu .sub-hover li').removeClass("sub-active");
+			  $(this).addClass("sub-active");
+
+			});
 		});
 		
 	    

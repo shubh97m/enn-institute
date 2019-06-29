@@ -781,6 +781,12 @@ ul.rightHeader li{
   opacity: 1;
   z-index: 9;
 }
+.child-active .sub-allcourse-main > li > ul > li{
+  opacity: 0;
+}
+.child-active .sub-allcourse-main > li.sub-active > ul > li{
+  opacity: 1;
+}
 .jsnn-nav .dropdownMenu > ul > li > ul > li{
   position: relative;
 }
@@ -2413,6 +2419,7 @@ span.pd-left>p {
 {
     width: 100%;
 }
+
 @media screen and (max-width: 1200px){
   .programmer-wrap .sub-courses .desc p{
     font-size: 13px;

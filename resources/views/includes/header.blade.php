@@ -167,7 +167,7 @@
 												</li>
 												<li class="menu-item-1 hover-menu">
 													<a href="javascript:void(0);" title="EC/EI/EEE Programs"><i class="fa fa-fw fa-microchip"></i><br>EC/EI/EEE Programs</a>
-													<ul class="sub-allcourse-main">
+													<ul class="sub-allcourse-main sub-hover">
 														<li><a title="Programming Language" href="javascript:void(0);">Programming Language</a>
 															<ul class="sub-allcourse-main">
 																<li>
@@ -175,6 +175,16 @@
 																</li>
 																<li>
 																	<a title="Software Testing" href="javascript:void(0);">Software Testing</a>
+																</li>
+															</ul>
+														</li>
+														<li><a title="Programming Language" href="javascript:void(0);">Programming</a>
+															<ul class="sub-allcourse-main">
+																<li>
+																	<a title="Web Development" href="javascript:void(0);">Web </a>
+																</li>
+																<li>
+																	<a title="Software Testing" href="javascript:void(0);">Software </a>
 																</li>
 															</ul>
 														</li>	
