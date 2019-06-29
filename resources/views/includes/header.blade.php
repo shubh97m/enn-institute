@@ -101,14 +101,14 @@
 														@if(!empty($sub_course))
 															@foreach($sub_course as $sub_courses)
 														<li class="sub-sub-allcourse-list">
-															<a title="Programming Language" href="javascript:void(0);">{{$sub_courses['name']}}</a>
+															<a title="{{$sub_courses['name']}}" href="javascript:void(0);">{{$sub_courses['name']}}</a>
 															<ul class="sub-allcourse-main">
 															@php
 															$child_course =_arefy(App\Models\ChildCourses::where(['sub_course'=>$sub_courses['id'],'status'=>'active'])->get());
 															@endphp
 																@if(!empty($child_course))
 																@foreach($child_course as $child_courses)
-																<li><a title="Web Development" href="javascript:void(0);">{{$child_courses['name']}}</a></li>
+																<li><a title="{{$child_courses['name']}}" href="javascript:void(0);">{{$child_courses['name']}}</a></li>
 																@endforeach
 																@endif
 															</ul>

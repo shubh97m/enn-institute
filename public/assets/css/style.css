@@ -858,6 +858,9 @@ ul.rightHeader li{
   text-align: left;
   padding: 7px 10px;
 }
+.jsnn-nav .dropdownMenu ul li.hover-menu {
+    background: #507aa3;
+}
 .jsnn-nav .dropdownMenu ul li:first-child{
   padding: 7px 8px;
 }
