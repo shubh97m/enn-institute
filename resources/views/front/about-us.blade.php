@@ -1,4 +1,4 @@
-	<section class="jsnn-course" data-aos="fade-up">
+	<section class="jsnn-course topspace" data-aos="fade-up">
 			<div class="container">
 				<div class="section-heading">
                   	<h2><span>About Us</span></h2>  

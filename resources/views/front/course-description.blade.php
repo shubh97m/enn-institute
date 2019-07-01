@@ -1,4 +1,4 @@
-<section class="descriptionSection">
+<section class="descriptionSection topspace">
 	<div class="container">
 		<div class="coursedescription-wrap">
 			<div class="row">

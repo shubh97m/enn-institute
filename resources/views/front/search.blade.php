@@ -1,4 +1,4 @@
-		<section class="jsnn-course">
+		<section class="jsnn-course topspace">
 			<div class="container">
 				<div class="our-course">
 					<h3>Search Result  : {{$search}}</h3>

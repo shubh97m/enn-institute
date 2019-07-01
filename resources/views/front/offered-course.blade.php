@@ -1,4 +1,4 @@
-<section class="offeredSection">
+<section class="offeredSection topspace">
 	
 	<div class="container">
 		<div class="row">

@@ -1,7 +1,7 @@
 		<header>
 			<div class="topHeader">
 				<div class="container">
-					<div class="clearfix">   
+					<div class="headerflex">   
 				@php     
 			   $settings= _arefy(App\Models\generalSettings::where('status','!=','trashed')->first()); @endphp
 
@@ -71,9 +71,9 @@
 					
 					<div class="container">					
 						<div class="row">
-							<div class="col-md-4 col-sm-3 col-xs-4">
-								<div id="jsnn-logo"><a href="{{url('/')}}"><img src="{{url('images/logo/logo.png')}}"></a></div>
-								<div class="new-offered-blink1">
+							<div class="col-md-3 col-sm-3 col-xs-4">
+								<div id="jsnn-logo"><a href="{{url('/')}}"><img src="{{url('images/logo/logo-1.png')}}"></a></div>
+								<div class="new-offered-blink1 formobileblink">
 				   					<div class="quadrat_s"><a href="{{url('courseOffered')}}">
 				   						Summer Training / Internship
 				   						<div class="new_round">
@@ -82,18 +82,18 @@
 				   					</a></div>
 				   				</div>
 							</div>
-							<div class="col-md-8 col-sm-9 col-xs-8 text-right menu-1">
+							<div class="col-md-9 col-sm-9 col-xs-8 menu-1">
 								<ul class="menuListing">
 									<li class=""><a href="{{url('/')}}">Home</a></li>
 									<li class="has-dropdown">
 										<a href="javascript:void(0);">All Courses</a>
 										<div class="dropdownMenu">
-											<i class="caret-up"></i>
+											<!-- <i class="caret-up"></i> -->
 											<ul class="allcourse-main">
 											@if(!empty($course))
 												@foreach($course as $courses)
 													<li class="menu-item-1 hover-menu child-active">
-													<a href="javascript:void(0);" title="{{$courses['name']}}"><img src="{{asset('assets/img/markup.png')}}" alt="course" width="24px" height="24px"><br>{{$courses['name']}}</a>
+													<a href="javascript:void(0);" title="{{$courses['name']}}"><img src="{{asset('assets/img/Courses')}}/{{$courses['image']}}" alt="course" width="24px" height="24px"><br>{{$courses['name']}}</a>
 													<ul class="sub-allcourse-main sub-hover">
 														@php
 														$sub_course =_arefy(App\Models\SubCourses::where(['course_id'=>$courses['id'],'status'=>'active'])->get());
@@ -138,11 +138,11 @@
 									</li>
 									<li><a href="{{url('/about-us')}}">About Us</a></li>
 									<li><a href="{{url('/contact')}}">Contact Us</a></li>
-									<li class="mobileHide"><a href="javascript:void(0);" class="search-input search">
+									<!-- <li class="mobileHide"><a href="javascript:void(0);" class="search-input search">
 										<i class="fa fa-search searchIcon"></i>
 										<i class="fa fa-times cross-icon"></i>
 										</a>
-									</li>
+									</li> -->
 									
 									
 								</ul>
@@ -152,14 +152,14 @@
 										<button type="submit" class="btn-secarch"><i class="fa fa-search"></i></button>
 									</div>
 								</form>
-								{{-- <div class="new-offered-blink1">
+								<div class="new-offered-blink1">
 				   					<div class="quadrat_s"><a href="{{url('courseOffered')}}">
 				   						Summer Training / Internship
 				   						<div class="new_round">
 				   							<img src="{{asset('images/new_red.gif')}}" alt="new">
 				   						</div>
 				   					</a></div>
-				   				</div> --}}
+				   				</div> 
 							</div>
 						</div>
 					</div>

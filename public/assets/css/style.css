@@ -293,6 +293,9 @@ h1, h2, h3, h4, h5, h6, figure {
     left: 100%;
     margin-left: 15px;
 }
+.formobileblink{
+    display: none;
+  }
 .section-heading span:before, .section-heading span:after {
     content: "";
     position: absolute;
@@ -328,7 +331,7 @@ h1, h2, h3, h4, h5, h6, figure {
   padding: 8px 40px 8px 8px;
   border: 2px solid #507aa3;
   border-top-right-radius: 0;
-  margin-top: 30px;
+  /*margin-top: 30px;*/
   border-bottom-right-radius: 0;
   max-width: 450px;
   height: 45px !important;
@@ -557,10 +560,10 @@ ul .search
    width: 100%; 
 }
 ul.rightHeader {
-   float: right; 
+  float: right; 
   padding: 0;
-  padding-top: 3px;
-    margin-bottom: 0px;
+  padding-top: 0;
+  margin-bottom: 0px;
 }
 ul.rightHeader li{
   display:inline-block;
@@ -713,7 +716,7 @@ ul.rightHeader li{
   position: absolute;
   padding: 2px;
   right: 0;
-  top: 6px;
+  top: 27px;
   z-index: 20;
   border-radius: 45%;
 }
@@ -758,7 +761,7 @@ ul.rightHeader li{
 .sub-allcourse-main{
   opacity: 0;
 }
-.jsnn-nav ul li.has-dropdown:hover .dropdownMenu{
+.jsnn-nav .top-menu ul li.has-dropdown:hover .dropdownMenu{
   display: block;
 }
 .jsnn-nav .dropdownMenu > ul > li ul{
@@ -863,6 +866,9 @@ ul.rightHeader li{
 .jsnn-nav .dropdownMenu ul li:first-child{
   padding: 7px 8px;
 }
+.topspace{
+  margin-top: 90px;
+}
 .jsnn-nav .dropdownMenu ul li:hover{
   background-color: #222;
 }
@@ -878,7 +884,7 @@ ul.rightHeader li{
 .quadrat_s {
     padding: 7px 20px 4px;
     height: 100%;
-    background: #fff;
+    /*background-color: rgba(44, 37, 51,.4);*/
     text-align: center;
     border-radius: 45%;
 }
@@ -909,8 +915,8 @@ ul.rightHeader li{
  
 }
 .quadrat_s a{
-  color: #000 !important;
-  font-size: 15px;
+  color: #fff !important;
+  font-size: 14px;
   animation: blinker 1s linear infinite;
   font-weight: 700;
 }
@@ -1029,10 +1035,11 @@ section .offeredcourse-form select{
   transition-duration: 400ms;
   transition: .3s ease-in;
   position: absolute;
-   top: 40px; 
+  top: 30px; 
   opacity: 0;
   text-align: left;
   padding: 10px;
+  z-index: 1000;
   background: #404040;
 }
 .jsnn-nav ul ul.training li{
@@ -1108,17 +1115,20 @@ div.view-child-course{
   border: 1px solid #beb5b5;
   border-radius: 10px;
 }
+.forDesktop{
+  display: block;
+}
 #jsnn-sub-course{
  
 }
 .jsnn-nav .top-menu {
-  height: 64px;
+  /*height: 64px;*/
   position: fixed;
-  padding-top: 5px;
   width: 100%;
   top: 35px;
-  box-shadow: 0px 2px 2px rgb(37, 36, 36);
-  background: rgba(37, 36, 36, 0.6) none repeat scroll 0 0 !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  /*box-shadow: 0px 2px 2px rgb(37, 36, 36);*/
+  background: rgba(37, 36, 36, 0.4) none repeat scroll 0 0 !important;
   z-index: 999;
 }
 .menu-1 {
@@ -1165,7 +1175,7 @@ div.view-child-course{
   margin: 0;
   align-items: center;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   padding: 0;
   padding-bottom: 2px;
   color: #000;
@@ -1207,12 +1217,15 @@ div.view-child-course{
   position: absolute;
   padding: 8px 34px;
   top: 0px;
-  margin-top: 30px;
+  /*margin-top: 30px;*/
   border: 2px solid #507aa3;
   border-radius: 3px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   background-color: #507aa3;
+}
+.search-toggle .btn-secarch .fa-search{
+  color:#fff;
 }
 .searchBox-input .fa-search{
   display: none;
@@ -1220,14 +1233,15 @@ div.view-child-course{
 .searchBox-input .cross-icon{
   display: block;
 }
-.jsnn-nav ul li:last-child a:hover::after {
+/*.jsnn-nav ul li:last-child a:hover::after {
     border-color: transparent;
-}
+}*/
 .header-hidden .jsnn-nav .top-menu{
   top:0;
+  background: #2E3E42 none repeat scroll 0 0 !important;
 }
 header {
-  height: 100px;
+  /*height: 130px;*/
 }
 .jsnn-nav ul li:hover a{
   color: #29a3f5 !important;
@@ -1238,7 +1252,11 @@ header {
   height: 35px;
   /*align-items: center;*/
 } 
-
+.headerflex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .our-course h3 {
     font-size: 35px;
     margin-bottom: 0;
@@ -1256,7 +1274,7 @@ header {
   text-align: center;
 }
 #jsnn-logo img {
-    width: 118px;
+    /*width: 118px;*/
 }
 .progarmWrapper h3{
   color:#0b0b3e;
@@ -1975,8 +1993,8 @@ a.search-input.search{
   transform: scale(1.1); 
 }
 #jsnn-hero {
-  min-height: 450px;
-  background: #fff url(../images/loader.gif) no-repeat center center;
+  min-height: 500px;
+  /*background: #fff url(../images/loader.gif) no-repeat center center;*/
   width: 100%;
   float: left;
 }
@@ -2000,6 +2018,7 @@ a.search-input.search{
   background-size: cover;
   background-position: center center;
   position: relative;
+  height: 610px;
 }
 #jsnn-hero .flexslider .slides li .overlay {
   position: absolute; 
@@ -2044,7 +2063,7 @@ a.search-input.search{
   max-width: 100%;
   display: table;
   opacity: 0;
-  height: 450px;
+  height: 610px;
   z-index: 9;
 }
 #jsnn-hero .flexslider .slider-text > .slider-text-inner {
@@ -2066,7 +2085,7 @@ a.search-input.search{
   color: white; 
 }
 #jsnn-hero .flexslider .slider-text > .slider-text-inner h1 {
-  margin-bottom: 80px;
+  margin-bottom: 20px;
   font-size: 50px;
   padding-left: 40px;
   line-height: 1.3;
@@ -2432,17 +2451,28 @@ span.pd-left>p {
     font-size: 13px;
   }
   .new-offered-blink1{
-    right: -124px;
+    right: -64px;
   }
 }
 @media screen and (max-width: 992px) {
   .jsnn-video {
     height: 450px; 
   } 
+  .new-offered-blink1{
+    top:6px;
+    right:-24px;
+  }
 }
 @media screen and (max-width: 768px) {
   .jsnn-nav {
     margin: 0; 
+  }
+  .formobileblink{
+    display: block;
+
+  }
+  .new-offered-blink1{
+    top:6px;
   }
   /*.dropdownMenu{
     position: absolute;
@@ -2470,6 +2500,9 @@ span.pd-left>p {
   .sub-courses-desc {
     padding: 0; 
   } 
+  .topspace{
+    margin-top: 56px;
+  }
   .sub-couse-sub-courses{
     margin: 60px 10px 0px 10px;
   }
@@ -2495,7 +2528,7 @@ span.pd-left>p {
   #jsnn-hero .flexslider .slides li{
     background-size: 100% 100%;
     background-position: top center;
-    height: 170px;
+    height: 300px;
   }
   #jsnn-hero .flexslider .slider-text > .slider-text-inner{
     height: auto;
@@ -2536,7 +2569,7 @@ span.pd-left>p {
     display:none;
   }
   .mobileBlock{
-    display:block !important;
+    display:inline-block !important;
   }
   .jsnn-nav .menu-1 {
     display: none; 
@@ -2563,40 +2596,21 @@ span.pd-left>p {
       top: 4px;
       position: fixed;
       left: 14px;
+  }
+  ul.rightHeader{
+    padding-top: 3px;
+  }
+  #jsnn-hero .flexslider .slides li{
+    height: 230px;
   } 
   .forMobile input{
     max-width: 400px;
     /*left: 10px;*/
   }
   .forMobile {
-      position: relative;
+      position: unset;
   }
-  .forMobile input{
-    display: block;
-    width: 100%;
-      position: absolute;
-      top: 100px;
-      border-radius:3px;
-      border:2px solid #507aa3;
-      height:34px !important;
-      padding:0 10px;
-      border: 1px solid #a3a3a3;
-      z-index: 9;
-      background: #fff;
-  }
-  .forMobile button.btn-secarch {
-      position: absolute;
-      top: 100px !important;
-      z-index: 9;
-      border: none;
-      right: 0;
-      box-shadow: none;
-      border-radius: 3px;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      padding: 4px 17px;
-      background:#507aa3;
-  }
+  
   .mobile_search .cross-icon{
     display: block;
     padding-top: 5px;
@@ -3037,6 +3051,36 @@ article {
       display: block;
       top: 39px !important;
   }
+  .forMobile{
+    position: relative;
+  }
+  .forMobile input{
+    display: block;
+    width: 90%;
+      position: absolute;
+      top: 100px;
+      left:10px;
+      border-radius:3px;
+      border:2px solid #507aa3;
+      height:34px !important;
+      padding:0 10px;
+      border: 1px solid #a3a3a3;
+      z-index: 9;
+      background: #fff;
+  }
+  .forMobile button.btn-secarch {
+      position: absolute;
+      top: 100px !important;
+      z-index: 9;
+      border: none;
+      right: 10px;
+      box-shadow: none;
+      border-radius: 3px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      padding: 4px 17px;
+      background:#507aa3;
+  }
   .new-offered-blink1 {
       right: -280px;
   }
@@ -3105,7 +3149,7 @@ article {
     height: 54px;
   }
   header {
-      height: 89px;
+      /*height: 89px;*/
   }
   .jsnn-about-img .item {
       width: 150px;
@@ -3273,6 +3317,12 @@ article {
 @media screen and (max-width: 420px){
   .popupmodal .modal-dialog {
     width: 300px !important;
+  }
+  .rightHeader .boxli{
+    margin-left:18px;
+  }
+  #jsnn-hero .flexslider .slides li {
+      height: 200px;
   }
   #jsnn-logo img{
     width: 82px;
@@ -3916,10 +3966,10 @@ input[type="text"] {
       -o-transition: all .2s ease-out;
       transition: all .2s ease-out; }
   .jsnn-nav-toggle.jsnn-nav-white > i {
-    color: #10185b;
-    background: #10185b; }
+    color: #fff;
+    background: #fff; }
     .jsnn-nav-toggle.jsnn-nav-white > i::before, .jsnn-nav-toggle.jsnn-nav-white > i::after {
-      background: #10185b; }
+      background: #fff; }
 
 .jsnn-nav-toggle i::before {
   top: -7px; }

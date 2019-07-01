@@ -1,4 +1,4 @@
-		<section class="jsnn-course" data-aos="fade-down">
+		<section class="jsnn-course topspace" data-aos="fade-down">
 			<div class="container">
 				<div class="section-heading wow fadeInUp">
                       <h2><span>All Courses</span></h2>  

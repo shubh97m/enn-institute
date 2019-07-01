@@ -1,4 +1,4 @@
-<section id="gallery" class="gallery-wrap">	        
+<section id="gallery" class="gallery-wrap topspace">	        
     <div class="container"> 
         <div class="row">
               <div class="col-12">
