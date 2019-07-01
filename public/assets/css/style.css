@@ -3052,7 +3052,7 @@ article {
       top: 39px !important;
   }
   .forMobile{
-    position: relative;
+    position: unset;
   }
   .forMobile input{
     display: block;
