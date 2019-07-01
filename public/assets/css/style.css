@@ -774,7 +774,6 @@ ul.rightHeader li{
 .jsnn-nav .dropdownMenu ul li{
   display: block;
   padding-left: 0;
-  position: unset;
   padding: 7px 10px;
   text-align: center;
 }
@@ -1118,8 +1117,8 @@ div.view-child-course{
   padding-top: 5px;
   width: 100%;
   top: 35px;
-  box-shadow: 0px 2px 2px #ddd;
-  background: #fff;
+  box-shadow: 0px 2px 2px rgb(37, 36, 36);
+  background: rgba(37, 36, 36, 0.6) none repeat scroll 0 0 !important;
   z-index: 999;
 }
 .menu-1 {
@@ -1175,7 +1174,7 @@ div.view-child-course{
   position: relative;
   font-size: 16px;
   font-weight: 500;
-  color: #000;
+  color: #fff;
   padding: 10px 11px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
