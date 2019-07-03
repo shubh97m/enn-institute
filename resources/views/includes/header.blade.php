@@ -91,9 +91,15 @@
 											<!-- <i class="caret-up"></i> -->
 											<ul class="allcourse-main">
 											@if(!empty($course))
+											@php
+												$course = _arefy(App\Models\MainCourses::where('status','=','active')->get());
+												@endphp
 												@foreach($course as $courses)
 													<li class="menu-item-1 hover-menu child-active">
-													<a href="javascript:void(0);" title="{{$courses['name']}}"><img src="{{asset('assets/img/Courses')}}/{{$courses['image']}}" alt="course" width="24px" height="24px"><br>{{$courses['name']}}</a>
+													<a href="javascript:void(0);" title="{{$courses['name']}}">
+														<img src="{{asset('assets/img/Courses')}}/{{$courses['image']}}" alt="course" width="24px" height="24px">
+														<br>{{$courses['name']}}
+													</a>
 													<ul class="sub-allcourse-main sub-hover">
 														@php
 														$sub_course =_arefy(App\Models\SubCourses::where(['course_id'=>$courses['id'],'status'=>'active'])->get());
